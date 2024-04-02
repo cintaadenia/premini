@@ -27,7 +27,7 @@
 </div>
 
 @yield('konten')
-{{-- @include('include.footer') --}}
+@include('include.footer')
         </div>
     </div>
 @include('include.scripct')
