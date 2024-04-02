@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Scholar - Online School HTML5 </title>
+    <title>Scholar - Online School HTML5</title>
 
     <!-- Bootstrap core CSS -->
     <link href="
@@ -52,7 +52,7 @@ https://mo.com/tm-586-scholar
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <h1>&copyG.Gacoan</h1>
+                        <h1>Gacoan</h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Serach Start ***** -->
@@ -103,6 +103,8 @@ https://mo.com/tm-586-scholar
                 </div>
               </div>
             </div>
+
+
             <div class="item item-2">
               <div class="header-text">
                 <span class="category">Best Result</span>
@@ -118,6 +120,8 @@ https://mo.com/tm-586-scholar
                 </div>
               </div>
             </div>
+
+            
             <div class="item item-3">
               <div class="header-text">
                 <span class="category">Online Learning</span>
@@ -142,8 +146,8 @@ https://mo.com/tm-586-scholar
   <br>
   <br>
   <br>
-  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu makanan</h1>
 
+  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu Noodles</h1>
 
 
   <div class="services section" id="services">
@@ -185,7 +189,7 @@ https://mo.com/tm-586-scholar
           <div class="service-item">
             <div class="icon">
               <img src=
-              {{ asset('image/hompimpa2.png') }} height="100" width="100" alt="online degrees">
+              {{ asset('image/hompimpa.png') }} height="100" width="100" alt="online degrees">
             </div>
             <div class="main-content">
               <h4>Mie Hompimpa</h4>
@@ -202,187 +206,10 @@ https://mo.com/tm-586-scholar
     </div>
   </div>
 
-  {{-- <div class="section about-us">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-1">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Where shall we begin?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How do we work together?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Why SCHOLAR is the best?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  There are more than one hundred responsive HTML s to choose from <strong></strong>Mo website. You can browse by different tags or categories.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Do we get the best support?
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  You can also search on Google with specific keywords such as <code>mo business s, mo gallery s, admin dashboard mo, 3-column mo, etc.</code>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 align-self-center">
-          <div class="section-heading">
-            <h6>About Us</h6>
-            <h2>What make us the best academy online?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.</p>
-            <div class="main-button">
-              <a href="#">Discover More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-
-  {{-- <section class="section courses" id="courses" >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Latest Courses</h6>
-            <h2>Latest Courses</h2>
-          </div>
-        </div>
-      </div>
-      <ul class="event_filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".design">Webdesign</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".development">Development</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".wordpress">Wordpress</a>
-        </li>
-      </ul> --}}
-
-{{--
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-01.jpg" alt=""></a>
-              <span class="category">Siomay</span>
-              <span class="price"><h6><em>$</em>160</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Siomay</span>
-              <h4>Learn Web Design</h4>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-02.jpg" alt=""></a>
-              <span class="category">Udang Rambutan</span>
-              <span class="price"><h6><em>$</em>340</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Udang Rambutan</span>
-              <h4>Web Development Tips</h4>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-03.jpg" alt=""></a>
-              <span class="category">Udang Keju</span>
-              <span class="price"><h6><em>$</em>640</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Udang Keju</span>
-              <h4>Latest Web Trends</h4>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-04.jpg" alt=""></a>
-              <span class="category">Lumpia Udang</span>
-              <span class="price"><h6><em>$</em>450</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Lumpia Udang</span>
-              <h4>Online Learning Steps</h4>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-05.jpg" alt=""></a>
-              <span class="category">Pangsit Goreng</span>
-              <span class="price"><h6><em>$</em>320</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Pangsit Goreng</span>
-              <h4>Be a WordPress Master</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
   <br>
   <br>
   <br>
-  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu dimsum</h1>
+  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu Dimsum</h1>
 
   <div class="services section" id="services">
     <div class="container">
@@ -414,7 +241,7 @@ https://mo.com/tm-586-scholar
             </div>
             <div class="main-content">
               <h4>Udang Keju</h4>
-              <p>Udang keju merupakan salah satu menu pendamping favorit untuk menyantap mie Gacoan. Teksturnya yang lembut di dalam dan garing di luar, ditambah isian keju mozzarella yang lumer.</p>
+              <p>Udang keju, salah satu menu pendamping favorit untuk menyantap mie Gacoan. Teksturnya yang lembutdan garing di luar, ditambah isian keju mozzarella yang lumer.</p>
               <div class="main-button">
                 <a href="#">Read More</a>
               </div>
@@ -489,19 +316,19 @@ https://mo.com/tm-586-scholar
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
                   <h2 class="timer count-title count-number" data-to="500" data-speed="1000"></h2>
-                   <p class="count-text ">Rating Maknan</p>
+                   <p class="count-text ">Rating Noodles</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
                   <h2 class="timer count-title count-number" data-to="550" data-speed="1000"></h2>
-                  <p class="count-text ">Rating Diimsum</p>
+                  <p class="count-text ">Rating Dimsum</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
                   <h2 class="timer count-title count-number" data-to="450" data-speed="1000"></h2>
-                  <p class="count-text ">Rating Minuman</p>
+                  <p class="count-text ">Rating Drink</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
@@ -792,7 +619,7 @@ https://mo.com/tm-586-scholar
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://mo.com" rel="nofollow" target="_blank">Mo</a></p>
+        <p>© 2024 Gacoan. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://mo.com" rel="nofollow" target="_blank">CS</a></p>
       </div>
     </div>
   </footer>
