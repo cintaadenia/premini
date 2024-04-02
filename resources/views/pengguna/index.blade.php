@@ -494,20 +494,20 @@ https://mo.com/tm-586-scholar
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="804" data-speed="1000"></h2>
-                  <p class="count-text ">Course Hours</p>
+                  <h2 class="timer count-title count-number" data-to="550" data-speed="1000"></h2>
+                  <p class="count-text ">Rating Diimsum</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
-                  <p class="count-text ">Employed Students</p>
+                  <h2 class="timer count-title count-number" data-to="450" data-speed="1000"></h2>
+                  <p class="count-text ">Rating Minuman</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="counter end">
-                  <h2 class="timer count-title count-number" data-to="15" data-speed="1000"></h2>
-                  <p class="count-text ">Years Experience</p>
+                  <h2 class="timer count-title count-number" data-to="900" data-speed="1000"></h2>
+                  <p class="count-text ">Chat Admin</p>
                 </div>
               </div>
             </div>
