@@ -8,4 +8,4 @@
 <link rel="stylesheet" href="{{ asset('template/assets/css/shared/iconly.css') }}">
 
 {{-- css login --}}
-<link rel="stylesheet" href="{{asset ('template/assets/css/pages/auth.css') }}">
+<link rel="stylesheet" href="{{ asset ('template/assets/css/pages/auth.css') }}">

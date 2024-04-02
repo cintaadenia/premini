@@ -24,5 +24,10 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/dashboard', [dashboardController::class, 'index']);
 
+//LOGIN
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/log', [LoginController::class, 'login'])->name('login.store');
+
+//REGISTER
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
