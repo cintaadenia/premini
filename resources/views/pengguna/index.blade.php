@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>Scholar - Online School HTML5</title>
+    <title>Gacoan</title>
 
     <!-- Bootstrap core CSS -->
     <link href="
@@ -59,7 +59,7 @@ https://mo.com/tm-586-scholar
                         <!-- ***** Serach Start ***** -->
                         <div class="search-input">
                             <form id="search" action="#">
-                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
+                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
                                     onkeypress="handle" />
                                 <i class="fa fa-search"></i>
                             </form>
@@ -68,9 +68,9 @@ https://mo.com/tm-586-scholar
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Noodles</a></li>
+                            <li class="scroll-to-section"><a href="#services">Makanan</a></li>
                             <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#team">Drink</a></li>
+                            <li class="scroll-to-section"><a href="#team">Minuman</a></li>
                             <!-- <li class="scroll-to-section"><a href="#events">Events</a></li> -->
                             <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
                         </ul>
@@ -92,8 +92,8 @@ https://mo.com/tm-586-scholar
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
                             <div class="header-text">
-                                <span class="category">Our Courses</span>
-                                <h2>With Scholar Teachers, Everything Is Easier</h2>
+                                <span class="category">Mie Gacoan</span>
+                                <h2>Mie Dulu Baru Skripsi. Mie Dulu Ga sihh...</h2>
                                 <p>Scholar is free CSS designed by Mo for online educational related websites. This
                                     layout is based on the famous Bootstrap v5.3.0 framework.</p>
                                 <div class="buttons">
@@ -110,8 +110,8 @@ https://mo.com/tm-586-scholar
 
                         <div class="item item-2">
                             <div class="header-text">
-                                <span class="category">Best Result</span>
-                                <h2>Get the best result out of your effort</h2>
+                                <span class="category">Mie Gacoan</span>
+                                <h2>Siang-Siang Tuh Kalemin aja guys</h2>
                                 <p>You are allowed to use this for any educational or commercial purpose. You are not
                                     allowed to re-distribute the ZIP file on any other website.</p>
                                 <div class="buttons">
@@ -128,8 +128,8 @@ https://mo.com/tm-586-scholar
 
                         <div class="item item-3">
                             <div class="header-text">
-                                <span class="category">Online Learning</span>
-                                <h2>Online Learning helps you save the time</h2>
+                                <span class="category">Mie Gacoan</span>
+                                <h2>Ujian Terberat adlah Macet, solusinya Mie Gacoan</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious
                                     incididunt ut labore et dolore magna aliqua suspendisse.</p>
                                 <div class="buttons">
@@ -260,6 +260,7 @@ https://mo.com/tm-586-scholar
                     </div>
                 </div>
 
+
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
@@ -277,6 +278,7 @@ https://mo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
+
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
@@ -297,6 +299,7 @@ https://mo.com/tm-586-scholar
                     </div>
                 </div>
 
+
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
@@ -315,6 +318,7 @@ https://mo.com/tm-586-scholar
                     </div>
                 </div>
 
+                
                 <h1 class="button"
                 style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
                 Menu Minuman</h1>
@@ -562,7 +566,7 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number" data-to="500" data-speed="1000"></h2>
-                                    <p class="count-text ">Rating Noodles</p>
+                                    <p class="count-text ">Rating Makanan</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
@@ -574,7 +578,7 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number" data-to="450" data-speed="1000"></h2>
-                                    <p class="count-text ">Rating Drink</p>
+                                    <p class="count-text ">Rating Minuman</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
@@ -597,7 +601,7 @@ https://mo.com/tm-586-scholar
                     <div class="team-member">
                         <div class="main-content">
                             <img src="
-              user/assets/images/member-01.jpg" alt="">
+             {{asset('image/gacoan.png')}}" alt="">
                             <span class="category">UX Teacher</span>
                             <h4>Sophia Rose</h4>
                             <ul class="social-icons">
@@ -663,34 +667,31 @@ https://mo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Please tell your friends or collegues about Mo website. Anyone can access the website to
-                                download free s. Thank you for visiting.”</p>
+                            <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
                                 <span class="category">Full Stack Master</span>
-                                <h4>Claude David</h4>
+                                <h4>ELSA</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”
+                            <p>“Datang lapar, pulang bahagia. kenapa bisa sebahagia itu? karena selain makan dan minumannya yg enak, harga Mie Gacoan ramah di kantong.”
                             </p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
                                 <span class="category">UI Expert</span>
-                                <h4>Thomas Jefferson</h4>
+                                <h4>AMI NUR DWIUTAMI</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Scholar is free website provided by Mo for educational related websites. This CSS layout
-                                is based on Bootstrap v5.3.0 framework.”</p>
+                            <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh.... sesuatuuu bangeet!!. ”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
                                 <span class="category">Digital Animator</span>
-                                <h4>Stella Blair</h4>
+                                <h4>BELINDA</h4>
                             </div>
                         </div>
                     </div>
@@ -698,9 +699,8 @@ https://mo.com/tm-586-scholar
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
                         <h6>TESTIMONIALS</h6>
-                        <h2>What they say about us?</h2>
-                        <p>You can search free CSS s on Google using different keywords such as mo portfolio, mo
-                            gallery, mo blue color, etc.</p>
+                        <h2>Apa pendapat mereka tentang GACOAN?</h2>
+                        <p>Mie Gacoan" adalah sebuah merk dagang dari jaringan restaurant mie pedas no 1 di indonesia, yang menjadi anak perusahaan PT Pesta Pora Abadi.</p>
                     </div>
                 </div>
             </div>
