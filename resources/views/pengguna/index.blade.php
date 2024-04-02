@@ -129,7 +129,7 @@ https://mo.com/tm-586-scholar
                         <div class="item item-3">
                             <div class="header-text">
                                 <span class="category">Mie Gacoan</span>
-                                <h2>Ujian Terberat adlah Macet, solusinya Mie Gacoan</h2>
+                                <h2>Ujian Terberat adalah Macet, solusinya Mie Gacoan</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious
                                     incididunt ut labore et dolore magna aliqua suspendisse.</p>
                                 <div class="buttons">
