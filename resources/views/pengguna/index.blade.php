@@ -138,6 +138,13 @@ https://mo.com/tm-586-scholar
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu makanan</h1>
+
+
 
   <div class="services section" id="services">
     <div class="container">
@@ -146,11 +153,13 @@ https://mo.com/tm-586-scholar
           <div class="service-item">
             <div class="icon">
               <img src=
-              {{ asset('image/miesuit.png') }} height="100" width="100" alt="online degrees">
+              {{ asset('image/suit2.png') }} height="100" width="100" alt="online degrees">
             </div>
             <div class="main-content">
-              <h4>Online Degrees</h4>
-              <p>Whenever you need free s in HTML CSS, you just remember Mo website.</p>
+              <h4>Mie suit</h4>
+              <p>
+                Mie Gacoan mempunyai ciri khas yaitu mie dengan selera asin gurih saja dan kering tidak berkuah.
+              </p>
               <div class="main-button">
                 <a href="#">Read More</a>
               </div>
@@ -160,12 +169,12 @@ https://mo.com/tm-586-scholar
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
             <div class="icon">
-              <img src="
-              user/assets/images/service-02.png" alt="short courses">
+              <img src=
+              {{ asset('image/gacoan3.png') }} height="100" width="100" alt="online degrees">
             </div>
             <div class="main-content">
-              <h4>Short Courses</h4>
-              <p>You can browse free s based on different tags such as digital marketing, etc.</p>
+              <h4>Mie Gacoan</h4>
+              <p>Mie Gacoan mempunyai ciri khas yaitu mie dengan selera pedas dan kering tidak berkuah.</p>
               <div class="main-button">
                 <a href="#">Read More</a>
               </div>
@@ -175,12 +184,14 @@ https://mo.com/tm-586-scholar
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
             <div class="icon">
-              <img src="
-              user/assets/images/service-03.png" alt="web experts">
+              <img src=
+              {{ asset('image/hompimpa2.png') }} height="100" width="100" alt="online degrees">
             </div>
             <div class="main-content">
-              <h4>Web Experts</h4>
-              <p>You can start learning HTML CSS by modifying free s from our website too.</p>
+              <h4>Mie Hompimpa</h4>
+              <p>
+                Mie Hompimpa ini memiliki ciri khas yang hampir sama dengan mie suit namun ada rasa pedasnya
+              </p>
               <div class="main-button">
                 <a href="#">Read More</a>
               </div>
@@ -191,7 +202,7 @@ https://mo.com/tm-586-scholar
     </div>
   </div>
 
-  <div class="section about-us">
+  {{-- <div class="section about-us">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-1">
@@ -258,9 +269,9 @@ https://mo.com/tm-586-scholar
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <section class="section courses" id="courses" >
+  {{-- <section class="section courses" id="courses" >
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -283,9 +294,9 @@ https://mo.com/tm-586-scholar
         <li>
           <a href="#!" data-filter=".wordpress">Wordpress</a>
         </li>
-      </ul>
+      </ul> --}}
 
-
+{{--
       <div class="row event_box">
         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
           <div class="events_item">
@@ -365,28 +376,109 @@ https://mo.com/tm-586-scholar
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section> --}}
+  <br>
+  <br>
+  <br>
+  <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Menu dimsum</h1>
 
-
-
-        {{-- <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="
-                user/assets/images/course-06.jpg" alt=""></a>
-              <span class="category">Webdesign</span>
-              <span class="price"><h6><em>$</em>240</h6></span>
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src=
+              {{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
             </div>
-            <div class="down-content">
-              <span class="author">David Hutson</span>
-              <h4>Full Stack Developer</h4>
+            <div class="main-content">
+              <h4>Siomay</h4>
+              <p>
+                Siomai (Hokkien: 燒賣; dialek xiamen sio māiⁿ) adalah sejenis dimsum yang merupakan makanan tradisional Tiongkok.
+              </p>
+              <div class="main-button">
+                <a href="#">Read More</a>
+              </div>
             </div>
           </div>
-        </div> --}}
+        </div>
 
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src=
+              {{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
+            </div>
+            <div class="main-content">
+              <h4>Udang Keju</h4>
+              <p>Udang keju merupakan salah satu menu pendamping favorit untuk menyantap mie Gacoan. Teksturnya yang lembut di dalam dan garing di luar, ditambah isian keju mozzarella yang lumer.</p>
+              <div class="main-button">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src=
+              {{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
+            </div>
+            <div class="main-content">
+              <h4>Kitchen</h4>
+              <p>
+                Kitchen adalah dimsum yang paling populer dan terkenal. Wan Ton dibuat dengan cara menggabungkan adonan daging dan sayur dengan cara dibentuk bulatan.
+              </p>
+              <div class="main-button">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src=
+                {{ asset('image/pangsitgoreng.png') }} height="150" width="150" alt="online degrees">
+              </div>
+              <div class="main-content">
+                <h4>Pangsit Goreng</h4>
+                <p>
+                Pangsit (Hokkien: 扁食; dialek Zhangzhou páng sit) adalah makanan tradisional Tiongkok yang berupa daging cincang yang dibungkus lembaran tepung terigu.
+                </p>
+                <div class="main-button">
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src=
+                {{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
+              </div>
+              <div class="main-content">
+                <h4>Udang Rambutan</h4>
+                <p>
+                Pangsit (Hokkien: 扁食; dialek Zhangzhou páng sit) adalah makanan tradisional Tiongkok yang berupa daging cincang yang dibungkus lembaran tepung terigu.
+                </p>
+                <div class="main-button">
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="section fun-facts">
     <div class="container">
@@ -396,8 +488,8 @@ https://mo.com/tm-586-scholar
             <div class="row">
               <div class="col-lg-3 col-md-6">
                 <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="150" data-speed="1000"></h2>
-                   <p class="count-text ">Happy Students</p>
+                  <h2 class="timer count-title count-number" data-to="500" data-speed="1000"></h2>
+                   <p class="count-text ">Rating Maknan</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
