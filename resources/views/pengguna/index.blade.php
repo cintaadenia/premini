@@ -671,7 +671,7 @@ https://mo.com/tm-586-scholar
                     <div class="team-member">
                         <div class="main-content">
                             <img src="
-              {{ asset('image/uk.png') }} " alt="">
+                                {{ asset('image/uk.png') }} " alt="">
                             <span class="category">Udang Keju</span>
                             <h4>Stella Blair</h4>
                             <div class="rating">
@@ -679,7 +679,7 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
