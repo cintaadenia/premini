@@ -754,9 +754,11 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan.jpg" alt="">
+                  user/assets/images/gacoan.jpg" alt="" width="240" height="240">
                                 </div>
                             </div>
+
+
                             <div class="col-lg-9">
                                 <ul>
                                     <li>
@@ -781,13 +783,14 @@ https://mo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-12 col-md-6">
                     <div class="item">
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan2.jpeg" alt="">
+                  user/assets/images/gacoan2.jpeg" alt="" width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -820,7 +823,7 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan3.jpg" alt="">
+                  user/assets/images/gacoan3.jpg" alt=""  width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
