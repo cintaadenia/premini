@@ -597,58 +597,90 @@ https://mo.com/tm-586-scholar
                     <div class="team-member">
                         <div class="main-content">
                             <img src="
-              user/assets/images/member-01.jpg" alt="">
-                            <span class="category">UX Teacher</span>
+                            {{ asset('image/sm.png') }}" alt="">
+                            <span class="category">Siomay</span>
                             <h4>Sophia Rose</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
+                            </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
                             <img src="
-              user/assets/images/member-02.jpg" alt="">
-                            <span class="category">Graphic Teacher</span>
+                            {{ asset('image/gacoan3.png') }}" alt="">
+                            <span class="category">Mie Gacoan</span>
                             <h4>Cindy Walker</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                            </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="
-              user/assets/images/member-03.jpg" alt="">
-                            <span class="category">Full Stack Master</span>
+                            <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
+                            <span class="category">Es Gobak Sodor</span>
                             <h4>David Hutson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
+                            </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
                             <img src="
-              user/assets/images/member-04.jpg" alt="">
-                            <span class="category">Digital Animator</span>
+              {{ asset('image/uk.png') }} " alt="">
+                            <span class="category">Udang Keju</span>
                             <h4>Stella Blair</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
+                            </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
