@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', function () {
-    return view('pengguna.index');
-});
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/dashboard', [dashboardController::class, 'index']);
+Route::get('/users', function () {
+    // dd(1);
+    return view('pengguna.index');
+});
 
 //LOGIN
 Route::get('/', [LoginController::class, 'index'])->name('login');
