@@ -4,6 +4,7 @@ use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\User2Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pengguna.index');
 });
+
+Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/dashboard', [dashboardController::class, 'index']);
