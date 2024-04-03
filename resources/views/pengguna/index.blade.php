@@ -72,7 +72,7 @@ https://mo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#team">Minuman</a></li>
                             <!-- <li class="scroll-to-section"><a href="#events">Events</a></li> -->
-                            <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+                            <li class="scroll-to-section"><a href="#contact">Order Sekarang!</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
