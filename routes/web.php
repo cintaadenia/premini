@@ -17,16 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/home', [HomeController::class, 'home'])->name('home');
-Route::get('/dashboard', [dashboardController::class, 'index']);
-Route::get('/users', function () {
-    // dd(1);
+Route::get('/', function () {
     return view('pengguna.index');
 });
 
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/dashboard', [dashboardController::class, 'index']);
+
 //LOGIN
-Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/log', [LoginController::class, 'login'])->name('login.store');
 
 //REGISTER
