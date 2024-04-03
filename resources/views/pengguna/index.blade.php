@@ -71,7 +71,7 @@ https://mo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#services">Makanan</a></li>
                             <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#team">Minuman</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Order Sekarang!</a></li>
+                            <li class="scroll-to-section"><a href="{{ route ('login') }}">Order Sekarang!</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
