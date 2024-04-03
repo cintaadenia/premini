@@ -122,7 +122,7 @@ https://mo.com/tm-586-scholar
                                                 <i class="fas fa-star" style="color: gold;"></i>
                                                 <i class="fas fa-star" style="color: gold;"></i>
                                                 <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="far fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
                                             </div>
                                         </div>
                                 </div>
