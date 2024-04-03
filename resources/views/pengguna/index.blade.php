@@ -94,14 +94,16 @@ https://mo.com/tm-586-scholar
                             <div class="header-text">
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Mie Dulu Baru Skripsi. Mie Dulu Ga sihh...</h2>
-                                <p>Scholar is free CSS designed by Mo for online educational related websites. This
-                                    layout is based on the famous Bootstrap v5.3.0 framework.</p>
+                                <p>"Sensasi Pedasnya Bikin Ketagihan, Mie Gacoan Pilihan Terbaik!"</p>
                                 <div class="buttons">
                                     <div class="main-button">
-                                        <a href="#">Request Demo</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's Scholar?</a>
+                                        <div class="rating">
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -112,15 +114,17 @@ https://mo.com/tm-586-scholar
                             <div class="header-text">
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Siang-Siang Tuh Kalemin aja guys</h2>
-                                <p>You are allowed to use this for any educational or commercial purpose. You are not
-                                    allowed to re-distribute the ZIP file on any other website.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Request Demo</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's the best result?</a>
-                                    </div>
+                                <p>"Kreasikan Hidanganmu dengan Mie Gacoan, Selalu Berkesan!"</p>
+                                    <div class="buttons">
+                                        <div class="main-button">
+                                            <div class="rating">
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="far fa-star" style="color: gold;"></i>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -130,15 +134,17 @@ https://mo.com/tm-586-scholar
                             <div class="header-text">
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Ujian Terberat adalah Macet, solusinya Mie Gacoan</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious
-                                    incididunt ut labore et dolore magna aliqua suspendisse.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Request Demo</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
-                                    </div>
+                                <p>"Setiap Gigitan Mie Gacoan, Sebuah Petualangan Rasa!"</p>
+                                    <div class="buttons">
+                                        <div class="main-button">
+                                            <div class="rating">
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
