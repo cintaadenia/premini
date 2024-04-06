@@ -68,11 +68,15 @@ https://mo.com/tm-586-scholar
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Makanan</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#team">Minuman</a></li>
+                            <li class="scroll-to-section"><a href="#services">Menu</a></li>
+                            {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li>
+                            <li class="scroll-to-section"><a href="#services">Minuman</a></li> --}}
                             <li class="scroll-to-section"><a href="#contact">Order</a></li>
-                            <li class="scroll-to-section"><a href="#" style="color: black">Logout</a></li>
+                            <li class="scroll-to-section"><a href="/logout" style="color: black">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -937,7 +941,7 @@ https://mo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                {{-- <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post">
                             <div class="row">
@@ -951,8 +955,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            placeholder="E-mail..." required="">
+                                        <input type="number" name="no_tlpn" id="no_tlpn" pattern="[^ @]*@[^ @]*"
+                                            placeholder="No Tepephone..." required="">
                                     </fieldset>
                                 </div>
 
@@ -981,10 +985,10 @@ https://mo.com/tm-586-scholar
 
                                     <div class="col-lg-6">
                                         <fieldset>
-                                            <input type="text" name="noPesanan" id="noPesanan" pattern="[^ @]*@[^ @]*"
-                                                placeholder="No Pesanan..." required="">
+                                            <textarea name="noPesanan" id="noPesanan" placeholder="catatan..." required=""></textarea>
                                         </fieldset>
                                     </div>
+
                                 </div>
 
 
@@ -994,25 +998,72 @@ https://mo.com/tm-586-scholar
                                     <fieldset>
                                         <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
                                     </fieldset>
+                                </div> --}}
+                                <div class="col-lg-6">
+                                    <div class="contact-us-content">
+                                        <form id="contact-form" action="" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <input type="text" name="nama" id="nama" placeholder="Nama..." autocomplete="on" required>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <input type="number" name="no_tlpn" id="no_tlpn" placeholder="No Telepon..." required>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <fieldset>
+                                                        <input type="text" name="makanan" id="makanan" placeholder="Makanan..." required>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <fieldset>
+                                                        <input type="text" name="minuman" id="minuman" placeholder="Minuman..." required>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <fieldset>
+                                                        <input type="text" name="dimsum" id="dimsum" placeholder="Dimsum..." required>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <fieldset>
+                                                        <textarea name="noPesanan" id="noPesanan" placeholder="Catatan..." required></textarea>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <fieldset>
+                                                        <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
 
+                                <script>
+                                    document.getElementById("form-submit").addEventListener("click", function(event) {
+                                        // Hentikan aksi bawaan dari tombol submit
+                                        event.preventDefault();
 
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                        // Lakukan aksi AJAX untuk mengirimkan formulir
+                                        // Di sini Anda dapat menambahkan kode AJAX untuk mengirimkan formulir
 
-    <footer>
-        <div class="container">
-            <div class="col-lg-12">
-                <p>© 2024 Gacoan. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://mo.com"
-                        rel="nofollow" target="_blank">CS</a></p>
-            </div>
-        </div>
-    </footer>
+                                        // Setelah formulir berhasil dikirim, redirect ke halaman awal
+                                        window.location.href = "/user2"; // Ganti dengan URL halaman awal Anda
+                                    });
+                                </script>
+
+                                <footer>
+                                    <div class="container">
+                                        <div class="col-lg-12">
+                                            <p>© 2024 Gacoan</p>
+                                        </div>
+                                    </div>
+                                </footer>
+
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->

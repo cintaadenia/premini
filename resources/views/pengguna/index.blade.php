@@ -924,8 +924,7 @@ https://mo.com/tm-586-scholar
     <footer>
         <div class="container">
             <div class="col-lg-12">
-                <p>© 2024 Gacoan. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://mo.com"
-                        rel="nofollow" target="_blank">CS</a></p>
+                <p>© 2024 Gacoan</p>
             </div>
         </div>
     </footer>
