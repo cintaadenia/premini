@@ -645,14 +645,14 @@ https://mo.com/tm-586-scholar
                         <div class="main-content">
                             <img src="
                             {{ asset('image/sm.png') }}" alt="">
-                            <span class="category">Siomayy</span>
-                            <h4>Sophia Rose</h4>
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Siomay</h4>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -668,8 +668,8 @@ https://mo.com/tm-586-scholar
                         <div class="main-content">
                             <img src="
                             {{ asset('image/gacoan3.png') }}" alt="">
-                            <span class="category">Mie Gacoan</span>
-                            <h4>Cindy Walker</h4>
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Mie Gacoan</h4>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
@@ -690,14 +690,14 @@ https://mo.com/tm-586-scholar
                     <div class="team-member">
                         <div class="main-content">
                             <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
-                            <span class="category">Es Gobak Sodor</span>
-                            <h4>David Hutson</h4>
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Es Gobak Sodor</h4>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -715,8 +715,8 @@ https://mo.com/tm-586-scholar
                         <div class="main-content">
                             <img src="
                                 {{ asset('image/uk.png') }} " alt="">
-                            <span class="category">Udang Keju</span>
-                            <h4>Stella Blair</h4>
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Udang Keju</h4>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>

@@ -139,7 +139,7 @@
     </li>
 
     <li class="sidebar-title">Forms &amp; Tables</li>
-
+{{--
     <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
@@ -166,9 +166,9 @@
                 <a href="form-element-textarea.html">Textarea</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
-    <li
+    {{-- <li
         class="sidebar-item active ">
         <a href="form-layout.html" class='sidebar-link'>
             <i class="bi bi-file-earmark-medical-fill"></i>
@@ -187,9 +187,9 @@
                 <a href="form-validation-parsley.html">Parsley</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
-    <li
+    {{-- <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
             <i class="bi bi-pen-fill"></i>
@@ -209,7 +209,7 @@
                 <a href="form-editor-tinymce.html">TinyMCE</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
     <li
         class="sidebar-item  ">
@@ -235,7 +235,7 @@
         </ul>
     </li>
 
-    <li class="sidebar-title">Extra UI</li>
+    {{-- <li class="sidebar-title">Extra UI</li>
 
     <li
         class="sidebar-item  has-sub">
@@ -254,8 +254,8 @@
                 <a href="ui-widgets-todolist.html">To-do List</a>
             </li>
         </ul>
-    </li>
-
+    </li> --}}
+{{--
     <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
@@ -273,7 +273,7 @@
                 <a href="ui-icons-dripicons.html">Dripicons</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
     <li
         class="sidebar-item  has-sub">
@@ -349,7 +349,7 @@
         </a>
     </li>
 
-    <li
+    {{-- <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
             <i class="bi bi-person-badge-fill"></i>
@@ -366,9 +366,9 @@
                 <a href="auth-forgot-password.html">Forgot Password</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
-    <li
+    {{-- <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
             <i class="bi bi-x-octagon-fill"></i>
@@ -385,9 +385,9 @@
                 <a href="error-500.html">500</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 
-    <li class="sidebar-title">Raise Support</li>
+    {{-- <li class="sidebar-title">Raise Support</li>
 
     <li
         class="sidebar-item  ">
@@ -395,24 +395,16 @@
             <i class="bi bi-life-preserver"></i>
             <span>Documentation</span>
         </a>
-    </li>
+    </li> --}}
 
-    <li
-        class="sidebar-item  ">
-        <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
-            <i class="bi bi-puzzle"></i>
-            <span>Contribute</span>
-        </a>
+    <li class="sidebar-item">
+        @auth
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="btn btn-danger">Logout</button>
+        </form>
+        @endauth
     </li>
-
-    <li
-        class="sidebar-item  ">
-        <a href="https://github.com/zuramai/mazer#donation" class='sidebar-link'>
-            <i class="bi bi-cash"></i>
-            <span>Donate</span>
-        </a>
-    </li>
-
 </ul>
 
 @yield('sidebar')

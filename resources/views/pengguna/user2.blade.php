@@ -72,7 +72,7 @@ https://mo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#team">Minuman</a></li>
                             <li class="scroll-to-section"><a href="#contact">Order</a></li>
-                            <li class="scroll-to-section"><a href="#">Logout</a></li>
+                            <li class="scroll-to-section"><a href="#" style="color: black">Logout</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -638,104 +638,104 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Rating Tertinggi</h1>
 
-    <div class="team section" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="
-                            {{ asset('image/sm.png') }}" alt="">
-                            <span class="category">Siomayy</span>
-                            <h4>Sophia Rose</h4>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+        <div class="team section" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <div class="main-content">
+                                <img src="
+                                {{ asset('image/sm.png') }}" alt="">
+                                <span class="category">Ranking Peminat</span>
+                                <h4>Siomay</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
                             </div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="
-                            {{ asset('image/gacoan3.png') }}" alt="">
-                            <span class="category">Mie Gacoan</span>
-                            <h4>Cindy Walker</h4>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <div class="main-content">
+                                <img src="
+                                {{ asset('image/gacoan3.png') }}" alt="">
+                                <span class="category">Ranking Peminat</span>
+                                <h4>Mie Gacoan</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
                             </div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
-                            <span class="category">Es Gobak Sodor</span>
-                            <h4>David Hutson</h4>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <div class="main-content">
+                                <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
+                                <span class="category">Ranking Peminat</span>
+                                <h4>Es Gobak Sodor</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+
                             </div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-
                         </div>
                     </div>
-                </div>
 
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="
-                                {{ asset('image/uk.png') }} " alt="">
-                            <span class="category">Udang Keju</span>
-                            <h4>Stella Blair</h4>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <div class="main-content">
+                                <img src="
+                                    {{ asset('image/uk.png') }} " alt="">
+                                <span class="category">Ranking Peminat</span>
+                                <h4>Udang Keju</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
                             </div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
     <div class="section fun-facts">
@@ -927,7 +927,7 @@ https://mo.com/tm-586-scholar
                 <div class="col-lg-6  align-self-center">
                     <div class="section-heading">
                         <h6>Mie Gacoan</h6>
-                        <h2>Kuy Guys Pesan Sekarang!</h2>
+                        <h2>Kuy Guys Order Sekarang!</h2>
                         <p>Inovasi akan selalu kami kedepankan agar "Mie Gacoan" tetap relevan dan menjadi pilihan terbaik bagi para customer fanatik.</p>
                         <div class="special-offer">
                             <span class="offer">off<br><em>50%</em></span>
@@ -943,26 +943,60 @@ https://mo.com/tm-586-scholar
                             <div class="row">
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input type="name" name="name" id="name"
-                                            placeholder="Your Name..." autocomplete="on" required>
+                                        <input type="name" name="nama" id="nama"
+                                            placeholder="Nama..." autocomplete="on" required>
                                     </fieldset>
                                 </div>
+
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            placeholder="Your E-mail..." required="">
+                                            placeholder="E-mail..." required="">
                                     </fieldset>
                                 </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <fieldset>
+                                            <input type="text" name="makanan" id="makanan" pattern="[^ @]*@[^ @]*"
+                                                placeholder="Makanan..." required="">
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <fieldset>
+                                            <input type="text" name="minuman" id="minuman" pattern="[^ @]*@[^ @]*"
+                                                placeholder="Minuman..." required="">
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <fieldset>
+                                            <input type="text" name="dimsum" id="dimsum" pattern="[^ @]*@[^ @]*"
+                                                placeholder="Dimsum..." required="">
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <fieldset>
+                                            <input type="text" name="noPesanan" id="noPesanan" pattern="[^ @]*@[^ @]*"
+                                                placeholder="No Pesanan..." required="">
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+
+                                <br>
+                                <br>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                                        <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
                                     </fieldset>
                                 </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button">Pesan Sekarang</button>
-                                    </fieldset>
-                                </div>
+
+
                             </div>
                         </form>
                     </div>
