@@ -26,10 +26,14 @@ Route::get('/', function () {
 Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
-Route::get('/dashboard', [dashboardController::class, 'index']);
+
+Route::middleware(['role:admin', 'auth'])->group(function(){
+    Route::get('/dashboard', [dashboardController::class, 'index']);
+
+});
 
 //LOGOUT
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //LOGIN
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -38,3 +42,4 @@ Route::post('/log', [LoginController::class, 'login'])->name('login.store');
 //REGISTER
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
+

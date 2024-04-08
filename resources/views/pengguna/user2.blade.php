@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    {{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <title>Gacoan</title>
 
@@ -21,6 +23,28 @@
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <style>
+        .select2-container--default .select2-selection--multiple {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            background-color: rgba(249, 235, 255, 0.15);
+            border: none;
+            outline: none;
+            font-weight: 300;
+            padding: 0px 20px;
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .select2-search__field {
+            background-color: transparent !important;
+            /* color: #fff !important; */
+        }
+    </style>
     <!--
 
 Mo 586 Scholar
@@ -72,7 +96,7 @@ https://mo.com/tm-586-scholar
                             {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#services">Minuman</a></li> --}}
                             <li class="scroll-to-section"><a href="#contact">Order</a></li>
-                            <li class="scroll-to-section"><a href="/logout" style="color: black">Logout</a>
+                            <li class="scroll-to-section"><a href="#" onclick="document.getElementById('logout-form').submit();" style="color: black">Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
@@ -119,16 +143,16 @@ https://mo.com/tm-586-scholar
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Siang-Siang Tuh Kalemin aja guys</h2>
                                 <p>"Kreasikan Hidanganmu dengan Mie Gacoan, Selalu Berkesan!"</p>
-                                    <div class="buttons">
-                                        <div class="main-button">
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                            </div>
+                                <div class="buttons">
+                                    <div class="main-button">
+                                        <div class="rating">
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,16 +163,16 @@ https://mo.com/tm-586-scholar
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Ujian Terberat adalah Macet, solusinya Mie Gacoan</h2>
                                 <p>"Setiap Gigitan Mie Gacoan, Sebuah Petualangan Rasa!"</p>
-                                    <div class="buttons">
-                                        <div class="main-button">
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                            </div>
+                                <div class="buttons">
+                                    <div class="main-button">
+                                        <div class="rating">
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -167,73 +191,77 @@ https://mo.com/tm-586-scholar
         Menu Makanan</h1>
 
 
-        <div class="services section" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/suit2.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie suit</h4>
-                                <p>
-                                    Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani taburan ayam cincang dan pangsit goreng.
-                                </p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/suit2.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie suit</h4>
+                            <p>
+                                Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
+                                taburan ayam cincang dan pangsit goreng.
+                            </p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/gacoan3.png') }} height="100" width="100"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie Gacoan</h4>
-                                <p>Untuk yang suka manis harus cobain mie yang satu ini. Mie dengan rasa manis,pedas manis buat kamu yang ingin mencoba sensasi pedas manis.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/gacoan3.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie Gacoan</h4>
+                            <p>Untuk yang suka manis harus cobain mie yang satu ini. Mie dengan rasa manis,pedas manis
+                                buat kamu yang ingin mencoba sensasi pedas manis.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/hompimpa.png') }} height="100" width="100"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie Hompimpa</h4>
-                                <p>Semangkuk mie dengan rasa pedas asin yang bakal membuat mulut kamu meledak!!! Dengan toping ayam cincang dan krupuk pangsit.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/hompimpa.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie Hompimpa</h4>
+                            <p>Semangkuk mie dengan rasa pedas asin yang bakal membuat mulut kamu meledak!!! Dengan
+                                toping ayam cincang dan krupuk pangsit.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <br>
     <br>
@@ -242,117 +270,122 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-        <div class="services section" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Siomay</h4>
-                                <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang MANTULLLL!!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Siomay</h4>
+                            <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang
+                                MANTULLLL!!</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Udang Keju</h4>
-                                <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan yummy.</p>
-                                    <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                    <div class="rating">
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Udang Keju</h4>
+                            <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan
+                                yummy.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Lumpia Udang</h4>
-                                <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin TOP MARKOTOP!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Lumpia Udang</h4>
+                            <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin
+                                TOP MARKOTOP!</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/pangsitgoreng.png') }} height="150" width="150"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Pangsit Goreng</h4>
-                                <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya yang renyah.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/pangsitgoreng.png') }} height="150" width="150"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Pangsit Goreng</h4>
+                            <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya
+                                yang renyah.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Udang Rambutan</h4>
-                                <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin aueenduuul polll...</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Udang Rambutan</h4>
+                            <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin
+                                aueenduuul polll...</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
                 <h1 class="button"
-                style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-                Menu Minuman</h1>
+                    style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+                    Menu Minuman</h1>
 
 
                 <div class="services section" id="services">
@@ -407,7 +440,8 @@ https://mo.com/tm-586-scholar
                                     <div class="main-content">
                                         <h4>Es Teklek</h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, commodi.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+                                            commodi.
                                         </p>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -595,7 +629,8 @@ https://mo.com/tm-586-scholar
                                     </div>
                                     <div class="main-content">
                                         <h4>Vanilalte</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!
+                                        </p>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -615,7 +650,8 @@ https://mo.com/tm-586-scholar
                                     <div class="main-content">
                                         <h4>Thaitea</h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, distinctio.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+                                            distinctio.
                                         </p>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -642,104 +678,106 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Rating Tertinggi</h1>
 
-        <div class="team section" id="team">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-member">
-                            <div class="main-content">
-                                <img src="
+    <div class="team section" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
                                 {{ asset('image/sm.png') }}" alt="">
-                                <span class="category">Ranking Peminat</span>
-                                <h4>Siomay</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
-                                <ul class="social-icons">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Siomay</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-member">
-                            <div class="main-content">
-                                <img src="
-                                {{ asset('image/gacoan3.png') }}" alt="">
-                                <span class="category">Ranking Peminat</span>
-                                <h4>Mie Gacoan</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
-                                <ul class="social-icons">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
+                                {{ asset('image/gacoan3.png') }}"
+                                alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Mie Gacoan</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-member">
-                            <div class="main-content">
-                                <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
-                                <span class="category">Ranking Peminat</span>
-                                <h4>Es Gobak Sodor</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
-                                <ul class="social-icons">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Es Gobak Sodor</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-member">
-                            <div class="main-content">
-                                <img src="
-                                    {{ asset('image/uk.png') }} " alt="">
-                                <span class="category">Ranking Peminat</span>
-                                <h4>Udang Keju</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
-                                <ul class="social-icons">
-                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
+                                    {{ asset('image/uk.png') }} "
+                                alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Udang Keju</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
     <div class="section fun-facts">
@@ -782,7 +820,8 @@ https://mo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
+                            <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun
+                                harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
@@ -791,7 +830,8 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Datang lapar, pulang bahagia. kenapa bisa sebahagia itu? karena selain makan dan minumannya yg enak, harga Mie Gacoan ramah di kantong.”
+                            <p>“Datang lapar, pulang bahagia. kenapa bisa sebahagia itu? karena selain makan dan
+                                minumannya yg enak, harga Mie Gacoan ramah di kantong.”
                             </p>
                             <div class="author">
                                 <img src="
@@ -801,7 +841,8 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh.... sesuatuuu bangeet!!. ”</p>
+                            <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh....
+                                sesuatuuu bangeet!!. ”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
@@ -815,7 +856,8 @@ https://mo.com/tm-586-scholar
                     <div class="section-heading">
                         <h6>TESTIMONIALS</h6>
                         <h2>Apa pendapat mereka tentang GACOAN?</h2>
-                        <p>Mie Gacoan" adalah sebuah merk dagang dari jaringan restaurant mie pedas no 1 di indonesia, yang menjadi anak perusahaan PT Pesta Pora Abadi.</p>
+                        <p>Mie Gacoan" adalah sebuah merk dagang dari jaringan restaurant mie pedas no 1 di indonesia,
+                            yang menjadi anak perusahaan PT Pesta Pora Abadi.</p>
                     </div>
                 </div>
             </div>
@@ -837,7 +879,8 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan.jpg" alt="" width="240" height="240">
+                  user/assets/images/gacoan.jpg" alt=""
+                                        width="240" height="240">
                                 </div>
                             </div>
 
@@ -869,7 +912,8 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan2.jpeg" alt="" width="245" height="245">
+                  user/assets/images/gacoan2.jpeg" alt=""
+                                        width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -898,7 +942,8 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan3.jpg" alt=""  width="245" height="245">
+                  user/assets/images/gacoan3.jpg" alt=""
+                                        width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -932,7 +977,8 @@ https://mo.com/tm-586-scholar
                     <div class="section-heading">
                         <h6>Mie Gacoan</h6>
                         <h2>Kuy Guys Order Sekarang!</h2>
-                        <p>Inovasi akan selalu kami kedepankan agar "Mie Gacoan" tetap relevan dan menjadi pilihan terbaik bagi para customer fanatik.</p>
+                        <p>Inovasi akan selalu kami kedepankan agar "Mie Gacoan" tetap relevan dan menjadi pilihan
+                            terbaik bagi para customer fanatik.</p>
                         <div class="special-offer">
                             <span class="offer">off<br><em>50%</em></span>
                             <h6>Valide: <em>24 April 2036</em></h6>
@@ -999,86 +1045,106 @@ https://mo.com/tm-586-scholar
                                         <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
                                     </fieldset>
                                 </div> --}}
-                                <div class="col-lg-6">
-                                    <div class="contact-us-content">
-                                        <form id="contact-form" action="" method="post">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <fieldset>
-                                                        <input type="text" name="nama" id="nama" placeholder="Nama..." autocomplete="on" required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <fieldset>
-                                                        <input type="number" name="no_tlpn" id="no_tlpn" placeholder="No Telepon..." required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <input type="text" name="makanan" id="makanan" placeholder="Makanan..." required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <input type="text" name="minuman" id="minuman" placeholder="Minuman..." required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <input type="text" name="dimsum" id="dimsum" placeholder="Dimsum..." required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <textarea name="noPesanan" id="noPesanan" placeholder="Catatan..." required></textarea>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <fieldset>
-                                                        <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                <div class="col-lg-6">
+                    <div class="contact-us-content">
+                        <form id="contact-form" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <input type="text" name="nama" id="nama" placeholder="Nama..."
+                                            autocomplete="on" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <input type="number" name="no_tlpn" id="no_tlpn"
+                                            placeholder="No Telepon..." required>
+                                    </fieldset>
                                 </div>
 
-                                <script>
-                                    document.getElementById("form-submit").addEventListener("click", function(event) {
-                                        // Hentikan aksi bawaan dari tombol submit
-                                        event.preventDefault();
 
-                                        // Lakukan aksi AJAX untuk mengirimkan formulir
-                                        // Di sini Anda dapat menambahkan kode AJAX untuk mengirimkan formulir
-
-                                        // Setelah formulir berhasil dikirim, redirect ke halaman awal
-                                        window.location.href = "/user2"; // Ganti dengan URL halaman awal Anda
-                                    });
-                                </script>
-
-                                <footer>
-                                    <div class="container">
-                                        <div class="col-lg-12">
-                                            <p>© 2024 Gacoan</p>
-                                        </div>
-                                    </div>
-                                </footer>
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <select class="js-example-basic-multiple" name="states[]"
+                                            multiple="multiple">
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
 
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="
-      user/vendor/jquery/jquery.min.js"></script>
-    <script src="
-      user/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="
-      user/assets/js/isotope.min.js"></script>
-    <script src="
-      user/assets/js/owl-carousel.js"></script>
-    <script src="
-      user/assets/js/counter.js"></script>
-    <script src="
-      user/assets/js/custom.js"></script>
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <input type="text" name="minuman" id="minuman" placeholder="Minuman..."
+                                            required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <input type="text" name="dimsum" id="dimsum" placeholder="Dimsum..."
+                                            required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <textarea name="noPesanan" id="noPesanan" placeholder="Catatan..." required></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="orange-button">Order
+                                            Sekarang</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById("form-submit").addEventListener("click", function(event) {
+                        // Hentikan aksi bawaan dari tombol submit
+                        event.preventDefault();
+
+                        // Lakukan aksi AJAX untuk mengirimkan formulir
+                        // Di sini Anda dapat menambahkan kode AJAX untuk mengirimkan formulir
+
+                        // Setelah formulir berhasil dikirim, redirect ke halaman awal
+                        window.location.href = "/user2"; // Ganti dengan URL halaman awal Anda
+                    });
+                </script>
+
+                <footer>
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <p>© 2024 Gacoan</p>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!-- Scripts -->
+                <!-- Bootstrap core JavaScript -->
+                <script src="
+                                      user/vendor/jquery/jquery.min.js"></script>
+                <script src="
+                                      user/assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="
+                                      user/assets/js/isotope.min.js"></script>
+                <script src="
+                                      user/assets/js/owl-carousel.js"></script>
+                <script src="
+                                      user/assets/js/counter.js"></script>
+                <script src="
+                                      user/assets/js/custom.js"></script>
+
+                <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('.js-example-basic-multiple').select2();
+                    });
+                </script>
 
 </body>
 

@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -23,8 +24,12 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect()->intended('user2');
+            $user = DB::table('users')->where('email', '=', $request->email)->get();
+            if ($user[0]->role == 'admin') {
+                return redirect()->to('dashboard');
+            } else {
+                return redirect()->intended('user2');
+            }
         }
 
         return back()->withErrors([
