@@ -1063,10 +1063,10 @@ https://mo.com/tm-586-scholar
                                 </div>
 
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <fieldset>
                                         <select class="js-example-basic-multiple" name="states[]"
-                                            multiple="multiple">
+                                            multiple="multiple" placeholder="Makanan...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1074,23 +1074,35 @@ https://mo.com/tm-586-scholar
                                 </div>
 
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <fieldset>
-                                        <input type="text" name="minuman" id="minuman" placeholder="Minuman..."
-                                            required>
+                                        <select class="js-example-basic-multiple" name="states[]"
+                                            multiple="multiple" placeholder="Minuman...">
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
                                     </fieldset>
                                 </div>
-                                <div class="col-lg-6">
+
+
+                                <div class="col-lg-12">
                                     <fieldset>
-                                        <input type="text" name="dimsum" id="dimsum" placeholder="Dimsum..."
-                                            required>
+                                        <select class="js-example-basic-multiple" name="states[]"
+                                            multiple="multiple" placeholder="Dimsum...">
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
                                     </fieldset>
                                 </div>
-                                <div class="col-lg-6">
+
+
+                                <div class="col-lg-12">
                                     <fieldset>
-                                        <textarea name="noPesanan" id="noPesanan" placeholder="Catatan..." required></textarea>
+                                        <textarea name="catatan" id="catatan" placeholder="Catatan..." required></textarea>
                                     </fieldset>
                                 </div>
+
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <button type="submit" id="form-submit" class="orange-button">Order
@@ -1102,19 +1114,17 @@ https://mo.com/tm-586-scholar
                     </div>
                 </div>
 
+
                 <script>
                     document.getElementById("form-submit").addEventListener("click", function(event) {
-                        // Hentikan aksi bawaan dari tombol submit
                         event.preventDefault();
-
-                        // Lakukan aksi AJAX untuk mengirimkan formulir
-                        // Di sini Anda dapat menambahkan kode AJAX untuk mengirimkan formulir
-
-                        // Setelah formulir berhasil dikirim, redirect ke halaman awal
                         window.location.href = "/user2"; // Ganti dengan URL halaman awal Anda
                     });
                 </script>
 
+                <br>
+                <br>
+                <br>
                 <footer>
                     <div class="container">
                         <div class="col-lg-12">
@@ -1123,21 +1133,14 @@ https://mo.com/tm-586-scholar
                     </div>
                 </footer>
 
-
                 <!-- Scripts -->
                 <!-- Bootstrap core JavaScript -->
-                <script src="
-                                      user/vendor/jquery/jquery.min.js"></script>
-                <script src="
-                                      user/assets/bootstrap/js/bootstrap.min.js"></script>
-                <script src="
-                                      user/assets/js/isotope.min.js"></script>
-                <script src="
-                                      user/assets/js/owl-carousel.js"></script>
-                <script src="
-                                      user/assets/js/counter.js"></script>
-                <script src="
-                                      user/assets/js/custom.js"></script>
+                <script src="user/vendor/jquery/jquery.min.js"></script>
+                <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="user/assets/js/isotope.min.js"></script>
+                <script src="user/assets/js/owl-carousel.js"></script>
+                <script src="user/assets/js/counter.js"></script>
+                <script src="user/assets/js/custom.js"></script>
 
                 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
                 <script>
