@@ -5,7 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <title>Gacoan</title>
@@ -94,8 +95,10 @@ https://mo.com/tm-586-scholar
                             {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#services">Minuman</a></li> --}}
                             <li class="scroll-to-section"><a href="#contact">Order</a></li>
-                            <li class="scroll-to-section"><a href="#" onclick="document.getElementById('logout-form').submit();" style="color: black">Logout</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            <li class="scroll-to-section"><a href="#"
+                                    onclick="document.getElementById('logout-form').submit();"
+                                    style="color: black">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="get" class="d-none">
                                     @csrf
                                 </form>
                             </li>
@@ -1063,8 +1066,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]"
-                                            multiple="multiple" placeholder="Makanan...">
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
+                                            placeholder="Makanan...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1074,8 +1077,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]"
-                                            multiple="multiple" placeholder="Minuman...">
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
+                                            placeholder="Minuman...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1085,8 +1088,18 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]"
-                                            multiple="multiple" placeholder="Dimsum...">
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
+                                            placeholder="Dimsum...">
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
+                                            placeholder="Level...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1116,7 +1129,7 @@ https://mo.com/tm-586-scholar
                 <script>
                     document.getElementById("form-submit").addEventListener("click", function(event) {
                         event.preventDefault();
-                        window.location.href = "/user2"; // Ganti dengan URL halaman awal Anda
+                        window.location.href = "/user2";
                     });
                 </script>
 

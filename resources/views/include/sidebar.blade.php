@@ -399,7 +399,7 @@
 
     <li class="sidebar-item">
         @auth
-        <form action="{{ route('logout') }}" method="POST">
+        <form action="{{ route('logout') }}" method="get">
             @csrf
             <button class="btn btn-danger">Logout</button>
         </form>
