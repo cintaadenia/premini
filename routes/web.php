@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\DimsumController;
+use App\Http\Controllers\DrinkController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -28,7 +31,11 @@ Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::middleware(['role:admin', 'auth'])->group(function(){
-    Route::get('/dashboard', [dashboardController::class, 'index']);
+    Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/food', [FoodController::class, 'index'])->name('food.index');
+    Route::get('/drink', [DrinkController::class, 'index'])->name('drink.index');
+    Route::get('/dimsum', [DimsumController::class, 'index'])->name('dimsum.index');
+
 
 });
 

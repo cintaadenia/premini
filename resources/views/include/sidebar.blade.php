@@ -27,13 +27,38 @@
 
     <li
         class="sidebar-item  ">
-        <a href="index.html" class='sidebar-link'>
+        <a href="{{ route('dashboard.index') }}" class='sidebar-link'>
             <i class="bi bi-grid-fill"></i>
             <span>Dashboard</span>
         </a>
     </li>
 
     <li
+        class="sidebar-item  ">
+        <a href="{{ route('food.index') }}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>Food</span>
+        </a>
+    </li>
+
+    <li
+        class="sidebar-item  ">
+        <a href="{{ route('drink.index') }}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>Drink</span>
+        </a>
+    </li>
+
+    <li
+        class="sidebar-item  ">
+        <a href="{{ route('dimsum.index') }}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>Dimsum</span>
+        </a>
+    </li>
+
+
+    {{-- <li
         class="sidebar-item  has-sub">
         <a href="#" class='sidebar-link'>
             <i class="bi bi-stack"></i>
@@ -138,7 +163,7 @@
         </ul>
     </li>
 
-    <li class="sidebar-title">Forms &amp; Tables</li>
+    <li class="sidebar-title">Forms &amp; Tables</li> --}}
 {{--
     <li
         class="sidebar-item  has-sub">
