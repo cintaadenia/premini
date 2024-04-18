@@ -911,7 +911,10 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+<<<<<<< HEAD
                                 <a href="#"></i></a>
+=======
+>>>>>>> 09637fd1b5aa6cf7e478d30d2127e268a47ffe3b
                             </div>
                         </div>
                     </div>
@@ -942,11 +945,15 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+<<<<<<< HEAD
                                 <a href="#"></i></a>
+=======
+>>>>>>> 09637fd1b5aa6cf7e478d30d2127e268a47ffe3b
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-12 col-md-6">
                     <div class="item">
                         <div class="row">
@@ -972,7 +979,10 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+<<<<<<< HEAD
                                 <a href="#"></a>
+=======
+>>>>>>> 09637fd1b5aa6cf7e478d30d2127e268a47ffe3b
                             </div>
                         </div>
                     </div>
