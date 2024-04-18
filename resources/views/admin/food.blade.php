@@ -30,9 +30,9 @@
                     Create / Edit Menu Food
                 </div>
                 <div class="card-body">
-                    <!-- Alert -->
+                    {{-- <!-- Alert -->
                     @if (session('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <div class="alert alert-success alert-dismissible fade show  " role="alert">
                             {{ session('success') }}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
@@ -43,7 +43,7 @@
                             {{ session('delete_success') }}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                    @endif
+                    @endif --}}
 
                     <form action="{{ route('food.create') }}" method="POST" id="food">
                         @csrf
