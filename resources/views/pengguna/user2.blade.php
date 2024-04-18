@@ -911,7 +911,7 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                                <a href="#"></i></a>
                             </div>
                         </div>
                     </div>
@@ -942,7 +942,7 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                                <a href="#"></i></a>
                             </div>
                         </div>
                     </div>
@@ -972,7 +972,7 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                                <a href="#"></a>
                             </div>
                         </div>
                     </div>
@@ -994,7 +994,7 @@
                             <span class="offer">off<br><em>50%</em></span>
                             <h6>Valide: <em>24 April 2036</em></h6>
                             <h4>Special Offer <em>50%</em> OFF!</h4>
-                            {{-- <a href="#"><i class="fa fa-angle-right"></i></a> --}}
+                            {{-- <a href="#"></i></a> --}}
                         </div>
                     </div>
                 </div>
