@@ -20,16 +20,15 @@
     <style>
         .select2-container--default .select2-selection--multiple {
             width: 100%;
-            height: 50px;
             border-radius: 25px;
             background-color: rgba(255, 255, 255, 0.15);
             border: none;
             outline: none;
             font-weight: 300;
-            padding: 0px 5px;
             font-size: 14px;
             color: #1b1919;
             margin-bottom: 30px;
+            padding: 14px;
             position: relative;
             z-index: 3;
         }
@@ -37,6 +36,7 @@
         .select2-search__field {
             background-color: transparent !important;
             color: #fff !important;
+            height: 30px;
         }
 
         /* edit inputan select 2 */
@@ -47,7 +47,6 @@
             box-sizing: border-box;
             display: inline-block;
             margin-left: 9px;
-            margin-top: 5px;
             margin-bottom:  5%;
             padding: 0;
             position: relative;
@@ -1005,7 +1004,7 @@
                         <form id="contact-form" action="" method="post">
                             <div class="col-lg-12">
                                 <fieldset style="text-align: center;">
-                                    <input type="file" name="photo" id="photo" accept="image/*" required style="display: inline-block;">
+                                    <input type="file" name="photo" id="photo" accept="image/*" required style="height: 4pc; ">
                                 </fieldset>
                             </div>
 
@@ -1061,8 +1060,8 @@
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button">Order
-                                            Sekarang</button>
+                                        <button type="submit" id="form-submit" class="btn btn-light p-3">Order
+                                            Sekarang!</button>
                                     </fieldset>
                                 </div>
                             </div>

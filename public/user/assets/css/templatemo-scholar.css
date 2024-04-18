@@ -1589,15 +1589,14 @@ Contact Style
   color: #fff;
 }
 
-#contact-form input  {
+#contact-form input {
     width: 100%;
-    height: 50px;
     border-radius: 25px;
     background-color: rgba(249, 235, 255, 0.15);
     border: none;
     outline: none;
     font-weight: 300;
-    padding: 0px 20px;
+    padding: 20px;
     font-size: 14px;
     color: #fff;
     margin-bottom: 30px;
@@ -1611,7 +1610,7 @@ Contact Style
     color: #fff;
   }
 
-  #contact-form textarea {
+  textarea#catatan {
     width: 100%;
     min-height: 50px; /* Mengatur ketinggian minimal */
     border-radius: 25px;
@@ -1627,6 +1626,10 @@ Contact Style
     z-index: 3;
 }
 
+textarea#catatan::placeholder {
+    color: #fff;
+}
+
 #contact-form textarea::placeholder {
     color: #fff;
 }
@@ -1636,11 +1639,9 @@ Contact Style
 #contact-form button {
         border: none;
         width: auto; /* Mengembalikan lebar ke otomatis */
-        height: 30px;
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 600;
-        background-color: #fff;
-        padding: 0px 10px; /* Mengurangi padding */
+        padding: 0px 5px; /* Mengurangi padding */
         border-radius: 15px; /* Mengurangi radius border */
         color: #7a6ad8;
         transition: all .4s;
