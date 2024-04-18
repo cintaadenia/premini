@@ -2,38 +2,33 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
     <title>Gacoan</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- Bootstrap core CSS -->
-    <link href="
-    user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
     <style>
         .select2-container--default .select2-selection--multiple {
             width: 100%;
             height: 50px;
             border-radius: 25px;
-            background-color: rgba(249, 235, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.15);
             border: none;
             outline: none;
             font-weight: 300;
-            padding: 0px 20px;
+            padding: 0px 5px;
             font-size: 14px;
-            color: #fff;
+            color: #1b1919;
             margin-bottom: 30px;
             position: relative;
             z-index: 3;
@@ -41,16 +36,31 @@
 
         .select2-search__field {
             background-color: transparent !important;
-            /* color: #fff !important; */
+            color: #fff !important;
+        }
+
+        /* edit inputan select 2 */
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #f2e3f7;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: inline-block;
+            margin-left: 9px;
+            margin-top: 5px;
+            margin-bottom:  5%;
+            padding: 0;
+            position: relative;
+            max-width: 100%;
+            height: 45px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: bottom;
+            white-space: nowrap;
         }
     </style>
-    <!--
 
-Mo 586 Scholar
 
-https://mo.com/tm-586-scholar
-
--->
 </head>
 
 <body>
@@ -1050,6 +1060,7 @@ https://mo.com/tm-586-scholar
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post">
                             <div class="row">
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <input type="text" name="nama" id="nama" placeholder="Nama..."
@@ -1066,8 +1077,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                            placeholder="Makanan...">
+                                        <select class="js-example-basic-multiple text-white form-select"
+                                            multiple="multiple" name="states[]" data-placeholder="pilih Makanan...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1077,8 +1088,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                            placeholder="Minuman...">
+                                        <select class="js-example-basic-multiple text-white form-control"
+                                            name="states[]" multiple="multiple" data-placeholder="Pilih Minuman...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1088,8 +1099,8 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                            placeholder="Dimsum...">
+                                        <select class="js-example-basic-multiple text-white form-control"
+                                            name="states[]" multiple="multiple" data-placeholder="Pilih Dimsum...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
@@ -1098,20 +1109,10 @@ https://mo.com/tm-586-scholar
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                            placeholder="Level...">
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
-                                        </select>
+                                        <textarea name="catatan" id="catatan" placeholder="Catatan..." autocomplete="on" required></textarea>
                                     </fieldset>
                                 </div>
 
-
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="catatan" id="catatan" placeholder="Catatan..." required></textarea>
-                                    </fieldset>
-                                </div>
 
 
                                 <div class="col-lg-12">
@@ -1159,6 +1160,7 @@ https://mo.com/tm-586-scholar
                         $('.js-example-basic-multiple').select2();
                     });
                 </script>
+
 
 </body>
 
