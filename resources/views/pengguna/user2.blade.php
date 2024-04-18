@@ -911,7 +911,6 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -942,11 +941,11 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-12 col-md-6">
                     <div class="item">
                         <div class="row">
@@ -972,7 +971,6 @@
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
