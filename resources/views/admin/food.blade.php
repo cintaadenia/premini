@@ -38,6 +38,8 @@
                         </div>
                     @endif
 
+                    
+
                     @if (session('delete_success'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                             {{ session('delete_success') }}
