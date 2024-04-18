@@ -31,13 +31,6 @@
                 Create / Edit Menu Food
             </div>
             <div class="card-body">
-                        <!-- Alert -->
-                        @if (session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
 
                         <form action="{{ route('food.update', $food->id) }}" method="POST" id="food">
                             @csrf

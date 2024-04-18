@@ -998,64 +998,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-6">
-                    <div class="contact-us-content">
-                        <form id="contact-form" action="" method="post">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="name" name="nama" id="nama"
-                                            placeholder="Nama..." autocomplete="on" required>
-                                    </fieldset>
-                                </div>
 
-
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="number" name="no_tlpn" id="no_tlpn" pattern="[^ @]*@[^ @]*"
-                                            placeholder="No Tepephone..." required="">
-                                    </fieldset>
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="text" name="makanan" id="makanan" pattern="[^ @]*@[^ @]*"
-                                                placeholder="Makanan..." required="">
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="text" name="minuman" id="minuman" pattern="[^ @]*@[^ @]*"
-                                                placeholder="Minuman..." required="">
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="text" name="dimsum" id="dimsum" pattern="[^ @]*@[^ @]*"
-                                                placeholder="Dimsum..." required="">
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <textarea name="noPesanan" id="noPesanan" placeholder="catatan..." required=""></textarea>
-                                        </fieldset>
-                                    </div>
-
-                                </div>
-
-
-                                <br>
-                                <br>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button">Order Sekarang</button>
-                                    </fieldset>
-                                </div> --}}
                 <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post">
@@ -1078,7 +1021,7 @@
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <select class="js-example-basic-multiple text-white form-select"
-                                            multiple="multiple" name="states[]" data-placeholder="pilih Makanan...">
+                                            multiple="multiple" name="states[]" data-placeholder="Pilih Makanan...">
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
