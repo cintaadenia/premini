@@ -25,10 +25,11 @@
         <div class="mx-auto">
             <!-- untuk memasukkan data -->
             <h2 style="text-align: center;">Menu Dimsum</h2>
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-primary">
-                    Create / Edit Menu Dimsum
+                    Tambah Menu Dimsum
                 </div>
+                <br>
                 <div class="card-body">
 
                     <form action="{{ route('dimsum.create') }}" method="POST" id="dimsum">
@@ -46,7 +47,7 @@
 
 
                         <div class="col-12">
-                            <input type="submit" name="simpan" value="Simpan Data" style="border-radius: 50px;"
+                            <input type="submit" name="simpan" value="Tambah +" style="border-radius: 50px;"
                                 class="btn btn-primary">
                         </div>
 
@@ -56,7 +57,7 @@
 
 
             <!-- untuk mengeluarkan data -->
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-black">
                     Data Menu Dimsum
                 </div>
@@ -74,7 +75,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $dm->dimsum }}</td>
                                     <td scope="row">
-                                        <a href="" class="btn btn-warning">
+                                        <a href="{{ route('dimsum.edit', $dm->id) }}" class="btn btn-warning">
                                             <i class="fas fa-edit"></i>
                                         </a> |
 
@@ -106,4 +107,4 @@
         }
     </script>
 
-    @endsection
+@endsection

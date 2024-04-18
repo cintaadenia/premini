@@ -54,7 +54,7 @@ class DrinkController extends Controller
 
         Drink::create($validatedData);
 
-        return redirect()->route('admin.drink')->with('success', 'Drink created successfully.');
+        return redirect()->route('admin.drink')->with('success', 'Data Drink berhasil Diupdate');
     }
 
     /**
@@ -70,7 +70,8 @@ class DrinkController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $drink = Drink::findOrFail($id); // Mengambil data post berdasarkan ID
+        return view('admin.editdrink', compact('drink'));
     }
 
     /**
@@ -78,7 +79,19 @@ class DrinkController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        {
+            $drink = Drink::findOrFail($id);
+            $drink = $request->validate([
+                'drink' => 'required|string|max:255',
+            ]);
+
+            $drink = Drink::findOrFail($id);
+
+            $drink->update($request->all());
+            $drink->save();
+
+            return to_route('drink.index')->with('success', 'Food updated successfully.');
+        }
     }
 
     /**

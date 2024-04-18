@@ -25,10 +25,11 @@
         <div class="mx-auto">
             <!-- untuk memasukkan data -->
             <h2 style="text-align: center;">Menu Drink</h2>
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-primary">
-                    Create / Edit Menu Drink
+                    Tambah Menu Drink
                 </div>
+                <br>
                 <div class="card-body">
 
                     <form action="{{ route('drink.create') }}" method="POST" id="drink">
@@ -47,7 +48,7 @@
 
 
                         <div class="col-12">
-                            <input type="submit" name="simpan" value="Simpan Data" style="border-radius: 50px;"
+                            <input type="submit" name="simpan" value="Tambah +" style="border-radius: 50px;"
                                 class="btn btn-primary">
                         </div>
 
@@ -57,7 +58,7 @@
 
 
             <!-- untuk mengeluarkan data -->
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-black">
                     Data Menu Drink
                 </div>
@@ -75,7 +76,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $m->drink }}</td>
                                     <td scope="row">
-                                        <a href="" class="btn btn-warning">
+                                        <a href="{{ route('drink.edit', $m->id) }}" class="btn btn-warning">
                                             <i class="fas fa-edit"></i>
                                         </a> |
 
@@ -98,13 +99,13 @@
             </div>
         </div>
 
-        <script>
-            // Function untuk konfirmasi sebelum menghapus
-            function confirmDelete(id) {
-                if (confirm('Yakin Ingin Menghapus Data?')) {
-                    document.getElementById('deleteForm'+id).submit();
-                }
-            }
-        </script>
+
+<script>
+    function confirmDelete(id) {
+        if (confirm('Yakin Ingin Menghapus Data?')) {
+            document.getElementById('deleteForm'+id).submit();
+        }
+    }
+</script>
 
     @endsection

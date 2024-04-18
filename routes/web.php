@@ -37,19 +37,25 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/food', [FoodController::class, 'index'])->name('food.index');
     Route::post('/food/create', [FoodController::class, 'create'])->name('food.create');
     Route::delete('/food/destroy/{id}', [FoodController::class, 'destroy'])->name('food.destroy');
-    Route::get('/food/update/{id}', [FoodController::class, 'update'])->name('food.update');
+    Route::put('/food/update/{id}', [FoodController::class, 'update'])->name('food.update');
+    Route::get('/food/edit/{id}', [FoodController::class, 'edit'])->name('food.edit');
+
 
 
     //Drink
     Route::get('/drink', [DrinkController::class, 'index'])->name('drink.index');
     Route::post('/drink/create', [DrinkController::class, 'create'])->name('drink.create');
     Route::delete('/drink/destroy/{id}', [DrinkController::class, 'destroy'])->name('drink.destroy');
+    Route::put('/drink/update/{id}', [DrinkController::class, 'update'])->name('drink.update');
+    Route::get('/drink/edit/{id}', [DrinkController::class, 'edit'])->name('drink.edit');
 
 
     //Dimsum
     Route::get('/dimsum', [DimsumController::class, 'index'])->name('dimsum.index');
     Route::post('/dimsum/create', [DimsumController::class, 'create'])->name('dimsum.create');
     Route::delete('/dimsum/destroy/{id}', [DimsumController::class, 'destroy'])->name('dimsum.destroy');
+    Route::put('/dimsum/update/{id}', [DimsumController::class, 'update'])->name('dimsum.update');
+    Route::get('/dimsum/edit/{id}', [DimsumController::class, 'edit'])->name('dimsum.edit');
 
 
 

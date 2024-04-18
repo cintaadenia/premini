@@ -70,7 +70,8 @@ class FoodController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $food = Food::findOrFail($id); // Mengambil data post berdasarkan ID
+        return view('admin.editfood', compact('food'));
     }
 
     /**
@@ -79,16 +80,17 @@ class FoodController extends Controller
     public function update(Request $request, $id)
     {
         {
-            // Validasi data yang diterima dari formulir
+            $food = Food::findOrFail($id);
             $food = $request->validate([
                 'food' => 'required|string|max:255',
             ]);
 
             $food = Food::findOrFail($id);
 
-            $food->update($food);
+            $food->update($request->all());
+            $food->save();
 
-            return redirect()->back()->with('success', 'Food updated successfully.');
+            return to_route('food.index')->with('success', 'Data Food berhasil Diupdate');
         }
     }
 

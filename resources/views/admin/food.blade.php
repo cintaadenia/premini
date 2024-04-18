@@ -25,10 +25,11 @@
         <div class="mx-auto">
             <!-- untuk memasukkan data -->
             <h2 style="text-align: center;">Menu Food</h2>
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-primary">
-                    Create / Edit Menu Food
+                    Tambah Menu Food
                 </div>
+                <br>
                 <div class="card-body">
 
                     <form action="{{ route('food.create') }}" method="POST" id="food">
@@ -46,7 +47,7 @@
                         </div>
 
                         <div class="col-12">
-                            <input type="submit" name="simpan" value="Tambah Food" style="border-radius: 50px;" class="btn btn-primary">
+                            <input type="submit" name="simpan" value="Tambah +" style="border-radius: 50px;" class="btn btn-primary">
                         </div>
 
                     </form>
@@ -55,7 +56,7 @@
 
 
             <!-- untuk mengeluarkan data -->
-            <div class="card">
+            <div class="card border">
                 <div class="card-header text-white bg-black">
                     Data Menu Food
                 </div>
@@ -73,7 +74,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $f->food }}</td>
                                 <td scope="row">
-                                    <a href="{{ route('food.update', $f->id) }}" class="btn btn-warning">
+                                    <a href="{{ route('food.edit', $f->id) }}" class="btn btn-warning">
                                         <i class="fas fa-edit"></i>
                                     </a> |
 

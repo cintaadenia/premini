@@ -31,7 +31,7 @@ class DimsumController extends Controller
                 'dimsum' => $request->dimsum,
             ]);
 
-            return redirect()->back()->with('success', 'Data Drink berhasil ditambahkan');
+            return redirect()->back()->with('success', 'Data Dimsum berhasil ditambahkan');
         } catch (QueryException $e) {
             $errorCode = $e->errorInfo[1];
             if ($errorCode === 1062) {
@@ -72,7 +72,8 @@ class DimsumController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dimsum = Dimsum::findOrFail($id); // Mengambil data post berdasarkan ID
+        return view('admin.editdimsum', compact('dimsum'));
     }
 
     /**
@@ -80,7 +81,19 @@ class DimsumController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        {
+            $dimsum = Dimsum::findOrFail($id);
+            $dimsum = $request->validate([
+                'dimsum' => 'required|string|max:255',
+            ]);
+
+            $dimsum = Dimsum::findOrFail($id);
+
+            $dimsum->update($request->all());
+            $dimsum->save();
+
+            return to_route('dimsum.index')->with('success', 'Data Dimsum berhasil Diupdate');
+        }
     }
 
     /**

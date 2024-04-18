@@ -25,22 +25,22 @@
 
             <div class="mx-auto">
                 <!-- untuk memasukkan data -->
-                <h2 style="text-align: center;">Edit Menu Food</h2>
+                <h2 style="text-align: center;">Edit Menu Dimsum</h2>
                 <div class="card border">
                     <div class="card-header text-white bg-primary">
-                        Edit Menu Food
+                        Edit Menu Dimsum
                     </div>
                     <br>
                     <div class="card-body">
 
-                        <form action="{{ route('food.update', $food->id) }}" method="POST" id="food">
+                        <form action="{{ route('dimsum.update', $dimsum->id) }}" method="POST" id="food">
                             @csrf
                             @method('PUT')
                             <div class="mb-3 row">
-                                <label for="food" class="col-sm-2 col-form-label">Food</label>
+                                <label for="dimsum" class="col-sm-2 col-form-label">Dimsum</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" id="food" rows="3" placeholder="Edit Food"
-                                        name="food" value="{{ $food['food'] }}">
+                                    <input class="form-control" id="dimsum" rows="3" placeholder="Edit Dimsum"
+                                        name="dimsum" value="{{ $dimsum['dimsum'] }}">
                                     @error('food')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
