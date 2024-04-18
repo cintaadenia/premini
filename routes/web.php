@@ -32,9 +32,25 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard.index');
+
+    //Food
     Route::get('/food', [FoodController::class, 'index'])->name('food.index');
+    Route::post('/food/create', [FoodController::class, 'create'])->name('food.create');
+    Route::delete('/food/destroy/{id}', [FoodController::class, 'destroy'])->name('food.destroy');
+    Route::get('/food/update/{id}', [FoodController::class, 'update'])->name('food.update');
+
+
+    //Drink
     Route::get('/drink', [DrinkController::class, 'index'])->name('drink.index');
+    Route::post('/drink/create', [DrinkController::class, 'create'])->name('drink.create');
+    Route::delete('/drink/destroy/{id}', [DrinkController::class, 'destroy'])->name('drink.destroy');
+
+
+    //Dimsum
     Route::get('/dimsum', [DimsumController::class, 'index'])->name('dimsum.index');
+    Route::post('/dimsum/create', [DimsumController::class, 'create'])->name('dimsum.create');
+    Route::delete('/dimsum/destroy/{id}', [DimsumController::class, 'destroy'])->name('dimsum.destroy');
+
 
 
 });

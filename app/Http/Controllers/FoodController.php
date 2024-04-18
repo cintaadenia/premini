@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Food;
+use Illuminate\Database\QueryException;
 class FoodController extends Controller
 {
     /**
@@ -11,15 +12,34 @@ class FoodController extends Controller
      */
     public function index()
     {
-        return view('admin.food');
+        $food = Food::get();
+        return view('admin.food', compact('food'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        try {
+            // Validasi input
+            $request->validate(Food::rules());
+
+            $food = Food::create([
+                'food' => $request->food,
+            ]);
+
+            return redirect()->back()->with('success', 'Data Food berhasil ditambahkan');
+        } catch (QueryException $e) {
+            $errorCode = $e->errorInfo[1];
+            if ($errorCode === 1062) {
+                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada');
+            } else {
+                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
+        }
     }
 
     /**
@@ -27,7 +47,13 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'food' => 'required|string|max:255',
+        ]);
+
+        Food::create($validatedData);
+
+        return redirect()->route('admin.food')->with('success', 'Dimsum created successfully.');
     }
 
     /**
@@ -49,9 +75,20 @@ class FoodController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        {
+            // Validasi data yang diterima dari formulir
+            $validatedData = $request->validate([
+                'food' => 'required|string|max:255',
+            ]);
+
+            $food = Food::findOrFail($id);
+
+            $food->update($validatedData);
+
+            return redirect()->back()->with('success', 'Food updated successfully.');
+        }
     }
 
     /**
@@ -59,6 +96,12 @@ class FoodController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $food = Food::findOrFail($id);
+            $food->delete();
+            return redirect()->back()->with('success', 'Data Food berhasil dihapus');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Gagal menghapus data Food, karena data sedang digunakan! ');
+        }
     }
 }
