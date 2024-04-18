@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('pengguna.index');
 });
 
-Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
+Route::get('/user2', [User2Controller::class, 'user2'])->name('user2')->middleware('auth');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
@@ -62,13 +62,16 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
 });
 
 //LOGOUT
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
-//LOGIN
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/log', [LoginController::class, 'login'])->name('login.store');
+Route::middleware('guest')->group(function(){
 
-//REGISTER
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
+    //LOGIN
+    Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+    Route::post('/log', [LoginController::class, 'login'])->name('login.store');
+
+    //REGISTER
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
+});
 

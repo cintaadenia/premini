@@ -1022,8 +1022,13 @@
                                     <fieldset>
                                         <select class="js-example-basic-multiple text-white form-select"
                                             multiple="multiple" name="states[]" data-placeholder="Pilih Makanan...">
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
+                                            @forelse ($foods as $food)
+                                            <option value="{{$food->id}}">{{$food->food}}</option>
+
+                                            @empty
+                                            <option>Belum ada makanan</option>
+
+                                            @endforelse
                                         </select>
                                     </fieldset>
                                 </div>
