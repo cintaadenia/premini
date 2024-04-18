@@ -175,7 +175,7 @@ https://mo.com/tm-586-scholar
                                 <p>
                                     Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani taburan ayam cincang dan pangsit goreng.
                                 </p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp 9.5K</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -248,7 +248,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <h4>Siomay</h4>
                                 <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang MANTULLLL!!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -269,7 +269,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <h4>Udang Keju</h4>
                                 <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan yummy.</p>
-                                    <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                    <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                     <div class="rating">
                                         <i class="fas fa-star" style="color: gold;"></i>
                                         <i class="fas fa-star" style="color: gold;"></i>
@@ -290,7 +290,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <h4>Lumpia Udang</h4>
                                 <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin TOP MARKOTOP!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -312,7 +312,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <h4>Pangsit Goreng</h4>
                                 <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya yang renyah.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp 9.6K</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -333,7 +333,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <h4>Udang Rambutan</h4>
                                 <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin aueenduuul polll...</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -360,10 +360,11 @@ https://mo.com/tm-586-scholar
                                             alt="online degrees">
                                     </div>
                                     <div class="main-content">
-                                        <h4>Es Teh</h4>
+                                        <h4>Es Tea</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quidem.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 4.1K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -383,6 +384,7 @@ https://mo.com/tm-586-scholar
                                     <div class="main-content">
                                         <h4>Es Coklat</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, alias!</p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -404,6 +406,7 @@ https://mo.com/tm-586-scholar
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, commodi.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.9K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -429,10 +432,11 @@ https://mo.com/tm-586-scholar
                                             alt="online degrees">
                                     </div>
                                     <div class="main-content">
-                                        <h4>Es GobakSodor</h4>
+                                        <h4>Es Gobak Sodor</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, distinctio.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -450,8 +454,9 @@ https://mo.com/tm-586-scholar
                                             alt="online degrees">
                                     </div>
                                     <div class="main-content">
-                                        <h4>GreenTea</h4>
+                                        <h4>Green Tea</h4>
                                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, cumque.</p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -473,6 +478,7 @@ https://mo.com/tm-586-scholar
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolorum.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.9K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -502,6 +508,7 @@ https://mo.com/tm-586-scholar
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, facere.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.0K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -522,6 +529,7 @@ https://mo.com/tm-586-scholar
                                         <h4>Milo</h4>
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nam!
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -543,6 +551,7 @@ https://mo.com/tm-586-scholar
                                         <p>
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, autem?
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 6.4K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -572,6 +581,7 @@ https://mo.com/tm-586-scholar
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, placeat.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 4.1K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -589,8 +599,9 @@ https://mo.com/tm-586-scholar
                                             alt="online degrees">
                                     </div>
                                     <div class="main-content">
-                                        <h4>Vanilalte</h4>
+                                        <h4>Vanilla latte</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!</p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -608,10 +619,11 @@ https://mo.com/tm-586-scholar
                                             alt="online degrees">
                                     </div>
                                     <div class="main-content">
-                                        <h4>Thaitea</h4>
+                                        <h4>Thai Tea</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, distinctio.
                                         </p>
+                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -832,7 +844,8 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan.jpg" alt="" width="240" height="240">
+                  user/assets/images/gacoan.jpg" alt=""
+                                        width="240" height="240">
                                 </div>
                             </div>
 
@@ -852,6 +865,7 @@ https://mo.com/tm-586-scholar
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+                                <a href="#"></i></a>
                             </div>
                         </div>
                     </div>
@@ -863,7 +877,8 @@ https://mo.com/tm-586-scholar
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan2.jpeg" alt="" width="245" height="245">
+                  user/assets/images/gacoan2.jpeg" alt=""
+                                        width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -881,18 +896,20 @@ https://mo.com/tm-586-scholar
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+                                <a href="#"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-12 col-md-6">
                     <div class="item">
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
                                     <img src="
-                  user/assets/images/gacoan3.jpg" alt=""  width="245" height="245">
+                  user/assets/images/gacoan3.jpg" alt=""
+                                        width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -910,6 +927,7 @@ https://mo.com/tm-586-scholar
                                         <h6>24 Jam</h6>
                                     </li>
                                 </ul>
+                                <a href="#"></a>
                             </div>
                         </div>
                     </div>
@@ -917,7 +935,6 @@ https://mo.com/tm-586-scholar
             </div>
         </div>
     </div>
-
 
     <footer>
         <div class="container">
