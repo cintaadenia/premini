@@ -1059,14 +1059,14 @@
                 <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post">
-                            <div class="row">
+                            <div class="col-lg-12">
+                                <fieldset style="text-align: center;">
+                                    <input type="file" name="photo" id="photo" accept="image/*" required style="display: inline-block;">
+                                </fieldset>
+                            </div>
 
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="text" name="nama" id="nama" placeholder="Nama..."
-                                            autocomplete="on" required>
-                                    </fieldset>
-                                </div>
+
+
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <input type="number" name="no_tlpn" id="no_tlpn"
