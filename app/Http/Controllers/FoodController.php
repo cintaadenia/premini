@@ -30,6 +30,7 @@ class FoodController extends Controller
             ]);
 
             return redirect()->back()->with('success', 'Data Food berhasil ditambahkan');
+
         } catch (QueryException $e) {
             $errorCode = $e->errorInfo[1];
             if ($errorCode === 1062) {
@@ -79,13 +80,13 @@ class FoodController extends Controller
     {
         {
             // Validasi data yang diterima dari formulir
-            $validatedData = $request->validate([
+            $food = $request->validate([
                 'food' => 'required|string|max:255',
             ]);
 
             $food = Food::findOrFail($id);
 
-            $food->update($validatedData);
+            $food->update($food);
 
             return redirect()->back()->with('success', 'Food updated successfully.');
         }
