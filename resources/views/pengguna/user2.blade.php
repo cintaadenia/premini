@@ -1055,6 +1055,21 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
+                                    <select class="js-example-basic-multiple text-white form-select"
+                                        multiple="multiple" name="states[]" data-placeholder="Pilih Makanan...">
+                                        @forelse ($levels as $level)
+                                            <option value="{{ $level->id }}">{{ $level->level }}</option>
+
+                                        @empty
+                                            <option>Level tidak tersedia</option>
+                                        @endforelse
+                                    </select>
+                                </fieldset>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select" name="states[]"
                                         multiple="multiple" data-placeholder="Pilih Minuman...">
                                         @forelse ($drinks as $drink)

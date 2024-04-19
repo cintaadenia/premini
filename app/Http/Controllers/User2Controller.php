@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Food;
+use App\Models\Level;
 use Illuminate\Http\Request;
 
 class User2Controller extends Controller
@@ -13,19 +14,22 @@ class User2Controller extends Controller
         $foods = Food::all();
         $drinks = Drink::all();
         $dimsums = Dimsum::all();
+        $leves = Level::all();
         return view('pengguna.user2', compact('foods', 'drinks', 'dimsums'));
     }
 
     public function drink(){
         $drinks = Drink::all();
         return view('pengguna.user2',compact('drinks'));
-
     }
 
     public function dimsum(){
         $dimsums = Dimsum::all();
         return view('pengguna.user2',compact('dimsums'));
-
     }
 
+    public function level(){
+        $dlevels = Level::all();
+        return view('pengguna.user2',compact('levels'));
+    }
 }

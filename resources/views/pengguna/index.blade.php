@@ -114,16 +114,16 @@ https://mo.com/tm-586-scholar
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Siang-Siang Tuh Kalemin aja guys</h2>
                                 <p>"Kreasikan Hidanganmu dengan Mie Gacoan, Selalu Berkesan!"</p>
-                                    <div class="buttons">
-                                        <div class="main-button">
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                            </div>
+                                <div class="buttons">
+                                    <div class="main-button">
+                                        <div class="rating">
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -134,16 +134,16 @@ https://mo.com/tm-586-scholar
                                 <span class="category">Mie Gacoan</span>
                                 <h2>Ujian Terberat adalah Macet, solusinya Mie Gacoan</h2>
                                 <p>"Setiap Gigitan Mie Gacoan, Sebuah Petualangan Rasa!"</p>
-                                    <div class="buttons">
-                                        <div class="main-button">
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                            </div>
+                                <div class="buttons">
+                                    <div class="main-button">
+                                        <div class="rating">
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,73 +162,77 @@ https://mo.com/tm-586-scholar
         Menu Makanan</h1>
 
 
-        <div class="services section" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/suit2.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie suit</h4>
-                                <p>
-                                    Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani taburan ayam cincang dan pangsit goreng.
-                                </p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 9.5K</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/suit2.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie suit</h4>
+                            <p>
+                                Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
+                                taburan ayam cincang dan pangsit goreng.
+                            </p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 9.5K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/gacoan3.png') }} height="100" width="100"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie Gacoan</h4>
-                                <p>Untuk yang suka manis harus cobain mie yang satu ini. Mie dengan rasa manis,pedas manis buat kamu yang ingin mencoba sensasi pedas manis.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/gacoan3.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie Gacoan</h4>
+                            <p>Untuk yang suka manis harus cobain mie yang satu ini. Mie dengan rasa manis,pedas manis
+                                buat kamu yang ingin mencoba sensasi pedas manis.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/hompimpa.png') }} height="100" width="100"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Mie Hompimpa</h4>
-                                <p>Semangkuk mie dengan rasa pedas asin yang bakal membuat mulut kamu meledak!!! Dengan toping ayam cincang dan krupuk pangsit.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/hompimpa.png') }} height="100" width="100"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Mie Hompimpa</h4>
+                            <p>Semangkuk mie dengan rasa pedas asin yang bakal membuat mulut kamu meledak!!! Dengan
+                                toping ayam cincang dan krupuk pangsit.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <br>
     <br>
@@ -237,117 +241,122 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-        <div class="services section" id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Siomay</h4>
-                                <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang MANTULLLL!!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Siomay</h4>
+                            <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang
+                                MANTULLLL!!</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Udang Keju</h4>
-                                <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan yummy.</p>
-                                    <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                    <div class="rating">
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Udang Keju</h4>
+                            <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan
+                                yummy.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Lumpia Udang</h4>
-                                <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin TOP MARKOTOP!</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Lumpia Udang</h4>
+                            <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin
+                                TOP MARKOTOP!</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="far fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/pangsitgoreng.png') }} height="150" width="150"
-                                    alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Pangsit Goreng</h4>
-                                <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya yang renyah.</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 9.6K</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/pangsitgoreng.png') }} height="150" width="150"
+                                alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Pangsit Goreng</h4>
+                            <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya
+                                yang renyah.</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 9.6K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
-                            </div>
-                            <div class="main-content">
-                                <h4>Udang Rambutan</h4>
-                                <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin aueenduuul polll...</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src={{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Udang Rambutan</h4>
+                            <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin
+                                aueenduuul polll...</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                         </div>
                     </div>
+                </div>
 
                 <h1 class="button"
-                style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-                Menu Minuman</h1>
+                    style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+                    Menu Minuman</h1>
 
 
                 <div class="services section" id="services">
@@ -404,7 +413,8 @@ https://mo.com/tm-586-scholar
                                     <div class="main-content">
                                         <h4>Es Teklek</h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, commodi.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+                                            commodi.
                                         </p>
                                         <h6 style="color: rgb(255, 0, 0)">Rp 5.9K</h6>
                                         <div class="rating">
@@ -600,7 +610,8 @@ https://mo.com/tm-586-scholar
                                     </div>
                                     <div class="main-content">
                                         <h4>Vanilla latte</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!
+                                        </p>
                                         <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
                                             <i class="fas fa-star" style="color: gold;"></i>
@@ -621,7 +632,8 @@ https://mo.com/tm-586-scholar
                                     <div class="main-content">
                                         <h4>Thai Tea</h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, distinctio.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+                                            distinctio.
                                         </p>
                                         <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
                                         <div class="rating">
@@ -789,7 +801,8 @@ https://mo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
+                            <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun
+                                harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
@@ -798,7 +811,8 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Datang lapar, pulang bahagia. kenapa bisa sebahagia itu? karena selain makan dan minumannya yg enak, harga Mie Gacoan ramah di kantong.”
+                            <p>“Datang lapar, pulang bahagia. kenapa bisa sebahagia itu? karena selain makan dan
+                                minumannya yg enak, harga Mie Gacoan ramah di kantong.”
                             </p>
                             <div class="author">
                                 <img src="
@@ -808,7 +822,8 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh.... sesuatuuu bangeet!!. ”</p>
+                            <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh....
+                                sesuatuuu bangeet!!. ”</p>
                             <div class="author">
                                 <img src="
                 user/assets/images/testimonial-author.jpg" alt="">
@@ -822,7 +837,8 @@ https://mo.com/tm-586-scholar
                     <div class="section-heading">
                         <h6>TESTIMONIALS</h6>
                         <h2>Apa pendapat mereka tentang GACOAN?</h2>
-                        <p>Mie Gacoan" adalah sebuah merk dagang dari jaringan restaurant mie pedas no 1 di indonesia, yang menjadi anak perusahaan PT Pesta Pora Abadi.</p>
+                        <p>Mie Gacoan" adalah sebuah merk dagang dari jaringan restaurant mie pedas no 1 di indonesia,
+                            yang menjadi anak perusahaan PT Pesta Pora Abadi.</p>
                     </div>
                 </div>
             </div>
@@ -947,17 +963,17 @@ https://mo.com/tm-586-scholar
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="
-      user/vendor/jquery/jquery.min.js"></script>
+          user/vendor/jquery/jquery.min.js"></script>
     <script src="
-      user/assets/bootstrap/js/bootstrap.min.js"></script>
+          user/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="
-      user/assets/js/isotope.min.js"></script>
+          user/assets/js/isotope.min.js"></script>
     <script src="
-      user/assets/js/owl-carousel.js"></script>
+          user/assets/js/owl-carousel.js"></script>
     <script src="
-      user/assets/js/counter.js"></script>
+          user/assets/js/counter.js"></script>
     <script src="
-      user/assets/js/custom.js"></script>
+          user/assets/js/custom.js"></script>
 
 </body>
 
