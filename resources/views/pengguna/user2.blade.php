@@ -117,6 +117,8 @@
                                 function changeColor() {
                                     alert("Yakin Log out?.");
                                 }
+
+
                             </script>
                         </ul>
                         <a class='menu-trigger'>
