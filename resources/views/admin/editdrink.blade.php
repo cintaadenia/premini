@@ -20,6 +20,8 @@
     </style>
 
 
+<body>
+
     <div class="mx-auto">
         <!-- untuk memasukkan data -->
         <h2 style="text-align: center;">Edit Menu Drink</h2>
@@ -30,19 +32,51 @@
             <br>
             <div class="card-body">
 
-                <form action="{{ route('drink.update', $drink->id) }}" method="POST" id="food">
+                <form action="{{ route('drink.update', $drink->id) }}" method="POST" id="drink">
                     @csrf
                     @method('PUT')
                     <div class="mb-3 row">
-                        <label for="drink" class="col-sm-2 col-form-label">Dimsum</label>
+                        <label for="drink" class="col-sm-2 col-form-label">drink</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="drink" rows="3" placeholder="Edit Drink"
+                            <input class="form-control" id="drink" rows="3" placeholder="Edit drink"
                                 name="drink" value="{{ $drink['drink'] }}">
-                            @error('food')
+                            @error('drink')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
+
+                    <div class="mb-3 row">
+                        <label for="price" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="price" rows="3" placeholder="Edit price"
+                                name="price" value="{{ $drink['price'] }}">
+                            @error('price')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3 row">
+                        <label for="stock" class="col-sm-2 col-form-label">Stock</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="price" rows="3" placeholder="Edit stock"
+                                name="stock" value="{{ $drink['stock'] }}">
+                            @error('stock')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="image" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                            <img src="{{ asset('storage/'. $drink->image) }}" alt="" width="400">
+                            <input class="form-control" type="file" id="image" name="image" rows="3">
+                        </div>
+                    </div>
+
                     <br>
                     <nav class="navbar bg-body-tertiary">
                         <button class="btn btn-outline-success me-2" type="submit" id="submitForm">
