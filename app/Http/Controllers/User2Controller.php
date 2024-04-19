@@ -14,8 +14,8 @@ class User2Controller extends Controller
         $foods = Food::all();
         $drinks = Drink::all();
         $dimsums = Dimsum::all();
-        $leves = Level::all();
-        return view('pengguna.user2', compact('foods', 'drinks', 'dimsums'));
+        $levels = Level::all();
+        return view('pengguna.user2', compact('foods', 'drinks', 'dimsums', 'levels'));
     }
 
     public function drink(){
@@ -29,7 +29,7 @@ class User2Controller extends Controller
     }
 
     public function level(){
-        $dlevels = Level::all();
+        $levels = Level::all();
         return view('pengguna.user2',compact('levels'));
     }
 }

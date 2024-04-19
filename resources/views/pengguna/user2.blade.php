@@ -1056,7 +1056,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="states[]" data-placeholder="Pilih Makanan...">
+                                        multiple="multiple" name="states[]" data-placeholder="Pilih Level...">
                                         @forelse ($levels as $level)
                                             <option value="{{ $level->id }}">{{ $level->level }}</option>
 
