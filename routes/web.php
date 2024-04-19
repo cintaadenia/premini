@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\DimsumController;
 use App\Http\Controllers\DrinkController;
+use App\Http\Controllers\EmailUserController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -26,7 +28,11 @@ Route::get('/', function () {
     return view('pengguna.index');
 });
 
-Route::get('/user2', [User2Controller::class, 'user2'])->name('user2')->middleware('auth');
+Route::middleware('auth')->group(function(){
+    Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
+    //LOGOUT
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
@@ -58,11 +64,17 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/dimsum/edit/{id}', [DimsumController::class, 'edit'])->name('dimsum.edit');
 
 
+    //Checkout
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+
+    //Email User
+    Route::get('/emailUser', [EmailUserController::class, 'index'])->name('emailUser.index');
+
+
 
 });
 
-//LOGOUT
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
+
 
 Route::middleware('guest')->group(function(){
 

@@ -79,14 +79,14 @@
                 <li class="sidebar-title">Pages</li>
 
                 <li class="sidebar-item  ">
-                    <a href="application-checkout.html" class='sidebar-link'>
+                    <a href="{{ route('checkout.index') }}" class='sidebar-link'>
                         <i class="bi bi-basket-fill"></i>
                         <span>Checkout Page</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item  ">
-                    <a href="application-email.html" class='sidebar-link'>
+                    <a href="{{ route('emailUser.index') }}" class='sidebar-link'>
                         <i class="bi bi-envelope-fill"></i>
                         <span>Email Application</span>
                     </a>
