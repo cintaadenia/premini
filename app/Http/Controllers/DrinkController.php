@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Drink;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Storage;
 
 class DrinkController extends Controller
 {
@@ -23,7 +24,19 @@ class DrinkController extends Controller
     public function create(Request $request)
     {
         try {
-            // Validasi input
+
+            $fotopath = null;
+            if ($request->hasFile('image')) {
+                $fotopath = $request->file('image')->store('image', 'public');
+            }
+
+            Drink::create([
+                'food' => $request->food,
+                'price' => $request->price,
+                'stock' => $request->stock,
+                'image' => $fotopath,
+            ]);
+
             $request->validate(Drink::rules());
 
             $drink = Drink::create([
@@ -46,6 +59,7 @@ class DrinkController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([

@@ -108,18 +108,17 @@
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
-                                    <button type="submit" id="logout-button"
-                                        style="color: rgb(254, 254, 254); background-color: transparent; border: none; cursor: pointer;"
-                                        onclick="changeColor()">Logout</button>
+                                    <button type="submit" id="logout-button" style="color: rgb(254, 254, 254); background-color: transparent; border: none; cursor: pointer;" onclick="delayedAlert()">Logout</button>
                                 </form>
                             </li>
                             <script>
-                                function changeColor() {
-                                    alert("Yakin Log out?.");
+                                function delayedAlert() {
+                                    setTimeout(function() {
+                                        alert("Yakin Log out?.");
+                                    }, 1000);
                                 }
-
-
                             </script>
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
