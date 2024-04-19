@@ -93,7 +93,7 @@
                 </li>
 
                 <li class="sidebar-item  ">
-                    <a href="application-chat.html" class='sidebar-link'>
+                    <a href="{{ route('catatanUser.index') }}" class='sidebar-link'>
                         <i class="bi bi-chat-dots-fill"></i>
                         <span>Chat Application</span>
                     </a>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatatanUserController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\DimsumController;
@@ -70,7 +71,8 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     //Email User
     Route::get('/emailUser', [EmailUserController::class, 'index'])->name('emailUser.index');
 
-
+    //Chat User
+    Route::get('/catatanUser', [CatatanUserController::class, 'index'])->name('catatanUser.index');
 
 });
 
