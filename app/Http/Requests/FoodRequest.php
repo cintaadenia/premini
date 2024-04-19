@@ -22,13 +22,13 @@ class FoodRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'food' => 'required|unique:food,food,',
+            'food' => 'required|unique:food,food,' . $this->id,
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
-            'image' => 'required|mimes:jpg,png,jpeg',
-
+            'image' => 'nullable|mimes:jpg,png,jpeg',
         ];
     }
+
 
     public function messages(): array
     {

@@ -32,7 +32,7 @@
             <br>
             <div class="card-body">
 
-                <form action="{{ route('drink.update', $drink->id) }}" method="POST" id="drink">
+                <form action="{{ route('drink.update', $drink->id) }}" method="POST" id="drink" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3 row">

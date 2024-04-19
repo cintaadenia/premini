@@ -63,7 +63,7 @@ class FoodController extends Controller
         }
 
         $validatedData = $request->validate([
-            'food' => 'required|unique:food,food,',
+            'food' => 'required|unique:food,food,' ,
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
@@ -98,17 +98,14 @@ class FoodController extends Controller
      */
     public function update(Request $request, $id)
     {
-
             $food = Food::findOrFail($id);
 
             $request->validate([
-                'food' => 'required|unique:food,food,',
+                'food' => 'required|unique:food,food,' . $id,
                 'price' => 'required|numeric|min:1',
                 'stock' => 'required|numeric|min:1',
                 'image' => 'nullable|mimes:jpg,png,jpeg,svg',
             ]);
-
-            $exit = $food->image;
 
             if ($request->hasFile('image')) {
                 if ($food->image) {
@@ -119,18 +116,11 @@ class FoodController extends Controller
                 $food->image = $fotopath;
             }
 
-            //$food = Food::findOrFail($id);
-            //$food->update($request->all());
-
             $food->food = $request->input('food');
             $food->price = $request->input('price');
             $food->stock = $request->input('stock');
-            $food->save();
 
-            if ($request->hasFile('image') && $exit) {
-                $food->image = $exit;
-                $food->save();
-            }
+            $food->save();
 
             return redirect('/food')->with('success', 'Data Food berhasil Diupdate');
 

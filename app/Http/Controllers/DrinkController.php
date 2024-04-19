@@ -86,43 +86,33 @@ class DrinkController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        {
-            $drink = Drink::findOrFail($id);
+        $drink = Drink::findOrFail($id);
+        // dd($drink);
 
-            $request->validate([
-                'drink' => 'required|unique:drink,drink,',
-                'price' => 'required|numeric|min:1',
-                'stock' => 'required|numeric|min:1',
-                'image' => 'nullable|mimes:jpg,png,jpeg,svg',
-            ]);
+        $request->validate([
+            'drink' => 'required|unique:drinks,drink,' . $id,
+            'price' => 'required|numeric|min:1',
+            'stock' => 'required|numeric|min:1',
+            'image' => 'nullable|mimes:jpg,png,jpeg,svg',
+        ]);
 
-            $exit = $drink->image;
-
-            if ($request->hasFile('image')) {
-                if ($drink->image) {
-                    Storage::disk('public')->delete($drink->image);
-                }
-
-                $fotopath = $request->file('image')->store('image', 'public');
-                $drink->image = $fotopath;
+        if ($request->hasFile('image')) {
+            if ($drink->image) {
+                Storage::disk('public')->delete($drink->image);
             }
 
-            //$drink = drink::findOrFail($id);
-            //$drink->update($request->all());
-
-            $drink->drink = $request->input('drink');
-            $drink->price = $request->input('price');
-            $drink->stock = $request->input('stock');
-            $drink->save();
-
-            if ($request->hasFile('image') && $exit) {
-                $drink->image = $exit;
-                $drink->save();
-            }
-
-            return redirect('drink.index')->with('success', 'Data Drink berhasil Diupdate');
+            $fotopath = $request->file('image')->store('image', 'public');
+            $drink->image = $fotopath;
         }
-    }
+
+        $drink->drink = $request->input('drink');
+        $drink->price = $request->input('price');
+        $drink->stock = $request->input('stock');
+
+        $drink->save();
+
+        return redirect('/drink')->with('success', 'Data Drink berhasil Diupdate');
+}
 
     /**
      * Remove the specified resource from storage.

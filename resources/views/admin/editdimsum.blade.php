@@ -33,7 +33,7 @@
                     <br>
                     <div class="card-body">
 
-                        <form action="{{ route('dimsum.update', $dimsum->id) }}" method="POST" id="food">
+                        <form action="{{ route('dimsum.update', $dimsum->id) }}" method="POST" id="food" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-3 row">

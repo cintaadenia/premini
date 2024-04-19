@@ -98,16 +98,14 @@ class DimsumController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $dimsum = dimsum::findOrFail($id);
+        $dimsum = Dimsum::findOrFail($id);
 
         $request->validate([
-            'dimsum' => 'required|unique:dimsum,dimsum,',
-            'price' => 'required|numeric|min:1',
+            'dimsum' => 'required|unique:dimsums,dimsum,' . $id,
+            'price' => 'required|numeric|min:1 ',
             'stock' => 'required|numeric|min:1',
             'image' => 'nullable|mimes:jpg,png,jpeg,svg',
         ]);
-
-        $exit = $dimsum->image;
 
         if ($request->hasFile('image')) {
             if ($dimsum->image) {
@@ -118,20 +116,13 @@ class DimsumController extends Controller
             $dimsum->image = $fotopath;
         }
 
-        //$dimsum = dimsum::findOrFail($id);
-        //$dimsum->update($request->all());
-
         $dimsum->dimsum = $request->input('dimsum');
         $dimsum->price = $request->input('price');
         $dimsum->stock = $request->input('stock');
+
         $dimsum->save();
 
-        if ($request->hasFile('image') && $exit) {
-            $dimsum->image = $exit;
-            $dimsum->save();
-        }
-
-        return redirect('/dimsum')->with('success', 'Data dimsum berhasil Diupdate');
+        return redirect('/dimsum')->with('success', 'Data Dimsum berhasil Diupdate');
 
 }
 
