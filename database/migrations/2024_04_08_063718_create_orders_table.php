@@ -16,6 +16,7 @@ return new class extends Migration
             $table->text('foto');
             $table->integer('noTelepon');
             $table->text('makanan');
+            $table->text('level');
             $table->text('minuman');
             $table->text('dimsum');
             $table->text('catatan');

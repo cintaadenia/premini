@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FoodRequest;
 use Illuminate\Http\Request;
 use App\Models\Food;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Storage;
+
 class FoodController extends Controller
 {
     /**
@@ -19,15 +22,22 @@ class FoodController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create(FoodRequest $request)
     {
         try {
-            // Validasi input
-            $request->validate(Food::rules());
 
-            $food = Food::create([
+            $fotopath = null;
+            if ($request->hasFile('image')) {
+                $fotopath = $request->file('image')->store('image', 'public');
+            }
+
+            Food::create([
                 'food' => $request->food,
+                'price' => $request->price,
+                'stock' => $request->stock,
+                'image' => $fotopath,
             ]);
+
 
             return redirect()->back()->with('success', 'Data Food berhasil ditambahkan');
 
@@ -38,8 +48,6 @@ class FoodController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
             }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
         }
     }
 
@@ -48,8 +56,17 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
+
+        $fotopath = null;
+        if ($request->hasFile('image')) {
+            $fotopath = $request->file('image')->store('image', 'public');
+        }
+
         $validatedData = $request->validate([
-            'food' => 'required|string|max:255',
+            'food' => 'required|unique:food,food,',
+            'price' => 'required|numeric|min:1000',
+            'stock' => 'required|numeric|min:1',
+            'image' => $fotopath,
         ]);
 
         Food::create($validatedData);
@@ -72,6 +89,8 @@ class FoodController extends Controller
     {
         $food = Food::findOrFail($id); // Mengambil data post berdasarkan ID
         return view('admin.editfood', compact('food'));
+
+
     }
 
     /**
@@ -79,19 +98,42 @@ class FoodController extends Controller
      */
     public function update(Request $request, $id)
     {
-        {
+
             $food = Food::findOrFail($id);
-            $food = $request->validate([
-                'food' => 'required|string|max:255',
+
+            $request->validate([
+                'food' => 'required|unique:food,food,',
+                'price' => 'required|numeric|min:1000',
+                'stock' => 'required|numeric|min:1',
+                'image' => 'nullable|mimes:jpg,png,jpeg,svg',
             ]);
 
-            $food = Food::findOrFail($id);
+            $exit = $food->image;
 
-            $food->update($request->all());
+            if ($request->hasFile('image')) {
+                if ($food->image) {
+                    Storage::disk('public')->delete($food->image);
+                }
+
+                $fotopath = $request->file('image')->store('image', 'public');
+                $food->image = $fotopath;
+            }
+
+            //$food = Food::findOrFail($id);
+            //$food->update($request->all());
+
+            $food->food = $request->input('food');
+            $food->price = $request->input('price');
+            $food->stock = $request->input('stock');
             $food->save();
 
-            return to_route('food.index')->with('success', 'Data Food berhasil Diupdate');
-        }
+            if ($request->hasFile('image') && $exit) {
+                $food->image = $exit;
+                $food->save();
+            }
+
+            return redirect('/food')->with('success', 'Data Food berhasil Diupdate');
+
     }
 
     /**
@@ -99,6 +141,14 @@ class FoodController extends Controller
      */
     public function destroy(string $id)
     {
+        $food = Food::FindOrFail($id);
+        if ($food->image) {
+            $fotopath = storage_path('app/public/' . $food->image);
+
+            if (file_exists($fotopath)) {
+                unlink($fotopath);
+            }
+        }
         try {
             $food = Food::findOrFail($id);
             $food->delete();

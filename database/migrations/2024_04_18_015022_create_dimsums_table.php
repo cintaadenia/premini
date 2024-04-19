@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('dimsums', function (Blueprint $table) {
             $table->id();
             $table->text('dimsum');
+            $table->integer('price');
+            $table->text('stock');
             $table->timestamps();
         });
     }

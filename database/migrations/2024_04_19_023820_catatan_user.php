@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('catatanUser', function (Blueprint $table) {
             $table->id();
+            $table->text('catatan');
             $table->timestamps();
         });
     }

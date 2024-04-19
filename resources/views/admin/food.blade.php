@@ -32,7 +32,7 @@
                 <br>
                 <div class="card-body">
 
-                    <form action="{{ route('food.create') }}" method="POST" id="food">
+                    <form action="{{ route('food.create') }}" method="POST" id="food" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 row">
                             <label for="food" class="col-sm-2 col-form-label">Food</label>
@@ -46,8 +46,44 @@
                             </div>
                         </div>
 
+                        <div class="mb-3 row">
+                            <label for="price" class="col-sm-2 col-form-label">Price</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="price" name="price" type="number"
+                                    placeholder="Tambahkan price"></input>
+                                @error('price')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="stock" class="col-sm-2 col-form-label">Stock</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="stock" name="stock" type="number"
+                                    placeholder="Tambahkan stock"></input>
+                                @error('stock')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="image" class="col-sm-2 col-form-label">Image</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="image" name="image" type="file"
+                                    placeholder="Tambahkan image"></input>
+                                @error('image')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+
+                            </div>
+                        </div>
+
                         <div class="col-12">
-                            <input type="submit" name="simpan" value="Tambah +" style="border-radius: 50px;" class="btn btn-primary">
+                            <button type="submit" style="border-radius: 50px;" class="btn btn-primary">+ Tambah</button>
                         </div>
 
                     </form>
@@ -65,7 +101,10 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Menu Food</th>
+                                <th scope="col"> Food</th>
+                                <th scope="col"> Price</th>
+                                <th scope="col"> Stock</th>
+                                <th scope="col"> Image</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         <tbody>
@@ -73,6 +112,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $f->food }}</td>
+                                <td>{{ $f->price }}</td>
+                                <td>{{ $f->stock }}</td>
+                                <td><img src="{{ asset('storage/' . $f->image) }}" style="width: 100px;"></td>
                                 <td scope="row">
                                     <a href="{{ route('food.edit', $f->id) }}" class="btn btn-warning">
                                         <i class="fas fa-edit"></i>
