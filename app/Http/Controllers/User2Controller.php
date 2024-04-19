@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dimsum;
+use App\Models\Drink;
 use App\Models\Food;
 use Illuminate\Http\Request;
 
@@ -11,4 +13,17 @@ class User2Controller extends Controller
         $foods = Food::all();
         return view('pengguna.user2', compact('foods'));
     }
+
+    public function drink(){
+        $drinks = Drink::all();
+        return view('pengguna.user2',compact('drinks'));
+
+    }
+
+    public function dimsum(){
+        $dimsums = Dimsum::all();
+        return view('pengguna.user2',compact('dimsums'));
+
+    }
+
 }

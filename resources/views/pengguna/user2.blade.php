@@ -1038,8 +1038,13 @@
                                     <fieldset>
                                         <select class="js-example-basic-multiple text-white form-control"
                                             name="states[]" multiple="multiple" data-placeholder="Pilih Minuman...">
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
+                                            @forelse ($drinks as $drink)
+                                            <option value="{{$drink->id}}">{{$drink->drink}}</option>
+
+                                            @empty
+                                            <option>Belum ada minuman</option>
+
+                                            @endforelse
                                         </select>
                                     </fieldset>
                                 </div>
@@ -1049,8 +1054,13 @@
                                     <fieldset>
                                         <select class="js-example-basic-multiple text-white form-control"
                                             name="states[]" multiple="multiple" data-placeholder="Pilih Dimsum...">
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
+                                            @forelse ($dimsums as $dimsum)
+                                            <option value="{{$dimsum->id}}">{{$dimsum->dimsum}}</option>
+
+                                            @empty
+                                            <option>Belum ada dimsum</option>
+
+                                            @endforelse
                                         </select>
                                     </fieldset>
                                 </div>
