@@ -63,7 +63,7 @@ class DrinkController extends Controller
 
         $validatedData = $request->validate([
             'drink' => 'required|unique:drink,drink,',
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
         ]);
@@ -100,7 +100,7 @@ class DrinkController extends Controller
 
             $request->validate([
                 'drink' => 'required|unique:drink,drink,',
-                'price' => 'required|numeric|min:1000',
+                'price' => 'required|numeric|min:1',
                 'stock' => 'required|numeric|min:1',
                 'image' => 'nullable|mimes:jpg,png,jpeg,svg',
             ]);

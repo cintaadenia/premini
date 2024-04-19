@@ -23,7 +23,7 @@ class FoodRequest extends FormRequest
     {
         return [
             'food' => 'required|unique:food,food,',
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'required|mimes:jpg,png,jpeg',
 

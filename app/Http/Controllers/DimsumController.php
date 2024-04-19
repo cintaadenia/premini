@@ -66,7 +66,7 @@ class DimsumController extends Controller
 
         $validatedData = $request->validate([
             'dimsum' => 'required|unique:dimsum,dimsum,',
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
         ]);
@@ -102,7 +102,7 @@ class DimsumController extends Controller
 
         $request->validate([
             'dimsum' => 'required|unique:dimsum,dimsum,',
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'nullable|mimes:jpg,png,jpeg,svg',
         ]);

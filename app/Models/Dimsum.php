@@ -11,13 +11,19 @@ class Dimsum extends Model
 
     protected $table = "dimsums";
     protected $fillable = [
-        'dimsum'
+        'dimsum',
+        'price',
+        'stock',
+        'image',
     ];
 
     public static function rules($id = null)
     {
         return [
-            'dimsum' => 'required|unique:dimsums,dimsum,' . $id,
+            'dimsum' => 'required|unique:dimsum,dimsum,' . $id,
+            'price' => 'required|numeric|min:1',
+            'stock' => 'required|numeric|min:1',
+            'image' => 'required|image|mimes:jpg,png,jpeg,svg',
         ];
     }
 }

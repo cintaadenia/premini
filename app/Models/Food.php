@@ -22,7 +22,7 @@ class Food extends Model
     {
         return [
             'food' => 'required|unique:food,food,' . $id,
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'required|image|mimes:jpg,png,jpeg,svg',
         ];

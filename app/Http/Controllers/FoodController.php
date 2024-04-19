@@ -64,7 +64,7 @@ class FoodController extends Controller
 
         $validatedData = $request->validate([
             'food' => 'required|unique:food,food,',
-            'price' => 'required|numeric|min:1000',
+            'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
         ]);
@@ -103,7 +103,7 @@ class FoodController extends Controller
 
             $request->validate([
                 'food' => 'required|unique:food,food,',
-                'price' => 'required|numeric|min:1000',
+                'price' => 'required|numeric|min:1',
                 'stock' => 'required|numeric|min:1',
                 'image' => 'nullable|mimes:jpg,png,jpeg,svg',
             ]);
