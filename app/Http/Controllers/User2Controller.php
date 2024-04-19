@@ -11,7 +11,9 @@ class User2Controller extends Controller
 {
     public function user2(){
         $foods = Food::all();
-        return view('pengguna.user2', compact('foods'));
+        $drinks = Drink::all();
+        $dimsums = Dimsum::all();
+        return view('pengguna.user2', compact('foods', 'drinks', 'dimsums'));
     }
 
     public function drink(){
