@@ -23,7 +23,6 @@ class DrinkController extends Controller
      */
     public function create(Request $request)
     {
-        try {
 
             $fotopath = null;
             if ($request->hasFile('image')) {
@@ -40,14 +39,6 @@ class DrinkController extends Controller
 
             return redirect()->back()->with('success', 'Data Drink berhasil ditambahkan');
 
-        } catch (QueryException $e) {
-            $errorCode = $e->errorInfo[1];
-            if ($errorCode === 1062) {
-                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada');
-            } else {
-                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
-            }
-        }
     }
 
     /**
@@ -62,7 +53,7 @@ class DrinkController extends Controller
         }
 
         $validatedData = $request->validate([
-            'drink' => 'required|unique:drink,drink,',
+            'drink' => 'required',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,

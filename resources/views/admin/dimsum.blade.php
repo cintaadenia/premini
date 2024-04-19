@@ -111,9 +111,9 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $dm->dimsum }}</td>
-                                    <td>{{ $d->price }}</td>
-                                <td>{{ $d->stock }}</td>
-                                <td><img src="{{ asset('storage/' . $d->image) }}" style="width: 100px;"></td>
+                                    <td>{{ $dm->price }}</td>
+                                <td>{{ $dm->stock }}</td>
+                                <td><img src="{{ asset('storage/' . $dm->image) }}" style="width: 100px;"></td>
                                     <td scope="row">
                                         <a href="{{ route('dimsum.edit', $dm->id) }}" class="btn btn-warning">
                                             <i class="fas fa-edit"></i>
