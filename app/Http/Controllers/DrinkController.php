@@ -31,19 +31,15 @@ class DrinkController extends Controller
             }
 
             Drink::create([
-                'food' => $request->food,
+                'drink' => $request->drink,
                 'price' => $request->price,
                 'stock' => $request->stock,
                 'image' => $fotopath,
             ]);
 
-            $request->validate(Drink::rules());
-
-            $drink = Drink::create([
-                'drink' => $request->drink,
-            ]);
 
             return redirect()->back()->with('success', 'Data Drink berhasil ditambahkan');
+
         } catch (QueryException $e) {
             $errorCode = $e->errorInfo[1];
             if ($errorCode === 1062) {
@@ -51,8 +47,6 @@ class DrinkController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
             }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
         }
     }
 
@@ -62,13 +56,21 @@ class DrinkController extends Controller
 
     public function store(Request $request)
     {
+        $fotopath = null;
+        if ($request->hasFile('image')) {
+            $fotopath = $request->file('image')->store('image', 'public');
+        }
+
         $validatedData = $request->validate([
-            'drink' => 'required|string|max:255',
+            'drink' => 'required|unique:drink,drink,',
+            'price' => 'required|numeric|min:1000',
+            'stock' => 'required|numeric|min:1',
+            'image' => $fotopath,
         ]);
 
         Drink::create($validatedData);
 
-        return redirect()->route('admin.drink')->with('success', 'Data Drink berhasil Diupdate');
+        return redirect()->route('admin.drink')->with('success', 'Dimsum created successfully.');
     }
 
     /**
@@ -95,16 +97,39 @@ class DrinkController extends Controller
     {
         {
             $drink = Drink::findOrFail($id);
-            $drink = $request->validate([
-                'drink' => 'required|string|max:255',
+
+            $request->validate([
+                'drink' => 'required|unique:drink,drink,',
+                'price' => 'required|numeric|min:1000',
+                'stock' => 'required|numeric|min:1',
+                'image' => 'nullable|mimes:jpg,png,jpeg,svg',
             ]);
 
-            $drink = Drink::findOrFail($id);
+            $exit = $drink->image;
 
-            $drink->update($request->all());
+            if ($request->hasFile('image')) {
+                if ($drink->image) {
+                    Storage::disk('public')->delete($drink->image);
+                }
+
+                $fotopath = $request->file('image')->store('image', 'public');
+                $drink->image = $fotopath;
+            }
+
+            //$drink = drink::findOrFail($id);
+            //$drink->update($request->all());
+
+            $drink->drink = $request->input('drink');
+            $drink->price = $request->input('price');
+            $drink->stock = $request->input('stock');
             $drink->save();
 
-            return to_route('drink.index')->with('success', 'Food updated successfully.');
+            if ($request->hasFile('image') && $exit) {
+                $drink->image = $exit;
+                $drink->save();
+            }
+
+            return redirect('drink.index')->with('success', 'Data Drink berhasil Diupdate');
         }
     }
 
@@ -113,10 +138,18 @@ class DrinkController extends Controller
      */
     public function destroy($id)
     {
+        $drink = Drink::FindOrFail($id);
+        if ($drink->image) {
+            $fotopath = storage_path('app/public/' . $drink->image);
+
+            if (file_exists($fotopath)) {
+                unlink($fotopath);
+            }
+        }
         try {
             $drink = Drink::findOrFail($id);
             $drink->delete();
-            return redirect()->back()->with('success', 'Data Drink berhasil dihapus');
+            return redirect()->back()->with('success', 'Data drink berhasil dihapus');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Gagal menghapus data Drink, karena data sedang digunakan! ');
         }

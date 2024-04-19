@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DimsumRequest;
 use Illuminate\Http\Request;
 use App\Models\Dimsum;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class DimsumController extends Controller
@@ -24,14 +27,22 @@ class DimsumController extends Controller
     public function create(Request $request)
     {
         try {
-            // Validasi input
-            $request->validate(Dimsum::rules());
 
-            $dimsum = Dimsum::create([
+            $fotopath = null;
+            if ($request->hasFile('image')) {
+                $fotopath = $request->file('image')->store('image', 'public');
+            }
+
+            Dimsum::create([
                 'dimsum' => $request->dimsum,
+                'price' => $request->price,
+                'stock' => $request->stock,
+                'image' => $fotopath,
             ]);
 
+
             return redirect()->back()->with('success', 'Data Dimsum berhasil ditambahkan');
+
         } catch (QueryException $e) {
             $errorCode = $e->errorInfo[1];
             if ($errorCode === 1062) {
@@ -39,8 +50,6 @@ class DimsumController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
             }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
         }
     }
 
@@ -50,8 +59,16 @@ class DimsumController extends Controller
      */
     public function store(Request $request)
     {
+        $fotopath = null;
+        if ($request->hasFile('image')) {
+            $fotopath = $request->file('image')->store('image', 'public');
+        }
+
         $validatedData = $request->validate([
-            'dimsum' => 'required|string|max:255',
+            'dimsum' => 'required|unique:dimsum,dimsum,',
+            'price' => 'required|numeric|min:1000',
+            'stock' => 'required|numeric|min:1',
+            'image' => $fotopath,
         ]);
 
         Dimsum::create($validatedData);
@@ -81,32 +98,62 @@ class DimsumController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        {
-            $dimsum = Dimsum::findOrFail($id);
-            $dimsum = $request->validate([
-                'dimsum' => 'required|string|max:255',
-            ]);
+        $dimsum = dimsum::findOrFail($id);
 
-            $dimsum = Dimsum::findOrFail($id);
+        $request->validate([
+            'dimsum' => 'required|unique:dimsum,dimsum,',
+            'price' => 'required|numeric|min:1000',
+            'stock' => 'required|numeric|min:1',
+            'image' => 'nullable|mimes:jpg,png,jpeg,svg',
+        ]);
 
-            $dimsum->update($request->all());
-            $dimsum->save();
+        $exit = $dimsum->image;
 
-            return to_route('dimsum.index')->with('success', 'Data Dimsum berhasil Diupdate');
+        if ($request->hasFile('image')) {
+            if ($dimsum->image) {
+                Storage::disk('public')->delete($dimsum->image);
+            }
+
+            $fotopath = $request->file('image')->store('image', 'public');
+            $dimsum->image = $fotopath;
         }
-    }
+
+        //$dimsum = dimsum::findOrFail($id);
+        //$dimsum->update($request->all());
+
+        $dimsum->dimsum = $request->input('dimsum');
+        $dimsum->price = $request->input('price');
+        $dimsum->stock = $request->input('stock');
+        $dimsum->save();
+
+        if ($request->hasFile('image') && $exit) {
+            $dimsum->image = $exit;
+            $dimsum->save();
+        }
+
+        return redirect('/dimsum')->with('success', 'Data dimsum berhasil Diupdate');
+
+}
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy($id)
     {
+        $dimsum = Dimsum::FindOrFail($id);
+        if ($dimsum->image) {
+            $fotopath = storage_path('app/public/' . $dimsum->image);
+
+            if (file_exists($fotopath)) {
+                unlink($fotopath);
+            }
+        }
         try {
             $dimsum = Dimsum::findOrFail($id);
             $dimsum->delete();
-            return redirect()->back()->with('success', 'Data Dimsum berhasil dihapus');
+            return redirect()->back()->with('success', 'Data dimsum berhasil dihapus');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Gagal menghapus data Dimsum, karena data sedang digunakan! ');
+            return redirect()->back()->with('error', 'Gagal menghapus data dimsum, karena data sedang digunakan! ');
         }
     }
 }
