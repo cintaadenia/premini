@@ -8,6 +8,7 @@ use App\Http\Controllers\DrinkController;
 use App\Http\Controllers\EmailUserController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User2Controller;
@@ -63,6 +64,14 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::delete('/dimsum/destroy/{id}', [DimsumController::class, 'destroy'])->name('dimsum.destroy');
     Route::put('/dimsum/update/{id}', [DimsumController::class, 'update'])->name('dimsum.update');
     Route::get('/dimsum/edit/{id}', [DimsumController::class, 'edit'])->name('dimsum.edit');
+
+
+    //Level
+    Route::get('/level', [LevelController::class, 'index'])->name('level.index');
+    Route::post('/level/create', [LevelController::class, 'create'])->name('level.create');
+    Route::delete('/level/destroy/{id}', [LevelController::class, 'destroy'])->name('level.destroy');
+    Route::put('/level/update/{id}', [LevelController::class, 'update'])->name('level.update');
+    Route::get('/level/edit/{id}', [LevelController::class, 'edit'])->name('level.edit');
 
 
     //Checkout

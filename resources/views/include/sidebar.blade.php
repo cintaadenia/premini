@@ -76,6 +76,13 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item  ">
+                    <a href="{{ route('level.index') }}" class='sidebar-link'>
+                        <i class="fas fa-level-up-alt"></i>
+                        <span>Level</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-title">Pages</li>
 
                 <li class="sidebar-item  ">
