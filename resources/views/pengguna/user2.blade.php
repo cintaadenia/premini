@@ -1036,7 +1036,7 @@
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple text-white form-control"
+                                        <select class="js-example-basic-multiple text-white form-select"
                                             name="states[]" multiple="multiple" data-placeholder="Pilih Minuman...">
                                             @forelse ($drinks as $drink)
                                             <option value="{{$drink->id}}">{{$drink->drink}}</option>
@@ -1052,7 +1052,7 @@
 
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <select class="js-example-basic-multiple text-white form-control"
+                                        <select class="js-example-basic-multiple text-white form-select"
                                             name="states[]" multiple="multiple" data-placeholder="Pilih Dimsum...">
                                             @forelse ($dimsums as $dimsum)
                                             <option value="{{$dimsum->id}}">{{$dimsum->dimsum}}</option>
