@@ -174,12 +174,9 @@ https://mo.com/tm-586-scholar
                         </div>
                         <div class="main-content">
                             <h4>{{ $food->food }}</h4>
-                            <p>
-                                Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
-                                taburan ayam cincang dan pangsit goreng.
-                            </p>
+                            <p>{{ $food->deskripsi }}</p>
                             <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
-                            <h6>Stock : {{ $food->stock }}</h6>
+                            <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
@@ -216,12 +213,9 @@ https://mo.com/tm-586-scholar
                             </div>
                             <div class="main-content">
                                 <h4>{{ $dimsum->dimsum }}</h4>
-                                <p>
-                                    Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
-                                    taburan ayam cincang dan pangsit goreng.
-                                </p>
+                                <p>{{ $dimsum->deskripsi }}</p>
                                 <h6 style="color: rgb(255, 0, 0)">Rp {{ $dimsum->price }}</h6>
-                                <h6>Stock : {{ $dimsum->stock }}</h6>
+                                <h6 style="color: gray">Stock : {{ $dimsum->stock }}</h6>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -257,12 +251,9 @@ https://mo.com/tm-586-scholar
                                         </div>
                                         <div class="main-content">
                                             <h4>{{ $drink->drink }}</h4>
-                                            <p>
-                                                Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
-                                                taburan ayam cincang dan pangsit goreng.
-                                            </p>
+                                            <p>{{ $drink->deskripsi }}</p>
                                             <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
-                                            <h6>Stock : {{ $drink->stock }}</h6>
+                                            <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
                                             <div class="rating">
                                                 <i class="fas fa-star" style="color: gold;"></i>
                                                 <i class="fas fa-star" style="color: gold;"></i>

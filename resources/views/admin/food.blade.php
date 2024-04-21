@@ -113,6 +113,7 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col"> Food</th>
+                                <th scope="col"> Deskripsi</th>
                                 <th scope="col"> Price</th>
                                 <th scope="col"> Stock</th>
                                 <th scope="col"> Image</th>
@@ -123,6 +124,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $f->food }}</td>
+                                <td>{{ $f->deskripsi }}</td>
                                 <td>{{ $f->price }}</td>
                                 <td>{{ $f->stock }}</td>
                                 <td><img src="{{ asset('storage/' . $f->image) }}" style="width: 100px;"></td>

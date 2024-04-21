@@ -49,7 +49,7 @@
                     <div class="mb-3 row">
                         <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi" value>{{ $deskripsi['deskripsi'] }}</textarea>
+                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi" value>{{ $drink['deskripsi'] }}</textarea>
                             @error('deskripsi')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
