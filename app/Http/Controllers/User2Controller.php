@@ -11,25 +11,25 @@ use Illuminate\Http\Request;
 class User2Controller extends Controller
 {
     public function user2(){
-        $foods = Food::all();
-        $drinks = Drink::all();
-        $dimsums = Dimsum::all();
-        $levels = Level::all();
+        $foods = Food::get();
+        $drinks = Drink::get();
+        $dimsums = Dimsum::get();
+        $levels = Level::get();
         return view('pengguna.user2', compact('foods', 'drinks', 'dimsums', 'levels'));
     }
 
     public function drink(){
-        $drinks = Drink::all();
+        $drinks = Drink::get();
         return view('pengguna.user2',compact('drinks'));
     }
 
     public function dimsum(){
-        $dimsums = Dimsum::all();
+        $dimsums = Dimsum::get();
         return view('pengguna.user2',compact('dimsums'));
     }
 
     public function level(){
-        $levels = Level::all();
+        $levels = Level::get();
         return view('pengguna.user2',compact('levels'));
     }
 }

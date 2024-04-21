@@ -35,6 +35,7 @@ class DimsumController extends Controller
 
             Dimsum::create([
                 'dimsum' => $request->dimsum,
+                'deskripsi' => $request->deskripsi,
                 'price' => $request->price,
                 'stock' => $request->stock,
                 'image' => $fotopath,
@@ -66,6 +67,7 @@ class DimsumController extends Controller
 
         $validatedData = $request->validate([
             'dimsum' => 'required|unique:dimsum,dimsum,',
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
@@ -102,6 +104,7 @@ class DimsumController extends Controller
 
         $request->validate([
             'dimsum' => 'required|unique:dimsums,dimsum,' . $id,
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1 ',
             'stock' => 'required|numeric|min:1',
             'image' => 'nullable|mimes:jpg,png,jpeg,svg',
@@ -117,6 +120,7 @@ class DimsumController extends Controller
         }
 
         $dimsum->dimsum = $request->input('dimsum');
+        $dimsum->deskripsi = $request->input('deskripsi');
         $dimsum->price = $request->input('price');
         $dimsum->stock = $request->input('stock');
 

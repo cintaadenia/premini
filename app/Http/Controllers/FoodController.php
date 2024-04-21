@@ -33,6 +33,7 @@ class FoodController extends Controller
 
             Food::create([
                 'food' => $request->food,
+                'deskripsi' => $request->deskripsi,
                 'price' => $request->price,
                 'stock' => $request->stock,
                 'image' => $fotopath,
@@ -63,7 +64,8 @@ class FoodController extends Controller
         }
 
         $validatedData = $request->validate([
-            'food' => 'required|unique:food,food,' ,
+            'food' => 'required|unique:food,food,',
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
@@ -102,6 +104,7 @@ class FoodController extends Controller
 
             $request->validate([
                 'food' => 'required|unique:food,food,' . $id,
+                'deskripsi' => 'required|string|max:255 ',
                 'price' => 'required|numeric|min:1',
                 'stock' => 'required|numeric|min:1',
                 'image' => 'nullable|mimes:jpg,png,jpeg,svg',
@@ -117,6 +120,7 @@ class FoodController extends Controller
             }
 
             $food->food = $request->input('food');
+            $food->deskripsi = $request->input('deskripsi');
             $food->price = $request->input('price');
             $food->stock = $request->input('stock');
 

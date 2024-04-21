@@ -212,19 +212,21 @@
     <div class="services section" id="services">
         <div class="container">
             <div class="row">
+                @foreach ($foods as $food)
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
-                            <img src={{ asset('image/suit2.png') }} height="100" width="100"
-                                alt="online degrees">
+                            <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100"
+                            alt="online degrees">
                         </div>
                         <div class="main-content">
-                            <h4>Mie suit</h4>
+                            <h4>{{ $food->food }}</h4>
                             <p>
                                 Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
                                 taburan ayam cincang dan pangsit goreng.
                             </p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 9.5K</h6>
+                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
+                            <h6>Stock : {{ $food->stock }}</h6>
                             <div class="rating">
                                 <i class="fas fa-star" style="color: gold;"></i>
                                 <i class="fas fa-star" style="color: gold;"></i>
@@ -235,48 +237,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/gacoan3.png') }} height="100" width="100"
-                                alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Mie Gacoan</h4>
-                            <p>Untuk yang suka manis harus cobain mie yang satu ini. Mie dengan rasa manis,pedas manis
-                                buat kamu yang ingin mencoba sensasi pedas manis.</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/hompimpa.png') }} height="100" width="100"
-                                alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Mie Hompimpa</h4>
-                            <p>Semangkuk mie dengan rasa pedas asin yang bakal membuat mulut kamu meledak!!! Dengan
-                                toping ayam cincang dan krupuk pangsit.</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 12.000</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            @endforeach
+
             </div>
         </div>
     </div>
@@ -288,417 +251,81 @@
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-    <div class="services section" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/sm.png') }} height="100" width="100" alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Siomay</h4>
-                            <p>Dimsum Kukus isi ayam dicampur sedikit udang dibungkus dengan kulit siomay yang
-                                MANTULLLL!!</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/uk.png') }} height="100" width="100" alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Udang Keju</h4>
-                            <p>Dimsum imut nan gendud berisi potongan keju didalamnya dibalut tepung roti yg cripsy dan
-                                yummy.</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/kt.png') }} height="100" width="100" alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Lumpia Udang</h4>
-                            <p>Dimsum dengan isi daging asli yang digoreng dan dibuat dengan kulit lumpia yang dijamin
-                                TOP MARKOTOP!</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/pangsitgoreng.png') }} height="150" width="150"
+        <div class="services section" id="services">
+            <div class="container">
+                <div class="row">
+                    @foreach ($dimsums as $dimsum)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/'. $dimsum->image) }}" height="100" width="100"
                                 alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Pangsit Goreng</h4>
-                            <p>Dimsum goreng berisi daging ayam cincang didalamnya dibuat dengan kulit pangsit diluarnya
-                                yang renyah.</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 9.6K</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
+                            </div>
+                            <div class="main-content">
+                                <h4>{{ $dimsum->dimsum }}</h4>
+                                <p>
+                                    Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
+                                    taburan ayam cincang dan pangsit goreng.
+                                </p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ $dimsum->price }}</h6>
+                                <h6>Stock : {{ $dimsum->stock }}</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                @endforeach
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src={{ asset('image/ur.png') }} height="150" width="150" alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Udang Rambutan</h4>
-                            <p>Bola daging yg diselimuti surai naga, juicy di bagian dalam dan kriuk di luarnya diajmin
-                                aueenduuul polll...</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+            </div>
+        </div>
+
 
                 <h1 class="button"
                     style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
                     Menu Minuman</h1>
 
 
-                <div class="services section" id="services">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/esteh.png') }} height="100" width="100"
+                    <div class="services section" id="services">
+                        <div class="container">
+                            <div class="row">
+                                @foreach ($drinks as $drink)
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="service-item">
+                                        <div class="icon">
+                                            <img src="{{ asset('storage/'. $drink->image) }}" height="100" width="100"
                                             alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Es Tea</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quidem.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 4.1K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
+                                        </div>
+                                        <div class="main-content">
+                                            <h4>{{ $drink->drink }}</h4>
+                                            <p>
+                                                Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat. Ditemani
+                                                taburan ayam cincang dan pangsit goreng.
+                                            </p>
+                                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
+                                            <h6>Stock : {{ $drink->stock }}</h6>
+                                            <div class="rating">
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="fas fa-star" style="color: gold;"></i>
+                                                <i class="far fa-star" style="color: gold;"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/escoklat.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Es Coklat</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, alias!</p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/esteklek.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Es Teklek</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
-                                            commodi.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.9K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
+
+                            @endforeach
+
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-                <div class="services section" id="services">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/esgobaksodor.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Es Gobak Sodor</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, distinctio.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/greentea.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Green Tea</h4>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, cumque.</p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 8.6K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/lemontea.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Lemon Tea</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolorum.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.9K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="services section" id="services">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/orange.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Orange</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, facere.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 5.0K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/milo.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Milo</h4>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nam!
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/tehtarik.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Teh Tarik</h4>
-                                        <p>
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, autem?
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 6.4K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="services section" id="services">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/aqua.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Air Mineral</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, placeat.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 4.1K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/vanilalate.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Vanilla latte</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, sint!
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <img src={{ asset('image/thaitea.png') }} height="100" width="100"
-                                            alt="online degrees">
-                                    </div>
-                                    <div class="main-content">
-                                        <h4>Thai Tea</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                            distinctio.
-                                        </p>
-                                        <h6 style="color: rgb(255, 0, 0)">Rp 7.7K</h6>
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <br>

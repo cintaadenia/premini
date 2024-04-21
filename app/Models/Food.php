@@ -12,6 +12,7 @@ class Food extends Model
     protected $table = "food";
     protected $fillable = [
         'food',
+        'deskripsi',
         'price',
         'stock',
         'image',
@@ -22,6 +23,7 @@ class Food extends Model
     {
         return [
             'food' => 'required|unique:food,food,' . $id,
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'required|image|mimes:jpg,png,jpeg,svg',

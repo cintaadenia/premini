@@ -23,6 +23,7 @@ class FoodRequest extends FormRequest
     {
         return [
             'drink' => 'required|unique:drink,drink,',
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'required|mimes:jpg,png,jpeg',
@@ -34,6 +35,7 @@ class FoodRequest extends FormRequest
     {
         return [
             'drink.required' => 'Silahkan Isi Drink Terlebih Dahulu',
+            'deskripsi.required' => 'Silahkan Isi Deskripsi Terlebih Dahulu',
             'price.required' => 'Silahkan Isi Price Terlebih Dahulu',
             'stock.required' => 'Silahkan Isi Stock Terlebih Dahulu',
             'image.required' => 'Silahkan Isi Image Terlebih Dahulu',

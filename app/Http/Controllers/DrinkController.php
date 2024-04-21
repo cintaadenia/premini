@@ -31,6 +31,7 @@ class DrinkController extends Controller
 
             Drink::create([
                 'drink' => $request->drink,
+                'deskripsi' => $request->deskripsi,
                 'price' => $request->price,
                 'stock' => $request->stock,
                 'image' => $fotopath,
@@ -54,6 +55,7 @@ class DrinkController extends Controller
 
         $validatedData = $request->validate([
             'drink' => 'required',
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => $fotopath,
@@ -91,6 +93,7 @@ class DrinkController extends Controller
 
         $request->validate([
             'drink' => 'required|unique:drinks,drink,' . $id,
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'nullable|mimes:jpg,png,jpeg,svg',
@@ -106,6 +109,7 @@ class DrinkController extends Controller
         }
 
         $drink->drink = $request->input('drink');
+        $drink->deskripsi = $request->input('deskripsi');
         $drink->price = $request->input('price');
         $drink->stock = $request->input('stock');
 

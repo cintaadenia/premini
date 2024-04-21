@@ -46,6 +46,17 @@
                         </div>
 
                         <div class="mb-3 row">
+                            <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi"></textarea>
+                                @error('deskripsi')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
                             <label for="price" class="col-sm-2 col-form-label">Price</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="price" name="price" type="number"
@@ -101,6 +112,7 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Menu Dimsum</th>
+                                <th scope="col"> Deskripsi</th>
                                 <th scope="col"> Price</th>
                                 <th scope="col"> Stock</th>
                                 <th scope="col"> Image</th>
@@ -111,8 +123,9 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $dm->dimsum }}</td>
+                                    <td>{{ $dm->deskripsi }}</td>
                                     <td>{{ $dm->price }}</td>
-                                <td>{{ $dm->stock }}</td>
+                                    <td>{{ $dm->stock }}</td>
                                 <td><img src="{{ asset('storage/' . $dm->image) }}" style="width: 100px;"></td>
                                     <td scope="row">
                                         <a href="{{ route('dimsum.edit', $dm->id) }}" class="btn btn-warning">

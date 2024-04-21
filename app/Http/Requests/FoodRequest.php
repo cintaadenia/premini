@@ -23,6 +23,7 @@ class FoodRequest extends FormRequest
     {
         return [
             'food' => 'required|unique:food,food,' . $this->id,
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'nullable|mimes:jpg,png,jpeg',
@@ -34,6 +35,7 @@ class FoodRequest extends FormRequest
     {
         return [
             'food.required' => 'Silahkan Isi Food Terlebih Dahulu',
+            'deskripsi.required' => 'Silahkan Isi Deskripsi Terlebih Dahulu',
             'price.required' => 'Silahkan Isi Price Terlebih Dahulu',
             'stock.required' => 'Silahkan Isi Stock Terlebih Dahulu',
             'image.required' => 'Silahkan Isi Image Terlebih Dahulu',

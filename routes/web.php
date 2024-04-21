@@ -12,6 +12,7 @@ use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User2Controller;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pengguna.index');
-});
+Route::get('/', [UserController::class, 'foods'])->name('foods');
+
 
 Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');

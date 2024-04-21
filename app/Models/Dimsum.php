@@ -12,6 +12,7 @@ class Dimsum extends Model
     protected $table = "dimsums";
     protected $fillable = [
         'dimsum',
+        'deskripsi',
         'price',
         'stock',
         'image',
@@ -21,6 +22,7 @@ class Dimsum extends Model
     {
         return [
             'dimsum' => 'required|unique:dimsum,dimsum,' . $id,
+            'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
             'image' => 'required|image|mimes:jpg,png,jpeg,svg',

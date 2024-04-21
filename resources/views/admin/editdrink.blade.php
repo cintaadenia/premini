@@ -47,6 +47,17 @@
                     </div>
 
                     <div class="mb-3 row">
+                        <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi" value>{{ $deskripsi['deskripsi'] }}</textarea>
+                            @error('deskripsi')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
                         <label for="price" class="col-sm-2 col-form-label">Price</label>
                         <div class="col-sm-10">
                             <input class="form-control" id="price" rows="3" placeholder="Edit price"
