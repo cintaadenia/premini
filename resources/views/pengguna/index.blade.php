@@ -188,6 +188,8 @@ https://mo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
+
+            {{--
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
@@ -229,7 +231,9 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
+
             </div>
         </div>
     </div>
@@ -264,7 +268,10 @@ https://mo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </div>
+    </div>
+{{--
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
@@ -352,7 +359,7 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <h1 class="button"
                     style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
@@ -384,6 +391,7 @@ https://mo.com/tm-586-scholar
                                     </div>
                                 </div>
                             </div>
+{{--
                             <div class="col-lg-4 col-md-6">
                                 <div class="service-item">
                                     <div class="icon">
@@ -645,7 +653,9 @@ https://mo.com/tm-586-scholar
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+
+
                         </div>
                     </div>
                 </div>
