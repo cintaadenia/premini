@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +14,9 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('auth.login');
+        $users = User::get();
+        $order = Order::get();
+        return view('auth.login', compact(['users', 'order']));
     }
 
     public function login(Request $request)

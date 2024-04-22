@@ -128,7 +128,7 @@
                                     <td>{{ $m->drink }}</td>
                                     <td>{{ $m->deskripsi }}</td>
                                     <td>{{ $m->price }}</td>
-                                <td>{{ $m->stock }}</td>
+                                    <td>{{ $m->stock }}</td>
                                 <td><img src="{{ asset('storage/' . $m->image) }}" style="width: 100px;"></td>
                                     <td scope="row">
                                         <a href="{{ route('drink.edit', $m->id) }}" class="btn btn-warning">

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Checkout;
+use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -11,7 +14,9 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        return view('user.checkout');
+
+        $data = Checkout::get();
+        return view('admin.checkout', compact('data'));
     }
 
     /**
