@@ -637,10 +637,10 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="contact-us-content">
                         <form id="contact-form" action="" method="post">
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <fieldset style="text-align: center;">
                                     <input type="file" name="photo" id="photo" accept="image/*" required
                                         style="height: 4pc; ">
