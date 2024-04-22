@@ -40,15 +40,19 @@
                                 </td>
                             </tr>
 
-                            <div class="modal" tabindex="-1" id="lihat{{ $loop->iteration }}">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
+                            <div class="modal fade text-left" id="lihat{{ $loop->iteration }}" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title">Detail Pesanan</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <h5 class="modal-title" id="myModalLabel1">Basic Modal</h5>
+                                        <button type="button" class="close rounded-pill" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <i data-feather="x"></i>
+                                        </button>
                                     </div>
                                     <div class="modal-body">
-                                      <p>Username: {{ $user->user->name }}</p>
+                                        <p>Username: {{ $user->user->name }}</p>
                                       <hr>
                                       <p>Email: {{ $user->user->email }}</p>
                                       <hr>
@@ -64,13 +68,21 @@
                                       <hr>
                                       <p>Catatan: {{ $user->order->catatan }}</p>
                                     </div>
+
                                     <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn" data-bs-dismiss="modal">
+                                            <i class="bx bx-x d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Close</span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Accept</span>
+                                        </button>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
+                        </div>
+                    </div>
                         @endforeach
                     </tbody>
                 </table>
