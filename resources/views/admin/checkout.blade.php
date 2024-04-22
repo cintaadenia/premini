@@ -45,7 +45,7 @@
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="myModalLabel1">Basic Modal</h5>
+                                        <h5 class="modal-title" id="myModalLabel1">Data Order</h5>
                                         <button type="button" class="close rounded-pill" data-bs-dismiss="modal"
                                             aria-label="Close">
                                             <i data-feather="x"></i>
