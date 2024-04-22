@@ -10,6 +10,7 @@ use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\User2Controller;
 use App\Http\Controllers\UserController;
@@ -49,7 +50,6 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/food/edit/{id}', [FoodController::class, 'edit'])->name('food.edit');
 
 
-
     //Drink
     Route::get('/drink', [DrinkController::class, 'index'])->name('drink.index');
     Route::post('/drink/create', [DrinkController::class, 'create'])->name('drink.create');
@@ -72,6 +72,10 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::delete('/level/destroy/{id}', [LevelController::class, 'destroy'])->name('level.destroy');
     Route::put('/level/update/{id}', [LevelController::class, 'update'])->name('level.update');
     Route::get('/level/edit/{id}', [LevelController::class, 'edit'])->name('level.edit');
+
+
+    // //ORDER
+    // Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 
 
     //Checkout

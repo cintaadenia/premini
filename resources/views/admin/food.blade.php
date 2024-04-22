@@ -61,7 +61,7 @@
                             <label for="price" class="col-sm-2 col-form-label">Price</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="price" name="price" type="number"
-                                    placeholder="Tambahkan price"></input>
+                                    placeholder="Tambahkan Price"></input>
                                 @error('price')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -73,7 +73,7 @@
                             <label for="stock" class="col-sm-2 col-form-label">Stock</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="stock" name="stock" type="number"
-                                    placeholder="Tambahkan stock"></input>
+                                    placeholder="Tambahkan Stock"></input>
                                 @error('stock')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -85,7 +85,7 @@
                             <label for="image" class="col-sm-2 col-form-label">Image</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="image" name="image" type="file"
-                                    placeholder="Tambahkan image"></input>
+                                    placeholder="Upload Image"></input>
                                 @error('image')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
