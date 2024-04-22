@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
@@ -20,17 +21,13 @@ class Order extends Model
 
     ];
 
-
-    // public static function rules($id = null)
-    // {
-    //     return [
-    //         'noTelepon' => 'required|numeric|min:11'. $id,
-    //         'makanan' => 'required|string|min:1',
-    //         'level' => 'required|string|min:1',
-    //         'minuman' => 'required|string|min:1',
-    //         'dimsum' => 'required|string|min:1',
-    //         'catatan' => 'required|string|min:1',
-
-    //     ];
-    // }
+  
+    public function checkout()
+    {
+        return $this->belongsTo(Checkout::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

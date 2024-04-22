@@ -1,3 +1,11 @@
+@if ($errors->any())
+  @foreach ($errors->all() as $item)
+<script>
+    console.log("{{ $item }}")
+</script>
+  @endforeach
+@endif
+
 <!DOCTYPE html>
 <html lang="en">
 

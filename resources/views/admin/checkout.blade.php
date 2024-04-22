@@ -10,7 +10,7 @@
 <br>
 <br>
     <div class="card border">
-        <div class="card-header text-white bg-warning">
+        <div class="card-header text-white bg-primary">
             Data Pesanan User / Checkout
         </div>
         <div class="card-body">
@@ -34,7 +34,7 @@
                                 <td>{{ $user->user->email }}</td>
                                 <td>{{ $user->order->noTelepon }}</td>
                                 <td scope="row">
-                                    <a class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
+                                    <a class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                 </td>
@@ -74,7 +74,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                </table>
+            </table>
         </div>
     </div>
 @endsection

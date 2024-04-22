@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
+use App\Models\Checkout;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
@@ -20,10 +22,9 @@ class OrderController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create(OrderRequest $request)
     {
-
-            Order::create([
+            $order = Order::create([
                 'noTelepon' => $request->noTelepon,
                 'makanan' => $request->makanan,
                 'level' => $request->level,
@@ -31,6 +32,11 @@ class OrderController extends Controller
                 'dimsum' => $request->dimsum,
                 'catatan' => $request->catatan,
 
+            ]);
+
+            Checkout::create([
+                'user_id' => auth()->user()->id,
+                'order_id' => $order->id,
             ]);
 
             return redirect()->back()->with('success', 'Anda Berhasil Order');

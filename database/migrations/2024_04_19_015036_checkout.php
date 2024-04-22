@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('checkout', function (Blueprint $table) {
             $table->id();
-            $table->text('checkout');
             $table->foreignId('user_id')->constrained()->onDelete('restrict');
+            $table->foreignId('order_id')->constrained()->onDelete('restrict');
             $table->timestamps();
         });
     }
