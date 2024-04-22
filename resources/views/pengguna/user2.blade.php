@@ -108,7 +108,9 @@
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
-                                    <button type="submit" id="logout-button" style="color: rgb(254, 254, 254); background-color: transparent; border: none; cursor: pointer;" onclick="delayedAlert()">Logout</button>
+                                    <button type="submit" id="logout-button"
+                                        style="color: rgb(254, 254, 254); background-color: transparent; border: none; cursor: pointer;"
+                                        onclick="delayedAlert()">Logout</button>
                                 </form>
                             </li>
                             <script>
@@ -213,29 +215,28 @@
         <div class="container">
             <div class="row">
                 @foreach ($foods as $food)
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100"
-                            alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>{{ $food->food }}</h4>
-                            <p>{{ $food->deskripsi }}</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
-                            <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/' . $food->image) }}" height="100" width="100"
+                                    alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <h4>{{ $food->food }}</h4>
+                                <p>{{ $food->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
+                                <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            @endforeach
+                @endforeach
 
             </div>
         </div>
@@ -248,15 +249,15 @@
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-        <div class="services section" id="services">
-            <div class="container">
-                <div class="row">
-                    @foreach ($dimsums as $dimsum)
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                @foreach ($dimsums as $dimsum)
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="icon">
-                                <img src="{{ asset('storage/'. $dimsum->image) }}" height="100" width="100"
-                                alt="online degrees">
+                                <img src="{{ asset('storage/' . $dimsum->image) }}" height="100" width="100"
+                                    alt="online degrees">
                             </div>
                             <div class="main-content">
                                 <h4>{{ $dimsum->dimsum }}</h4>
@@ -273,50 +274,48 @@
                             </div>
                         </div>
                     </div>
-
                 @endforeach
 
-                </div>
             </div>
         </div>
+    </div>
 
 
-                <h1 class="button"
-                    style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-                    Menu Minuman</h1>
+    <h1 class="button"
+        style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+        Menu Minuman</h1>
 
 
-                    <div class="services section" id="services">
-                        <div class="container">
-                            <div class="row">
-                                @foreach ($drinks as $drink)
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="service-item">
-                                        <div class="icon">
-                                            <img src="{{ asset('storage/'. $drink->image) }}" height="100" width="100"
-                                            alt="online degrees">
-                                        </div>
-                                        <div class="main-content">
-                                            <h4>{{ $drink->drink }}</h4>
-                                            <p>{{ $drink->deskripsi }}</p>
-                                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
-                                            <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="far fa-star" style="color: gold;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                @foreach ($drinks as $drink)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/' . $drink->image) }}" height="100" width="100"
+                                    alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <h4>{{ $drink->drink }}</h4>
+                                <p>{{ $drink->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
+                                <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
                                 </div>
-
-                            @endforeach
-
                             </div>
                         </div>
                     </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
 
 
     <br>
@@ -639,7 +638,7 @@
 
                 <div class="col-lg-6">
                     <div class="contact-us-content">
-                        <form id="contact-form" action="" method="post">
+                        <form id="contact-form" action="{{ route('order.create') }}" method="post">
                             {{-- <div class="col-lg-12">
                                 <fieldset style="text-align: center;">
                                     <input type="file" name="photo" id="photo" accept="image/*" required
@@ -648,11 +647,11 @@
                             </div> --}}
 
 
-
+                            @csrf
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <input type="number" name="no_tlpn" id="no_tlpn" placeholder="No Telepon..."
-                                        required>
+                                    <input type="number" name="noTelepon" id="noTelepon"
+                                        placeholder="No Telepon..." required>
                                 </fieldset>
                             </div>
 
@@ -660,7 +659,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="states[]" data-placeholder="Pilih Makanan...">
+                                        multiple="multiple" name="makanan" data-placeholder="Pilih Makanan...">
                                         @forelse ($foods as $food)
                                             <option value="{{ $food->id }}">{{ $food->food }}</option>
 
@@ -675,7 +674,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="states[]" data-placeholder="Pilih Level...">
+                                        multiple="multiple" name="level" data-placeholder="Pilih Level...">
                                         @forelse ($levels as $level)
                                             <option value="{{ $level->id }}">{{ $level->level }}</option>
 
@@ -689,7 +688,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="states[]"
+                                    <select class="js-example-basic-multiple text-white form-select" name="minuman"
                                         multiple="multiple" data-placeholder="Pilih Minuman...">
                                         @forelse ($drinks as $drink)
                                             <option value="{{ $drink->id }}">{{ $drink->drink }}</option>
@@ -704,7 +703,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="states[]"
+                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum"
                                         multiple="multiple" data-placeholder="Pilih Dimsum...">
                                         @forelse ($dimsums as $dimsum)
                                             <option value="{{ $dimsum->id }}">{{ $dimsum->dimsum }}</option>
@@ -726,7 +725,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="btn btn-light p-3">Order
+                                    <button class="btn btn-light p-3">Order
                                         Sekarang!</button>
                                 </fieldset>
                             </div>
@@ -736,12 +735,6 @@
             </div>
 
 
-            <script>
-                document.getElementById("form-submit").addEventListener("click", function(event) {
-                    event.preventDefault();
-                    window.location.href = "/user2";
-                });
-            </script>
 
             <br>
             <br>

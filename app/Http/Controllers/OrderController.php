@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Storage;
 
 class OrderController extends Controller
 {
@@ -12,15 +14,26 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('admin.order');
+        return view('pengguna.user2');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+            Order::create([
+                'noTelepon' => $request->noTelepon,
+                'makanan' => $request->makanan,
+                'level' => $request->level,
+                'minuman' => $request->minuman,
+                'dimsum' => $request->dimsum,
+                'catatan' => $request->catatan,
+
+            ]);
+
+            return redirect()->back()->with('success', 'Anda Berhasil Order');
     }
 
     /**

@@ -33,11 +33,15 @@ Route::get('/', [UserController::class, 'foods'])->name('foods');
 
 Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
+
     //LOGOUT
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-});
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+    // //ORDER
+    Route::get('/order', [OrderController::class, 'index'])->name('order.index');
+    Route::post('/order/create', [OrderController::class, 'create'])->name('order.create');
+    
+});
 
 Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard.index');
@@ -74,10 +78,6 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/level/edit/{id}', [LevelController::class, 'edit'])->name('level.edit');
 
 
-    // //ORDER
-    // Route::get('/order', [OrderController::class, 'index'])->name('order.index');
-
-
     //Checkout
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
@@ -101,4 +101,7 @@ Route::middleware('guest')->group(function(){
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
 });
+
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+
 
