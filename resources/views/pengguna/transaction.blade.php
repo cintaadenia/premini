@@ -56,10 +56,9 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Makanan</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#team">Minuman</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Sekarang!</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -90,7 +89,7 @@
                 <div class="col-lg-12 col-md-6">
     <div class="item">
         <div class="row">
-            <div id="main" class="col-12"> <!-- Menyesuaikan lebar kolom -->
+            <div id="main" class="col-5">
                 <header class="mb-3">
                     <a href="#" class="burger-btn d-block d-xl-none">
                         <i class="bi bi-justify fs-3"></i>
@@ -98,7 +97,7 @@
                 </header>
             </div>
 
-            <div class="page-heading col-12 mt-3"> <!-- Menambahkan kelas mt-3 untuk spasi tambahan -->
+            <div class="page-heading col-12 mt-3">
                 <section class="section">
                     <div class="card">
                         <div class="card-header" style="background-color: #7a6ad8;">
