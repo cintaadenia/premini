@@ -110,9 +110,9 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Menu</a></li>
-                            {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#services">Minuman</a></li> --}}
+                            {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li> --}}
                             <li class="scroll-to-section"><a href="#contact">Order</a></li>
+                            <li class="scroll-to-section"><a href="{{route('transaction.index')}}">Transsaction</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf

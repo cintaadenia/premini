@@ -2,50 +2,31 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
     <title>Gacoan</title>
-
     <!-- Bootstrap core CSS -->
-    <link href="
-    user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <!--
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <style>
+        .main-nav {
+            padding: 55px 0; /* Mengurangi padding vertikal */
+        }
 
-Mo 586 Scholar
-
-https://mo.com/tm-586-scholar
-
--->
-
-<style>
-    .main-banner .item span.category {
-  background-color: #7a6ad8;
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 5px 15px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 50px;
-    }
-</style>
-
+        .main-nav .logo {
+            font-size: 24px; /* Mengurangi ukuran font logo */
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
@@ -93,7 +74,6 @@ https://mo.com/tm-586-scholar
     <div class="main-banner" id="top">
         <div class="container">
             <div class="row">
-
                 {{--  --}}
             </div>
         </div>
@@ -108,21 +88,65 @@ https://mo.com/tm-586-scholar
                 </div>
 
                 <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
+    <div class="item">
+        <div class="row">
+            <div id="main" class="col-12"> <!-- Menyesuaikan lebar kolom -->
+                <header class="mb-3">
+                    <a href="#" class="burger-btn d-block d-xl-none">
+                        <i class="bi bi-justify fs-3"></i>
+                    </a>
+                </header>
+            </div>
 
-                            <div class="col-lg-9">
-                            </div>
+            <div class="page-heading col-12 mt-3"> <!-- Menambahkan kelas mt-3 untuk spasi tambahan -->
+                <section class="section">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #7a6ad8;">
+                            <h5 class="card-title text-white">
+                                Simple Datatable
+                            </h5>
+                        </div>
+
+                        <div class="card-body">
+                            <table class="table table-striped" id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>City</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hamilton</td>
+                                        <td>mauris@diam.org</td>
+                                        <td>0800 256 8788</td>
+                                        <td>Sanzeno</td>
+                                        <td>
+                                            <span class="badge bg-success">Active</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ferdinand</td>
+                                        <td>gravida.molestie@tinciduntadipiscing.org</td>
+                                        <td>(016977) 4107</td>
+                                        <td>Marlborough</td>
+                                        <td>
+                                            <span class="badge bg-danger">Inactive</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-
+                </section>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
+</div>
+
 
     <footer>
         <div class="container">
@@ -134,18 +158,12 @@ https://mo.com/tm-586-scholar
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
-    <script src="
-              user/vendor/jquery/jquery.min.js"></script>
-    <script src="
-              user/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="
-              user/assets/js/isotope.min.js"></script>
-    <script src="
-              user/assets/js/owl-carousel.js"></script>
-    <script src="
-              user/assets/js/counter.js"></script>
-    <script src="
-              user/assets/js/custom.js"></script>
+    <script src="user/vendor/jquery/jquery.min.js"></script>
+    <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="user/assets/js/isotope.min.js"></script>
+    <script src="user/assets/js/owl-carousel.js"></script>
+    <script src="user/assets/js/counter.js"></script>
+    <script src="user/assets/js/custom.js"></script>
 
 </body>
 
