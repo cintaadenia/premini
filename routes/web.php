@@ -12,6 +12,7 @@ use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\User2Controller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -30,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'foods'])->name('foods');
 
-
+//USER
 Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
 
@@ -40,9 +41,14 @@ Route::middleware('auth')->group(function(){
     // //ORDER
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/create', [OrderController::class, 'create'])->name('order.create');
-    
+
+    //Transaction
+    Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
+
+
 });
 
+//ADMIN
 Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard.index');
 
@@ -88,7 +94,6 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     Route::get('/catatanUser', [CatatanUserController::class, 'index'])->name('catatanUser.index');
 
 });
-
 
 
 Route::middleware('guest')->group(function(){
