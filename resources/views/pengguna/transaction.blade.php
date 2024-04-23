@@ -113,15 +113,15 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>City</th>
+                                        <th>Total</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Hamilton</td>
-                                        <td>mauris@diam.org</td>
-                                        <td>0800 256 8788</td>
+                                    {{-- <tr>
+                                        <td>{{ $user->user->name }}</td>
+                                        <td>{{ $user->user->email }}</td>
+                                        <td>{{ $user->order->noTelepon }}</td>
                                         <td>Sanzeno</td>
                                         <td>
                                             <span class="badge bg-success">Active</span>
@@ -135,7 +135,22 @@
                                         <td>
                                             <span class="badge bg-danger">Inactive</span>
                                         </td>
+                                    </tr> --}}
+                                    @foreach ($transaction as $trans )
+
+                                    <tr>
+                                        <td>
+                                            {{ $transaction->user->name }}
+                                        </td>
+                                        <td>
+                                            {{ $transaction->user->email }}
+                                        </td>
+                                        <td>{{ $transaction->noTelepon }}</td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
+
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

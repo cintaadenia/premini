@@ -13,7 +13,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return view('pengguna.transaction');
+        $transaction = Transaction::get();
+        return view('pengguna.transaction', compact('transaction'));
     }
 
     /**
@@ -21,7 +22,10 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        //
+        Transaction::create([
+            'user_id' => auth()->user()->id,
+            // 'order_id' => $->id,
+        ]);
     }
 
     /**

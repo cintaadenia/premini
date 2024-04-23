@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('minuman');
             $table->text('dimsum');
             $table->text('catatan');
+            $table->enum('status',['UNPAID', 'COOK', 'DELIVER', 'RECIVED'])->default('UNPAID');
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->string('transactions_id');
+            $table->string('user_id');
+            $table->string('order_id');
+            $table->string('reference');
+            $table->string('urlSnap');
+            $table->enum('statusBayar',['PAID', 'UNPAID', 'CANCEL', 'EXPIRED']);
             $table->timestamps();
         });
     }
