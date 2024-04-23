@@ -28,6 +28,20 @@ Mo 586 Scholar
 https://mo.com/tm-586-scholar
 
 -->
+
+<style>
+    .main-banner .item span.category {
+  background-color: #7a6ad8;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 50px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -43,20 +57,15 @@ https://mo.com/tm-586-scholar
             </div>
         </div>
     </div>
-    <!-- ***** Preloader End ***** -->
 
-    <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Serach Start ***** -->
                         <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
@@ -64,8 +73,6 @@ https://mo.com/tm-586-scholar
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
-                        <!-- ***** Serach Start ***** -->
-                        <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Makanan</a></li>
@@ -76,7 +83,6 @@ https://mo.com/tm-586-scholar
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
@@ -87,68 +93,8 @@ https://mo.com/tm-586-scholar
     <div class="main-banner" id="top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="owl-carousel owl-banner">
-                        <div class="item item-1">
-                            <div class="header-text">
-                                <span class="category">Mie Gacoan</span>
-                                <h2>Mie Dulu Baru Skripsi. Mie Dulu Ga sihh...</h2>
-                                <p>"Sensasi Pedasnya Bikin Ketagihan, Mie Gacoan Pilihan Terbaik!"</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-
-                        <div class="item item-2">
-                            <div class="header-text">
-                                <span class="category">Mie Gacoan</span>
-                                <h2>Siang-Siang Tuh Kalemin aja guys</h2>
-                                <p>"Kreasikan Hidanganmu dengan Mie Gacoan, Selalu Berkesan!"</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="item item-3">
-                            <div class="header-text">
-                                <span class="category">Mie Gacoan</span>
-                                <h2>Ujian Terberat adalah Macet, solusinya Mie Gacoan</h2>
-                                <p>"Setiap Gigitan Mie Gacoan, Sebuah Petualangan Rasa!"</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <div class="rating">
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{--  --}}
             </div>
         </div>
     </div>
