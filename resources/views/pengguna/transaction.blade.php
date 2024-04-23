@@ -55,7 +55,7 @@
                             </form>
                         </div>
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Makanan</a></li>
                             <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#team">Minuman</a></li>
