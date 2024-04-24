@@ -59,12 +59,12 @@
 
                 <li class="sidebar-item {{ Route::is('checkout.index') ? 'active' : '' }}">
                     <a href="{{ route('checkout.index') }}" class='sidebar-link'>
-                        <i class="bi bi-basket-fill"></i>
-                        <span>Checkout Page</span>
+                        <i class="bi bi-chat-dots-fill"></i>
+                        <span>Feedback Page</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ Route::is('emailUser.index') ? 'active' : '' }}">
+                {{-- <li class="sidebar-item {{ Route::is('emailUser.index') ? 'active' : '' }}">
                     <a href="{{ route('emailUser.index') }}" class='sidebar-link'>
                         <i class="bi bi-envelope-fill"></i>
                         <span>Email Application</span>
@@ -76,7 +76,7 @@
                         <i class="bi bi-chat-dots-fill"></i>
                         <span>Chat Application</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="sidebar-item">
                     <a href="application-gallery.html" class='sidebar-link'>

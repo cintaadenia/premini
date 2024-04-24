@@ -102,7 +102,7 @@
                                     <div class="card">
                                         <div class="card-header" style="background-color: #7a6ad8;">
                                             <h5 class="card-title text-white">
-                                                Simple Datatable
+                                                Order
                                             </h5>
                                         </div>
 

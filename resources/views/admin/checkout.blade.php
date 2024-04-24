@@ -19,7 +19,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th class="col-md-3">No</th>
+                            <th class="col-md-3">#</th>
                             <th class="col-md-3">Username</th>
                             <th class="col-md-2">Email</th>
                             <th class="col-md-2">No Telepon</th>
@@ -45,28 +45,75 @@
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="myModalLabel1">Data Order</h5>
+                                        <h4 class="modal-title" id="myModalLabel1">Feedback</h4>
                                         <button type="button" class="close rounded-pill" data-bs-dismiss="modal"
                                             aria-label="Close">
                                             <i data-feather="x"></i>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Username: {{ $user->user->name }}</p>
-                                      <hr>
-                                      <p>Email: {{ $user->user->email }}</p>
-                                      <hr>
-                                      <p>No Telepon: {{ $user->order->noTelepon }}</p>
-                                      <hr>
-                                      <p>Makanan: {{ $user->order->food->food }}</p>
-                                      <hr>
-                                      <p>Level: {{ $user->order->levels->level}}</p>
-                                      <hr>
-                                      <p>Minuman : {{ $user->order->drinks->drink}}</p>
-                                      <hr>
-                                      <p>Dimsum: {{ $user->order->dimsums->dimsum }}</p>
-                                      <hr>
-                                      <p>Catatan: {{ $user->order->catatan }}</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Username: {{ $user->user->name }}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Email: {{ $user->user->email }}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>No Telepon: {{ $user->order->noTelepon }}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Makanan: {{ $user->order->food->food }}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>{{ $user->order->levels->level}}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Minuman : {{ $user->order->drinks->drink}}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Dimsum: {{ $user->order->dimsums->dimsum }}</h6>
+                                            </div>
+                                        </div>
+
+                                        <hr style="color: blueviolet">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Catatan: {{ $user->order->catatan }}</h6>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                     <div class="modal-footer">

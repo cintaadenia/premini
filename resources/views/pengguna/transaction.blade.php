@@ -103,7 +103,7 @@
                                     <div class="card">
                                         <div class="card-header" style="background-color: #7a6ad8;">
                                             <h5 class="card-title text-white">
-                                                Simple Datatable
+                                                Transactions
                                             </h5>
                                         </div>
 
