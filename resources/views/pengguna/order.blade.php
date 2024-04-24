@@ -130,26 +130,20 @@
                                                             <td>{{ $ord->dimsums->dimsum }}</td>
                                                             <td>{{ $ord->catatan }}</td>
                                                             <td>
-                                                                <span class="badge
-                                                                    @if($ord->status == 'Belum Dibayar') bg-danger
-                                                                    @elseif($ord->status == 'Sedang Dimasak') bg-warning text-dark
-                                                                    @elseif($ord->status == 'Sedang Diantar') bg-info
-                                                                    @elseif($ord->status == 'Sudah Diterima') bg-success
-                                                                    @else bg-secondary
-                                                                    @endif">
-                                                                    {{ $ord->status }}
-                                                                </span>
-                                                                @if($ord->status == 'Belum Dibayar')
+
+                                                                @if ($ord->status == 'UNPAID')
                                                                     <button class="btn btn-primary">Bayar Sekarang</button>
-                                                                @elseif($ord->status == 'Sedang Dimasak')
-                                                                    <button class="btn btn-info">Status Pesanan</button>
-                                                                @elseif($ord->status == 'Sedang Diantar')
-                                                                    <button class="btn btn-warning">Hubungi Kurir</button>
-                                                                @elseif($ord->status == 'Sudah Diterima')
-                                                                    <button class="btn btn-success">Beri Ulasan</button>
-                                                                @else
-                                                                    <button class="btn btn-danger">Bayar Sekarang</button>
+
+                                                                @elseif($ord->status == 'COOK')
+                                                                    <span class="badge bg-warning text-dark">Sedang Dimasak</span>
+
+                                                                @elseif($ord->status == 'DELIVER')
+                                                                    <span class="badge bg-info">Sedang Diantar</span>
+
+                                                                @elseif($ord->status == 'RECEIVED')
+                                                                    <span class="badge bg-success">Sudah Diterima</span>
                                                                 @endif
+
                                                             </td>
 
 
