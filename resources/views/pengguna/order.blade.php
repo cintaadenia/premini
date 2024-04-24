@@ -121,24 +121,6 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {{-- <tr>
-                                        <td>{{ $user->user->name }}</td>
-                                        <td>{{ $user->user->email }}</td>
-                                        <td>{{ $user->order->noTelepon }}</td>
-                                        <td>Sanzeno</td>
-                                        <td>
-                                            <span class="badge bg-success">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ferdinand</td>
-                                        <td>gravida.molestie@tinciduntadipiscing.org</td>
-                                        <td>(016977) 4107</td>
-                                        <td>Marlborough</td>
-                                        <td>
-                                            <span class="badge bg-danger">Inactive</span>
-                                        </td>
-                                    </tr> --}}
                                                     @foreach ($order as $ord)
                                                         <tr>
                                                             <td>{{ $ord->noTelepon }}</td>
@@ -147,7 +129,24 @@
                                                             <td>{{ $ord->drinks->drink }}</td>
                                                             <td>{{ $ord->dimsums->dimsum }}</td>
                                                             <td>{{ $ord->catatan }}</td>
-                                                            <td></td>
+                                                            <td>
+                                                                <span class="badge @if($order->status == 'Belum Dibayar') bg-danger @elseif($order->status == 'Sedang Dimasak') bg-warning text-dark @elseif($order->status == 'Sedang Diantar') bg-info @elseif($order->status == 'Sudah Diterima') bg-success @else bg-secondary @endif">
+                                                                    {{ $order->status }}
+                                                                </span>
+                                                                @if($order->status == 'Belum Dibayar')
+                                                                    <button class="btn btn-primary">Bayar Sekarang</button>
+                                                                @elseif($order->status == 'Sedang Dimasak')
+                                                                    <button class="btn btn-info">Status Pesanan</button>
+                                                                @elseif($order->status == 'Sedang Diantar')
+                                                                    <button class="btn btn-warning">Hubungi Kurir</button>
+                                                                @elseif($order->status == 'Sudah Diterima')
+                                                                    <button class="btn btn-success">Beri Ulasan</button>
+                                                                @else
+                                                                    <button class="btn btn-secondary">Tindakan</button>
+                                                                @endif
+                                                            </td>
+
+
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
