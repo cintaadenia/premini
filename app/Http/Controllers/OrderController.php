@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OrderRequest;
 use App\Models\Checkout;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
@@ -24,6 +25,10 @@ class OrderController extends Controller
         $order = Order::get();
         return view('pengguna.order', compact('order'));
     }
+
+    // app/Http/Controllers/UserController.php
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -60,9 +65,14 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
+    public function show(Order $id)
     {
-        //
+        {
+            $user = User::find($id);
+            $status = $user->status;
+
+            return view('user.show', compact('user', 'status'));
+        }
     }
 
     /**
