@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('order_id');
             $table->string('reference');
             $table->string('urlSnap');
+            $table->string('total');
             $table->enum('statusBayar',['PAID', 'UNPAID', 'CANCEL', 'EXPIRED']);
             $table->timestamps();
         });

@@ -11,17 +11,8 @@ class Order extends Model
     use HasFactory;
 
     protected $table = "orders";
-    protected $fillable = [
-        'noTelepon',
-        'makanan',
-        'level',
-        'minuman',
-        'dimsum',
-        'catatan',
+    protected $guarded = ['id'];
 
-    ];
-
-  
     public function checkout()
     {
         return $this->belongsTo(Checkout::class);
@@ -29,5 +20,21 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function food()
+    {
+        return $this->belongsTo(Food::class);
+    }
+    public function levels()
+    {
+        return $this->belongsTo(Level::class);
+    }
+    public function drinks()
+    {
+        return $this->belongsTo(Drink::class);
+    }
+    public function dimsums()
+    {
+        return $this->belongsTo(Dimsum::class);
     }
 }

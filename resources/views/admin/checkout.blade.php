@@ -58,13 +58,13 @@
                                       <hr>
                                       <p>No Telepon: {{ $user->order->noTelepon }}</p>
                                       <hr>
-                                      <p>Makanan: {{ $user->order->makanan }}</p>
+                                      <p>Makanan: {{ $user->order->food->food }}</p>
                                       <hr>
-                                      <p>Level: {{ $user->order->level }}</p>
+                                      <p>Level: {{ $user->order->levels->level}}</p>
                                       <hr>
-                                      <p>Minuman : {{ $user->order->minuman }}</p>
+                                      <p>Minuman : {{ $user->order->drinks->drink}}</p>
                                       <hr>
-                                      <p>Dimsum: {{ $user->order->dimsum }}</p>
+                                      <p>Dimsum: {{ $user->order->dimsums->dimsum }}</p>
                                       <hr>
                                       <p>Catatan: {{ $user->order->catatan }}</p>
                                     </div>

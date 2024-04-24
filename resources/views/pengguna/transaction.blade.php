@@ -56,9 +56,8 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}#services">Makanan</a></li>
+                            <li class="scroll-to-section"><a href="{{route('order')}}">Order</a></li>
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

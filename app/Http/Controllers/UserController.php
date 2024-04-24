@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Food;
 use App\Models\Dimsum;
 use App\Models\Drink;
+use App\Models\Level;
 
 class UserController extends Controller
 {
@@ -13,7 +14,8 @@ class UserController extends Controller
         $foods = Food::get();
         $dimsums = Dimsum::get();
         $drinks = Drink::get();
-        return view('pengguna.index',compact('foods', 'dimsums', 'drinks'));
+        $levels = Level::get();
+        return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'levels'));
     }
 
 
@@ -26,5 +28,10 @@ class UserController extends Controller
     public function drinks(){
         $drinks = Drink::get();
         return view('pengguna.index',compact('drinks'));
+    }
+
+    public function levels(){
+        $levels = Level::get();
+        return view('pengguna.index',compact('levels'));
     }
 }

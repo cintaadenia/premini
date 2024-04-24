@@ -19,17 +19,24 @@ class OrderController extends Controller
         return view('pengguna.user2');
     }
 
+    public function order()
+    {
+        $order = Order::get();
+        return view('pengguna.order', compact('order'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create(OrderRequest $request)
     {
+        // dd($request->all());
             $order = Order::create([
                 'noTelepon' => $request->noTelepon,
-                'makanan' => $request->makanan,
-                'level' => $request->level,
-                'minuman' => $request->minuman,
-                'dimsum' => $request->dimsum,
+                'food_id' => $request->makanan,
+                'levels_id' => $request->level,
+                'drinks_id' => $request->minuman,
+                'dimsums_id' => $request->dimsum,
                 'catatan' => $request->catatan,
 
             ]);
