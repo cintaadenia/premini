@@ -14,10 +14,4 @@ class Level extends Model
         'level'
     ];
 
-    public static function rules($id = null)
-    {
-        return [
-            'level' => 'required|unique:food,food,' . $id,
-        ];
-    }
 }

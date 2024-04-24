@@ -18,14 +18,4 @@ class Dimsum extends Model
         'image',
     ];
 
-    public static function rules($id = null)
-    {
-        return [
-            'dimsum' => 'required|unique:dimsum,dimsum,' . $id,
-            'deskripsi' => 'required|string|max:255 ',
-            'price' => 'required|numeric|min:1',
-            'stock' => 'required|numeric|min:1',
-            'image' => 'required|image|mimes:jpg,png,jpeg,svg',
-        ];
-    }
 }
