@@ -351,9 +351,9 @@
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -375,9 +375,9 @@
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -397,9 +397,9 @@
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
 
                         </div>
@@ -423,9 +423,9 @@
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
