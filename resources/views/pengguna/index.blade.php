@@ -69,8 +69,8 @@ https://mo.com/tm-586-scholar
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Makanan</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#team">Minuman</a></li>
+                            <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
+                            <li class="scroll-to-section"><a href="#minuman">Minuman</a></li>
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Sekarang!</a></li>
                         </ul>
                         <a class='menu-trigger'>
@@ -201,7 +201,7 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-        <div class="services section" id="services">
+        <div class="services section" id="dimsum">
             <div class="container">
                 <div class="row">
                     @foreach ($dimsums as $dimsum)
@@ -239,7 +239,7 @@ https://mo.com/tm-586-scholar
                     Menu Minuman</h1>
 
 
-                    <div class="services section" id="services">
+                    <div class="services section" id="minuman">
                         <div class="container">
                             <div class="row">
                                 @foreach ($drinks as $drink)

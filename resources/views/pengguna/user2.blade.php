@@ -109,9 +109,9 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Menu</a></li>
-                            {{-- <li class="scroll-to-section"><a href="#services">Dimsum</a></li> --}}
-                            <li class="scroll-to-section"><a href="#contact">Order</a></li>
+                            <li class="scroll-to-section"><a href="#makanan">Makanan</a></li>
+                            <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
+                            <li class="scroll-to-section"><a href="#minuman">Minuman</a></li>
                             <li class="scroll-to-section"><a href="{{route('transaction.index')}}">Transsaction</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
@@ -219,7 +219,7 @@
         Menu Makanan</h1>
 
 
-    <div class="services section" id="services">
+    <div class="services section" id="makanan">
         <div class="container">
             <div class="row">
                 @foreach ($foods as $food)
@@ -257,7 +257,7 @@
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Menu Dimsum</h1>
 
-    <div class="services section" id="services">
+    <div class="services section" id="dimsum">
         <div class="container">
             <div class="row">
                 @foreach ($dimsums as $dimsum)
@@ -294,7 +294,7 @@
         Menu Minuman</h1>
 
 
-    <div class="services section" id="services">
+    <div class="services section" id="minuman">
         <div class="container">
             <div class="row">
                 @foreach ($drinks as $drink)
