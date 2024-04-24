@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('drinks_id')->constrained('drinks')->cascadeOnDelete()->cascadeOnUpdate(); // Menentukan nama kolom referensi
             $table->foreignId('dimsums_id')->constrained('dimsums')->cascadeOnDelete()->cascadeOnUpdate(); // Menentukan nama kolom referensi
+            $table->foreignId('users_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate(); // Menentukan nama kolom referensi
             $table->text('catatan');
             $table->enum('status',['UNPAID', 'COOK', 'DELIVER', 'RECEIVED'])->default('UNPAID');
             $table->timestamps();

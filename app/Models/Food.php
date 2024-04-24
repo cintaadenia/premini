@@ -18,4 +18,15 @@ class Food extends Model
         'image',
     ];
 
+
+    public static function rules($id = null)
+    {
+        return [
+            'food' => 'required|unique:food,food,' . $id,
+            'deskripsi' => 'required|string|max:255 ',
+            'price' => 'required|numeric|min:1',
+            'stock' => 'required|numeric|min:1',
+            'image' => 'required|image|mimes:jpg,png,jpeg,svg',
+        ];
+    }
 }

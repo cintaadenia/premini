@@ -110,13 +110,13 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col"> No</th>
-                                <th scope="col"> Dimsum</th>
-                                <th scope="col"> Deskripsi</th>
-                                <th scope="col"> Price</th>
-                                <th scope="col"> Stock</th>
-                                <th scope="col"> Image</th>
-                                <th scope="col">Aksi</th>
+                                <th scope="col">#</th>
+                                <th scope="col">DIMSUM</th>
+                                <th scope="col">DESKRIPSI</th>
+                                <th scope="col">PRICE</th>
+                                <th scope="col">STOCK</th>
+                                <th scope="col">IMAGE</th>
+                                <th scope="col">AKSI</th>
                             </tr>
                             <tbody>
                                 @foreach ($dimsum as $dm )

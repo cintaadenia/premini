@@ -6,7 +6,9 @@ use App\Http\Requests\OrderRequest;
 use App\Models\Checkout;
 use App\Models\Order;
 use App\Models\User;
+use App\Services\MidtransSnap;
 use Illuminate\Http\Request;
+use App\Models\Transaction;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,32 +28,75 @@ class OrderController extends Controller
         return view('pengguna.order', compact('order'));
     }
 
-    // app/Http/Controllers/UserController.php
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create(OrderRequest $request)
     {
         // dd($request->all());
-            $order = Order::create([
-                'noTelepon' => $request->noTelepon,
-                'food_id' => $request->makanan,
-                'levels_id' => $request->level,
-                'drinks_id' => $request->minuman,
-                'dimsums_id' => $request->dimsum,
-                'catatan' => $request->catatan,
+        $order = Order::create([
+            'noTelepon' => $request->noTelepon,
+            'food_id' => $request->makanan,
+            'levels_id' => $request->level,
+            'drinks_id' => $request->minuman,
+            'dimsums_id' => $request->dimsum,
+            'users_id' => auth()->id(),
+            'catatan' => $request->catatan,
+        ]);
 
+        Checkout::create([
+            'user_id' => auth()->id(),
+            'order_id' => $order->id,
+        ]);
+
+        return redirect()->back()->with('success', 'Anda Berhasil Order');
+    }
+
+    public function pay(Request $request)
+    {
+        $request->validate([
+            'id' => 'exists:orders,id|required'
+        ]);
+
+        $orderId = "ORDER-" . rand();
+        $orders = Order::find($request->id)->first();
+
+        $item = collect([]);
+
+        if ($orders->food) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->food->price,
+                'quantity' => 1,
+                'name' => $orders->food->food,
             ]);
+        }
 
-            Checkout::create([
-                'user_id' => auth()->user()->id,
-                'order_id' => $order->id,
+        if ($orders->drinks) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->drinks->price,
+                'quantity' => 1,
+                'name' => $orders->drinks->drink,
             ]);
+        }
 
-            return redirect()->back()->with('success', 'Anda Berhasil Order');
+        if ($orders->dimsums) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->dimsums->price,
+                'quantity' => 1,
+                'name' => $orders->dimsums->dimsum,
+            ]);
+        }
+
+        $userDetail = [
+            'first_name' => $orders->user->name,
+            'email' => $orders->user->email,
+            'phone' => $orders->noTelepon,
+        ];
+
+        $midtrans = new MidtransSnap($orderId, $item, $userDetail);
+        $midtrans->create();
+
     }
 
     /**
@@ -66,8 +111,7 @@ class OrderController extends Controller
      * Display the specified resource.
      */
     public function show(Order $id)
-    {
-        {
+    { {
             $user = User::find($id);
             $status = $user->status;
 

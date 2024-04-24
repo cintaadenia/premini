@@ -115,7 +115,7 @@
                                                         <th>Level</th>
                                                         <th>Minuman</th>
                                                         <th>Dimsum</th>
-                                                        <th>Catatan</th>
+                                                        {{-- <th>Catatan</th> --}}
                                                         <th>Status</th>
 
                                                     </tr>
@@ -128,11 +128,15 @@
                                                             <td>{{ $ord->levels->level }}</td>
                                                             <td>{{ $ord->drinks->drink }}</td>
                                                             <td>{{ $ord->dimsums->dimsum }}</td>
-                                                            <td>{{ $ord->catatan }}</td>
+                                                            {{-- <td>{{ $ord->catatan }}</td> --}}
                                                             <td>
 
                                                                 @if ($ord->status == 'UNPAID')
-                                                                    <button class="btn btn-primary">Bayar Sekarang</button>
+                                                                    <form action="{{ route('order.pay') }}" method="POST">
+                                                                        @csrf
+                                                                        <input type="hidden" name="id" value="{{ $ord->id }}" />
+                                                                        <button class="btn btn-primary">Bayar Sekarang</button>
+                                                                    </form>
 
                                                                 @elseif($ord->status == 'COOK')
                                                                     <span class="badge bg-warning text-dark">Sedang Dimasak</span>

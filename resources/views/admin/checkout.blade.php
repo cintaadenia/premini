@@ -11,7 +11,7 @@
 <br>
     <div class="card border">
         <div class="card-header text-white bg-primary">
-            Data Pesanan User / Checkout
+            Data Pesanan User
         </div>
         <div class="card-body">
             <table class="table">
@@ -20,10 +20,10 @@
                     <thead>
                         <tr>
                             <th class="col-md-3">#</th>
-                            <th class="col-md-3">Username</th>
-                            <th class="col-md-2">Email</th>
-                            <th class="col-md-2">No Telepon</th>
-                            <th class="col-md-2">Detail</th>
+                            <th class="col-md-3">USERNAME</th>
+                            <th class="col-md-2">EMAIL</th>
+                            <th class="col-md-2">NO TELEPON</th>
+                            <th class="col-md-2">AKSI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,8 +34,8 @@
                                 <td>{{ $user->user->email }}</td>
                                 <td>{{ $user->order->noTelepon }}</td>
                                 <td scope="row">
-                                    <a class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
-                                        <i class="fas fa-eye"></i>
+                                    <a class="btn icon icon-left btn-primary me-2 text-nowrap" type="button" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
+                                        <i class="bi bi-eye-fill"></i> Show
                                     </a>
                                 </td>
                             </tr>
@@ -45,7 +45,7 @@
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h4 class="modal-title" id="myModalLabel1">Feedback</h4>
+                                        <h3 class="modal-title" id="myModalLabel1">Feedback</h3>
                                         <button type="button" class="close rounded-pill" data-bs-dismiss="modal"
                                             aria-label="Close">
                                             <i data-feather="x"></i>

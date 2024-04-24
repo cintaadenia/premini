@@ -42,9 +42,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::post('/order/create', [OrderController::class, 'create'])->name('order.create');
 
-
     Route::get('/order', [OrderController::class, 'order'])->name('order');
-
+    Route::post('/order/pay', [OrderController::class, 'pay'])->name('order.pay');
 
     //Transaction
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');

@@ -16,7 +16,6 @@ class LevelController extends Controller
     {
         $level = Level::get();
         return view('admin.level', compact('level'));
-
     }
 
     /**
@@ -34,14 +33,15 @@ class LevelController extends Controller
 
             return redirect()->back()->with('success', 'Data Level berhasil ditambahkan');
         } catch (QueryException $e) {
-            $errorCode = $e->errorInfo[1];
-            if ($errorCode === 1062) {
-                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada');
-            } else {
-                return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
-            }
+            return redirect()->back()->with('error', 'Gagal menambahkan data! ' . $e->getMessage());
+            // $errorCode = $e->errorInfo[1];
+            // if ($errorCode === 1062) {
+            //     return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada');
+            // } else {
+            //     return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
+            // }
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
+            return redirect()->back()->with('error', 'Gagal menambahkan data! ' . $e->getMessage());
         }
     }
 
@@ -57,7 +57,6 @@ class LevelController extends Controller
         Level::create($validatedData);
 
         return redirect()->route('admin.level')->with('success', 'Level created successfully.');
-
     }
 
     /**
@@ -75,15 +74,13 @@ class LevelController extends Controller
     {
         $level = Level::findOrFail($id); // Mengambil data post berdasarkan ID
         return view('admin.editlevel', compact('level'));
-
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        {
+    { {
             $level = Level::findOrFail($id);
             $level = $request->validate([
                 'level' => 'required|string|max:255',
