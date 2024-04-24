@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('transactions_id');
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('order_id');
-            $table->string('reference');
-            $table->string('urlSnap');
+            $table->string('snapToken');
             $table->string('total');
             $table->enum('statusBayar',['PAID', 'UNPAID', 'CANCEL', 'EXPIRED']);
             $table->timestamps();

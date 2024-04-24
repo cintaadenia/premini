@@ -34,12 +34,15 @@ class MidtransSnap extends MidtransBase
             })->sum()),
         ];
 
-        $snapToken = Snap::getSnapToken([
-            'transaction_details' => $transactionDetail,
-            'item_details' => $itemDetail->toArray(),
-            'customer_details' => $this->_customerDetail,
-        ]);
-
-        dd($snapToken);
+        return [
+            'token' => Snap::getSnapToken([
+                'transaction_details' => $transactionDetail,
+                'item_details' => $itemDetail->toArray(),
+                'customer_details' => $this->_customerDetail,
+            ]),
+            'total' => (int) ceil($itemDetail->map(function ($item) {
+                return $item['price']; // Map each item's price to 11% of its original value
+            })->sum())
+        ];
     }
 }

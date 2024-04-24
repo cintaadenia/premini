@@ -112,7 +112,7 @@
                             <li class="scroll-to-section"><a href="#makanan">Makanan</a></li>
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#minuman">Minuman</a></li>
-                            <li class="scroll-to-section"><a href="#order">Order</a></li>
+                            <li class="scroll-to-section"><a href="#order">Pesan</a></li>
                             <li class="scroll-to-section"><a href="{{route('transaction.index')}}">Transsaction</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">

@@ -95,8 +95,15 @@ class OrderController extends Controller
         ];
 
         $midtrans = new MidtransSnap($orderId, $item, $userDetail);
-        $midtrans->create();
+        $midtransData = $midtrans->create();
 
+        Transaction::create([
+            'transactions_id' => $orderId   ,
+            'user_id' => auth()->id(),
+            'order_id' => $orderId,
+            'snapToken' => $midtransData['token'],
+            'total' => $midtransData['total'],
+        ]);
     }
 
     /**
