@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <style>
         .main-nav {
-            padding: 55px 0; /* Mengurangi padding vertikal */
+            padding: 55px 0;
+            /* Mengurangi padding vertikal */
         }
 
         .main-nav .logo {
-            font-size: 24px; /* Mengurangi ukuran font logo */
+            font-size: 24px;
+            /* Mengurangi ukuran font logo */
         }
     </style>
 </head>
@@ -56,7 +58,7 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{route('order')}}">Order</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('order') }}">Order</a></li>
 
                         </ul>
                         <a class='menu-trigger'>
@@ -86,38 +88,38 @@
                 </div>
 
                 <div class="col-lg-12 col-md-6">
-    <div class="item">
-        <div class="row">
-            <div id="main" class="col-5">
-                <header class="mb-3">
-                    <a href="#" class="burger-btn d-block d-xl-none">
-                        <i class="bi bi-justify fs-3"></i>
-                    </a>
-                </header>
-            </div>
+                    <div class="item">
+                        <div class="row">
+                            <div id="main" class="col-5">
+                                <header class="mb-3">
+                                    <a href="#" class="burger-btn d-block d-xl-none">
+                                        <i class="bi bi-justify fs-3"></i>
+                                    </a>
+                                </header>
+                            </div>
 
-            <div class="page-heading col-12 mt-3">
-                <section class="section">
-                    <div class="card">
-                        <div class="card-header" style="background-color: #7a6ad8;">
-                            <h5 class="card-title text-white">
-                                Simple Datatable
-                            </h5>
-                        </div>
+                            <div class="page-heading col-12 mt-3">
+                                <section class="section">
+                                    <div class="card">
+                                        <div class="card-header" style="background-color: #7a6ad8;">
+                                            <h5 class="card-title text-white">
+                                                Simple Datatable
+                                            </h5>
+                                        </div>
 
-                        <div class="card-body">
-                            <table class="table table-striped" id="table1">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Total</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {{-- <tr>
+                                        <div class="card-body">
+                                            <table class="table table-striped" id="table1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Phone</th>
+                                                        <th>Total</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {{-- <tr>
                                         <td>{{ $user->user->name }}</td>
                                         <td>{{ $user->user->email }}</td>
                                         <td>{{ $user->order->noTelepon }}</td>
@@ -135,48 +137,40 @@
                                             <span class="badge bg-danger">Inactive</span>
                                         </td>
                                     </tr> --}}
-                                    @foreach ($transaction as $trans )
-
-                                    <tr>
-                                        <td>
-                                            {{ $transaction->user->name }}
-                                        </td>
-                                        <td>
-                                            {{ $transaction->user->email }}
-                                        </td>
-                                        <td>{{ $transaction->noTelepon }}</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                                    @foreach ($transaction as $trans)
+                                                        <tr>
+                                                            <td>{{ $trans->users->name }}</td>
+                                                            <td>{{ $trans->users->email }}</td>
+                                                            <td>{{ $trans->orders->noTelepon }}</td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
+                </div>
 
 
-    <footer>
-        <div class="container">
-            <div class="col-lg-12">
-                <p>© 2024 Gacoan</p>
-            </div>
-        </div>
-    </footer>
+                <footer>
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <p>© 2024 Gacoan</p>
+                        </div>
+                    </div>
+                </footer>
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="user/vendor/jquery/jquery.min.js"></script>
-    <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="user/assets/js/isotope.min.js"></script>
-    <script src="user/assets/js/owl-carousel.js"></script>
-    <script src="user/assets/js/counter.js"></script>
-    <script src="user/assets/js/custom.js"></script>
+                <!-- Scripts -->
+                <!-- Bootstrap core JavaScript -->
+                <script src="user/vendor/jquery/jquery.min.js"></script>
+                <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="user/assets/js/isotope.min.js"></script>
+                <script src="user/assets/js/owl-carousel.js"></script>
+                <script src="user/assets/js/counter.js"></script>
+                <script src="user/assets/js/custom.js"></script>
 
 </body>
 

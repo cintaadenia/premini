@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('transactions_id');
-            $table->string('user_id');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('order_id');
             $table->string('reference');
             $table->string('urlSnap');

@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Transaction;
+use App\Models\User;
 use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
 
@@ -22,7 +22,7 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        Transaction::create([
+        User::create([
             'user_id' => auth()->user()->id,
             // 'order_id' => $->id,
         ]);

@@ -7,6 +7,7 @@ use App\Models\Food;
 use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Level;
+use App\Models\Transaction;
 
 class UserController extends Controller
 {
@@ -15,7 +16,8 @@ class UserController extends Controller
         $dimsums = Dimsum::get();
         $drinks = Drink::get();
         $levels = Level::get();
-        return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'levels'));
+        $transaction = Transaction::get();
+        return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'levels','transaction'));
     }
 
 
@@ -33,5 +35,9 @@ class UserController extends Controller
     public function levels(){
         $levels = Level::get();
         return view('pengguna.index',compact('levels'));
+    }
+    public function transactions(){
+        $transacton = Transaction::get();
+        return view('pengguna.transaction',compact('transaction'));
     }
 }
