@@ -112,6 +112,7 @@
                             <li class="scroll-to-section"><a href="#makanan">Makanan</a></li>
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#minuman">Minuman</a></li>
+                            <li class="scroll-to-section"><a href="#order">Order</a></li>
                             <li class="scroll-to-section"><a href="{{route('transaction.index')}}">Transsaction</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
@@ -644,17 +645,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="order">
                     <div class="contact-us-content">
                         <form id="contact-form" action="{{ route('order.create') }}" method="post">
-                            {{-- <div class="col-lg-12">
-                                <fieldset style="text-align: center;">
-                                    <input type="file" name="photo" id="photo" accept="image/*" required
-                                        style="height: 4pc; ">
-                                </fieldset>
-                            </div> --}}
-
-
                             @csrf
                             <div class="col-lg-12">
                                 <fieldset>
