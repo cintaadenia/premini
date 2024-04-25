@@ -109,11 +109,11 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#makanan">Makanan</a></li>
+                            <li class="scroll-to-section"><a href="#makanan">Food</a></li>
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#minuman">Minuman</a></li>
-                            <li class="scroll-to-section"><a href="#order">Pesan disini!</a></li>
-                            <li class="scroll-to-section"><a href="{{route('order')}}">Order</a></li>
+                            <li class="scroll-to-section"><a href="#minuman">Drink</a></li>
+                            <li class="scroll-to-section"><a href="#order">Order Here!</a></li>
+                            <li class="scroll-to-section"><a href="{{route('order')}}">Detail Order</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
@@ -217,7 +217,7 @@
 
     <h1 class="button"
         style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-        Menu Makanan</h1>
+        Food Menu</h1>
 
 
     <div class="services section" id="makanan">
@@ -256,7 +256,7 @@
     <br>
     <h1 class="button"
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-        Menu Dimsum</h1>
+        Dimsum Menu</h1>
 
     <div class="services section" id="dimsum">
         <div class="container">
@@ -292,7 +292,7 @@
 
     <h1 class="button"
         style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-        Menu Minuman</h1>
+        Drink Menu</h1>
 
 
     <div class="services section" id="minuman">
