@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script type="text/javascript"
+    src="https://app.sandbox.midtrans.com/snap/snap.js"
+    data-client-key="SB-Mid-client-f0qKrHclba2MSy33"></script>
     <style>
         .main-nav {
             padding: 55px 0;
@@ -139,9 +142,13 @@
                                     </tr> --}}
                                                     @foreach ($transaction as $trans)
                                                         <tr>
-                                                            <td>{{ $trans->users->name }}</td>
-                                                            <td>{{ $trans->users->email }}</td>
+                                                            <td>{{ $trans->user->name }}</td>
+                                                            <td>{{ $trans->user->email }}</td>
                                                             <td>{{ $trans->orders->noTelepon }}</td>
+                                                            <td></td>
+                                                            <td><button class="btn btn-primary pay-transaction"
+                                                                    snap-token="{{ $trans->snapToken }}">Bayar
+                                                                    Sekarang</button></td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -171,6 +178,12 @@
                 <script src="user/assets/js/owl-carousel.js"></script>
                 <script src="user/assets/js/counter.js"></script>
                 <script src="user/assets/js/custom.js"></script>
+                <script>
+                    $(document).on('click', '.pay-transaction', function(e) {
+                        let snap_token = $(this).attr('snap-token')
+                        window.snap.pay(snap_token);
+                    })
+                </script>
 
 </body>
 

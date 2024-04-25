@@ -45,7 +45,10 @@ class OrderController extends Controller
         Checkout::create([
             'user_id' => auth()->id(),
             'order_id' => $order->id,
+
         ]);
+
+
 
         return redirect()->back()->with('success', 'Anda Berhasil Order');
     }
@@ -100,10 +103,12 @@ class OrderController extends Controller
         Transaction::create([
             'transactions_id' => $orderId   ,
             'user_id' => auth()->id(),
-            'order_id' => $orderId,
+            'order_id' => $request->id,
             'snapToken' => $midtransData['token'],
-            'total' => $midtransData['total'],
+            'total' => $midtransData['total']
         ]);
+
+        return response()->json(['snap-token' => $midtransData['token']]);
     }
 
     /**

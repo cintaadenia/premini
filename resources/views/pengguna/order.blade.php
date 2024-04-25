@@ -132,10 +132,10 @@
                                                             <td>
 
                                                                 @if ($ord->status == 'UNPAID')
-                                                                    <form action="{{ route('order.pay') }}" method="POST">
+                                                                    <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
                                                                         @csrf
                                                                         <input type="hidden" name="id" value="{{ $ord->id }}" />
-                                                                        <button class="btn btn-primary">Bayar Sekarang</button>
+                                                                        <button class="btn btn-primary" order="{{ $ord->id }}">Bayar Sekarang</button>
                                                                     </form>
 
                                                                 @elseif($ord->status == 'COOK')
