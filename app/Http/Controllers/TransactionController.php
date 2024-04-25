@@ -5,16 +5,22 @@ use App\Models\Transaction;
 use App\Models\User;
 use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
+use Illuminate\Http\Request;
 
 class TransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $transaction = Transaction::get();
-        return view('pengguna.transaction', compact('transaction'));
+        $detailtransaction =Transaction::where([
+            ['id','=', $request->input('id')],
+            // ['statusBayar','!=','PAID'],
+        ])->first();
+
+        return view('pengguna.transaction', compact('transaction','detailtransaction'));
     }
 
     /**

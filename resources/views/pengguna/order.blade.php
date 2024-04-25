@@ -110,6 +110,7 @@
                                             <table class="table table-striped" id="table1">
                                                 <thead>
                                                     <tr>
+                                                        <th>id order</th>
                                                         <th>No Telepon</th>
                                                         <th>Makanan</th>
                                                         <th>Level</th>
@@ -123,8 +124,9 @@
                                                 <tbody>
                                                     @foreach ($order as $ord)
                                                         <tr>
+                                                            <td>#{{ $ord->id }}</td>
                                                             <td>{{ $ord->noTelepon }}</td>
-                                                            <td>{{ $ord->food->food }}</td>
+                                                            <td>{{ $ord->food->food  }}</td>
                                                             <td>{{ $ord->levels->level }}</td>
                                                             <td>{{ $ord->drinks->drink }}</td>
                                                             <td>{{ $ord->dimsums->dimsum }}</td>

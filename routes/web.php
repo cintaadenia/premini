@@ -47,8 +47,6 @@ Route::middleware('auth')->group(function(){
 
     //Transaction
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
-
-
 });
 
 //ADMIN

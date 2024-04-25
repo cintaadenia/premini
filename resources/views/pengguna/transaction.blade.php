@@ -166,6 +166,12 @@
                     })
                 </script>
 
+                @if ($detailtransaction)
+                    <script>
+                        window.snap.pay('{{ $detailtransaction->snapToken }}');
+                    </script>
+                @endif
+
 </body>
 
 </html>

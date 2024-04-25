@@ -31,7 +31,7 @@ class OrderController extends Controller
 
     public function create(OrderRequest $request)
     {
-        
+        // dd($request->all());
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
             'food_id' => $request->makanan,
@@ -45,10 +45,7 @@ class OrderController extends Controller
         Checkout::create([
             'user_id' => auth()->id(),
             'order_id' => $order->id,
-
         ]);
-
-
 
         return redirect()->back()->with('success', 'Anda Berhasil Order');
     }
@@ -58,6 +55,16 @@ class OrderController extends Controller
         $request->validate([
             'id' => 'exists:orders,id|required'
         ]);
+
+        $transaction = Transaction::where([
+            ['order_id','=', $request->input('id')],
+            ['statusBayar','=','PAID']
+        ])->first();
+
+        if($transaction)
+        {
+            return redirect()->route('transaction.index', ['id' => $transaction->id]);
+        }
 
         $orderId = "ORDER-" . rand();
         $orders = Order::find($request->id)->first();
@@ -108,7 +115,8 @@ class OrderController extends Controller
             'total' => $midtransData['total']
         ]);
 
-        return response()->json(['snap-token' => $midtransData['token']]);
+        // return response()->json(['snap-token' => $midtransData['token']]);
+        return redirect('/transaction');
     }
 
     /**
