@@ -14,7 +14,7 @@ class TransactionController extends Controller
      */
     public function index(Request $request)
     {
-        $transaction = Transaction::get();
+        $transaction = Transaction::where('user_id', auth()->id())->get();
         $detailtransaction =Transaction::where([
             ['id','=', $request->input('id')],
 
@@ -23,11 +23,6 @@ class TransactionController extends Controller
         return view('pengguna.transaction', compact('transaction','detailtransaction'));
     }
 
-    public function transaction()
-    {
-        $transaction = Transaction::where('users_id', auth()->id())->get();
-        return view('pengguna.transaction', compact('transaction'));
-    }
     /**
      * Show the form for creating a new resource.
      */
