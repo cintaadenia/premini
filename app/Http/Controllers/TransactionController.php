@@ -17,12 +17,17 @@ class TransactionController extends Controller
         $transaction = Transaction::get();
         $detailtransaction =Transaction::where([
             ['id','=', $request->input('id')],
-            // ['statusBayar','!=','PAID'],
+
         ])->first();
 
         return view('pengguna.transaction', compact('transaction','detailtransaction'));
     }
 
+    public function transaction()
+    {
+        $transaction = Transaction::where('users_id', auth()->id())->get();
+        return view('pengguna.transaction', compact('transaction'));
+    }
     /**
      * Show the form for creating a new resource.
      */
