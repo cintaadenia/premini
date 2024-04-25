@@ -78,12 +78,12 @@
                     </a>
                 </li> --}}
 
-                <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                     <a href="application-gallery.html" class='sidebar-link'>
                         <i class="bi bi-image-fill"></i>
                         <span>Photo Gallery</span>
                     </a>
-                </li>
+                </li> --}}
 
 
             <li class="sidebar-item">
