@@ -31,7 +31,7 @@ class OrderController extends Controller
 
     public function create(OrderRequest $request)
     {
-        // dd($request->all());
+        
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
             'food_id' => $request->makanan,
