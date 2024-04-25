@@ -56,7 +56,7 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('transaction.index') }}">Transaction</a>
+                            {{-- <li class="scroll-to-section"><a href="{{ route('transaction.index') }}">Transaction</a> --}}
                             </li>
 
                         </ul>

@@ -113,7 +113,7 @@
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#minuman">Drink</a></li>
                             <li class="scroll-to-section"><a href="#order">Order Here!</a></li>
-                            <li class="scroll-to-section"><a href="{{route('order')}}">Detail Order</a></li>
+                            {{-- <li class="scroll-to-section"><a href="{{route('order')}}">Detail Order</a></li> --}}
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
@@ -726,10 +726,10 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button class="btn btn-light p-3">Order
-                                        Sekarang!</button>
+                                    <a href="{{ route('order') }}" class="btn btn-light p-3">Order Sekarang!</a>
                                 </fieldset>
                             </div>
+
                     </div>
                     </form>
                 </div>
