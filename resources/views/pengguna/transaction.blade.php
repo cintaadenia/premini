@@ -122,33 +122,14 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {{-- <tr>
-                                        <td>{{ $user->user->name }}</td>
-                                        <td>{{ $user->user->email }}</td>
-                                        <td>{{ $user->order->noTelepon }}</td>
-                                        <td>Sanzeno</td>
-                                        <td>
-                                            <span class="badge bg-success">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ferdinand</td>
-                                        <td>gravida.molestie@tinciduntadipiscing.org</td>
-                                        <td>(016977) 4107</td>
-                                        <td>Marlborough</td>
-                                        <td>
-                                            <span class="badge bg-danger">Inactive</span>
-                                        </td>
-                                    </tr> --}}
+
                                                     @foreach ($transaction as $trans)
                                                         <tr>
                                                             <td>{{ $trans->user->name }}</td>
                                                             <td>{{ $trans->user->email }}</td>
                                                             <td>{{ $trans->orders->noTelepon }}</td>
-                                                            <td></td>
-                                                            <td><button class="btn btn-primary pay-transaction"
-                                                                    snap-token="{{ $trans->snapToken }}">Bayar
-                                                                    Sekarang</button></td>
+                                                            <td>{{ $trans->total }}</td>
+                                                            <td><button class="btn btn-primary pay-transaction" snap-token="{{ $trans->snapToken }}">BayarSekarang</button></td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
