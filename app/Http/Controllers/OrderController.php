@@ -24,7 +24,7 @@ class OrderController extends Controller
 
     public function order()
     {
-        $order = Order::get();
+        $order = Order::where('users_id', auth()->id())->get();
         return view('pengguna.order', compact('order'));
     }
 

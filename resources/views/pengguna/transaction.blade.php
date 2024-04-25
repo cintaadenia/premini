@@ -128,7 +128,7 @@
                                                             <td>{{ $trans->user->name }}</td>
                                                             <td>{{ $trans->user->email }}</td>
                                                             <td>{{ $trans->orders->noTelepon }}</td>
-                                                            <td>{{ $trans->total }}</td>
+                                                            <td>Rp {{ number_format($trans->total, 0, ',', '.') }}</td>
                                                             <td><button class="btn btn-primary pay-transaction" snap-token="{{ $trans->snapToken }}">BayarSekarang</button></td>
                                                         </tr>
                                                     @endforeach
