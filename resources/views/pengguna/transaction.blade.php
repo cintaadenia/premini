@@ -162,7 +162,21 @@
                 <script>
                     $(document).on('click', '.pay-transaction', function(e) {
                         let snap_token = $(this).attr('snap-token')
-                        window.snap.pay(snap_token);
+                        window.snap.pay(snap_token, {
+                            onSuccess: function(result){
+                                console.log('success');console.log(result);
+                                result.order_id
+                            },
+                            onPending: function(result){
+                                console.log('pending');console.log(result);
+                            },
+                            onError: function(result){
+                                console.log('error');console.log(result);
+                            },
+                            onClose: function(){
+                                console.log('customer closed the popup without finishing the payment');
+                            }
+                        });
                     })
                 </script>
 

@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-12 col-xl-4">
                     <div class="card">
                         <div class="card-header">
@@ -151,8 +151,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-8">
-                    <div class="card">
+                <div class="col-12 col-xl-8"> --}}
+                    {{-- <div class="card">
                         <div class="card-header">
                             <h4>Latest Comments</h4>
                         </div>
@@ -200,8 +200,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-3">
+        </div> --}}
+        {{-- <div class="col-12 col-lg-3">
             <div class="card">
                 <div class="card-body py-4 px-4">
                     <div class="d-flex align-items-center">
@@ -262,6 +262,6 @@
             </div>
         </div>
     </section>
-</div>
+</div> --}}
 
 @endsection
