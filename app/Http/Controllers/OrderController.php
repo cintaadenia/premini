@@ -47,7 +47,8 @@ class OrderController extends Controller
             'order_id' => $order->id,
         ]);
 
-        return redirect()->back()->with('success', 'Anda Berhasil Order');
+        // return redirect()->back()->with('success', 'Anda Berhasil Order');
+        return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     public function pay(Request $request)

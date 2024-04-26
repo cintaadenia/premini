@@ -726,7 +726,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <a href="{{ route('order') }}" class="btn btn-light p-3">Order Sekarang!</a>
+                                    <button class="btn btn-light p-3" onclick="window.location.href='{{ route('order') }}'">Order Sekarang!</button>
                                 </fieldset>
                             </div>
 
