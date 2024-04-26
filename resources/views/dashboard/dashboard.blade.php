@@ -11,13 +11,13 @@
                         <div class="card-body px-4 py-4-5">
                             <div class="row">
                                 <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                    <div class="stats-icon purple mb-2">
-                                        <i class="iconly-boldShow"></i>
+                                    <div class="stats-icon " style="background-color: rgb(47, 55, 175);">
+                                        <i class="fa-solid fa-bowl-food"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                     <h6 class="text-muted font-semibold">Amount of Food</h6>
-                                    <h6 class="font-extrabold mb-0">{{ $countFood }}</h6>
+                                    <h6 class="font-extrabold mb-0">{{ $countFood }}</h6>   
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                     <div class="stats-icon blue mb-2">
-                                        <i class="iconly-boldProfile"></i>
+                                        <i class="fa-solid fa-mug-hot"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -45,8 +45,8 @@
                         <div class="card-body px-4 py-4-5">
                             <div class="row">
                                 <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                    <div class="stats-icon green mb-2">
-                                        <i class="iconly-boldAdd-User"></i>
+                                    <div class="stats-icon" style="background-color: rgb(249, 47, 152);">
+                                        <i class="fas fa-egg"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -79,7 +79,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Profile Visit</h4>
+                            <h4>Transaction Data</h4>
                         </div>
                         <div class="card-body">
                             <div id="chart-profile-visit"></div>
