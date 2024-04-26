@@ -37,7 +37,7 @@
                         <div class="mb-3 row">
                             <label for="food" class="col-sm-2 col-form-label">Food</label>
                             <div class="col-sm-10">
-                                <input class="form-control" id="food" name="food"
+                                <input class="form-control" id="food" name="food" value="{{ old('food') }}"
                                     placeholder="Tambahkan Food"></input>
                                 @error('food')
                                     <div class="text-danger">{{ $message }}</div>
@@ -49,7 +49,7 @@
                         <div class="mb-3 row">
                             <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi"></textarea>
+                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi">{{ old('deskripsi') }}</textarea>
                                 @error('deskripsi')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -61,7 +61,7 @@
                             <label for="price" class="col-sm-2 col-form-label">Price</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="price" name="price" type="number"
-                                    placeholder="Tambahkan Price"></input>
+                                    placeholder="Tambahkan Price" value="{{ old('price') }}"></input>
                                 @error('price')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -73,7 +73,7 @@
                             <label for="stock" class="col-sm-2 col-form-label">Stock</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="stock" name="stock" type="number"
-                                    placeholder="Tambahkan Stock"></input>
+                                    placeholder="Tambahkan Stock" value="{{ old('stock') }}"></input>
                                 @error('stock')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror

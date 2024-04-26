@@ -36,7 +36,7 @@
                             <label for="level" class="col-sm-2 col-form-label">Level</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="level" name="level"
-                                    placeholder="Tambahkan Level"></input>
+                                    placeholder="Tambahkan Level" value="{{ old('level') }}"></input>
                                 @error('level')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
