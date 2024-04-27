@@ -31,6 +31,8 @@
         </div>
     </div>
     @include('include.scripct')
+
+    @yield('script')
 </body>
 
 </html>

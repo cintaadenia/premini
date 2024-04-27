@@ -6,6 +6,7 @@ use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Food;
 use App\Models\Level;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class User2Controller extends Controller
@@ -15,6 +16,7 @@ class User2Controller extends Controller
         $drinks = Drink::get();
         $dimsums = Dimsum::get();
         $levels = Level::get();
+
         return view('pengguna.user2', compact('foods', 'drinks', 'dimsums', 'levels'));
     }
 
