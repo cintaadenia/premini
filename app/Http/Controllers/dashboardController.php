@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Food;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class dashboardController extends Controller

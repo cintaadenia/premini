@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentCallbackController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\User2Controller;
@@ -109,5 +110,8 @@ Route::middleware('guest')->group(function(){
 });
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
+
+//CALLBACKMIDTRANS
+Route::get('payments/callback', [PaymentCallbackController::class, 'receive']);
 
 

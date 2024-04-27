@@ -182,7 +182,21 @@
 
                 @if ($detailtransaction)
                     <script>
-                        window.snap.pay('{{ $detailtransaction->snapToken }}');
+                        window.snap.pay('{{ $detailtransaction->snapToken }}',  {
+                            onSuccess: function(result){
+                                console.log('success');console.log(result);
+                                result.order_id
+                            },
+                            onPending: function(result){
+                                console.log('pending');console.log(result);
+                            },
+                            onError: function(result){
+                                console.log('error');console.log(result);
+                            },
+                            onClose: function(){
+                                console.log('customer closed the popup without finishing the payment');
+                            }
+                        });
                     </script>
                 @endif
 
