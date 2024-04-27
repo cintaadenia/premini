@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('order_id');
             $table->string('snapToken');
             $table->string('total');
-            $table->enum('statusBayar',['PAID', 'UNPAID', 'CANCEL', 'EXPIRED']);
+            $table->enum('statusBayar',['PAID', 'UNPAID', 'CANCEL', 'EXPIRED'])->default('UNPAID');
             $table->timestamps();
         });
     }

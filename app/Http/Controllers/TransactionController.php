@@ -17,7 +17,7 @@ class TransactionController extends Controller
         $transaction = Transaction::where('user_id', auth()->id())->get();
         $detailtransaction =Transaction::where([
             ['id','=', $request->input('id')],
-
+            // ['statusBayar','!=','PAID'],
         ])->first();
 
         return view('pengguna.transaction', compact('transaction','detailtransaction'));

@@ -129,7 +129,15 @@
                                                             <td>{{ $trans->user->email }}</td>
                                                             <td>{{ $trans->orders->noTelepon }}</td>
                                                             <td>Rp {{ number_format($trans->total, 0, ',', '.') }}</td>
-                                                            <td><button class="btn btn-primary pay-transaction" snap-token="{{ $trans->snapToken }}">Bayar Sekarang</button></td>
+                                                            <td>
+                                                                @if($trans->statusBayar === 'PAID')
+                                                                    <span>Sudah Bayar</span>
+                                                                @else
+                                                                    <button class="btn btn-primary pay-transaction" snap-token="{{ $trans->snapToken }}" data-status="{{ $trans->statusBayar }}">
+                                                                        Bayar Sekarang
+                                                                    </button>
+                                                                @endif
+                                                            </td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -161,23 +169,34 @@
                 <script src="user/assets/js/custom.js"></script>
                 <script>
                     $(document).on('click', '.pay-transaction', function(e) {
-                        let snap_token = $(this).attr('snap-token')
+                        let snap_token = $(this).attr('snap-token');
+                        let status = $(this).data('status');
+
                         window.snap.pay(snap_token, {
-                            onSuccess: function(result){
-                                console.log('success');console.log(result);
-                                result.order_id
+                            onSuccess: function(result) {
+                                console.log('success');
+                                console.log(result);
+
+                                // Ubah status menjadi 'PAID'
+                                if (status !== 'PAID') {
+                                    $(this).attr('data-status', 'PAID');
+                                    $(this).text('Sudah Bayar');
+                                    $(this).closest('tr').find('td:first-child').html('<span>Sudah Bayar</span>');
+                                }
                             },
-                            onPending: function(result){
-                                console.log('pending');console.log(result);
+                            onPending: function(result) {
+                                console.log('pending');
+                                console.log(result);
                             },
-                            onError: function(result){
-                                console.log('error');console.log(result);
+                            onError: function(result) {
+                                console.log('error');
+                                console.log(result);
                             },
-                            onClose: function(){
+                            onClose: function() {
                                 console.log('customer closed the popup without finishing the payment');
                             }
                         });
-                    })
+                    });
                 </script>
 
                 @if ($detailtransaction)
