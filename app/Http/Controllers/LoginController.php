@@ -16,7 +16,7 @@ class LoginController extends Controller
     {
         $users = User::get();
         $order = Order::get();
-        return view('auth.login', compact(['users', 'order']));
+        return view('admin.auth.login', compact(['users', 'order']));
     }
 
     public function login(Request $request)

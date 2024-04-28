@@ -657,7 +657,7 @@
                             </div>
 
 
-                            {{-- <div class="col-lg-12">
+                            <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
                                         multiple="multiple" name="makanan" data-placeholder="Pilih Makanan...">
@@ -669,13 +669,13 @@
                                         @endforelse
                                     </select>
                                 </fieldset>
-                            </div> --}}
+                            </div>
 
 
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="level" data-placeholder="Pilih Makanan & Level...">
+                                        multiple="multiple" name="level" data-placeholder="Pilih Level...">
                                         @forelse ($levels as $level)
                                             <option value="{{ $level->id }}">{{ $level->level }}</option>
 

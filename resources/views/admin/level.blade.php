@@ -22,10 +22,10 @@
 
         <div class="mx-auto">
             <!-- untuk memasukkan data -->
-            <h2 style="text-align: center;">Menu Makanan & Level</h2>
+            <h2 style="text-align: center;">Menu Level</h2>
             <div class="card border">
                 <div class="card-header text-white bg-primary">
-                    Tambah Menu Makanan & Level
+                    Tambah Level
                 </div>
                 <br>
                 <div class="card-body">

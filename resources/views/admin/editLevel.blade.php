@@ -25,10 +25,10 @@
 
             <div class="mx-auto">
                 <!-- untuk memasukkan data -->
-                <h2 style="text-align: center;">Edit Menu Makanan & Level</h2>
+                <h2 style="text-align: center;">Edit Level</h2>
                 <div class="card border">
                     <div class="card-header text-white bg-primary">
-                        Edit Menu Makanan & Level
+                        Edit Level
                     </div>
                     <br>
                     <div class="card-body">

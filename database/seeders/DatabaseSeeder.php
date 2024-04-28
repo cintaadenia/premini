@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         {
-            // User::factory()->create([
-            //     'name' => 'admin',
-            //     'email' => 'admin@gmail.com',
-            //     'password' => Hash::make('12345678'),
-            //     'role' => 'admin',
+            User::factory()->create([
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('12345678'),
+                'role' => 'admin',
 
-            // ]);
+            ]);
             $this->call([
                 TransactionSeeder::class,
             ]);
