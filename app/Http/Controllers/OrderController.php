@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\OrderRequest;
 use App\Models\Checkout;
+use App\Models\Dimsum;
+use App\Models\Drink;
+use App\Models\Food;
 use App\Models\Order;
 use App\Models\User;
 use App\Services\MidtransSnap;
@@ -40,6 +43,24 @@ class OrderController extends Controller
             'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
             'catatan' => $request->catatan,
+        ]);
+        //untuk mengurangi stock
+        $food = Food::findOrFail($request->makanan);
+
+        $food->update([
+            'stock' => $food->stock - 1
+        ]);
+
+        $drink = Drink::findOrFail($request->minuman);
+
+        $drink->update([
+            'stock' => $drink->stock - 1
+        ]);
+
+        $dimsum = Dimsum::findOrFail($request->dimsum);
+
+        $dimsum->update([
+            'stock' => $dimsum->stock - 1
         ]);
 
         Checkout::create([
@@ -114,7 +135,7 @@ class OrderController extends Controller
             'order_id' => $request->id,
             'snapToken' => $midtransData['token'],
             'total' => $midtransData['total'],
-            // 'statusBayar' => "PAID",
+            'statusBayar' => "PAID",
         ]);
 
         // if ($transaction) {
@@ -123,6 +144,7 @@ class OrderController extends Controller
         //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
         //         if ($product) {
         //             $product->stock -= 1;
+        //             dd($product);
         //             $product->save();
         //         }
         //     }
