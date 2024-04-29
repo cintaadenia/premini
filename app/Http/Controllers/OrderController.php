@@ -45,18 +45,21 @@ class OrderController extends Controller
             'catatan' => $request->catatan,
         ]);
         //untuk mengurangi stock
+        //Untuk Food
         $food = Food::findOrFail($request->makanan);
 
         $food->update([
             'stock' => $food->stock - 1
         ]);
 
+        //Untuk Drink
         $drink = Drink::findOrFail($request->minuman);
 
         $drink->update([
             'stock' => $drink->stock - 1
         ]);
 
+        //Untuk Dimsum
         $dimsum = Dimsum::findOrFail($request->dimsum);
 
         $dimsum->update([

@@ -19,14 +19,6 @@ class PaymentCallbackController extends Controller
 
             if ($request->transaction_status === 'settlement') {
                     $trans->statusBayar = 'PAID';
-                    // Logika pengurangan stok
-                    // $order = Order::find($trans->order_id);
-                    // $order->stock -= $trans->quantity;
-                    // dd($order);
-                    // $order->save();
-
-                    // Ubah status pembayaran
-                    // $trans->statusBayar = 'PAID';
 
                 $trans->save();
 
