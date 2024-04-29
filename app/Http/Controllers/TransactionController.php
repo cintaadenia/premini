@@ -61,10 +61,26 @@ class TransactionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTransactionRequest $request, Transaction $transaction)
-    {
-        //
+  /**
+ * Update the specified resource in storage.
+ */
+public function update(UpdateTransactionRequest $request, Transaction $transaction)
+{
+    // Proses validasi dan pembaruan transaksi
+
+    // Jika transaksi berhasil diperbarui dan pembayaran telah diterima
+    if ($transaction->statusBayar === 'PAID') {
+        // Kurangi stok barang
+        $product = Transaction::find($transaction->order_id);
+        $product->reduceStock($transaction->quantity);
     }
+
+    // Lanjutkan proses pembaruan transaksi
+    $transaction->update($request->all());
+
+    // Redirect atau berikan respon sesuai kebutuhan aplikasi
+}
+
 
     /**
      * Remove the specified resource from storage.

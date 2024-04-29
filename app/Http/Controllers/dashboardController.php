@@ -19,10 +19,7 @@ class dashboardController extends Controller
         $countDrink = Drink::count();
         $countUser = User::count();
 
-        $transactions = Transaction::where([
-            ['user_id', '=', auth()->id()],
-            ['statusBayar', '=', 'PAID']
-        ]);
+        $transactions = Transaction::where('statusBayar', 'PAID');
 
         $transactionAmount = $transactions
             ->groupBy(DB::raw('MONTH(created_at)'))
@@ -52,7 +49,6 @@ class dashboardController extends Controller
             ];
             return $month[$item - 1];
         })->values()->all();
-
 
         return view('dashboard.dashboard', compact('countFood', 'countDrink', 'countDimsum', 'countUser', 'monthlyData', 'transactionMonth'));
     }
