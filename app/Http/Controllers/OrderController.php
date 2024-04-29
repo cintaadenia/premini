@@ -113,9 +113,20 @@ class OrderController extends Controller
             'user_id' => auth()->id(),
             'order_id' => $request->id,
             'snapToken' => $midtransData['token'],
-            'total' => $midtransData['total']
+            'total' => $midtransData['total'],
+            // 'statusBayar' => "PAID",
         ]);
 
+        // if ($transaction) {
+        //     $order = Order::find($request->id);
+        //     if ($order) {
+        //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
+        //         if ($product) {
+        //             $product->stock -= 1;
+        //             $product->save();
+        //         }
+        //     }
+        // }
         // return response()->json(['snap-token' => $midtransData['token']]);
         return redirect('/transaction');
     }

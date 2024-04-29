@@ -66,7 +66,18 @@ class TransactionController extends Controller
  */
 public function update(UpdateTransactionRequest $request, Transaction $transaction)
 {
-   
+    // Proses validasi dan pembaruan transaksi
+    // $transaction->update($request->all());
+
+    // // Jika transaksi berhasil diperbarui dan pembayaran telah diterima
+    // if ($transaction->statusBayar === 'PAID') {
+    //     // Kurangi stok barang
+    //     $product = Transaction::find($transaction->product_id);
+    //     if ($product) {
+    //         $product->stock -= $transaction->quantity;
+    //         $product->save();
+    //     }
+    // }
 }
 
 
