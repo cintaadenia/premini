@@ -23,6 +23,7 @@
         .main-nav .logo {
             font-size: 24px;
         }
+
     </style>
 </head>
 
@@ -56,9 +57,6 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            {{-- <li class="scroll-to-section"><a href="{{ route('transaction.index') }}">Transaction</a> --}}
-                            </li>
-
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -85,19 +83,45 @@
                     <div class="section-heading">
                     </div>
                 </div>
+                        <section class="content">
+                            <div class="row">
+                                @foreach ($order as $ord)
+                                <div class="col-md-4">
+                                    <div class="card" style="width: 21rem;">
+                                        <img src="" width="150" height="250" class="card-img-top"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Detail Pesanan</h5>
+                                            <p>Food : {{ $ord->food->food  }}</p>
+                                            <p>Drink : {{ $ord->drinks->drink }}</p>
+                                            <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
+                                            <p>Catatan : {{ $ord->catatan }}</p>
+                                            <h6 style="color: red">Total : Rp </h6>
+                                            <br>
+                                                @if ($ord->status == 'UNPAID')
+                                                <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $ord->id }}" />
+                                                    <button class="btn btn-primary" order="{{ $ord->id }}">Bayar Sekarang</button>
+                                                </form>
 
-                <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
-                            <div id="main" class="col-5">
-                                <header class="mb-3">
-                                    <a href="#" class="burger-btn d-block d-xl-none">
-                                        <i class="bi bi-justify fs-3"></i>
-                                    </a>
-                                </header>
+                                                @elseif($ord->status == 'COOK')
+                                                    <span class="badge bg-warning text-dark">Sedang Dimasak</span>
+
+                                                @elseif($ord->status == 'DELIVER')
+                                                    <span class="badge bg-info">Sedang Diantar</span>
+
+                                                @elseif($ord->status == 'RECEIVED')
+                                                    <span class="badge bg-success">Sudah Diterima</span>
+                                                @endif
+                                            </div>
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
 
-                            <div class="page-heading col-12 mt-3">
+
+                            {{-- <div class="page-heading col-12 mt-3">
                                 <section class="section">
                                     <div class="card">
                                         <div class="card-header" style="background-color: #7a6ad8;">
@@ -117,7 +141,7 @@
                                                         <th>Minuman</th>
                                                         <th>Dimsum</th>
                                                         {{-- <th>Catatan</th> --}}
-                                                        <th>Status</th>
+                                                        {{-- <th>Status</th>
 
                                                     </tr>
                                                 </thead>
@@ -129,9 +153,9 @@
                                                             <td>{{ $ord->food->food  }}</td>
                                                             <td>{{ $ord->levels->level }}</td>
                                                             <td>{{ $ord->drinks->drink }}</td>
-                                                            <td>{{ $ord->dimsums->dimsum }}</td>
+                                                            <td>{{ $ord->dimsums->dimsum }}</td> --}}
                                                             {{-- <td>{{ $ord->catatan }}</td> --}}
-                                                            <td>
+                                                            {{-- <td>
 
                                                                 @if ($ord->status == 'UNPAID')
                                                                     <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
@@ -160,8 +184,9 @@
                                         </div>
                                     </div>
                                 </section>
-                            </div>
+                            </div>  --}}
                         </div>
+                    </section>
                     </div>
                 </div>
 
