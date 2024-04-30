@@ -301,7 +301,7 @@
                     var myChart = new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: labels,
+                            labels: transactionMonth,
                             datasets: [{
                                 label: 'My First Dataset',
                                 data: monthlyData,
