@@ -60,7 +60,7 @@
                 <li class="sidebar-item {{ Route::is('checkout.index') ? 'active' : '' }}">
                     <a href="{{ route('checkout.index') }}" class='sidebar-link'>
                         <i class="bi bi-chat-dots-fill"></i>
-                        <span>Feedback Page</span>
+                        <span>Transactions</span>
                     </a>
                 </li>
 

@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="col-6 col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body px-4 py-4-5">
@@ -299,15 +299,15 @@
 
                     var ctx = document.getElementById('monthlyChart').getContext('2d');
                     var myChart = new Chart(ctx, {
-                        type: 'bar',
+                        type: 'line',
                         data: {
-                            labels: transactionMonth,
+                            labels: labels,
                             datasets: [{
-                                label: 'Transaksi',
+                                label: 'My First Dataset',
                                 data: monthlyData,
-                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                                borderColor: 'rgba(75, 192, 192, 1)',
-                                borderWidth: 1
+                                fill: false,
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1
                             }]
                         },
                         options: {
