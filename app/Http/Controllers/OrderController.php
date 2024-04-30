@@ -75,156 +75,86 @@ class OrderController extends Controller
         return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
-    // public function pay(Request $request)
-    // {
-    //     $request->validate([
-    //         'id' => 'exists:orders,id|required'
-    //     ]);
-
-    //     $transaction = Transaction::where([
-    //         ['order_id','=', $request->input('id')],
-    //         ['statusBayar','=','PAID']
-    //     ])->first();
-
-    //     if($transaction)
-    //     {
-    //         return redirect()->route('transaction.index', ['id' => $transaction->id]);
-    //     }
-
-    //     $orderId = "ORDER-" . rand();
-    //     $orders = Order::find($request->id)->first();
-
-    //     $item = collect([]);
-
-    //     if ($orders->food) {
-    //         $item->push([
-    //             'id' => rand(),
-    //             'price' => $orders->food->price,
-    //             'quantity' => 1,
-    //             'name' => $orders->food->food,
-    //         ]);
-    //     }
-
-    //     if ($orders->drinks) {
-    //         $item->push([
-    //             'id' => rand(),
-    //             'price' => $orders->drinks->price,
-    //             'quantity' => 1,
-    //             'name' => $orders->drinks->drink,
-    //         ]);
-    //     }
-
-    //     if ($orders->dimsums) {
-    //         $item->push([
-    //             'id' => rand(),
-    //             'price' => $orders->dimsums->price,
-    //             'quantity' => 1,
-    //             'name' => $orders->dimsums->dimsum,
-    //         ]);
-    //     }
-
-    //     $userDetail = [
-    //         'first_name' => $orders->user->name,
-    //         'email' => $orders->user->email,
-    //         'phone' => $orders->noTelepon,
-    //     ];
-
-    //     $midtrans = new MidtransSnap($orderId, $item, $userDetail);
-    //     $midtransData = $midtrans->create();
-
-    //     Transaction::create([
-    //         'transactions_id' => $orderId   ,
-    //         'user_id' => auth()->id(),
-    //         'order_id' => $request->id,
-    //         'snapToken' => $midtransData['token'],
-    //         'total' => $midtransData['total'],
-    //         'statusBayar' => "PAID",
-    //     ]);
-
-    //     return redirect('/transaction');
-    // }
-
     public function pay(Request $request)
-{
-    $request->validate([
-        'id' => 'exists:orders,id|required'
-    ]);
-
-    $transaction = Transaction::where([
-        ['order_id','=', $request->input('id')],
-        ['statusBayar','=','PAID']
-    ])->first();
-
-    if($transaction)
     {
-        return redirect()->route('transaction.index', ['id' => $transaction->id]);
-    }
-
-    $orderId = "ORDER-" . rand();
-    $order = Order::findOrFail($request->id);
-
-    // Pastikan pesanan belum dibayar
-    if ($order->status !== 'UNPAID') {
-        return redirect()->back()->with('error', 'Pesanan sudah dibayar sebelumnya.');
-    }
-
-    // Update status pesanan menjadi "COOK" atau sesuai dengan kebutuhan Anda
-    $order->status = 'COOK'; // Ubah menjadi status yang sesuai setelah pembayaran
-    $order->save();
-
-    // Proses pembayaran
-    $orders = Order::find($request->id)->first();
-
-    $item = collect([]);
-
-    if ($orders->food) {
-        $item->push([
-            'id' => rand(),
-            'price' => $orders->food->price,
-            'quantity' => 1,
-            'name' => $orders->food->food,
+        $request->validate([
+            'id' => 'exists:orders,id|required'
         ]);
-    }
 
-    if ($orders->drinks) {
-        $item->push([
-            'id' => rand(),
-            'price' => $orders->drinks->price,
-            'quantity' => 1,
-            'name' => $orders->drinks->drink,
+        $transaction = Transaction::where([
+            ['order_id','=', $request->input('id')],
+            ['statusBayar','=','PAID']
+        ])->first();
+
+        if($transaction)
+        {
+            return redirect()->route('transaction.index', ['id' => $transaction->id]);
+        }
+
+        $orderId = "ORDER-" . rand();
+        $orders = Order::find($request->id)->first();
+
+        $item = collect([]);
+
+        if ($orders->food) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->food->price,
+                'quantity' => 1,
+                'name' => $orders->food->food,
+            ]);
+        }
+
+        if ($orders->drinks) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->drinks->price,
+                'quantity' => 1,
+                'name' => $orders->drinks->drink,
+            ]);
+        }
+
+        if ($orders->dimsums) {
+            $item->push([
+                'id' => rand(),
+                'price' => $orders->dimsums->price,
+                'quantity' => 1,
+                'name' => $orders->dimsums->dimsum,
+            ]);
+        }
+
+        $userDetail = [
+            'first_name' => $orders->user->name,
+            'email' => $orders->user->email,
+            'phone' => $orders->noTelepon,
+        ];
+
+        $midtrans = new MidtransSnap($orderId, $item, $userDetail);
+        $midtransData = $midtrans->create();
+
+        Transaction::create([
+            'transactions_id' => $orderId   ,
+            'user_id' => auth()->id(),
+            'order_id' => $request->id,
+            'snapToken' => $midtransData['token'],
+            'total' => $midtransData['total'],
+            'statusBayar' => "PAID",
         ]);
+
+        // if ($transaction) {
+        //     $order = Order::find($request->id);
+        //     if ($order) {
+        //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
+        //         if ($product) {
+        //             $product->stock -= 1;
+        //             dd($product);
+        //             $product->save();
+        //         }
+        //     }
+        // }
+        // return response()->json(['snap-token' => $midtransData['token']]);
+        return redirect('/transaction');
     }
-
-    if ($orders->dimsums) {
-        $item->push([
-            'id' => rand(),
-            'price' => $orders->dimsums->price,
-            'quantity' => 1,
-            'name' => $orders->dimsums->dimsum,
-        ]);
-    }
-
-    $userDetail = [
-        'first_name' => $orders->user->name,
-        'email' => $orders->user->email,
-        'phone' => $orders->noTelepon,
-    ];
-
-    $midtrans = new MidtransSnap($orderId, $item, $userDetail);
-    $midtransData = $midtrans->create();
-
-    Transaction::create([
-        'transactions_id' => $orderId,
-        'user_id' => auth()->id(),
-        'order_id' => $request->id,
-        'snapToken' => $midtransData['token'],
-        'total' => $midtransData['total'],
-        'statusBayar' => "PAID",
-    ]);
-
-    return redirect('/transaction');
-}
-
 
     /**
      * Store a newly created resource in storage.

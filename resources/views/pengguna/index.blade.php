@@ -71,7 +71,20 @@ https://mo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#services">Food</a></li>
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#minuman">Drink</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
+                            {{-- <li class="scroll-to-section">
+                                <form action="{{ route('user2') }}" method="GET">
+                                    <button type="submit" class="btn btn-purple">Login</button>
+                                </form>
+                            </li> --}}
+                            <li class="scroll-to-section">
+                                <form id="logout-form" action="{{ route('user2') }}" method="get">
+                                    @csrf
+                                    <button type="submit" id="logout-button"
+                                        style="color: rgb(247, 244, 247); background-color: transparent; border: none; cursor: pointer;"
+                                        onclick="delayedAlert()">Login</button>
+                                </form>
+                            </li>
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

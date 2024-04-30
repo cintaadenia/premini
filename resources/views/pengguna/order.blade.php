@@ -102,17 +102,18 @@
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $ord->id }}" />
-                                                    <button class="btn btn-primary" order="{{ $ord->id }}">Bayar Sekarang</button>
+                                                    <button class="btn btn-primary float-end" order="{{ $ord->id }}">Bayar Sekarang</button>
                                                 </form>
 
+
                                                 @elseif($ord->status == 'COOK')
-                                                    <span class="badge bg-warning text-dark">Sedang Dimasak</span>
+                                                    <span class="badge bg-warning text-dark float-end">Sedang Dimasak</span>
 
                                                 @elseif($ord->status == 'DELIVER')
-                                                    <span class="badge bg-info">Sedang Diantar</span>
+                                                    <span class="badge bg-info float-end">Sedang Diantar</span>
 
                                                 @elseif($ord->status == 'RECEIVED')
-                                                    <span class="badge bg-success">Sudah Diterima</span>
+                                                    <span class="badge bg-success float-end">Sudah Diterima</span>
                                                 @endif
                                             </div>
                                     </div>
