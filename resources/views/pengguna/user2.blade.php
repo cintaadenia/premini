@@ -112,8 +112,8 @@
                             <li class="scroll-to-section"><a href="#makanan">Food</a></li>
                             <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
                             <li class="scroll-to-section"><a href="#minuman">Drink</a></li> --}}
-                            <li class="scroll-to-section"><a href="#order">Order Here!</a></li>
-                            {{-- <li class="scroll-to-section"><a href="{{route('order')}}">Detail Order</a></li> --}}
+                            <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
+                            <li class="scroll-to-section"><a href="{{route('order')}}">Details Order</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
@@ -239,7 +239,7 @@
                             @csrf
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <input type="number" name="noTelepon" id="noTelepon"
+                                    <input type="number" name="noTelepon" id="noTelepon" value="{{old('noTelepon')}}"
                                         placeholder="No Telepon..." required>
                                 </fieldset>
                             </div>

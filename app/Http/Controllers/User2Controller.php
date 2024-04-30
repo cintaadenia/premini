@@ -34,4 +34,7 @@ class User2Controller extends Controller
         $levels = Level::get();
         return view('pengguna.user2',compact('levels'));
     }
+    public function grafik(){
+        return view('pengguna.grafik');
+}
 }

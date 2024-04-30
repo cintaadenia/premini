@@ -34,7 +34,7 @@
             <span class="dot"></span>
             <div class="dots">
                 <span></span>
-                <span></span>
+                <span></span>y
                 <span></span>
             </div>
         </div>
@@ -57,6 +57,7 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{route('grafik')}}">spending</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
