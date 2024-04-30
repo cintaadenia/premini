@@ -59,8 +59,8 @@
 
                 <li class="sidebar-item {{ Route::is('checkout.index') ? 'active' : '' }}">
                     <a href="{{ route('checkout.index') }}" class='sidebar-link'>
-                        <i class="bi bi-chat-dots-fill"></i>
-                        <span>Transactions</span>
+                        <i class="bi bi-wallet2"></i>
+                        <span>Data Transactions</span>
                     </a>
                 </li>
 
