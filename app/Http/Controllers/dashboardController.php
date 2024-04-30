@@ -48,7 +48,9 @@ class dashboardController extends Controller
                 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'
             ];
             return $month[$item - 1];
+
         })->values()->all();
+        // dd($monthlyData);
 
         return view('dashboard.dashboard', compact('countFood', 'countDrink', 'countDimsum', 'countUser', 'monthlyData', 'transactionMonth'));
     }
