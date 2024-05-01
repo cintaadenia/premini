@@ -129,15 +129,11 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
 
-        document.addEventListener("DOMContentLoaded", function() {
-            var dailyData = @json($dailyData);
-            var transactionDay = @json($transactionDay);
-
-            // console.log(5645);
+            console.log(5645);
             var options = {
                 series: [{
-                    name: 'transactionDay',
-                    data: dailyData,
+                    name: 'Sales',
+                    data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
                 }],
                 chart: {
                     height: 350,
@@ -184,11 +180,10 @@
                     },
                 }
             };
-        });
+
             var chart = new ApexCharts(document.querySelector("#myChart"), options);
             chart.render();
         </script>
-
 
 </body>
 
