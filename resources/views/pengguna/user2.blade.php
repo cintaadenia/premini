@@ -92,12 +92,9 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ** Logo Start ** -->
                         <a href="index.html" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <!-- ** Logo End ** -->
-                        <!-- ** Serach Start ** -->
                         <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
@@ -105,14 +102,7 @@
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
-                        <!-- ** Serach Start ** -->
-                        <!-- ** Menu Start ** -->
                         <ul class="nav">
-                            {{-- <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#makanan">Food</a></li>
-                            <li class="scroll-to-section"><a href="#dimsum">Dimsum</a></li>
-                            <li class="scroll-to-section"><a href="#minuman">Drink</a></li> --}}
-                            <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{route('order')}}">Details Order</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
@@ -248,7 +238,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="makanan" data-placeholder="Pilih Makanan...">
+                                        multiple="multiple" name="makanan[]" data-placeholder="Pilih Makanan...">
                                         @forelse ($foods as $food)
                                             <option value="{{ $food->id }}">{{ $food->food }}</option>
 
@@ -263,7 +253,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="level" data-placeholder="Pilih Level...">
+                                        multiple="multiple" name="level[]" data-placeholder="Pilih Level...">
                                         @forelse ($levels as $level)
                                             <option value="{{ $level->id }}">{{ $level->level }}</option>
 
@@ -277,7 +267,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="minuman"
+                                    <select class="js-example-basic-multiple text-white form-select" name="minuman[]"
                                         multiple="multiple" data-placeholder="Pilih Minuman...">
                                         @forelse ($drinks as $drink)
                                             <option value="{{ $drink->id }}">{{ $drink->drink }}</option>
@@ -292,7 +282,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum"
+                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum[]"
                                         multiple="multiple" data-placeholder="Pilih Dimsum...">
                                         @forelse ($dimsums as $dimsum)
                                             <option value="{{ $dimsum->id }}">{{ $dimsum->dimsum }}</option>

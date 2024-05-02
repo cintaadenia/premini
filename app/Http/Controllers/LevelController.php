@@ -34,12 +34,6 @@ class LevelController extends Controller
             return redirect()->back()->with('success', 'Data Level berhasil ditambahkan');
         } catch (QueryException $e) {
             return redirect()->back()->with('error', 'Gagal menambahkan data! ' . $e->getMessage());
-            // $errorCode = $e->errorInfo[1];
-            // if ($errorCode === 1062) {
-            //     return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada');
-            // } else {
-            //     return redirect()->back()->with('error', 'Gagal menambahkan data, Data sudah ada! ');
-            // }
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Gagal menambahkan data! ' . $e->getMessage());
         }

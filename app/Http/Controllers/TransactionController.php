@@ -17,7 +17,6 @@ class TransactionController extends Controller
         $transaction = Transaction::where('user_id', auth()->id())->get();
         $detailtransaction =Transaction::where([
             ['id','=', $request->input('id')],
-            // ['statusBayar','!=','PAID'],
         ])->first();
 
         return view('pengguna.transaction', compact('transaction','detailtransaction'));
@@ -30,7 +29,6 @@ class TransactionController extends Controller
     {
         User::create([
             'user_id' => auth()->user()->id,
-            // 'order_id' => $->id,
         ]);
     }
 
@@ -66,18 +64,7 @@ class TransactionController extends Controller
  */
 public function update(UpdateTransactionRequest $request, Transaction $transaction)
 {
-    // Proses validasi dan pembaruan transaksi
-    // $transaction->update($request->all());
-
-    // // Jika transaksi berhasil diperbarui dan pembayaran telah diterima
-    // if ($transaction->statusBayar === 'PAID') {
-    //     // Kurangi stok barang
-    //     $product = Transaction::find($transaction->product_id);
-    //     if ($product) {
-    //         $product->stock -= $transaction->quantity;
-    //         $product->save();
-    //     }
-    // }
+    //
 }
 
 

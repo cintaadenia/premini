@@ -20,12 +20,10 @@ class UserController extends Controller
         return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'levels','transaction'));
     }
 
-
     public function dimsums(){
         $dimsums = Dimsum::get();
         return view('pengguna.index',compact('dimsums'));
     }
-
 
     public function drinks(){
         $drinks = Drink::get();
@@ -36,6 +34,7 @@ class UserController extends Controller
         $levels = Level::get();
         return view('pengguna.index',compact('levels'));
     }
+
     public function transactions(){
         $transacton = Transaction::get();
         return view('pengguna.transaction',compact('transaction'));

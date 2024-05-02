@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <script type="text/javascript"
-    src="https://app.sandbox.midtrans.com/snap/snap.js"
-    data-client-key="SB-Mid-client-f0qKrHclba2MSy33"></script>
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SB-Mid-client-f0qKrHclba2MSy33"></script>
     <style>
         .main-nav {
             padding: 55px 0;
@@ -122,7 +121,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-{{--
+                                                    {{--
                                                     @foreach ($spending as $spend) --}}
                                                     <tr>
                                                         <td></td>
