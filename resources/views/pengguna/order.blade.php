@@ -89,15 +89,15 @@
                                 @foreach ($order as $ord)
                                 <div class="col-md-4">
                                     <div class="card" style="width: 21rem;">
-                                        <img src="" width="150" height="250" class="card-img-top"
-                                            alt="...">
+                                        {{-- <img src="" width="150" height="250" class="card-img-top"
+                                            alt="..."> --}}
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <p>Food : {{ $ord->food->food  }}</p>
                                             <p>Drink : {{ $ord->drinks->drink }}</p>
                                             <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
                                             <p>Catatan : {{ $ord->catatan }}</p>
-                                            <h6 style="color: red">Total : Rp </h6>
+                                            <h6 style="color: red">Total :Rp {{ number_format($ord->total, 0, ',', '.') }} </h6>
                                             <br>
                                                 @if ($ord->status == 'UNPAID')
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">

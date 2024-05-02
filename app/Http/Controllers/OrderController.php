@@ -29,11 +29,13 @@ class OrderController extends Controller
     {
         $order = Order::where('users_id', auth()->id())->get();
         return view('pengguna.order', compact('order'));
+
     }
 
 
     public function create(OrderRequest $request)
     {
+        $order = Transaction::where('transactions_id', $request->order_id)->first();
         // dd($request->all());
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
@@ -72,6 +74,7 @@ class OrderController extends Controller
         ]);
 
         // return redirect()->back()->with('success', 'Anda Berhasil Order');
+
         return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
