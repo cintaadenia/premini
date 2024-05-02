@@ -1,9 +1,9 @@
 @if ($errors->any())
-  @foreach ($errors->all() as $item)
-<script>
-    console.log("{{ $item }}")
-</script>
-  @endforeach
+    @foreach ($errors->all() as $item)
+        <script>
+            console.log("{{ $item }}")
+        </script>
+    @endforeach
 @endif
 
 <!DOCTYPE html>
@@ -109,7 +109,7 @@
                         <!-- ** Menu Start ** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
-                            <li class="scroll-to-section"><a href="{{route('order')}}">Details Order</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
                                     @csrf
@@ -235,8 +235,8 @@
                             @csrf
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <input type="number" name="noTelepon" id="noTelepon" value="{{old('noTelepon')}}"
-                                        placeholder="No Telepon..." required>
+                                    <input type="number" name="noTelepon" id="noTelepon"
+                                        value="{{ old('noTelepon') }}" placeholder="No Telepon..." required>
                                 </fieldset>
                             </div>
 
@@ -244,7 +244,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="makanan[]" data-placeholder="Pilih Makanan...">
+                                        multiple="multiple" name="makanan" data-placeholder="Pilih Makanan...">
                                         @forelse ($foods as $food)
                                             <option value="{{ $food->id }}">{{ $food->food }}</option>
 
@@ -259,7 +259,7 @@
                             <div class="col-lg-12">
                                 <fieldset>
                                     <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="level[]" data-placeholder="Pilih Level...">
+                                        multiple="multiple" name="level" data-placeholder="Pilih Level...">
                                         @forelse ($levels as $level)
                                             <option value="{{ $level->id }}">{{ $level->level }}</option>
 
@@ -273,7 +273,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="minuman[]"
+                                    <select class="js-example-basic-multiple text-white form-select" name="minuman"
                                         multiple="multiple" data-placeholder="Pilih Minuman...">
                                         @forelse ($drinks as $drink)
                                             <option value="{{ $drink->id }}">{{ $drink->drink }}</option>
@@ -288,7 +288,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum[]"
+                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum"
                                         multiple="multiple" data-placeholder="Pilih Dimsum...">
                                         @forelse ($dimsums as $dimsum)
                                             <option value="{{ $dimsum->id }}">{{ $dimsum->dimsum }}</option>
@@ -310,7 +310,7 @@
 
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button class="btn btn-light p-3" onclick="window.location.href='{{ route('order') }}'">Order Sekarang!</button>
+                                    <button class="btn btn-light p-3">Order Sekarang!</button>
                                 </fieldset>
                             </div>
 

@@ -27,52 +27,9 @@ class OrderController extends Controller
 
     public function order()
     {
+        // dd("t");
         $order = Order::where('users_id', auth()->id())->get();
         return view('pengguna.order', compact('order'));
-    }
-
-
-    public function create(OrderRequest $request)
-    {
-        // dd($request->all());
-        $order = Order::create([
-            'noTelepon' => $request->noTelepon,
-            'food_id' => $request->makanan,
-            'levels_id' => $request->level,
-            'drinks_id' => $request->minuman,
-            'dimsums_id' => $request->dimsum,
-            'users_id' => auth()->id(),
-            'catatan' => $request->catatan,
-        ]);
-        //untuk mengurangi stock
-        //Untuk Food
-        $food = Food::findOrFail($request->makanan);
-
-        $food->update([
-            'stock' => $food->stock - 1
-        ]);
-
-        //Untuk Drink
-        $drink = Drink::findOrFail($request->minuman);
-
-        $drink->update([
-            'stock' => $drink->stock - 1
-        ]);
-
-        //Untuk Dimsum
-        $dimsum = Dimsum::findOrFail($request->dimsum);
-
-        $dimsum->update([
-            'stock' => $dimsum->stock - 1
-        ]);
-
-        Checkout::create([
-            'user_id' => auth()->id(),
-            'order_id' => $order->id,
-        ]);
-
-        // return redirect()->back()->with('success', 'Anda Berhasil Order');
-        return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     public function pay(Request $request)
@@ -141,11 +98,18 @@ class OrderController extends Controller
             'statusBayar' => "PAID",
         ]);
 
-        // $order = Order::findOrFail($request->id);
-        // $order->status = "PAID";
-        // $order->save();
-
-
+        // if ($transaction) {
+        //     $order = Order::find($request->id);
+        //     if ($order) {
+        //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
+        //         if ($product) {
+        //             $product->stock -= 1;
+        //             dd($product);
+        //             $product->save();
+        //         }
+        //     }
+        // }
+        // return response()->json(['snap-token' => $midtransData['token']]);
         return redirect('/transaction');
     }
 
@@ -155,6 +119,44 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
+        // dd($request->all());
+        $order = Order::create([
+            'noTelepon' => $request->noTelepon,
+            'food_id' => $request->makanan,
+            'levels_id' => $request->level,
+            'drinks_id' => $request->minuman,
+            'dimsums_id' => $request->dimsum,
+            'users_id' => auth()->id(),
+            'catatan' => $request->catatan,
+        ]);
+        //untuk mengurangi stock
+        //Untuk Food
+        $food = Food::findOrFail($request->makanan);
+
+        $food->update([
+            'stock' => $food->stock - 1
+        ]);
+
+        //Untuk Drink
+        $drink = Drink::findOrFail($request->minuman);
+
+        $drink->update([
+            'stock' => $drink->stock - 1
+        ]);
+
+        //Untuk Dimsum
+        $dimsum = Dimsum::findOrFail($request->dimsum);
+
+        $dimsum->update([
+            'stock' => $dimsum->stock - 1
+        ]);
+
+        Checkout::create([
+            'user_id' => auth()->id(),
+            'order_id' => $order->id,
+        ]);
+
+        return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     /**
