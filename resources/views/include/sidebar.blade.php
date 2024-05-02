@@ -88,7 +88,7 @@
 
             <li class="sidebar-item">
                 @auth
-                    <form action="{{ route('logout') }}" method="get">
+                    <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <!-- Menggunakan kelas "fas" untuk ikon Font Awesome -->
                         <button type="submit" class="btn btn-danger">
