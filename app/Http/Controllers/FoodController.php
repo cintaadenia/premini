@@ -33,6 +33,7 @@ class FoodController extends Controller
 
             Food::create([
                 'food' => $request->food,
+                'level' => $request->level,
                 'deskripsi' => $request->deskripsi,
                 'price' => $request->price,
                 'stock' => $request->stock,

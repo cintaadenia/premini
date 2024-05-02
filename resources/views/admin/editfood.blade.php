@@ -48,6 +48,18 @@
                             </div>
 
                             <div class="mb-3 row">
+                                <label for="food" class="col-sm-2 col-form-label">Level</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="level" name="level" value="{{ old('level') }}"
+                                        placeholder="Tambahkan Level"></input>
+                                    @error('level')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
                                 <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Tambahkan Deskripsi" value>{{ $food['deskripsi'] }}</textarea>
