@@ -35,7 +35,7 @@ Route::get('/', [UserController::class, 'foods'])->name('foods');
 //USER
 Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
-    Route::get('/grafik', [User2Controller::class, 'grafik'])->name('grafik');
+    Route::get('/spending', [User2Controller::class, 'spending'])->name('spending');
     //LOGOUT
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
