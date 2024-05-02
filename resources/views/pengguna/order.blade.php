@@ -57,7 +57,7 @@
                         </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{route('grafik')}}">spending</a></li>
+                            <li class="scroll-to-section"><a href="{{route('spending')}}">spending</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -105,7 +105,6 @@
                                                     <input type="hidden" name="id" value="{{ $ord->id }}" />
                                                     <button class="btn btn-primary float-end" order="{{ $ord->id }}">Bayar Sekarang</button>
                                                 </form>
-
 
                                                 @elseif($ord->status == 'COOK')
                                                     <span class="badge bg-warning text-dark float-end">Sedang Dimasak</span>
