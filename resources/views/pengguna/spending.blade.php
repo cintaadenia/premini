@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="" class="logo">
+                        <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
                         <div class="search-input">
@@ -59,8 +59,9 @@
                             </form>
                         </div>
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="{{ route('order') }}">Order</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
 
                         </ul>
                         <a class='menu-trigger'>

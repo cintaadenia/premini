@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
     Route::get('/spending', [User2Controller::class, 'spending'])->name('spending');
     //LOGOUT
-    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     // //ORDER
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');

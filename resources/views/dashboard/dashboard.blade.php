@@ -303,7 +303,7 @@
                         data: {
                             labels: transactionMonth,
                             datasets: [{
-                                label: 'My First Dataset',
+                                label: 'Data transaction',
                                 data: monthlyData,
                                 fill: false,
                                 borderColor: 'rgb(75, 192, 192)',

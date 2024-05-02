@@ -93,7 +93,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ** Logo Start ** -->
-                        <a href="index.html" class="logo">
+                        <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
                         <!-- ** Logo End ** -->
@@ -111,11 +111,11 @@
                             <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section">
-                                <form id="logout-form" action="{{ route('logout') }}" method="get">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                    style="color: rgb(254, 254, 254); background-color: transparent; text-decoration: none; cursor: pointer;"
+                                    onclick="delayedAlert()">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
-                                    <button type="submit" id="logout-button"
-                                        style="color: rgb(254, 254, 254); background-color: transparent; border: none; cursor: pointer;"
-                                        onclick="delayedAlert()">Logout</button>
                                 </form>
                             </li>
                             <script>
@@ -125,6 +125,7 @@
                                     }, 1000);
                                 }
                             </script>
+
 
                         </ul>
                         <a class='menu-trigger'>
