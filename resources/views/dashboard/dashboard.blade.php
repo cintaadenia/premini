@@ -265,11 +265,11 @@
                 </div>
                 <div class="card-body">
                     <div id="chart-visitors-profile"></div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </section>
-</div> --}}
+</div>
 
 
             @endsection
