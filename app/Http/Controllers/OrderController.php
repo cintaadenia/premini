@@ -98,18 +98,6 @@ class OrderController extends Controller
             'statusBayar' => "PAID",
         ]);
 
-        // if ($transaction) {
-        //     $order = Order::find($request->id);
-        //     if ($order) {
-        //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
-        //         if ($product) {
-        //             $product->stock -= 1;
-        //             dd($product);
-        //             $product->save();
-        //         }
-        //     }
-        // }
-        // return response()->json(['snap-token' => $midtransData['token']]);
         return redirect('/transaction');
     }
 

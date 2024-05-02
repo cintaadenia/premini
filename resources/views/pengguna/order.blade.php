@@ -1,3 +1,6 @@
+@php
+    use App\Helpers\OrderHelper;
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +100,7 @@
                                             <p>Drink : {{ $ord->drinks->drink }}</p>
                                             <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
                                             <p>Catatan : {{ $ord->catatan }}</p>
-                                            <h6 style="color: red">Total :Rp {{ number_format($ord->total, 0, ',', '.') }} </h6>
+                                            <h6 style="color: red">Total :Rp {{ number_format(OrderHelper::index($ord->id), 0, ',', '.') }}</h6>
                                             <br>
                                                 @if ($ord->status == 'UNPAID')
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
