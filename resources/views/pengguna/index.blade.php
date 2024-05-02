@@ -49,7 +49,7 @@ https://mo.com/tm-586-scholar
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="index.html" class="logo">
+                        <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
                         <div class="search-input">
