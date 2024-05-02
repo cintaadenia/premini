@@ -29,44 +29,42 @@ class OrderController extends Controller
     {
         $order = Order::where('users_id', auth()->id())->get();
         return view('pengguna.order', compact('order'));
-
     }
 
 
     public function create(OrderRequest $request)
     {
-        $order = Transaction::where('transactions_id', $request->order_id)->first();
         // dd($request->all());
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
-            'food_id' => $request->makanan,
+            // 'food_id' => $request->makanan,
             'levels_id' => $request->level,
-            'drinks_id' => $request->minuman,
-            'dimsums_id' => $request->dimsum,
+            // 'drinks_id' => $request->minuman,
+            // 'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
             'catatan' => $request->catatan,
         ]);
         //untuk mengurangi stock
         //Untuk Food
-        $food = Food::findOrFail($request->makanan);
-
-        $food->update([
-            'stock' => $food->stock - 1
-        ]);
+        foreach ($request->makanan as $foodId) {
+            $order->foods()->attach($foodId);
+            $food = Food::findOrFail($foodId);
+            $food->update(['stock' => $food->stock - 1]);
+        }
 
         //Untuk Drink
-        $drink = Drink::findOrFail($request->minuman);
-
-        $drink->update([
-            'stock' => $drink->stock - 1
-        ]);
+        foreach ($request->minuman as $drinkId) {
+            $order->drinks()->attach($drinkId);
+            $drink = Drink::findOrFail($drinkId);
+            $drink->update(['stock' => $drink->stock - 1]);
+        }
 
         //Untuk Dimsum
-        $dimsum = Dimsum::findOrFail($request->dimsum);
-
-        $dimsum->update([
-            'stock' => $dimsum->stock - 1
-        ]);
+        foreach ($request->dimsum as $dimsumId) {
+            $order->dimsums()->attach($dimsumId);
+            $dimsum = Dimsum::findOrFail($dimsumId);
+            $dimsum->update(['stock' => $dimsum->stock - 1]);
+        }
 
         Checkout::create([
             'user_id' => auth()->id(),
@@ -74,7 +72,6 @@ class OrderController extends Controller
         ]);
 
         // return redirect()->back()->with('success', 'Anda Berhasil Order');
-
         return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
