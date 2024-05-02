@@ -14,7 +14,7 @@ class GrafikController extends Controller
     public function index()
     {
         $spending = Order::get();
-        return view('pengguna.grafik', compact('spending'));
+        return view('pengguna.spending', compact('spending'));
     }
 
 }
