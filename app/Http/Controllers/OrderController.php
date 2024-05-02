@@ -33,9 +33,6 @@ class OrderController extends Controller
 
     }
 
-<<<<<<< Updated upstream
-=======
-
     public function create(OrderRequest $request)
     {
         $order = Transaction::where('transactions_id', $request->order_id)->first();
@@ -76,12 +73,9 @@ class OrderController extends Controller
             'order_id' => $order->id,
         ]);
 
-        // return redirect()->back()->with('success', 'Anda Berhasil Order');
-
         return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
->>>>>>> Stashed changes
     public function pay(Request $request)
     {
         $request->validate([
@@ -148,21 +142,6 @@ class OrderController extends Controller
             'statusBayar' => "PAID",
         ]);
 
-<<<<<<< Updated upstream
-=======
-        // if ($transaction) {
-        //     $order = Order::find($request->id);
-        //     if ($order) {
-        //         $product = $order->food ?? $order->drinks ?? $order->dimsums;
-        //         if ($product) {
-        //             $product->stock -= 1;
-        //             dd($product);
-        //             $product->save();
-        //         }
-        //     }
-        // }
-        // return response()->json(['snap-token' => $midtransData['token']]);
->>>>>>> Stashed changes
         return redirect('/transaction');
     }
 
