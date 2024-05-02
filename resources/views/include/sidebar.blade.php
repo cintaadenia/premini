@@ -48,12 +48,12 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ Route::is('level.index') ? 'active' : '' }}">
+                {{-- <li class="sidebar-item {{ Route::is('level.index') ? 'active' : '' }}">
                     <a href="{{ route('level.index') }}" class='sidebar-link'>
                         <i class="fas fa-level-up-alt"></i>
                         <span>Level</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="sidebar-title">Pages</li>
 

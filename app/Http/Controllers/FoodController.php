@@ -66,6 +66,7 @@ class FoodController extends Controller
 
         $validatedData = $request->validate([
             'food' => 'required|unique:food,food,',
+            'level' => 'required|string|max:255 ',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
@@ -105,6 +106,7 @@ class FoodController extends Controller
 
             $request->validate([
                 'food' => 'required|unique:food,food,' . $id,
+                'level' => 'required|string|max:255 ',
                 'deskripsi' => 'required|string|max:255 ',
                 'price' => 'required|numeric|min:1',
                 'stock' => 'required|numeric|min:1',
@@ -121,6 +123,7 @@ class FoodController extends Controller
             }
 
             $food->food = $request->input('food');
+            $food->level = $request->input('level');
             $food->deskripsi = $request->input('deskripsi');
             $food->price = $request->input('price');
             $food->stock = $request->input('stock');

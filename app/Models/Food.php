@@ -12,6 +12,7 @@ class Food extends Model
     protected $table = "food";
     protected $fillable = [
         'food',
+        'level',
         'deskripsi',
         'price',
         'stock',
@@ -23,6 +24,7 @@ class Food extends Model
     {
         return [
             'food' => 'required|unique:food,food,' . $id,
+            'level' => 'required|string|max:255 ',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',

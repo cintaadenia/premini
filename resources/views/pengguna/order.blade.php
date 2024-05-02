@@ -98,7 +98,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
-                                            <p>Food : {{ $ord->food->food  }}</p>
+                                            <p>Food : {{ $ord->food->food }}</p>
                                             <p>Drink : {{ $ord->drinks->drink }}</p>
                                             <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
                                             <p>Catatan : {{ $ord->catatan }}</p>

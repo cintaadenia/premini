@@ -82,13 +82,13 @@
                                             </div>
                                         </div>
 
-                                        <hr style="color: blueviolet">
+                                        {{-- <hr style="color: blueviolet">
 
                                         <div class="row">
                                             <div class="col">
                                                 <h6>{{ $user->order->levels->level}}</h6>
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         <hr style="color: blueviolet">
 

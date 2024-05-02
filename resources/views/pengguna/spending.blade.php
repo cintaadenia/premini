@@ -114,7 +114,6 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Food</th>
-                                                        <th>Level</th>
                                                         <th>Drink</th>
                                                         <th>Dimsum</th>
                                                         <th>Total</th>
@@ -124,7 +123,6 @@
                                                     {{--
                                                     @foreach ($spending as $spend) --}}
                                                     <tr>
-                                                        <td></td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>

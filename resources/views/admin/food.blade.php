@@ -125,6 +125,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">FOOD</th>
+                                <th scope="col">LEVEL</th>
                                 <th scope="col">DESKRIPSI</th>
                                 <th scope="col">PRICE</th>
                                 <th scope="col">STOCK</th>
@@ -136,6 +137,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $f->food }}</td>
+                                <td>{{ $f->level }}</td>
                                 <td>{{ $f->deskripsi }}</td>
                                 <td>{{ $f->price }}</td>
                                 <td>{{ $f->stock }}</td>

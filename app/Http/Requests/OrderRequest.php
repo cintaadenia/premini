@@ -24,7 +24,7 @@ class OrderRequest extends FormRequest
             return [
                 'noTelepon' => 'required|string|max:10',
                 'makanan' => 'required|string|min:1',
-                'level' => 'required|string|min:1',
+                // 'level' => 'required|string|min:1',
                 'minuman' => 'required|string|min:1',
                 'dimsum' => 'required|string|min:1',
                 'catatan' => 'required|string|min:1',

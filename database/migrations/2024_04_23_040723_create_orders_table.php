@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->integer('noTelepon');
             $table->foreignId('food_id')->constrained('food')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
+            // $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('drinks_id')->constrained('drinks')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('dimsums_id')->constrained('dimsums')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('users_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
-            // $table->foreignId('total_id')->constrained('transactions')->cascadeOnDelete()->cascadeOnUpdate();
             $table->text('catatan');
             $table->enum('status',['UNPAID', 'COOK', 'DELIVER', 'RECEIVED'])->default('UNPAID');
             $table->timestamps();

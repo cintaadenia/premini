@@ -16,10 +16,10 @@ class Spending extends Model
     {
         return $this->belongsTo(Food::class);
     }
-    public function levels()
-    {
-        return $this->belongsTo(Level::class);
-    }
+    // public function levels()
+    // {
+    //     return $this->belongsTo(Level::class);
+    // }
     public function drinks()
     {
         return $this->belongsTo(Drink::class);

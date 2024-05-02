@@ -40,7 +40,7 @@ class OrderController extends Controller
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
             'food_id' => $request->makanan,
-            'levels_id' => $request->level,
+            // 'levels_id' => $request->level,
             'drinks_id' => $request->minuman,
             'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
@@ -155,7 +155,7 @@ class OrderController extends Controller
         $order = Order::create([
             'noTelepon' => $request->noTelepon,
             'food_id' => $request->makanan,
-            'levels_id' => $request->level,
+            // 'levels_id' => $request->level,
             'drinks_id' => $request->minuman,
             'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),

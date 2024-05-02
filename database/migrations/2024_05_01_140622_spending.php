@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('spending', function (Blueprint $table) {
             $table->id();
             $table->foreignId('food_id')->constrained('food')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
+            // $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('drinks_id')->constrained('drinks')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('dimsums_id')->constrained('dimsums')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();

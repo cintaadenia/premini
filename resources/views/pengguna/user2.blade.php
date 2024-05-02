@@ -224,7 +224,6 @@
                             <span class="offer">off<br><em>50%</em></span>
                             <h6>Valide: <em>24 April 2036</em></h6>
                             <h4>Special Offer <em>50%</em> OFF!</h4>
-                            {{-- <a href="#"></i></a> --}}
                         </div>
                     </div>
                 </div>
@@ -246,7 +245,7 @@
                                     <select class="js-example-basic-multiple text-white form-select"
                                         multiple="multiple" name="makanan" data-placeholder="Pilih Makanan dan Level...">
                                         @forelse ($foods as $food)
-                                            <option value="{{ $food->id }}">{{ $food->food }} | {{ $food->level }}</option>
+                                            <option value="{{ $food->id }}">{{ $food->food }} | Level {{ $food->level }}</option>
 
                                         @empty
                                             <option>Belum ada makanan dan Level</option>
