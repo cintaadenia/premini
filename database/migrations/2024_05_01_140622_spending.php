@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('drinks_id')->constrained('drinks')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('dimsums_id')->constrained('dimsums')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('users_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

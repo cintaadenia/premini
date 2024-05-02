@@ -61,7 +61,7 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
-                            <li class="scroll-to-section"><a href="{{route('spending')}}">spending</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

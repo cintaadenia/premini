@@ -110,6 +110,7 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                             <li class="scroll-to-section">
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                     style="color: rgb(254, 254, 254); background-color: transparent; text-decoration: none; cursor: pointer;"
@@ -125,8 +126,6 @@
                                     }, 1000);
                                 }
                             </script>
-
-
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
