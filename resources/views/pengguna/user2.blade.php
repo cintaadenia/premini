@@ -92,9 +92,12 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
+                        <!-- ** Logo Start ** -->
                         <a href="index.html" class="logo">
                             <h1>Gacoan</h1>
                         </a>
+                        <!-- ** Logo End ** -->
+                        <!-- ** Serach Start ** -->
                         <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
@@ -102,7 +105,10 @@
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
+                        <!-- ** Serach Start ** -->
+                        <!-- ** Menu Start ** -->
                         <ul class="nav">
+                            <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{route('order')}}">Details Order</a></li>
                             <li class="scroll-to-section">
                                 <form id="logout-form" action="{{ route('logout') }}" method="get">
