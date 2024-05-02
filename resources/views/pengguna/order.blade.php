@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <style>
+    <style>7
         .main-nav {
             padding: 55px 0;
         }
