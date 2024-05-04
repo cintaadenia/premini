@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('order_dimsums', function (Blueprint $table) {
             $table->id();
             $table->foreignId('dimsum_id')->constrained('dimsums')->cascadeOnDelete();
+            $table->foreignId('order_id')->constrained('orders')->cascadeOnDelete();
             $table->integer('jumlah');
             $table->timestamps();
         });

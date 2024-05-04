@@ -163,15 +163,15 @@ https://mo.com/tm-586-scholar
         Food Menu</h1>
 
 
-        <div class="services section" id="dimsum">
-            <div class="container">
-                <div class="row">
-                    @foreach ($foods as $food)
+    <div class="services section" id="dimsum">
+        <div class="container">
+            <div class="row">
+                @foreach ($foods as $food)
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="icon">
-                                <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100"
-                                alt="online degrees">
+                                <img src="{{ asset('storage/' . $food->image) }}" height="100" width="100"
+                                    alt="online degrees">
                             </div>
                             <div class="main-content">
                                 <h4>{{ $food->food }} LV {{ $food->level }}</h4>
@@ -189,12 +189,11 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                     </div>
-
                 @endforeach
 
-                </div>
             </div>
         </div>
+    </div>
 
     <br>
     <br>
@@ -203,15 +202,15 @@ https://mo.com/tm-586-scholar
         style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
         Dimsum Menu</h1>
 
-        <div class="services section" id="dimsum">
-            <div class="container">
-                <div class="row">
-                    @foreach ($dimsums as $dimsum)
+    <div class="services section" id="dimsum">
+        <div class="container">
+            <div class="row">
+                @foreach ($dimsums as $dimsum)
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="icon">
-                                <img src="{{ asset('storage/'. $dimsum->image) }}" height="100" width="100"
-                                alt="online degrees">
+                                <img src="{{ asset('storage/' . $dimsum->image) }}" height="100" width="100"
+                                    alt="online degrees">
                             </div>
                             <div class="main-content">
                                 <h4>{{ $dimsum->dimsum }}</h4>
@@ -229,51 +228,49 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
                     </div>
-
                 @endforeach
 
-                </div>
             </div>
         </div>
+    </div>
 
 
-                <h1 class="button"
-                    style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-                    Drink Menu</h1>
+    <h1 class="button"
+        style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+        Drink Menu</h1>
 
 
-                    <div class="services section" id="minuman">
-                        <div class="container">
-                            <div class="row">
-                                @foreach ($drinks as $drink)
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="service-item">
-                                        <div class="icon">
-                                            <img src="{{ asset('storage/'. $drink->image) }}" height="100" width="100"
-                                            alt="online degrees">
-                                        </div>
-                                        <div class="main-content">
-                                            <h4>{{ $drink->drink }}</h4>
-                                            <p>{{ $drink->deskripsi }}</p>
-                                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
-                                            <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
-                                            <br>
-                                            <div class="rating">
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="fas fa-star" style="color: gold;"></i>
-                                                <i class="far fa-star" style="color: gold;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+    <div class="services section" id="minuman">
+        <div class="container">
+            <div class="row">
+                @foreach ($drinks as $drink)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/' . $drink->image) }}" height="100" width="100"
+                                    alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <h4>{{ $drink->drink }}</h4>
+                                <p>{{ $drink->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
+                                <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
+                                <br>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
                                 </div>
-
-                            @endforeach
-
                             </div>
                         </div>
                     </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
     <br>
     <br>
     <br>
@@ -299,9 +296,11 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -322,9 +321,11 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -344,9 +345,11 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
                             </ul>
 
                         </div>
@@ -369,9 +372,11 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -379,7 +384,6 @@ https://mo.com/tm-586-scholar
             </div>
         </div>
     </div>
-
 
     <div class="section fun-facts">
         <div class="container">
@@ -389,29 +393,32 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="500" data-speed="1000"></h2>
+                                    <h2 class="timer count-title count-number" data-to="500" data-speed="1000">500
+                                    </h2>
                                     <p class="count-text ">Rating Makanan</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="550" data-speed="1000"></h2>
+                                    <h2 class="timer count-title count-number" data-to="550" data-speed="1000">550
+                                    </h2>
                                     <p class="count-text ">Rating Dimsum</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="450" data-speed="1000"></h2>
+                                    <h2 class="timer count-title count-number" data-to="450" data-speed="1000">450
+                                    </h2>
                                     <p class="count-text ">Rating Minuman</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 
@@ -424,7 +431,8 @@ https://mo.com/tm-586-scholar
                             <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun
                                 harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
                             <div class="author">
-                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">Full Stack Master</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span
+                                    class="category">Full Stack Master</span>
                                 <h4>ELSA</h4>
                             </div>
                         </div>
@@ -433,7 +441,8 @@ https://mo.com/tm-586-scholar
                                 minumannya yg enak, harga Mie Gacoan ramah di kantong.”
                             </p>
                             <div class="author">
-                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">UI Expert</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span
+                                    class="category">UI Expert</span>
                                 <h4>AMI NUR DWIUTAMI</h4>
                             </div>
                         </div>
@@ -441,7 +450,8 @@ https://mo.com/tm-586-scholar
                             <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh....
                                 sesuatuuu bangeet!!. ”</p>
                             <div class="author">
-                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">Digital Animator</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span
+                                    class="category">Digital Animator</span>
                                 <h4>BELINDA</h4>
                             </div>
                         </div>
@@ -473,7 +483,8 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="user/assets/images/gacoan.jpg" alt="" width="240" height="240">
+                                    <img src="user/assets/images/gacoan.jpg" alt="" width="240"
+                                        height="240">
                                 </div>
                             </div>
 
@@ -504,7 +515,8 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="user/assets/images/gacoan2.jpeg" alt="" width="245" height="245">
+                                    <img src="user/assets/images/gacoan2.jpeg" alt="" width="245"
+                                        height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -533,7 +545,8 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="user/assets/images/gacoan3.jpg" alt="" width="245" height="245">
+                                    <img src="user/assets/images/gacoan3.jpg" alt="" width="245"
+                                        height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -576,7 +589,9 @@ https://mo.com/tm-586-scholar
     <script src="user/assets/js/owl-carousel.js"></script>
     <script src="/assets/js/counter.js"></script>
     <script src="user/assets/js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 

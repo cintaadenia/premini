@@ -210,7 +210,6 @@ https://mo.com/tm-586-scholar
                                     <br>
                                     <div class="order-details" style="display: none;">
                                         <input type="number" class="form-control quantity-input" placeholder="Jumlah">
-                                        <p style="text-align: right;">Total :</p>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +266,6 @@ https://mo.com/tm-586-scholar
                                 <br>
                                 <div class="order-details" style="display: none;">
                                     <input type="number" class="form-control quantity-input" placeholder="Jumlah">
-                                    <p style="text-align: right;">Total :</p>
                                 </div>
 
                             </div>
@@ -324,7 +322,6 @@ https://mo.com/tm-586-scholar
                                 <br>
                                 <div class="order-details" style="display: none;">
                                     <input type="number" class="form-control quantity-input" placeholder="Jumlah">
-                                    <p style="text-align: right;">Total :</p>
                                 </div>
                             </div>
                         </div>
