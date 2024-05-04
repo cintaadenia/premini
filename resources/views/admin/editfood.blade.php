@@ -50,7 +50,7 @@
                             <div class="mb-3 row">
                                 <label for="food" class="col-sm-2 col-form-label">Level</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" id="level" name="level" value="{{ old('level') }}"
+                                    <input class="form-control" id="level" name="level" value="{{ $food['level'] }}"
                                         placeholder="Tambahkan Level"></input>
                                     @error('level')
                                         <div class="text-danger">{{ $message }}</div>

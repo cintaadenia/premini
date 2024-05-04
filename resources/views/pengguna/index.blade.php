@@ -178,6 +178,7 @@ https://mo.com/tm-586-scholar
                                 <p>{{ $food->deskripsi }}</p>
                                 <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
                                 <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
+                                <br>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -217,6 +218,7 @@ https://mo.com/tm-586-scholar
                                 <p>{{ $dimsum->deskripsi }}</p>
                                 <h6 style="color: rgb(255, 0, 0)">Rp {{ $dimsum->price }}</h6>
                                 <h6 style="color: gray">Stock : {{ $dimsum->stock }}</h6>
+                                <br>
                                 <div class="rating">
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
@@ -255,6 +257,7 @@ https://mo.com/tm-586-scholar
                                             <p>{{ $drink->deskripsi }}</p>
                                             <h6 style="color: rgb(255, 0, 0)">Rp {{ $drink->price }}</h6>
                                             <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
+                                            <br>
                                             <div class="rating">
                                                 <i class="fas fa-star" style="color: gold;"></i>
                                                 <i class="fas fa-star" style="color: gold;"></i>
