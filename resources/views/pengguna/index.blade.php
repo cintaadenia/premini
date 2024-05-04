@@ -174,7 +174,7 @@ https://mo.com/tm-586-scholar
                                 alt="online degrees">
                             </div>
                             <div class="main-content">
-                                <h4>{{ $food->food }}</h4>
+                                <h4>{{ $food->food }} LV {{ $food->level }}</h4>
                                 <p>{{ $food->deskripsi }}</p>
                                 <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
                                 <h6 style="color: gray">Stock : {{ $food->stock }}</h6>

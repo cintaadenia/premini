@@ -61,7 +61,7 @@ https://mo.com/tm-586-scholar
                         </div>
                         <!-- ** Menu Start ** -->
                         <ul class="nav">
-                            {{-- <li class="scroll-to-section"><a href="#order">Order Now!</a></li> --}}
+                            <li class="scroll-to-section"><a href="#services">Home</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                             <li class="scroll-to-section">
@@ -170,8 +170,18 @@ https://mo.com/tm-586-scholar
 
         <div class="services section" id="services">
             <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
-                <button style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order Sekarang!</button>
+                <form id="orderForm" action="{{ route ('order.create') }}" method="post">
+                    <button type="submit" style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order Sekarang!</button>
+                </form>
             </div>
+
+            <script>
+                document.getElementById("orderForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    window.location.href = "order";
+                });
+            </script>
+
             <div class="container">
                 <div class="row">
                     @foreach ($foods as $food)
@@ -466,7 +476,7 @@ https://mo.com/tm-586-scholar
     <script src="user/assets/js/counter.js"></script>
     <script src="user/assets/js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
 </html>

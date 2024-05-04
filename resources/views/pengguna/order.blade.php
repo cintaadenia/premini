@@ -59,7 +59,7 @@
                             </form>
                         </div>
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Home</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                         </ul>
