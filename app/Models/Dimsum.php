@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Dimsum extends Model
 {
@@ -27,5 +28,15 @@ class Dimsum extends Model
             'stock' => 'required|numeric|min:1',
             'image' => 'required|image|mimes:jpg,png,jpeg,svg',
         ];
+    }
+
+    /**
+     * Get all of the comments for the Dimsum
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orderDimsums(): HasMany
+    {
+        return $this->hasMany(OrderDimsum::class);
     }
 }

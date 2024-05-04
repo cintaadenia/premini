@@ -1,79 +1,38 @@
-@if ($errors->any())
-    @foreach ($errors->all() as $item)
-        <script>
-            console.log("{{ $item }}")
-        </script>
-    @endforeach
-@endif
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <title>Gacoan</title>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <!-- Bootstrap core CSS -->
-    <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="
+    user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--
 
-    <style>
-        .select2-container--default .select2-selection--multiple {
-            width: 100%;
-            border-radius: 25px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border: none;
-            outline: none;
-            font-weight: 300;
-            font-size: 14px;
-            color: #1b1919;
-            margin-bottom: 30px;
-            padding: 14px;
-            position: relative;
-            z-index: 3;
-        }
+Mo 586 Scholar
 
-        .select2-search__field {
-            background-color: transparent !important;
-            color: #fff !important;
-            height: 30px;
-        }
+https://mo.com/tm-586-scholar
 
-        /* edit inputan select 2 */
-        .select2-container--default .select2-selection--multiple .select2-selection__choice {
-            background-color: #f2e3f7;
-            border: 1px solid #aaa;
-            border-radius: 4px;
-            box-sizing: border-box;
-            display: inline-block;
-            margin-left: 9px;
-            margin-bottom: 5%;
-            padding: 0;
-            position: relative;
-            max-width: 100%;
-            height: 45px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            vertical-align: bottom;
-            white-space: nowrap;
-        }
-    </style>
-
-
+-->
 </head>
 
 <body>
 
-    <!-- ** Preloader Start ** -->
+    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -84,20 +43,15 @@
             </div>
         </div>
     </div>
-    <!-- ** Preloader End ** -->
 
-    <!-- ** Header Area Start ** -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ** Logo Start ** -->
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <!-- ** Logo End ** -->
-                        <!-- ** Serach Start ** -->
                         <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
@@ -105,17 +59,18 @@
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
-                        <!-- ** Serach Start ** -->
                         <!-- ** Menu Start ** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#order">Order Now!</a></li>
+                            {{-- <li class="scroll-to-section"><a href="#order">Order Now!</a></li> --}}
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                             <li class="scroll-to-section">
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                     style="color: rgb(254, 254, 254); background-color: transparent; text-decoration: none; cursor: pointer;"
                                     onclick="delayedAlert()">Logout</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
                                     @csrf
                                 </form>
                             </li>
@@ -130,13 +85,13 @@
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ** Menu End ** -->
+                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ** Header Area End ** -->
+    <!-- ***** Header Area End ***** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -211,143 +166,307 @@
     <br>
     <br>
 
-    <div class="contact-us section" id="contact">
+    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;" id="food">Food Menu</h1>
+
+        <div class="services section" id="services">
+            <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
+                <button style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order Sekarang!</button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    @foreach ($foods as $food)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100" alt="online degrees">
+                                </div>
+                                <div class="main-content">
+                                    <div class="d-flex w-100 gap-2">
+                                        <input class="form-check-input food-checkbox" type="checkbox" id="food{{ $food->id }}" name="food" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
+                                        <label class="form-check-label" for="food{{ $food->id }}"></label>
+                                        <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
+                                    </div>
+                                    <p>{{ $food->deskripsi }}</p>
+                                    <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($food->price, 0, ',', '.') }}</h6>
+                                    <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
+                                    <br>
+                                    <div class="rating">
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="far fa-star" style="color: gold;"></i>
+                                    </div>
+                                    <br>
+                                    <div class="order-details" style="display: none;">
+                                        <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                        <p style="text-align: right;">Total :</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.food-checkbox').change(function(){
+                    var $parent = $(this).closest('.service-item');
+                    if ($(this).is(':checked')) {
+                        $parent.find('.order-details').show();
+                    } else {
+                        $parent.find('.order-details').hide();
+                    }
+                });
+            });
+        </script>
+    <br>
+    <br>
+    <br>
+    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Dimsum Menu</h1>
+
+    <div class="services section" id="services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6  align-self-center">
-                    <div class="section-heading">
-                        <h6>Mie Gacoan</h6>
-                        <h2>Kuy Guys Order Sekarang!</h2>
-                        <p>Inovasi akan selalu kami kedepankan agar "Mie Gacoan" tetap relevan dan menjadi pilihan
-                            terbaik bagi para customer fanatik.</p>
-                        <div class="special-offer">
-                            <span class="offer">off<br><em>50%</em></span>
-                            <h6>Valide: <em>24 April 2036</em></h6>
-                            <h4>Special Offer <em>50%</em> OFF!</h4>
+                @foreach ($dimsums as $dimsum)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/'. $dimsum->image) }}" height="100" width="100" alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <div class="d-flex w-100 gap-2">
+                                    <input class="form-check-input dimsum-checkbox" type="checkbox" id="dimsum{{ $dimsum->id }}" name="dimsum" value="{{ $dimsum->id }}" class="checkbox" style="width: 23px; height: 23px;" />
+                                    <label class="form-check-label" for="dimsum{{ $dimsum->id }}"></label>
+                                    <h4 class="w-80">{{ $dimsum->dimsum }}</h4>
+                                </div>
+                                <p>{{ $dimsum->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($dimsum->price, 0, ',', '.') }}</h6>
+                                <h6 style="color: gray">Stock : {{ $dimsum->stock }}</h6>
+                                <br>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
+                                <br>
+                                <div class="order-details" style="display: none;">
+                                    <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                    <p style="text-align: right;">Total :</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.dimsum-checkbox').change(function(){
+                var $parent = $(this).closest('.service-item');
+                if ($(this).is(':checked')) {
+                    $parent.find('.order-details').show();
+                } else {
+                    $parent.find('.order-details').hide();
+                }
+            });
+        });
+    </script>
+
+    <h1 class="button"style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Drink Menu</h1>
+
+
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+                @foreach ($drinks as $drink)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/'. $drink->image) }}" height="100" width="100" alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <div class="d-flex w-100 gap-2">
+                                    <input class="form-check-input drink-checkbox" type="checkbox" id="drink{{ $drink->id }}" name="drink" value="{{ $drink->id }}" class="checkbox" style="width: 23px; height: 23px;" />
+                                    <label class="form-check-label" for="drink{{ $drink->id }}"></label>
+                                    <h4 class="w-80">{{ $drink->drink }}</h4>
+                                </div>
+                                <p>{{ $drink->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($drink->price, 0, ',', '.') }}</h6>
+                                <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
+                                <br>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
+                                <br>
+                                <div class="order-details" style="display: none;">
+                                    <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                    <p style="text-align: right;">Total :</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.drink-checkbox').change(function(){
+                var $parent = $(this).closest('.service-item');
+                if ($(this).is(':checked')) {
+                    $parent.find('.order-details').show();
+                } else {
+                    $parent.find('.order-details').hide();
+                }
+            });
+        });
+    </script>
+    <br>
+    <br>
+    <br>
+    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Rating Tertinggi</h1>
+
+    <div class="team section" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
+                            {{ asset('image/sm.png') }}" alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Siomay</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                            </div>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6" id="order">
-                    <div class="contact-us-content">
-                        <form id="contact-form" action="{{ route('order.create') }}" method="post">
-                            @csrf
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <input type="number" name="noTelepon" id="noTelepon"
-                                        value="{{ old('noTelepon') }}" placeholder="No Telepon..." required>
-                                </fieldset>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
+                            {{ asset('image/gacoan3.png') }}" alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Mie Gacoan</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
                             </div>
-
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="makanan" data-placeholder="Pilih Makanan dan Level...">
-                                        @forelse ($foods as $food)
-                                            <option value="{{ $food->id }}">{{ $food->food }} | Level {{ $food->level }}</option>
-
-                                        @empty
-                                            <option>Belum ada makanan dan Level</option>
-                                        @endforelse
-                                    </select>
-                                </fieldset>
-                            </div>
-
-
-                            {{-- <div class="col-lg-12">
-                                <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select"
-                                        multiple="multiple" name="level" data-placeholder="Pilih Level...">
-                                        @forelse ($levels as $level)
-                                            <option value="{{ $level->id }}">{{ $level->level }}</option>
-
-                                        @empty
-                                            <option>Makanan & Level tidak tersedia</option>
-                                        @endforelse
-                                    </select>
-                                </fieldset>
-                            </div> --}}
-
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="minuman"
-                                        multiple="multiple" data-placeholder="Pilih Minuman...">
-                                        @forelse ($drinks as $drink)
-                                            <option value="{{ $drink->id }}">{{ $drink->drink }}</option>
-
-                                        @empty
-                                            <option>Belum ada minuman</option>
-                                        @endforelse
-                                    </select>
-                                </fieldset>
-                            </div>
-
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <select class="js-example-basic-multiple text-white form-select" name="dimsum"
-                                        multiple="multiple" data-placeholder="Pilih Dimsum...">
-                                        @forelse ($dimsums as $dimsum)
-                                            <option value="{{ $dimsum->id }}">{{ $dimsum->dimsum }}</option>
-
-                                        @empty
-                                            <option>Belum ada dimsum</option>
-                                        @endforelse
-                                    </select>
-                                </fieldset>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <textarea name="catatan" id="catatan" placeholder="Catatan..." autocomplete="on" required></textarea>
-                                </fieldset>
-                            </div>
-
-
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button class="btn btn-light p-3">Order Sekarang!</button>
-                                </fieldset>
-                            </div>
-
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    </form>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="{{ asset('image/esgobaksodor.png') }}" alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Es Gobak Sodor</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                            </div>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="
+                                {{ asset('image/uk.png') }} " alt="">
+                            <span class="category">Ranking Peminat</span>
+                            <h4>Udang Keju</h4>
+                            <div class="rating">
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                                <i class="fas fa-star" style="color: gold;"></i>
+                            </div>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <footer>
+        <div class="container">
+            <div class="col-lg-12">
+                <p>© 2024 Gacoan</p>
+            </div>
+        </div>
+    </footer>
 
-
-            <br>
-            <br>
-            <br>
-            <footer>
-                <div class="container">
-                    <div class="col-lg-12">
-                        <p>© 2024 Gacoan</p>
-                    </div>
-                </div>
-            </footer>
-
-            <!-- Scripts -->
-            <!-- Bootstrap core JavaScript -->
-            <script src="user/vendor/jquery/jquery.min.js"></script>
-            <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
-            <script src="user/assets/js/isotope.min.js"></script>
-            <script src="user/assets/js/owl-carousel.js"></script>
-            <script src="user/assets/js/counter.js"></script>
-            <script src="user/assets/js/custom.js"></script>
-
-            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('.js-example-basic-multiple').select2();
-                });
-            </script>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="user/vendor/jquery/jquery.min.js"></script>
+    <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="user/assets/js/isotope.min.js"></script>
+    <script src="user/assets/js/owl-carousel.js"></script>
+    <script src="user/assets/js/counter.js"></script>
+    <script src="user/assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </body>
-
 </html>

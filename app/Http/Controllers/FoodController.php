@@ -65,7 +65,7 @@ class FoodController extends Controller
         }
 
         $validatedData = $request->validate([
-            'food' => 'required|unique:food,food,',
+            'food' => 'required',
             'level' => 'required|string|max:255 ',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
@@ -105,7 +105,7 @@ class FoodController extends Controller
             $food = Food::findOrFail($id);
 
             $request->validate([
-                'food' => 'required|unique:food,food,' . $id,
+                'food' => 'required',
                 'level' => 'required|string|max:255 ',
                 'deskripsi' => 'required|string|max:255 ',
                 'price' => 'required|numeric|min:1',

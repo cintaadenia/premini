@@ -22,7 +22,7 @@ class FoodRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'food' => 'required|unique:food,food,' . $this->id,
+            'food' => 'required',
             'level' => 'required|string|max:255 ',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',

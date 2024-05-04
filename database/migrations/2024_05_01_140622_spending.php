@@ -10,22 +10,27 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('spending', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('food_id')->constrained('food')->cascadeOnDelete()->cascadeOnUpdate();
-            // $table->foreignId('levels_id')->constrained('levels')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('drinks_id')->constrained('drinks')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('dimsums_id')->constrained('dimsums')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('spending', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('food_id');
+        $table->unsignedBigInteger('drinks_id');
+        $table->unsignedBigInteger('dimsums_id');
+
+        $table->foreign('food_id')->references('id')->on('food')->onDelete('cascade')->onUpdate('cascade');
+        $table->foreign('drinks_id')->references('id')->on('drinks')->onDelete('cascade')->onUpdate('cascade');
+        $table->foreign('dimsums_id')->references('id')->on('dimsums')->onDelete('cascade')->onUpdate('cascade');
+
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('spendings');
+        Schema::dropIfExists('spending');
     }
 };

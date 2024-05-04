@@ -25,23 +25,23 @@
 
             <div class="mx-auto">
                 <!-- untuk memasukkan data -->
-                <h2 style="text-align: center;">Edit Level</h2>
+                <h2 style="text-align: center;">Edit Hompimpa</h2>
                 <div class="card border">
                     <div class="card-header text-white bg-primary">
-                        Edit Level
+                        Edit Hompimpa
                     </div>
                     <br>
                     <div class="card-body">
 
-                        <form action="{{ route('level.update', $level->id) }}" method="POST" id="level">
+                        <form action="{{ route('hompimpa.update', $hompimpa->id) }}" method="POST" id="hompimpa">
                             @csrf
                             @method('PUT')
                             <div class="mb-3 row">
-                                <label for="food" class="col-sm-2 col-form-label">Level</label>
+                                <label for="food" class="col-sm-2 col-form-label">Hompimpa</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" id="food" rows="3" placeholder="Edit Level"
-                                        name="level" value="{{ $level['level'] }}">
-                                    @error('level')
+                                    <input class="form-control" id="food" rows="3" placeholder="Edit hompimpa"
+                                        name="hompimpa" value="{{ $hompimpa['hompimpa'] }}">
+                                    @error('hompimpa')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

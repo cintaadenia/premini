@@ -37,7 +37,7 @@
             <span class="dot"></span>
             <div class="dots">
                 <span></span>
-                <span></span>y
+                <span></span>
                 <span></span>
             </div>
         </div>

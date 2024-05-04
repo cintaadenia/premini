@@ -163,37 +163,37 @@ https://mo.com/tm-586-scholar
         Food Menu</h1>
 
 
-    <div class="services section" id="services">
-        <div class="container">
-            <div class="row">
-                @foreach ($foods as $food)
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100"
-                            alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>{{ $food->food }}</h4>
-                            <p>{{ $food->deskripsi }}</p>
-                            <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
-                            <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
-                            <div class="rating">
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="fas fa-star" style="color: gold;"></i>
-                                <i class="far fa-star" style="color: gold;"></i>
+        <div class="services section" id="dimsum">
+            <div class="container">
+                <div class="row">
+                    @foreach ($foods as $food)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100"
+                                alt="online degrees">
+                            </div>
+                            <div class="main-content">
+                                <h4>{{ $food->food }}</h4>
+                                <p>{{ $food->deskripsi }}</p>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ $food->price }}</h6>
+                                <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                @endforeach
+
                 </div>
-
-            @endforeach
-
             </div>
         </div>
-    </div>
 
     <br>
     <br>
@@ -421,9 +421,7 @@ https://mo.com/tm-586-scholar
                             <p>“Solusi Tanggal tua, tp masih pengen makan mie. Always di Mie Gacoan lahh. Walaupun
                                 harganya terjangkau tp worth to buy karna rasanya juga enak.”</p>
                             <div class="author">
-                                <img src="
-                user/assets/images/testimonial-author.jpg" alt="">
-                                <span class="category">Full Stack Master</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">Full Stack Master</span>
                                 <h4>ELSA</h4>
                             </div>
                         </div>
@@ -432,9 +430,7 @@ https://mo.com/tm-586-scholar
                                 minumannya yg enak, harga Mie Gacoan ramah di kantong.”
                             </p>
                             <div class="author">
-                                <img src="
-                user/assets/images/testimonial-author.jpg" alt="">
-                                <span class="category">UI Expert</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">UI Expert</span>
                                 <h4>AMI NUR DWIUTAMI</h4>
                             </div>
                         </div>
@@ -442,9 +438,7 @@ https://mo.com/tm-586-scholar
                             <p>“Ngga ngerti lagi bisa seseneng itu tiap kali makan di Mie Gacoan rasanya tuh....
                                 sesuatuuu bangeet!!. ”</p>
                             <div class="author">
-                                <img src="
-                user/assets/images/testimonial-author.jpg" alt="">
-                                <span class="category">Digital Animator</span>
+                                <img src="user/assets/images/testimonial-author.jpg" alt=""><span class="category">Digital Animator</span>
                                 <h4>BELINDA</h4>
                             </div>
                         </div>
@@ -476,9 +470,7 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="
-                  user/assets/images/gacoan.jpg" alt=""
-                                        width="240" height="240">
+                                    <img src="user/assets/images/gacoan.jpg" alt="" width="240" height="240">
                                 </div>
                             </div>
 
@@ -509,9 +501,7 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="
-                  user/assets/images/gacoan2.jpeg" alt=""
-                                        width="245" height="245">
+                                    <img src="user/assets/images/gacoan2.jpeg" alt="" width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -540,9 +530,7 @@ https://mo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="
-                  user/assets/images/gacoan3.jpg" alt=""
-                                        width="245" height="245">
+                                    <img src="user/assets/images/gacoan3.jpg" alt="" width="245" height="245">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -579,18 +567,13 @@ https://mo.com/tm-586-scholar
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
-    <script src="
-          user/vendor/jquery/jquery.min.js"></script>
-    <script src="
-          user/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="
-          user/assets/js/isotope.min.js"></script>
-    <script src="
-          user/assets/js/owl-carousel.js"></script>
-    <script src="
-          user/assets/js/counter.js"></script>
-    <script src="
-          user/assets/js/custom.js"></script>
+    <script src="user/vendor/jquery/jquery.min.js"></script>
+    <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="user/assets/js/isotope.min.js"></script>
+    <script src="user/assets/js/owl-carousel.js"></script>
+    <script src="/assets/js/counter.js"></script>
+    <script src="user/assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 

@@ -23,7 +23,7 @@ class Food extends Model
     public static function rules($id = null)
     {
         return [
-            'food' => 'required|unique:food,food,' . $id,
+            'food' => 'required',
             'level' => 'required|string|max:255 ',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
