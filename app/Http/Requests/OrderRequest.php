@@ -22,12 +22,13 @@ class OrderRequest extends FormRequest
     public function rules(): array
     {
             return [
-                'noTelepon' => 'required|string|max:10',
-                'makanan' => 'required|string|min:1',
-                // 'level' => 'required|string|min:1',
-                'minuman' => 'required|string|min:1',
-                'dimsum' => 'required|string|min:1',
-                'catatan' => 'required|string|min:1',
+                'food_id' => 'nullable|array',
+                'drink_id' => 'nullable|array',
+                'dimsum_id' => 'nullable|array',
+                'jumlah_food' => 'nullable|array',
+                'jumlah_drink' => 'nullable|array',
+                'jumlah_dimsum' => 'nullable|array',
+                'catatan' => 'nullable|string',
 
             ];
     }

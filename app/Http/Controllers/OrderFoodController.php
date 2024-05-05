@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Food;
 use App\Models\OrderFood;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class OrderFoodController extends Controller
      */
     public function index()
     {
-        //
+        $foods = Food::all();
+        return view('pengguna.user2', compact('foods'));
     }
 
     /**
@@ -20,7 +22,21 @@ class OrderFoodController extends Controller
      */
     public function create()
     {
-        //
+
+        // $orderFood = OrderFood::create([
+        //     'orderFood_id' => $request->jumlah,
+
+        // ]);
+
+        // $orderDimsum = OrderDimsum::create([
+        //     'orderDimsum_id' => $request->jumlah,
+
+        // ]);
+
+        // $orderDrink = OrderDrink::create([
+        //     'orderDrink_id' => $request->jumlah,
+
+        // ]);
     }
 
     /**

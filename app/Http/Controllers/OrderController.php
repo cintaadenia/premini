@@ -8,6 +8,9 @@ use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Food;
 use App\Models\Order;
+use App\Models\OrderDimsum;
+use App\Models\OrderDrink;
+use App\Models\OrderFood;
 use App\Models\User;
 use App\Services\MidtransSnap;
 use Illuminate\Http\Request;
@@ -30,7 +33,6 @@ class OrderController extends Controller
         // dd("t");
         $order = Order::where('users_id', auth()->id())->get();
         return view('pengguna.order', compact('order'));
-
     }
 
     public function create(OrderRequest $request)
@@ -38,35 +40,69 @@ class OrderController extends Controller
         $order = Transaction::where('transactions_id', $request->order_id)->first();
         // dd($request->all());
         $order = Order::create([
-            'noTelepon' => $request->noTelepon,
-            'food_id' => $request->makanan,
-            // 'levels_id' => $request->level,
-            'drinks_id' => $request->minuman,
-            'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
             'catatan' => $request->catatan,
         ]);
+
+
+        $data = $request->validated();
+
+        $dataFoodId = $data['food_id'];
+        $count = count($dataFoodId);
+
+        for ($i = 0; $i < $count; $i++) {
+            $foodId = $dataFoodId[$i];
+            $orderFood = OrderFood::create([
+                'food_id' => $foodId,
+                'order_id' => $order->id,
+            ]);
+        }
+
+
+        $dataDimsumId = $data['dimsum_id'];
+        $count = count($dataDimsumId);
+
+        for ($i = 0; $i < $count; $i++) {
+            $dimsumId = $dataDimsumId[$i];
+            $orderDimsum = OrderDimsum::create([
+                'dimsum_id' => $dimsumId,
+                'order_id' => $order->id,
+            ]);
+        }
+
+
+        $dataDrinkId = $data['drink_id'];
+        $count = count($dataDrinkId);
+
+        for ($i = 0; $i < $count; $i++) {
+            $drinkId = $dataDrinkId[$i];
+            $orderDrink = OrderDrink::create([
+                'Drink_id' => $drinkId,
+                'order_id' => $order->id,
+            ]);
+        }
+
         //untuk mengurangi stock
         //Untuk Food
-        $food = Food::findOrFail($request->makanan);
+        // $food = Food::findOrFail($request->makanan);
 
-        $food->update([
-            'stock' => $food->stock - 1
-        ]);
+        // $food->update([
+        //     'stock' => $food->stock - 1
+        // ]);
 
-        //Untuk Drink
-        $drink = Drink::findOrFail($request->minuman);
+        // //Untuk Drink
+        // $drink = Drink::findOrFail($request->minuman);
 
-        $drink->update([
-            'stock' => $drink->stock - 1
-        ]);
+        // $drink->update([
+        //     'stock' => $drink->stock - 1
+        // ]);
 
-        //Untuk Dimsum
-        $dimsum = Dimsum::findOrFail($request->dimsum);
+        // //Untuk Dimsum
+        // $dimsum = Dimsum::findOrFail($request->dimsum);
 
-        $dimsum->update([
-            'stock' => $dimsum->stock - 1
-        ]);
+        // $dimsum->update([
+        //     'stock' => $dimsum->stock - 1
+        // ]);
 
         Checkout::create([
             'user_id' => auth()->id(),
@@ -83,12 +119,11 @@ class OrderController extends Controller
         ]);
 
         $transaction = Transaction::where([
-            ['order_id','=', $request->input('id')],
-            ['statusBayar','=','PAID']
+            ['order_id', '=', $request->input('id')],
+            ['statusBayar', '=', 'PAID']
         ])->first();
 
-        if($transaction)
-        {
+        if ($transaction) {
             return redirect()->route('transaction.index', ['id' => $transaction->id]);
         }
 
@@ -134,7 +169,7 @@ class OrderController extends Controller
         $midtransData = $midtrans->create();
 
         Transaction::create([
-            'transactions_id' => $orderId   ,
+            'transactions_id' => $orderId,
             'user_id' => auth()->id(),
             'order_id' => $request->id,
             'snapToken' => $midtransData['token'],
@@ -153,13 +188,14 @@ class OrderController extends Controller
         //
         // dd($request->all());
         $order = Order::create([
-            'noTelepon' => $request->noTelepon,
             'food_id' => $request->makanan,
-            // 'levels_id' => $request->level,
             'drinks_id' => $request->minuman,
             'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
-            'catatan' => $request->catatan,
+            // 'noTelepon' => $request->noTelepon,
+            // 'catatan' => $request->catatan,
+            // 'levels_id' => $request->level,
+
         ]);
         //untuk mengurangi stock
         //Untuk Food

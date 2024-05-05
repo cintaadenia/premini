@@ -167,12 +167,13 @@ https://mo.com/tm-586-scholar
     <br>
 
     <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;" id="food">Food Menu</h1>
+    <div class="services section" id="services">
+        <form id="orderForm" action="{{ route('order.create') }}" method="post">
 
-        <div class="services section" id="services">
             <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
-                <form id="orderForm" action="{{ route ('order.create') }}" method="post">
-                    <button type="submit" style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order Sekarang!</button>
-                </form>
+                <button type="submit"
+                    style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
+                    Sekarang!</button>
             </div>
 
             <script>
@@ -188,16 +189,20 @@ https://mo.com/tm-586-scholar
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="{{ asset('storage/'. $food->image) }}" height="100" width="100" alt="online degrees">
+                                    <img src="{{ asset('storage/' . $food->image) }}" height="100" width="100"
+                                        alt="online degrees">
                                 </div>
                                 <div class="main-content">
                                     <div class="d-flex w-100 gap-2">
-                                        <input class="form-check-input food-checkbox" type="checkbox" id="food{{ $food->id }}" name="food" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
+                                        <input class="form-check-input food-checkbox" type="checkbox"
+                                            id="food{{ $food->id }}" name="food" value="{{ $food->id }}"
+                                            class="checkbox" style=" width: 23px; height: 23px;" />
                                         <label class="form-check-label" for="food{{ $food->id }}"></label>
                                         <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
                                     </div>
                                     <p>{{ $food->deskripsi }}</p>
-                                    <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($food->price, 0, ',', '.') }}</h6>
+                                    <h6 style="color: rgb(255, 0, 0)">Rp
+                                        {{ number_format($food->price, 0, ',', '.') }}</h6>
                                     <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
                                     <br>
                                     <div class="rating">
@@ -209,7 +214,8 @@ https://mo.com/tm-586-scholar
                                     </div>
                                     <br>
                                     <div class="order-details" style="display: none;">
-                                        <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                        <input type="number" name="jumlah_food[]"
+                                            class="form-control quantity-input" placeholder="Jumlah">
                                     </div>
                                 </div>
                             </div>
@@ -217,24 +223,27 @@ https://mo.com/tm-586-scholar
                     @endforeach
                 </div>
             </div>
-        </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('.food-checkbox').change(function(){
-                    var $parent = $(this).closest('.service-item');
-                    if ($(this).is(':checked')) {
-                        $parent.find('.order-details').show();
-                    } else {
-                        $parent.find('.order-details').hide();
-                    }
-                });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.food-checkbox').change(function() {
+                var $parent = $(this).closest('.service-item');
+                if ($(this).is(':checked')) {
+                    $parent.find('.order-details').show();
+                } else {
+                    $parent.find('.order-details').hide();
+                }
             });
-        </script>
+        });
+    </script>
     <br>
     <br>
     <br>
+    </form>
+
+
     <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Dimsum Menu</h1>
 
     <div class="services section" id="services">
@@ -244,16 +253,20 @@ https://mo.com/tm-586-scholar
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="icon">
-                                <img src="{{ asset('storage/'. $dimsum->image) }}" height="100" width="100" alt="online degrees">
+                                <img src="{{ asset('storage/' . $dimsum->image) }}" height="100" width="100"
+                                    alt="online degrees">
                             </div>
                             <div class="main-content">
                                 <div class="d-flex w-100 gap-2">
-                                    <input class="form-check-input dimsum-checkbox" type="checkbox" id="dimsum{{ $dimsum->id }}" name="dimsum" value="{{ $dimsum->id }}" class="checkbox" style="width: 23px; height: 23px;" />
+                                    <input class="form-check-input dimsum-checkbox" type="checkbox"
+                                        id="dimsum{{ $dimsum->id }}" name="dimsum" value="{{ $dimsum->id }}"
+                                        class="checkbox" style="width: 23px; height: 23px;" />
                                     <label class="form-check-label" for="dimsum{{ $dimsum->id }}"></label>
                                     <h4 class="w-80">{{ $dimsum->dimsum }}</h4>
                                 </div>
                                 <p>{{ $dimsum->deskripsi }}</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($dimsum->price, 0, ',', '.') }}</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($dimsum->price, 0, ',', '.') }}
+                                </h6>
                                 <h6 style="color: gray">Stock : {{ $dimsum->stock }}</h6>
                                 <br>
                                 <div class="rating">
@@ -265,7 +278,8 @@ https://mo.com/tm-586-scholar
                                 </div>
                                 <br>
                                 <div class="order-details" style="display: none;">
-                                    <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                    <input type="number" name="jumlah_dimsum[]" class="form-control quantity-input"
+                                        placeholder="Jumlah">
                                 </div>
 
                             </div>
@@ -278,8 +292,8 @@ https://mo.com/tm-586-scholar
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.dimsum-checkbox').change(function(){
+        $(document).ready(function() {
+            $('.dimsum-checkbox').change(function() {
                 var $parent = $(this).closest('.service-item');
                 if ($(this).is(':checked')) {
                     $parent.find('.order-details').show();
@@ -300,16 +314,20 @@ https://mo.com/tm-586-scholar
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="icon">
-                                <img src="{{ asset('storage/'. $drink->image) }}" height="100" width="100" alt="online degrees">
+                                <img src="{{ asset('storage/' . $drink->image) }}" height="100" width="100"
+                                    alt="online degrees">
                             </div>
                             <div class="main-content">
                                 <div class="d-flex w-100 gap-2">
-                                    <input class="form-check-input drink-checkbox" type="checkbox" id="drink{{ $drink->id }}" name="drink" value="{{ $drink->id }}" class="checkbox" style="width: 23px; height: 23px;" />
+                                    <input class="form-check-input drink-checkbox" type="checkbox"
+                                        id="drink{{ $drink->id }}" name="drink" value="{{ $drink->id }}"
+                                        class="checkbox" style="width: 23px; height: 23px;" />
                                     <label class="form-check-label" for="drink{{ $drink->id }}"></label>
                                     <h4 class="w-80">{{ $drink->drink }}</h4>
                                 </div>
                                 <p>{{ $drink->deskripsi }}</p>
-                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($drink->price, 0, ',', '.') }}</h6>
+                                <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($drink->price, 0, ',', '.') }}
+                                </h6>
                                 <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
                                 <br>
                                 <div class="rating">
@@ -321,7 +339,8 @@ https://mo.com/tm-586-scholar
                                 </div>
                                 <br>
                                 <div class="order-details" style="display: none;">
-                                    <input type="number" class="form-control quantity-input" placeholder="Jumlah">
+                                    <input type="number" name="jumlah_drink[]" class="form-control quantity-input"
+                                        placeholder="Jumlah">
                                 </div>
                             </div>
                         </div>
@@ -333,8 +352,8 @@ https://mo.com/tm-586-scholar
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.drink-checkbox').change(function(){
+        $(document).ready(function() {
+            $('.drink-checkbox').change(function() {
                 var $parent = $(this).closest('.service-item');
                 if ($(this).is(':checked')) {
                     $parent.find('.order-details').show();
@@ -344,10 +363,14 @@ https://mo.com/tm-586-scholar
             });
         });
     </script>
+
+
     <br>
     <br>
     <br>
-    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Rating Tertinggi</h1>
+    <h1 class="button"
+        style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+        Rating Tertinggi</h1>
 
     <div class="team section" id="team">
         <div class="container">
@@ -472,8 +495,11 @@ https://mo.com/tm-586-scholar
     <script src="user/assets/js/owl-carousel.js"></script>
     <script src="user/assets/js/counter.js"></script>
     <script src="user/assets/js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
+
 </html>
