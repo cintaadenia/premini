@@ -36,51 +36,43 @@ class OrderController extends Controller
     }
 
     public function create(OrderRequest $request)
-    {
-        $order = Transaction::where('transactions_id', $request->order_id)->first();
-        // dd($request->all());
-        $order = Order::create([
-            'users_id' => auth()->id(),
-            'catatan' => $request->catatan,
-        ]);
+{
+    $transaction = Transaction::where('transactions_id', $request->order_id)->first();
 
+    $order = Order::create([
+        'users_id' => auth()->id(),
+        'catatan' => $request->catatan,
+    ]);
 
-        $data = $request->validated();
+    $validatedData = $request->validated();
 
-        $dataFoodId = $data['food_id'];
-        $count = count($dataFoodId);
-
-        for ($i = 0; $i < $count; $i++) {
-            $foodId = $dataFoodId[$i];
-            $orderFood = OrderFood::create([
+    // Simpan detail order untuk makanan
+    if (isset($validatedData['food_id'])) {
+        foreach ($validatedData['food_id'] as $foodId) {
+            OrderFood::create([
                 'food_id' => $foodId,
                 'order_id' => $order->id,
             ]);
         }
+    }
 
-
-        $dataDimsumId = $data['dimsum_id'];
-        $count = count($dataDimsumId);
-
-        for ($i = 0; $i < $count; $i++) {
-            $dimsumId = $dataDimsumId[$i];
-            $orderDimsum = OrderDimsum::create([
+    if (isset($validatedData['dimsum_id'])) {
+        foreach ($validatedData['dimsum_id'] as $dimsumId) {
+            OrderDimsum::create([
                 'dimsum_id' => $dimsumId,
                 'order_id' => $order->id,
             ]);
         }
+    }
 
-
-        $dataDrinkId = $data['drink_id'];
-        $count = count($dataDrinkId);
-
-        for ($i = 0; $i < $count; $i++) {
-            $drinkId = $dataDrinkId[$i];
-            $orderDrink = OrderDrink::create([
-                'Drink_id' => $drinkId,
+    if (isset($validatedData['drink_id'])) {
+        foreach ($validatedData['drink_id'] as $drinkId) {
+            OrderDrink::create([
+                'drink_id' => $drinkId,
                 'order_id' => $order->id,
             ]);
         }
+    }
 
         //untuk mengurangi stock
         //Untuk Food

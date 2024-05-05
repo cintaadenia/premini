@@ -98,11 +98,11 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
-                                            <p>Food : {{ $ord->food->food }}</p>
-                                            <p>Drink : {{ $ord->drinks->drink }}</p>
-                                            <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
-                                            <p>Catatan : {{ $ord->catatan }}</p>
-                                            <h6>Total : <span style="color: red;">Rp {{ number_format(OrderHelper::index($ord->id), 0, ',', '.') }}</span></h6>
+                                            <p>Food :</p>
+                                            <p>Drink :</p>
+                                            <p>Dimsum :</p>
+                                            <p>Catatan :</p>
+                                            <h6 style="text-align: right;">Total : <span style="color: red;">Rp </span></h6>
                                             <br>
                                                 @if ($ord->status == 'UNPAID')
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">

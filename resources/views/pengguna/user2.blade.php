@@ -168,13 +168,6 @@ https://mo.com/tm-586-scholar
 
     <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;" id="food">Food Menu</h1>
     <div class="services section" id="services">
-        <form id="orderForm" action="{{ route('order.create') }}" method="post">
-
-            <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
-                <button type="submit"
-                    style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
-                    Sekarang!</button>
-            </div>
 
             <script>
                 document.getElementById("orderForm").addEventListener("submit", function(event) {
@@ -184,6 +177,13 @@ https://mo.com/tm-586-scholar
             </script>
 
             <div class="container">
+                <form id="orderForm" action="{{ route('order.create') }}" method="post">
+                    @csrf
+                    <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
+                        <button type="submit"
+                            style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
+                            Sekarang!</button>
+                    </div>
                 <div class="row">
                     @foreach ($foods as $food)
                         <div class="col-lg-4 col-md-6">
@@ -194,9 +194,7 @@ https://mo.com/tm-586-scholar
                                 </div>
                                 <div class="main-content">
                                     <div class="d-flex w-100 gap-2">
-                                        <input class="form-check-input food-checkbox" type="checkbox"
-                                            id="food{{ $food->id }}" name="food" value="{{ $food->id }}"
-                                            class="checkbox" style=" width: 23px; height: 23px;" />
+                                        <input class="form-check-input food-checkbox" type="checkbox"id="food{{ $food->id }}" name="food" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
                                         <label class="form-check-label" for="food{{ $food->id }}"></label>
                                         <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
                                     </div>
@@ -223,7 +221,7 @@ https://mo.com/tm-586-scholar
                     @endforeach
                 </div>
             </div>
-    </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -241,7 +239,6 @@ https://mo.com/tm-586-scholar
     <br>
     <br>
     <br>
-    </form>
 
 
     <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Dimsum Menu</h1>
@@ -363,7 +360,7 @@ https://mo.com/tm-586-scholar
             });
         });
     </script>
-
+</form>
 
     <br>
     <br>
