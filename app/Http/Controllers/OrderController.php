@@ -47,53 +47,66 @@ class OrderController extends Controller
 
         $validatedData = $request->validated();
         if (isset($validatedData['food_id'])) {
-            foreach ($validatedData['food_id'] as $foodId) {
+            for ($i=0; $i < count($validatedData['food_id']); $i++) {
+                $foodId = $validatedData['food_id'][$i];
                 OrderFood::create([
                     'food_id' => $foodId,
                     'order_id' => $order->id,
+                    'jumlah' => $validatedData['jumlah_food'][$i],
                 ]);
             }
+
         }
 
+        $validatedData = $request->validated();
         if (isset($validatedData['dimsum_id'])) {
-            foreach ($validatedData['dimsum_id'] as $dimsumId) {
+            for ($i=0; $i < count($validatedData['dimsum_id']); $i++) {
+                $dimsumId = $validatedData['dimsum_id'][$i];
                 OrderDimsum::create([
                     'dimsum_id' => $dimsumId,
                     'order_id' => $order->id,
+                    'jumlah' => $validatedData['jumlah_dimsum'][$i],
                 ]);
             }
+
         }
 
+        $validatedData = $request->validated();
         if (isset($validatedData['drink_id'])) {
-            foreach ($validatedData['drink_id'] as $drinkId) {
+            for ($i=0; $i < count($validatedData['drink_id']); $i++) {
+                $drinkId = $validatedData['drink_id'][$i];
                 OrderDrink::create([
                     'drink_id' => $drinkId,
                     'order_id' => $order->id,
+                    'jumlah' => $validatedData['jumlah_drink'][$i],
                 ]);
             }
+
         }
+
+
 // dd($request->all());
         // untuk mengurangi stock
         // Untuk Food
-        $food = Food::find($request->food);
+        // $food = Food::find($request->food);
 
-        $food->update([
-            'stock' => $food->stock - 1
-        ]);
+        // $food->update([
+        //     'stock' => $food->stock - 1
+        // ]);
 
-        //Untuk Drink
-        $drink = Drink::find($request->drink);
+        // //Untuk Drink
+        // $drink = Drink::find($request->drink);
 
-        $drink->update([
-            'stock' => $drink->stock - 1
-        ]);
+        // $drink->update([
+        //     'stock' => $drink->stock - 1
+        // ]);
 
-        //Untuk Dimsum
-        $dimsum = Dimsum::find($request->dimsum);
+        // //Untuk Dimsum
+        // $dimsum = Dimsum::find($request->dimsum);
 
-        $dimsum->update([
-            'stock' => $dimsum->stock - 1
-        ]);
+        // $dimsum->update([
+        //     'stock' => $dimsum->stock - 1
+        // ]);
 
         Checkout::create([
             'user_id' => auth()->id(),

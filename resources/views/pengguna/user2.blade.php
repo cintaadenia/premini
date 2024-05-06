@@ -194,7 +194,7 @@ https://mo.com/tm-586-scholar
                                 </div>
                                 <div class="main-content">
                                     <div class="d-flex w-100 gap-2">
-                                        <input class="form-check-input food-checkbox" type="checkbox"id="food{{ $food->id }}" name="food" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
+                                        <input class="form-check-input food-checkbox" type="checkbox"id="food{{ $food->id }}" name="food_id[]" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
                                         <label class="form-check-label" for="food{{ $food->id }}"></label>
                                         <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
                                     </div>
@@ -256,7 +256,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <div class="d-flex w-100 gap-2">
                                     <input class="form-check-input dimsum-checkbox" type="checkbox"
-                                        id="dimsum{{ $dimsum->id }}" name="dimsum" value="{{ $dimsum->id }}"
+                                        id="dimsum{{ $dimsum->id }}" name="dimsum_id[]" value="{{ $dimsum->id }}"
                                         class="checkbox" style="width: 23px; height: 23px;" />
                                     <label class="form-check-label" for="dimsum{{ $dimsum->id }}"></label>
                                     <h4 class="w-80">{{ $dimsum->dimsum }}</h4>
@@ -317,7 +317,7 @@ https://mo.com/tm-586-scholar
                             <div class="main-content">
                                 <div class="d-flex w-100 gap-2">
                                     <input class="form-check-input drink-checkbox" type="checkbox"
-                                        id="drink{{ $drink->id }}" name="drink" value="{{ $drink->id }}"
+                                        id="drink{{ $drink->id }}" name="drink_id[]" value="{{ $drink->id }}"
                                         class="checkbox" style="width: 23px; height: 23px;" />
                                     <label class="form-check-label" for="drink{{ $drink->id }}"></label>
                                     <h4 class="w-80">{{ $drink->drink }}</h4>
