@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+use App\Models\Order;
 use App\Models\OrderFood;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 
 class OrderFoodController extends Controller
 {
@@ -13,30 +15,27 @@ class OrderFoodController extends Controller
      */
     public function index()
     {
-        $foods = Food::all();
-        return view('pengguna.user2', compact('foods'));
+        $foods = Food::get();
+        $orders = Order::get();
+        return view('pengguna.user2', compact('foods', 'orders'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
 
-        // $orderFood = OrderFood::create([
-        //     'orderFood_id' => $request->jumlah,
+            $request->validate(OrderFood::rules());
 
-        // ]);
+            $orderFood = OrderFood::create([
+                'order_id' => $request->id,
+                'food_id' => $request->id,
+                'jumlah' => $request->jumlah,
+            ]);
 
-        // $orderDimsum = OrderDimsum::create([
-        //     'orderDimsum_id' => $request->jumlah,
-
-        // ]);
-
-        // $orderDrink = OrderDrink::create([
-        //     'orderDrink_id' => $request->jumlah,
-
-        // ]);
+            return redirect()->back()->with('success', 'Data Level berhasil ditambahkan');
+        
     }
 
     /**
@@ -44,7 +43,11 @@ class OrderFoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'jumlah' => 'nullable',
+        ]);
+
+        OrderFood::create($validatedData);
     }
 
     /**

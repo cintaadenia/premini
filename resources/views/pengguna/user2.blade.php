@@ -177,7 +177,7 @@ https://mo.com/tm-586-scholar
             </script>
 
             <div class="container">
-                <form id="orderForm" action="{{ route('order.create') }}" method="post">
+                <form id="orderForm" action="{{ route("order.create") }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
                         <button type="submit"

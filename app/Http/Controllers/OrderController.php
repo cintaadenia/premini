@@ -36,72 +36,72 @@ class OrderController extends Controller
     }
 
     public function create(OrderRequest $request)
-{
-    $transaction = Transaction::where('transactions_id', $request->order_id)->first();
+    {
+        $transaction = Transaction::where('transactions_id', $request->order_id)->first();
 
-    $order = Order::create([
-        'users_id' => auth()->id(),
-        'catatan' => $request->catatan,
-    ]);
+        $order = Order::create([
+            'users_id' => auth()->id(),
+            'catatan' => $request->catatan,
+        ]);
 
-    $validatedData = $request->validated();
 
-    // Simpan detail order untuk makanan
-    if (isset($validatedData['food_id'])) {
-        foreach ($validatedData['food_id'] as $foodId) {
-            OrderFood::create([
-                'food_id' => $foodId,
-                'order_id' => $order->id,
-            ]);
+        $validatedData = $request->validated();
+        if (isset($validatedData['food_id'])) {
+            foreach ($validatedData['food_id'] as $foodId) {
+                OrderFood::create([
+                    'food_id' => $foodId,
+                    'order_id' => $order->id,
+                ]);
+            }
         }
-    }
 
-    if (isset($validatedData['dimsum_id'])) {
-        foreach ($validatedData['dimsum_id'] as $dimsumId) {
-            OrderDimsum::create([
-                'dimsum_id' => $dimsumId,
-                'order_id' => $order->id,
-            ]);
+        if (isset($validatedData['dimsum_id'])) {
+            foreach ($validatedData['dimsum_id'] as $dimsumId) {
+                OrderDimsum::create([
+                    'dimsum_id' => $dimsumId,
+                    'order_id' => $order->id,
+                ]);
+            }
         }
-    }
 
-    if (isset($validatedData['drink_id'])) {
-        foreach ($validatedData['drink_id'] as $drinkId) {
-            OrderDrink::create([
-                'drink_id' => $drinkId,
-                'order_id' => $order->id,
-            ]);
+        if (isset($validatedData['drink_id'])) {
+            foreach ($validatedData['drink_id'] as $drinkId) {
+                OrderDrink::create([
+                    'drink_id' => $drinkId,
+                    'order_id' => $order->id,
+                ]);
+            }
         }
-    }
+// dd($request->all());
+        // untuk mengurangi stock
+        // Untuk Food
+        $food = Food::find($request->food);
 
-        //untuk mengurangi stock
-        //Untuk Food
-        // $food = Food::findOrFail($request->makanan);
+        $food->update([
+            'stock' => $food->stock - 1
+        ]);
 
-        // $food->update([
-        //     'stock' => $food->stock - 1
-        // ]);
+        //Untuk Drink
+        $drink = Drink::find($request->drink);
 
-        // //Untuk Drink
-        // $drink = Drink::findOrFail($request->minuman);
+        $drink->update([
+            'stock' => $drink->stock - 1
+        ]);
 
-        // $drink->update([
-        //     'stock' => $drink->stock - 1
-        // ]);
+        //Untuk Dimsum
+        $dimsum = Dimsum::find($request->dimsum);
 
-        // //Untuk Dimsum
-        // $dimsum = Dimsum::findOrFail($request->dimsum);
-
-        // $dimsum->update([
-        //     'stock' => $dimsum->stock - 1
-        // ]);
+        $dimsum->update([
+            'stock' => $dimsum->stock - 1
+        ]);
 
         Checkout::create([
             'user_id' => auth()->id(),
             'order_id' => $order->id,
         ]);
 
-        return redirect('order')->with('success', 'Anda Berhasil Order');
+        return redirect()->route("order")->with('success', 'Anda Berhasil Order');
+
     }
 
     public function pay(Request $request)
@@ -178,52 +178,50 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
-        // dd($request->all());
-        $order = Order::create([
-            'food_id' => $request->makanan,
-            'drinks_id' => $request->minuman,
-            'dimsums_id' => $request->dimsum,
-            'users_id' => auth()->id(),
-            // 'noTelepon' => $request->noTelepon,
-            // 'catatan' => $request->catatan,
-            // 'levels_id' => $request->level,
+        // // dd($request->all());
+        // $order = Order::create([
+        //     'food_id' => $request->makanan,
+        //     'drinks_id' => $request->minuman,
+        //     'dimsums_id' => $request->dimsum,
+        //     'users_id' => auth()->id(),
 
-        ]);
-        //untuk mengurangi stock
-        //Untuk Food
-        $food = Food::findOrFail($request->makanan);
+        // ]);
+        // //untuk mengurangi stock
+        // //Untuk Food
+        // $food = Food::find($request->makanan);
 
-        $food->update([
-            'stock' => $food->stock - 1
-        ]);
+        // $food->update([
+        //     'stock' => $food->stock - 1
+        // ]);
 
-        //Untuk Drink
-        $drink = Drink::findOrFail($request->minuman);
+        // //Untuk Drink
+        // $drink = Drink::find($request->minuman);
 
-        $drink->update([
-            'stock' => $drink->stock - 1
-        ]);
+        // $drink->update([
+        //     'stock' => $drink->stock - 1
+        // ]);
 
-        //Untuk Dimsum
-        $dimsum = Dimsum::findOrFail($request->dimsum);
+        // //Untuk Dimsum
+        // $dimsum = Dimsum::find($request->dimsum);
 
-        $dimsum->update([
-            'stock' => $dimsum->stock - 1
-        ]);
+        // $dimsum->update([
+        //     'stock' => $dimsum->stock - 1
+        // ]);
 
-        Checkout::create([
-            'user_id' => auth()->id(),
-            'order_id' => $order->id,
-        ]);
+        // Checkout::create([
+        //     'user_id' => auth()->id(),
+        //     'order_id' => $order->id,
+        // ]);
 
-        return redirect('order')->with('success', 'Anda Berhasil Order');
+        // return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     /**
      * Display the specified resource.
      */
     public function show(Order $id)
-    { {
+    {
+        {
             $user = User::find($id);
             $status = $user->status;
 

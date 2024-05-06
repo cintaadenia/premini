@@ -10,6 +10,13 @@ class OrderDimsum extends Model
 {
     use HasFactory;
 
+    protected $table = "order_dimsums";
+    protected $fillable = [
+        'dimsum_id',
+        'order_id',
+        'jumlah',
+    ];
+
     /**
      * Get the dimsum that owns the OrderDimsum
      *
