@@ -179,11 +179,6 @@ https://mo.com/tm-586-scholar
             <div class="container">
                 <form id="orderForm" action="{{ route("order.create") }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
-                        <button type="submit"
-                            style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
-                            Sekarang!</button>
-                    </div>
                 <div class="row">
                     @foreach ($foods as $food)
                         <div class="col-lg-4 col-md-6">
@@ -360,6 +355,11 @@ https://mo.com/tm-586-scholar
             });
         });
     </script>
+
+    <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
+        <button type="submit" style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
+            Sekarang!</button>
+    </div>
 </form>
 
     <br>
