@@ -17,21 +17,25 @@ class Order extends Model
     {
         return $this->belongsTo(Checkout::class);
     }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'users_id', 'id');
     }
-    public function food()
+
+    public function foods()
     {
-        return $this->belongsTo(OrderFood::class,  'food_id', 'id');
+        return $this->hasMany(OrderFood::class,  'food_id', 'id');
     }
+
     public function drinks()
     {
-        return $this->belongsTo(OrderDrink::class, 'drink_id', 'id');
+        return $this->hasMany(OrderDrink::class, 'drink_id', 'id');
     }
+    
     public function dimsums()
     {
-        return $this->belongsTo(OrderDimsum::class, 'dimsum_id', 'id');
+        return $this->hasMany(OrderDimsum::class, 'dimsum_id', 'id');
     }
 
 }

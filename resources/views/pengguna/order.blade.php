@@ -98,11 +98,12 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
-                                            <p>Food :{{ $ord->food }}</p>
-                                            <p>Drink :</p>
-                                            <p>Dimsum :</p>
-                                            <p>Catatan :</p>
-                                            <h6 style="text-align: right;">Total : <span style="color: red;">Rp </span></h6>
+                                            <p>Food : @foreach ($orderFoods as $orderFood) {{ $orderFood->food->food }} ,  @endforeach</p>
+                                            <p>Drink : @foreach ($orderDrinks as $orderDrink ) {{ $orderDrink->drinks->drink }},  @endforeach </p>
+                                            <p>Dimsum : @foreach ($orderDimsums as $orderDimsum ) {{ $orderDimsum->dimsums->dimsum }},  @endforeach</p>
+                                            <p>Catatan : {{ $ord->catatan }} </p>
+                                            <h6 style="text-align: right">Total : <span style="color: red;">Rp </span></h6>
+                                            {{-- {{ number_format(OrderHelper::index($ord->id), 0, ',', '.') }} --}}
                                             <br>
                                                 @if ($ord->status == 'UNPAID')
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
@@ -129,7 +130,7 @@
 
                             {{-- <div class="page-heading col-12 mt-3">
                                 <section class="section">
-                                    <div class="card">
+                                    <div class="card"> 
                                         <div class="card-header" style="background-color: #7a6ad8;">
                                             <h5 class="card-title text-white">
                                                 Order

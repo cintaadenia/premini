@@ -22,9 +22,9 @@ class OrderDimsum extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function dimsum(): BelongsTo
+    public function dimsums(): BelongsTo
     {
-        return $this->belongsTo(Dimsum::class);
+        return $this->belongsTo(Dimsum::class, 'dimsum_id');
     }
 
 }
