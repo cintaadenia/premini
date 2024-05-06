@@ -27,7 +27,7 @@ class OrderRequest extends FormRequest
                 'dimsum_id' => 'nullable|array',
                 'jumlah_food' => 'nullable|array',
                 'jumlah_drink' => 'nullable|array',
-                'jumlah_dimsum' => 'nullable|array',
+                'jumlah_dimsum' => 'nullable|array|min:1',
                 'catatan' => 'nullable|string',
 
             ];

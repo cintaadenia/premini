@@ -366,16 +366,26 @@ https://mo.com/tm-586-scholar
         });
     </script>
 
-<div style="background-color: white; color: #9370DB; padding: 20px; border-radius: 5px;" id="catatanDiv">
-    <label for="catatan">Catatan:</label><br>
-    <textarea id="catatan" name="catatan" rows="4" cols="50" class="form-control"></textarea>
-</div>
-
-    <div class="pe-5 me-5" style="display: flex; justify-content: flex-end;">
-        <button type="submit"
-            style="background-color: #FFFFFF; color: #9370DB; border: 2px solid #9370DB; padding: 10px 20px; border-radius: 8px;">Order
-            Sekarang!</button>
+    <div class="pe-5 me-5" style="display: flex; justify-content: space-between; align-items: center;">
+        <div></div>
+        <div style="text-align: right;">
+            <a href="#" id="addToCartBtn" style="color: #9370DB;"><i class="fas fa-cart-plus"
+                    style="color: #9370DB;"></i> Tambahkan ke Keranjang</a>
+            <button type="submit" class="btn btn-primary"
+                style="background-color: #9370DB; margin-left: 10px;">Order Sekarang!</button>
+        </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#addToCartBtn').click(function(event) {
+                event.preventDefault(); // Menghentikan perilaku default dari tautan
+
+                // Lakukan sesuatu ketika tautan "Tambahkan ke Keranjang" diklik, misalnya kirim data ke backend
+                alert("Barang berhasil ditambahkan ke keranjang!");
+            });
+        });
+    </script>
     </form>
 
     <br>
