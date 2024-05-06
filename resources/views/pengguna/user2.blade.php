@@ -371,7 +371,10 @@ https://mo.com/tm-586-scholar
             <a href="#" id="addToCartBtn" style="color: #9370DB; font-size: 24px; vertical-align: middle;"><i
                     class="fas fa-cart-plus" style="color: #9370DB; font-size: 24px;"></i></a>
         </div>
-        <button type="submit" class="btn btn-primary" style="background-color: #9370DB;">Order Sekarang!</button>
+        <button type="submit" class="btn btn-primary" style="background-color: #9370DB; margin-left: 10px;"
+            onclick="return validateOrder();">Order Sekarang!</button>
+
+
     </div>
 
 
@@ -521,6 +524,23 @@ https://mo.com/tm-586-scholar
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript code for order validation -->
+    <script>
+        function validateOrder() {
+            // Check if any item is selected for purchase
+            var totalItems = document.querySelectorAll(
+                '.food-checkbox:checked, .dimsum-checkbox:checked, .drink-checkbox:checked').length;
+
+            // If no item is selected, show a warning message
+            if (totalItems === 0) {
+                alert('Mohon pilih item yang akan dibeli.');
+                return false; // Return false to prevent form submission
+            }
+
+            return true; // Continue with form submission if any item is selected
+        }
+    </script>
 
 </body>
 
