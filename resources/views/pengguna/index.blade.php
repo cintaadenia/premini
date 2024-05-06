@@ -52,13 +52,13 @@ https://mo.com/tm-586-scholar
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <div class="search-input">
+                        {{-- <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
                                     onkeypress="handle" />
                                 <i class="fa fa-search"></i>
                             </form>
-                        </div>
+                        </div> --}}
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Food</a></li>

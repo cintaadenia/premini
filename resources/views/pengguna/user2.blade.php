@@ -52,13 +52,13 @@ https://mo.com/tm-586-scholar
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <div class="search-input">
+                        {{-- <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
                                     onkeypress="handle" />
                                 <i class="fa fa-search"></i>
                             </form>
-                        </div>
+                        </div> --}}
                         <!-- ** Menu Start ** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#services">Home</a></li>
@@ -366,15 +366,14 @@ https://mo.com/tm-586-scholar
         });
     </script>
 
-    <div class="pe-5 me-5" style="display: flex; justify-content: space-between; align-items: center;">
-        <div></div>
-        <div style="text-align: right;">
-            <a href="#" id="addToCartBtn" style="color: #9370DB;"><i class="fas fa-cart-plus"
-                    style="color: #9370DB;"></i> Tambahkan ke Keranjang</a>
-            <button type="submit" class="btn btn-primary"
-                style="background-color: #9370DB; margin-left: 10px;">Order Sekarang!</button>
+    <div class="pe-5 me-5" style="display: flex; justify-content: flex-end; align-items: center;">
+        <div style="margin-right: 10px;">
+            <a href="#" id="addToCartBtn" style="color: #9370DB; font-size: 24px; vertical-align: middle;"><i
+                    class="fas fa-cart-plus" style="color: #9370DB; font-size: 24px;"></i></a>
         </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #9370DB;">Order Sekarang!</button>
     </div>
+
 
     <script>
         $(document).ready(function() {

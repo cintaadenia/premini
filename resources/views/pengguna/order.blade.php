@@ -51,13 +51,13 @@
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <div class="search-input">
+                        {{-- <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
                                     onkeypress="handle" />
                                 <i class="fa fa-search"></i>
                             </form>
-                        </div>
+                        </div> --}}
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Home</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
@@ -130,7 +130,7 @@
 
                             {{-- <div class="page-heading col-12 mt-3">
                                 <section class="section">
-                                    <div class="card"> 
+                                    <div class="card">
                                         <div class="card-header" style="background-color: #7a6ad8;">
                                             <h5 class="card-title text-white">
                                                 Order
