@@ -23,15 +23,15 @@ class Order extends Model
     }
     public function food()
     {
-        return $this->belongsTo(Food::class);
+        return $this->belongsTo(OrderFood::class,  'food_id', 'id');
     }
     public function drinks()
     {
-        return $this->belongsTo(Drink::class);
+        return $this->belongsTo(OrderDrink::class, 'drink_id', 'id');
     }
     public function dimsums()
     {
-        return $this->belongsTo(Dimsum::class);
+        return $this->belongsTo(OrderDimsum::class, 'dimsum_id', 'id');
     }
 
 }
