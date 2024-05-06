@@ -32,7 +32,10 @@ class OrderController extends Controller
     {
         // dd("t");
         $order = Order::where('users_id', auth()->id())->get();
-        return view('pengguna.order', compact('order'));
+        $orderFood = OrderFood::get();
+        $orderDimsum = OrderDimsum::get();
+        $orderDrink = OrderDrink::get();
+        return view('pengguna.order', compact('order', 'orderFood', 'orderDimsum', 'orderDrink'));
     }
 
     public function create(OrderRequest $request)
