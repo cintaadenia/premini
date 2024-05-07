@@ -324,14 +324,22 @@ https://mo.com/tm-586-scholar
                                 </h6>
                                 <h6 style="color: gray">Stock : {{ $dimsum->stock }}</h6>
                                 <br>
-                                <div class="rating">
+                            <div class="rating" style="display: flex; align-items: center;">
+                                <div>
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
-                                <br>
+                                <div style="margin-left: auto;">
+                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $dimsum->id }}">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br>
                                 <div class="order-details" style="display: none;">
                                     <input type="number" name="jumlah_dimsum[]" class="form-control quantity-input"
                                         placeholder="Jumlah">
@@ -387,13 +395,21 @@ https://mo.com/tm-586-scholar
                                 </h6>
                                 <h6 style="color: gray">Stock : {{ $drink->stock }}</h6>
                                 <br>
-                                <div class="rating">
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="fas fa-star" style="color: gold;"></i>
-                                    <i class="far fa-star" style="color: gold;"></i>
+                                <div class="rating" style="display: flex; align-items: center;">
+                                    <div>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="fas fa-star" style="color: gold;"></i>
+                                        <i class="far fa-star" style="color: gold;"></i>
+                                    </div>
+                                    <div style="margin-left: auto;">
+                                        <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $drink->id }}">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
                                 </div>
+
                                 <br>
                                 <div class="order-details" style="display: none;">
                                     <input type="number" name="jumlah_drink[]" class="form-control quantity-input" placeholder="Jumlah">
