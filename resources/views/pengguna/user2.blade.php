@@ -201,9 +201,9 @@ https://mo.com/tm-586-scholar
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
                                 <div style="margin-left: auto;">
-                                    <p class="btn-holder" style="margin-top: 21px;">
-                                        <a class="btn btn-outline-danger add-to-cart-btn" data-bs-toggle="modal" data-bs-target="#lihat" data-food-id="{{ $food->id }}">Add to cart</a>
-                                    </p>
+                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $food->id }}">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
                                 </div>
                             </div>
 
