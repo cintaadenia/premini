@@ -12,6 +12,7 @@ use App\Http\Controllers\LevelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentCallbackController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\User2Controller;
@@ -48,6 +49,12 @@ Route::middleware('auth')->group(function(){
 
     //Transaction
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
+
+    //Product
+    Route::get('/shopping-cart', [ProductController::class, 'productCart'])->name('shopping.cart');
+    Route::get('/product/{id}', [ProductController::class, 'addProducttoCart'])->name('addProduct.to.cart');
+    Route::patch('/update-shopping-cart', [ProductController::class, 'updateCart'])->name('update.sopping.cart');
+    Route::delete('/delete-cart-product', [ProductController::class, 'deleteProduct'])->name('delete.cart.product');
 });
 
 //ADMIN

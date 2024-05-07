@@ -171,72 +171,88 @@ https://mo.com/tm-586-scholar
             });
         </script>
 
-        <div class="container">
-            <form id="orderForm" action="{{ route('order.create') }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="row">
-                    @foreach ($foods as $food)
-                        <div class="col-lg-4 col-md-6">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <img src="{{ asset('storage/' . $food->image) }}" height="100" width="100"
-                                        alt="online degrees">
-                                </div>
-                                <div class="main-content">
-                                    <div class="d-flex w-100 gap-2">
-                                        <input class="form-check-input food-checkbox"
-                                            type="checkbox"id="food{{ $food->id }}" name="food_id[]"
-                                            value="{{ $food->id }}" class="checkbox"
-                                            style=" width: 23px; height: 23px;" />
-                                        <label class="form-check-label" for="food{{ $food->id }}"></label>
-                                        <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
-                                    </div>
-                                    <p>{{ $food->deskripsi }}</p>
-                                    <h6 style="color: rgb(255, 0, 0)">Rp
-                                        {{ number_format($food->price, 0, ',', '.') }}</h6>
-                                    <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
-                                    <br>
-                                    <div class="rating" style="display: flex; align-items: center;">
-                                        <div>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="fas fa-star" style="color: gold;"></i>
-                                            <i class="far fa-star" style="color: gold;"></i>
-                                        </div>
-                                        <div style="margin-left: auto;">
-                                            <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $food->id }}">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+<div class="container">
+    <form id="orderForm" action="{{ route('order.create') }}" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="row">
+            @foreach ($foods as $food)
 
-                                    <br>
-                                    <div class="order-details" style="display: none;">
-                                        <input type="number" name="jumlah_food[]"
-                                            class="form-control quantity-input" placeholder="Jumlah">
-                                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="{{ asset('storage/' . $food->image) }}" height="100" width="100" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <div class="d-flex w-100 gap-2">
+                                <input class="form-check-input food-checkbox" type="checkbox" id="food{{ $food->id }}" name="food_id[]" value="{{ $food->id }}" class="checkbox" style=" width: 23px; height: 23px;" />
+                                <label class="form-check-label" for="food{{ $food->id }}"></label>
+                                <h4 class="w-80">{{ $food->food }} LV {{ $food->level }}</h4>
+                            </div>
+                            <p>{{ $food->deskripsi }}</p>
+                            <h6 style="color: rgb(255, 0, 0)">Rp {{ number_format($food->price, 0, ',', '.') }}</h6>
+                            <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
+                            <br>
+                            <div class="rating" style="display: flex; align-items: center;">
+                                <div>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                </div>
+                                <div style="margin-left: auto;">
+                                    <p class="btn-holder" style="margin-top: 21px;">
+                                        <a class="btn btn-outline-danger add-to-cart-btn" data-bs-toggle="modal" data-bs-target="#lihat" data-food-id="{{ $food->id }}">Add to cart</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="order-details" style="display: none;">
+                                <input type="number" name="jumlah_food[]" class="form-control quantity-input" placeholder="Jumlah">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                    <div class="modal fade" id="lihat" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true" >
+                        <div class="modal-dialog" role="document" >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="cartModalLabel">Detail Pesanan Anda</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="cartModalBody">
+                                    <!-- Konten detail pesanan akan ditampilkan di sini -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Lanjutkan Pembayaran</button>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+            @endforeach
         </div>
-    </div>
+    </form>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.food-checkbox').change(function() {
-                var $parent = $(this).closest('.service-item');
-                if ($(this).is(':checked')) {
-                    $parent.find('.order-details').show();
-                } else {
-                    $parent.find('.order-details').hide();
-                }
-            });
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.food-checkbox').change(function() {
+            var $parent = $(this).closest('.service-item');
+            if ($(this).is(':checked')) {
+                $parent.find('.order-details').show();
+            } else {
+                $parent.find('.order-details').hide();
+            }
         });
-    </script>
+    });
+</script>
 
 <script>
     let cart = {};
@@ -260,9 +276,23 @@ https://mo.com/tm-586-scholar
             const quantityInput = button.parentElement.querySelector('.quantity-input');
             const quantity = parseInt(quantityInput.value);
             addToCart(foodId, quantity);
+
+            // Membuat detail pesanan
+            const foodName = button.parentElement.querySelector('label').innerText;
+            const totalPrice = quantity * parseFloat(button.parentElement.querySelector('h6').innerText.replace('Rp ', '').replace('.', '').replace(',', '.'));
+            const cartModalBody = document.getElementById('cartModalBody');
+            cartModalBody.innerHTML = `
+                <p>Item: ${foodName}</p>
+                <p>Jumlah: ${quantity}</p>
+                <p>Total Harga: Rp ${totalPrice}</p>
+            `;
+
+            // Menampilkan modal
+            $('#lihat').modal('show');
         });
     });
 </script>
+
 
     <br>
     <br>

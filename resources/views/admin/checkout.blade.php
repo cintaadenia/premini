@@ -34,7 +34,7 @@
                                 <td>{{ $user->user->email }}</td>
                                 <td>{{ $user->order->noTelepon }}</td>
                                 <td scope="row">
-                                    <a class="btn icon icon-left btn-primary me-2 text-nowrap" type="button" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
+                                    <a class="btn icon icon-left btn-primary me-2 text-nowrap" data-bs-toggle="modal" data-bs-target="#lihat{{ $loop->iteration }}">
                                         <i class="bi bi-eye-fill"></i> Show
                                     </a>
                                 </td>
@@ -82,14 +82,6 @@
                                             </div>
                                         </div>
 
-                                        {{-- <hr style="color: blueviolet">
-
-                                        <div class="row">
-                                            <div class="col">
-                                                <h6>{{ $user->order->levels->level}}</h6>
-                                            </div>
-                                        </div> --}}
-
                                         <hr style="color: blueviolet">
 
                                         <div class="row">
@@ -121,10 +113,7 @@
                                             <i class="bx bx-x d-block d-sm-none"></i>
                                             <span class="d-none d-sm-block">Close</span>
                                         </button>
-                                        {{-- <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                            <i class="bx bx-check d-block d-sm-none"></i>
-                                            <span class="d-none d-sm-block">Accept</span>
-                                        </button> --}}
+
                                     </div>
                                 </div>
                             </div>
