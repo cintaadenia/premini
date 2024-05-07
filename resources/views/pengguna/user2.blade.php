@@ -52,18 +52,15 @@ https://mo.com/tm-586-scholar
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        {{-- <div class="search-input">
-                            <form id="search" action="#">
-                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
-                                    onkeypress="handle" />
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div> --}}
                         <!-- ** Menu Start ** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#services">Home</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
+                            <div style="margin-right: 10px;">
+                                <a href="#" id="addToCartBtn" style="color: #faf9fa; font-size: 24px; vertical-align: middle;"><i
+                                    class="fas fa-cart-plus" style="color: #ffffff; font-size: 24px;"></i></a>
+                            </div>
                             <li class="scroll-to-section">
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
@@ -92,7 +89,6 @@ https://mo.com/tm-586-scholar
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
     <div class="main-banner" id="top">
         <div class="container">
             <div class="row">
@@ -137,7 +133,6 @@ https://mo.com/tm-586-scholar
                             </div>
                         </div>
 
-
                         <div class="item item-3">
                             <div class="header-text">
                                 <span class="category">Mie Gacoan</span>
@@ -166,11 +161,9 @@ https://mo.com/tm-586-scholar
     <br>
     <br>
 
-    <h1 class="button"
-        style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;"
-        id="food">Food Menu</h1>
-    <div class="services section" id="services">
+    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 30px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;" id="food">Food Menu</h1>
 
+    <div class="services section" id="services">
         <script>
             document.getElementById("orderForm").addEventListener("submit", function(event) {
                 event.preventDefault();
@@ -203,13 +196,21 @@ https://mo.com/tm-586-scholar
                                         {{ number_format($food->price, 0, ',', '.') }}</h6>
                                     <h6 style="color: gray">Stock : {{ $food->stock }}</h6>
                                     <br>
-                                    <div class="rating">
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="fas fa-star" style="color: gold;"></i>
-                                        <i class="far fa-star" style="color: gold;"></i>
+                                    <div class="rating" style="display: flex; align-items: center;">
+                                        <div>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="fas fa-star" style="color: gold;"></i>
+                                            <i class="far fa-star" style="color: gold;"></i>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $food->id }}">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </button>
+                                        </div>
                                     </div>
+
                                     <br>
                                     <div class="order-details" style="display: none;">
                                         <input type="number" name="jumlah_food[]"
@@ -236,14 +237,38 @@ https://mo.com/tm-586-scholar
             });
         });
     </script>
+
+<script>
+    let cart = {};
+
+    function addToCart(foodId, quantity) {
+        if (cart[foodId]) {
+            cart[foodId] += quantity;
+        } else {
+            cart[foodId] = quantity;
+        }
+        console.log("Makanan berhasil ditambahkan ke keranjang:", cart);
+    }
+</script>
+
+<script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const foodId = button.getAttribute('data-food-id');
+            const quantityInput = button.parentElement.querySelector('.quantity-input');
+            const quantity = parseInt(quantityInput.value);
+            addToCart(foodId, quantity);
+        });
+    });
+</script>
+
     <br>
     <br>
     <br>
 
-
-    <h1 class="button"
-        style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-        Dimsum Menu</h1>
+    <h1 class="button" style="text-align: center; color: #9370DB; padding-top: 100px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">Dimsum Menu</h1>
 
     <div class="services section" id="services">
         <div class="container">
@@ -341,8 +366,7 @@ https://mo.com/tm-586-scholar
                                 </div>
                                 <br>
                                 <div class="order-details" style="display: none;">
-                                    <input type="number" name="jumlah_drink[]" class="form-control quantity-input"
-                                        placeholder="Jumlah">
+                                    <input type="number" name="jumlah_drink[]" class="form-control quantity-input" placeholder="Jumlah">
                                 </div>
                             </div>
                         </div>
@@ -367,23 +391,13 @@ https://mo.com/tm-586-scholar
     </script>
 
     <div class="pe-5 me-5" style="display: flex; justify-content: flex-end; align-items: center;">
-        <div style="margin-right: 10px;">
-            <a href="#" id="addToCartBtn" style="color: #9370DB; font-size: 24px; vertical-align: middle;"><i
-                    class="fas fa-cart-plus" style="color: #9370DB; font-size: 24px;"></i></a>
-        </div>
-        <button type="submit" class="btn btn-primary" style="background-color: #9370DB; margin-left: 10px;"
-            onclick="return validateOrder();">Order Sekarang!</button>
-
-
+        <button type="submit" class="btn btn-primary" style="background-color: #9370DB; margin-left: 10px;" onclick="return validateOrder();">Order Sekarang!</button>
     </div>
-
 
     <script>
         $(document).ready(function() {
             $('#addToCartBtn').click(function(event) {
-                event.preventDefault(); // Menghentikan perilaku default dari tautan
-
-                // Lakukan sesuatu ketika tautan "Tambahkan ke Keranjang" diklik, misalnya kirim data ke backend
+                event.preventDefault();
                 alert("Barang berhasil ditambahkan ke keranjang!");
             });
         });
@@ -440,11 +454,9 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
-                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
-                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -464,11 +476,9 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
-                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
-                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
 
                         </div>
@@ -491,11 +501,9 @@ https://mo.com/tm-586-scholar
                                 <i class="fas fa-star" style="color: gold;"></i>
                             </div>
                             <ul class="social-icons">
-                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i
-                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/warunkgacoankota/?locale=id_ID"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/mie_gacoan"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/mie.gacoan/"><i
-                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/mie.gacoan/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -525,23 +533,18 @@ https://mo.com/tm-586-scholar
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- JavaScript code for order validation -->
     <script>
         function validateOrder() {
-            // Check if any item is selected for purchase
             var totalItems = document.querySelectorAll(
                 '.food-checkbox:checked, .dimsum-checkbox:checked, .drink-checkbox:checked').length;
-
-            // If no item is selected, show a warning message
             if (totalItems === 0) {
                 alert('Mohon pilih item yang akan dibeli.');
-                return false; // Return false to prevent form submission
+                return false;
             }
 
-            return true; // Continue with form submission if any item is selected
+            return true;
         }
     </script>
 
 </body>
-
 </html>
