@@ -30,7 +30,6 @@ class OrderController extends Controller
 
     public function order()
     {
-        // dd("t");
         $order = Order::where('users_id', auth()->id())->get();
         $orderFoods = OrderFood::get();
         $orderDimsums = OrderDimsum::get();
@@ -87,7 +86,6 @@ class OrderController extends Controller
             }
 
         }
-
 
 // dd($request->all());
         // untuk mengurangi stock
@@ -195,42 +193,6 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
-        // // dd($request->all());
-        // $order = Order::create([
-        //     'food_id' => $request->makanan,
-        //     'drinks_id' => $request->minuman,
-        //     'dimsums_id' => $request->dimsum,
-        //     'users_id' => auth()->id(),
-
-        // ]);
-        // //untuk mengurangi stock
-        // //Untuk Food
-        // $food = Food::find($request->makanan);
-
-        // $food->update([
-        //     'stock' => $food->stock - 1
-        // ]);
-
-        // //Untuk Drink
-        // $drink = Drink::find($request->minuman);
-
-        // $drink->update([
-        //     'stock' => $drink->stock - 1
-        // ]);
-
-        // //Untuk Dimsum
-        // $dimsum = Dimsum::find($request->dimsum);
-
-        // $dimsum->update([
-        //     'stock' => $dimsum->stock - 1
-        // ]);
-
-        // Checkout::create([
-        //     'user_id' => auth()->id(),
-        //     'order_id' => $order->id,
-        // ]);
-
-        // return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     /**

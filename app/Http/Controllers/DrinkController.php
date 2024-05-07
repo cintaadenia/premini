@@ -39,7 +39,6 @@ class DrinkController extends Controller
 
 
             return redirect()->back()->with('success', 'Data Drink berhasil ditambahkan');
-
     }
 
     /**

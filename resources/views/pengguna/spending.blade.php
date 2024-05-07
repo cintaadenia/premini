@@ -51,13 +51,6 @@
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        {{-- <div class="search-input">
-                            <form id="search" action="#">
-                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
-                                    onkeypress="handle" />
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div> --}}
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
