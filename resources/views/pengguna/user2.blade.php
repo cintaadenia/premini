@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
 <link rel="stylesheet" href="user/assets/css/owl.css">
 <link rel="stylesheet" href="user/assets/css/animate.css">
-<link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -308,7 +308,7 @@ https://mo.com/tm-586-scholar
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
                                 <div style="margin-left: auto;">
-                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $dimsum->id }}">
+                                    <button class="btn btn-none add-to-cart-btn" type="button" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $dimsum->id }}">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -383,9 +383,8 @@ https://mo.com/tm-586-scholar
         })
     </script>
 
-    <h1
-        class="button"style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
-        Drink Menu</h1>
+    <h1 class="button"style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
+     Drink Menu</h1>
 
 
     <div class="services section" id="services">
@@ -420,7 +419,7 @@ https://mo.com/tm-586-scholar
                                         <i class="far fa-star" style="color: gold;"></i>
                                     </div>
                                     <div style="margin-left: auto;">
-                                        <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $drink->id }}">
+                                        <button class="btn btn-none add-to-cart-btn" type="button" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $drink->id }}">
                                             <i class="fas fa-shopping-cart"></i>
                                         </button>
                                     </div>
