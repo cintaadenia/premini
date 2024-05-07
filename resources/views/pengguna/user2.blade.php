@@ -201,7 +201,7 @@ https://mo.com/tm-586-scholar
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
                                 <div style="margin-left: auto;">
-                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $food->id }}">
+                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;"  data-food-id="{{ $food->id }}">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -268,29 +268,33 @@ https://mo.com/tm-586-scholar
 </script>
 
 <script>
-    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const foodId = button.getAttribute('data-food-id');
-            const quantityInput = button.parentElement.querySelector('.quantity-input');
-            const quantity = parseInt(quantityInput.value);
-            addToCart(foodId, quantity);
+    $('.add-to-cart-btn').click( function(){
+        $('#lihat').modal('show');
+    })
+    // const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-            // Membuat detail pesanan
-            const foodName = button.parentElement.querySelector('label').innerText;
-            const totalPrice = quantity * parseFloat(button.parentElement.querySelector('h6').innerText.replace('Rp ', '').replace('.', '').replace(',', '.'));
-            const cartModalBody = document.getElementById('cartModalBody');
-            cartModalBody.innerHTML = `
-                <p>Item: ${foodName}</p>
-                <p>Jumlah: ${quantity}</p>
-                <p>Total Harga: Rp ${totalPrice}</p>
-            `;
+    // addToCartButtons.forEach(button => {
+    //     button.addEventListener('click', function() {
+    //         const foodId = button.getAttribute('data-food-id');
+    //         const quantityInput = button.parentElement.querySelector('.quantity-input');
+    //         const quantity = parseInt(quantityInput.value);
+    //         addToCart(foodId, quantity);
 
-            // Menampilkan modal
-            $('#lihat').modal('show');
-        });
-    });
+    //         // Membuat detail pesanan
+    //         const foodName = button.parentElement.querySelector('label').innerText;
+    //         const totalPrice = quantity * parseFloat(button.parentElement.querySelector('h6').innerText.replace('Rp ', '').replace('.', '').replace(',', '.'));
+    //         const cartModalBody = document.getElementById('cartModalBody');
+    //         cartModalBody.innerHTML = `
+    //             <p>Item: ${foodName}</p>
+    //             <p>Jumlah: ${quantity}</p>
+    //             <p>Total Harga: Rp ${totalPrice}</p>
+    //         `;
+
+    //         // Menampilkan modal
+    //         $('#lihat').modal('show');
+    //     });
+    // });
 </script>
 
 
