@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="user/assets/css/owl.css">
     <link rel="stylesheet" href="user/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!--
 
 Mo 586 Scholar
@@ -200,11 +204,13 @@ https://mo.com/tm-586-scholar
                                     <i class="fas fa-star" style="color: gold;"></i>
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
+
                                 <div style="margin-left: auto;">
-                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;"  data-food-id="{{ $food->id }}">
+                                    <button class="btn btn-outline-none" type="button" style="color: #9370DB; font-size: 21px;" data-bs-toggle="modal" data-bs-target="#lihat" data-food-id="{{ $food->id }}">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
+
                             </div>
 
                             <br>
@@ -216,11 +222,11 @@ https://mo.com/tm-586-scholar
                 </div>
                 <!-- Modal -->
                     <div class="modal fade" id="lihat" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" >
+                        <div class="modal-dialog modal-dialog-centered" role="document" >
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="cartModalLabel">Detail Pesanan Anda</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -228,8 +234,8 @@ https://mo.com/tm-586-scholar
                                     <!-- Konten detail pesanan akan ditampilkan di sini -->
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                    <button type="submit" class="btn btn-primary">Lanjutkan Pembayaran</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Tambah ke Keranjang</button>
                                 </div>
                             </div>
                         </div>
@@ -272,29 +278,6 @@ https://mo.com/tm-586-scholar
     $('.add-to-cart-btn').click( function(){
         $('#lihat').modal('show');
     })
-    // const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-
-    // addToCartButtons.forEach(button => {
-    //     button.addEventListener('click', function() {
-    //         const foodId = button.getAttribute('data-food-id');
-    //         const quantityInput = button.parentElement.querySelector('.quantity-input');
-    //         const quantity = parseInt(quantityInput.value);
-    //         addToCart(foodId, quantity);
-
-    //         // Membuat detail pesanan
-    //         const foodName = button.parentElement.querySelector('label').innerText;
-    //         const totalPrice = quantity * parseFloat(button.parentElement.querySelector('h6').innerText.replace('Rp ', '').replace('.', '').replace(',', '.'));
-    //         const cartModalBody = document.getElementById('cartModalBody');
-    //         cartModalBody.innerHTML = `
-    //             <p>Item: ${foodName}</p>
-    //             <p>Jumlah: ${quantity}</p>
-    //             <p>Total Harga: Rp ${totalPrice}</p>
-    //         `;
-
-    //         // Menampilkan modal
-    //         $('#lihat').modal('show');
-    //     });
-    // });
 </script>
 
 
@@ -337,7 +320,7 @@ https://mo.com/tm-586-scholar
                                     <i class="far fa-star" style="color: gold;"></i>
                                 </div>
                                 <div style="margin-left: auto;">
-                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $dimsum->id }}">
+                                    <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $dimsum->id }}">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -349,6 +332,27 @@ https://mo.com/tm-586-scholar
                                         placeholder="Jumlah">
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="lihat" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true" >
+                        <div class="modal-dialog modal-dialog-centered" role="document" >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="cartModalLabel">Detail Pesanan Anda</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="cartModalBody">
+                                    <!-- Konten detail pesanan akan ditampilkan di sini -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Tambah ke Keranjang</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -370,6 +374,26 @@ https://mo.com/tm-586-scholar
             });
         });
     </script>
+
+<script>
+    let cart = {};
+
+    function addToCart(dimsumId, quantity) {
+        if (cart[dimsumId]) {
+            cart[dimsumId] += quantity;
+        } else {
+            cart[dimsumId] = quantity;
+        }
+        console.log("Dimsum berhasil ditambahkan ke keranjang:", cart);
+    }
+</script>
+
+<script>
+
+    $('.add-to-cart-btn').click( function(){
+        $('#lihat').modal('show');
+    })
+</script>
 
     <h1
         class="button"style="text-align: center; color: #9370DB; padding-top: 200px; padding-bottom: 10px; font-size: 36px; line-height: 1.5; font-family: Arial, sans-serif;">
@@ -408,7 +432,7 @@ https://mo.com/tm-586-scholar
                                         <i class="far fa-star" style="color: gold;"></i>
                                     </div>
                                     <div style="margin-left: auto;">
-                                        <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-food-id="{{ $drink->id }}">
+                                        <button class="btn btn-none add-to-cart-btn" style="color: #9370DB; font-size: 21px;" data-bs-target="#lihat" data-food-id="{{ $drink->id }}">
                                             <i class="fas fa-shopping-cart"></i>
                                         </button>
                                     </div>
@@ -417,6 +441,26 @@ https://mo.com/tm-586-scholar
                                 <br>
                                 <div class="order-details" style="display: none;">
                                     <input type="number" name="jumlah_drink[]" class="form-control quantity-input" placeholder="Jumlah">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Modal -->
+                     <div class="modal fade" id="lihat" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true" >
+                        <div class="modal-dialog modal-dialog-centered" role="document" >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="cartModalLabel">Detail Pesanan Anda</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="cartModalBody">
+                                    <!-- Konten detail pesanan akan ditampilkan di sini -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Tambah ke Keranjang</button>
                                 </div>
                             </div>
                         </div>
@@ -440,28 +484,31 @@ https://mo.com/tm-586-scholar
         });
     </script>
 
+<script>
+    let cart = {};
+
+    function addToCart(drinkId, quantity) {
+        if (cart[drinkId]) {
+            cart[drinkId] += quantity;
+        } else {
+            cart[drinkId] = quantity;
+        }
+        console.log("Drink berhasil ditambahkan ke keranjang:", cart);
+    }
+</script>
+
+<script>
+
+    $('.add-to-cart-btn').click( function(){
+        $('#lihat').modal('show');
+    })
+</script>
+
     <div class="pe-5 me-5" style="display: flex; justify-content: flex-end; align-items: center;">
         <button type="submit" class="btn btn-primary" style="background-color: #9370DB; margin-left: 10px;" onclick="return validateOrder();">Order Sekarang!</button>
     </div>
 
-    {{-- <script>
-        $(document).ready(function() {
-            $('#addToCartBtn').click(function(event) {
-                event.preventDefault();
-                // Gantikan alert dengan logika untuk menampilkan riwayat pesanan
-                showOrderHistory();
-            });
-
-            // Definisikan fungsi untuk menampilkan riwayat pesanan
-            function showOrderHistory() {
-                // Tambahkan logika di sini untuk menampilkan riwayat pesanan
-                // Misalnya, munculkan modal atau buka halaman baru yang menampilkan riwayat pesanan
-                alert("Menampilkan riwayat pesanan...");
-            }
-        });
-    </script> --}}
-
-    </form>
+</form>
 
     <br>
     <br>
