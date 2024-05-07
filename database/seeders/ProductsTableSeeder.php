@@ -1,9 +1,11 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
+
 class ProductsTableSeeder extends Seeder
 {
     /**
@@ -11,6 +13,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run(): void
     {
+        // Membuat tiga produk contoh dan menyimpannya ke dalam database
         Product::create([
             'name' => 'Product 1',
             'price' => 10,
