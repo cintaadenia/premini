@@ -394,14 +394,23 @@ https://mo.com/tm-586-scholar
         <button type="submit" class="btn btn-primary" style="background-color: #9370DB; margin-left: 10px;" onclick="return validateOrder();">Order Sekarang!</button>
     </div>
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $('#addToCartBtn').click(function(event) {
                 event.preventDefault();
-                alert("Barang berhasil ditambahkan ke keranjang!");
+                // Gantikan alert dengan logika untuk menampilkan riwayat pesanan
+                showOrderHistory();
             });
+
+            // Definisikan fungsi untuk menampilkan riwayat pesanan
+            function showOrderHistory() {
+                // Tambahkan logika di sini untuk menampilkan riwayat pesanan
+                // Misalnya, munculkan modal atau buka halaman baru yang menampilkan riwayat pesanan
+                alert("Menampilkan riwayat pesanan...");
+            }
         });
-    </script>
+    </script> --}}
+
     </form>
 
     <br>
