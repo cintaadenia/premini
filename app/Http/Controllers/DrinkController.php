@@ -91,7 +91,7 @@ class DrinkController extends Controller
         // dd($drink);
 
         $request->validate([
-            'drink' => 'required|unique:drinks,drink,' . $id,
+            'drink' => 'required',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',

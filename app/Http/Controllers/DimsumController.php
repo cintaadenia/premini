@@ -66,7 +66,7 @@ class DimsumController extends Controller
         }
 
         $validatedData = $request->validate([
-            'dimsum' => 'required|unique:dimsum,dimsum,',
+            'dimsum' => 'required',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
@@ -103,7 +103,7 @@ class DimsumController extends Controller
         $dimsum = Dimsum::findOrFail($id);
 
         $request->validate([
-            'dimsum' => 'required|unique:dimsums,dimsum,' . $id,
+            'dimsum' => 'required',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1 ',
             'stock' => 'required|numeric|min:1',

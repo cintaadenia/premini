@@ -22,7 +22,7 @@ class Dimsum extends Model
     public static function rules($id = null)
     {
         return [
-            'dimsum' => 'required|unique:dimsum,dimsum,' . $id,
+            'dimsum' => 'required',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',

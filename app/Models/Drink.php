@@ -21,7 +21,7 @@ class Drink extends Model
     public static function rules($id = null)
     {
         return [
-            'drink' => 'required|unique:drink,drink,' . $id,
+            'drink' => 'required',
             'deskripsi' => 'required|string|max:255 ',
             'price' => 'required|numeric|min:1',
             'stock' => 'required|numeric|min:1',
