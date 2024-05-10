@@ -111,12 +111,12 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($order as $or)
+                                                    @foreach ($spending as $spend)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ $or->food->food }}</td>
-                                                        <td>{{ $or->drinks->drink }}</td>
-                                                        <td>{{ $or->dimsums->dimsum }}</td>
+                                                        <td>{{ $spend->food->food }}</td>
+                                                        <td>{{ $spend->drinks->drink }}</td>
+                                                        <td>{{ $spend->dimsums->dimsum }}</td>
                                                         <td>Rp. {{ number_format(OrderHelper::index($or->id), 0, ',', '.') }}</td>
                                                     </tr>
 

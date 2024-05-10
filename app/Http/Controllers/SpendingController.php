@@ -13,7 +13,7 @@ class GrafikController extends Controller
 {
     public function index()
     {
-        $spending = Order::get();
+        $spending = Order::where('users_id', auth()->id())->get();
         return view('pengguna.spending', compact('spending'));
     }
 
