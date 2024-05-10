@@ -45,7 +45,7 @@ class OrderController extends Controller
             'users_id' => auth()->id(),
             'catatan' => $request->catatan,
         ]);
-        //untuk mengurangi stock
+
         //Untuk Food
         $food = Food::findOrFail($request->makanan);
 

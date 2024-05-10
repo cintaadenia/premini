@@ -1,3 +1,7 @@
+@php
+    use App\Helpers\OrderHelper;
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <title>Gacoan</title>
-    <!-- Bootstrap core CSS -->
     <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
@@ -20,18 +22,15 @@
     <style>
         .main-nav {
             padding: 55px 0;
-            /* Mengurangi padding vertikal */
         }
 
         .main-nav .logo {
             font-size: 24px;
-            /* Mengurangi ukuran font logo */
         }
     </style>
 </head>
 
 <body>
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -64,7 +63,6 @@
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -113,15 +111,16 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {{--
-                                                    @foreach ($spending as $spend) --}}
+                                                    @foreach ($order as $or)
                                                     <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>{{ $loop->iteration }}</td>
+                                                        <td>{{ $or->food->food }}</td>
+                                                        <td>{{ $or->drinks->drink }}</td>
+                                                        <td>{{ $or->dimsums->dimsum }}</td>
+                                                        <td>Rp. {{ number_format(OrderHelper::index($or->id), 0, ',', '.') }}</td>
                                                     </tr>
-                                                    {{-- @endforeach --}}
+
+                                                    @endforeach
 
                                                 </tbody>
                                             </table>

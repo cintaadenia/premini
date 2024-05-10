@@ -21,18 +21,15 @@
     <style>
         .main-nav {
             padding: 55px 0;
-            /* Mengurangi padding vertikal */
         }
 
         .main-nav .logo {
             font-size: 24px;
-            /* Mengurangi ukuran font logo */
         }
     </style>
 </head>
 
 <body>
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -72,7 +69,6 @@
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -177,7 +173,6 @@
                                 console.log('success');
                                 console.log(result);
 
-                                // Ubah status menjadi 'PAID'
                                 if (status !== 'PAID') {
                                     $(this).attr('data-status', 'PAID');
                                     $(this).text('Sudah Bayar');

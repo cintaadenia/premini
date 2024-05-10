@@ -31,7 +31,6 @@
 </head>
 
 <body>
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -72,7 +71,6 @@
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -94,8 +92,6 @@
                                 @foreach ($order as $ord)
                                 <div class="col-md-4">
                                     <div class="card" style="width: 21rem;">
-                                        {{-- <img src="" width="150" height="250" class="card-img-top"
-                                            alt="..."> --}}
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
@@ -128,70 +124,6 @@
                             </div>
 
 
-                            {{-- <div class="page-heading col-12 mt-3">
-                                <section class="section">
-                                    <div class="card">
-                                        <div class="card-header" style="background-color: #7a6ad8;">
-                                            <h5 class="card-title text-white">
-                                                Order
-                                            </h5>
-                                        </div>
-
-                                        <div class="card-body">
-                                            <table class="table table-striped" id="table1">
-                                                <thead>
-                                                    <tr>
-                                                        <th>id order</th>
-                                                        <th>No Telepon</th>
-                                                        <th>Makanan</th>
-                                                        <th>Level</th>
-                                                        <th>Minuman</th>
-                                                        <th>Dimsum</th>
-                                                        {{-- <th>Catatan</th> --}}
-                                                        {{-- <th>Status</th>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach ($order as $ord)
-                                                        <tr>
-                                                            <td>#{{ $ord->id }}</td>
-                                                            <td>{{ $ord->noTelepon }}</td>
-                                                            <td>{{ $ord->food->food  }}</td>
-                                                            <td>{{ $ord->levels->level }}</td>
-                                                            <td>{{ $ord->drinks->drink }}</td>
-                                                            <td>{{ $ord->dimsums->dimsum }}</td> --}}
-                                                            {{-- <td>{{ $ord->catatan }}</td> --}}
-                                                            {{-- <td>
-
-                                                                @if ($ord->status == 'UNPAID')
-                                                                    <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
-                                                                        @csrf
-                                                                        <input type="hidden" name="id" value="{{ $ord->id }}" />
-                                                                        <button class="btn btn-primary" order="{{ $ord->id }}">Bayar Sekarang</button>
-                                                                    </form>
-
-                                                                @elseif($ord->status == 'COOK')
-                                                                    <span class="badge bg-warning text-dark">Sedang Dimasak</span>
-
-                                                                @elseif($ord->status == 'DELIVER')
-                                                                    <span class="badge bg-info">Sedang Diantar</span>
-
-                                                                @elseif($ord->status == 'RECEIVED')
-                                                                    <span class="badge bg-success">Sudah Diterima</span>
-                                                                @endif
-
-                                                            </td>
-
-
-                                                        </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>  --}}
                         </div>
                     </section>
                     </div>

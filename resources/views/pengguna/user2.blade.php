@@ -48,7 +48,6 @@
             height: 30px;
         }
 
-        /* edit inputan select 2 */
         .select2-container--default .select2-selection--multiple .select2-selection__choice {
             background-color: #f2e3f7;
             border: 1px solid #aaa;
@@ -73,7 +72,6 @@
 
 <body>
 
-    <!-- ** Preloader Start ** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -84,20 +82,16 @@
             </div>
         </div>
     </div>
-    <!-- ** Preloader End ** -->
 
-    <!-- ** Header Area Start ** -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ** Logo Start ** -->
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <!-- ** Logo End ** -->
-                        <!-- ** Serach Start ** -->
+
                         <div class="search-input">
                             <form id="search" action="#">
                                 <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
@@ -105,8 +99,6 @@
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
-                        <!-- ** Serach Start ** -->
-                        <!-- ** Menu Start ** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
@@ -119,13 +111,11 @@
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ** Menu End ** -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ** Header Area End ** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -213,7 +203,6 @@
                             <span class="offer">off<br><em>50%</em></span>
                             <h6>Valide: <em>24 April 2036</em></h6>
                             <h4>Special Offer <em>50%</em> OFF!</h4>
-                            {{-- <a href="#"></i></a> --}}
                         </div>
                     </div>
                 </div>

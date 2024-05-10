@@ -10,12 +10,8 @@
 
     <title>Gacoan</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="
-    user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
     <link rel="stylesheet" href="user/assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="user/assets/css/owl.css">
@@ -32,7 +28,6 @@ https://mo.com/tm-586-scholar
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
@@ -52,13 +47,7 @@ https://mo.com/tm-586-scholar
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        {{-- <div class="search-input">
-                            <form id="search" action="#">
-                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
-                                    onkeypress="handle" />
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div> --}}
+
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Food</a></li>
@@ -77,13 +66,11 @@ https://mo.com/tm-586-scholar
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
     <div class="main-banner" id="top">
         <div class="container">
@@ -418,8 +405,6 @@ https://mo.com/tm-586-scholar
             </div>
         </div>
     </div>
-
-
 
 
     <div class="section testimonials">
