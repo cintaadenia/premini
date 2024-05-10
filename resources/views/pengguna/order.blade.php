@@ -39,6 +39,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
             </div>
         </div>
     </div>
@@ -51,8 +52,15 @@
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
+                        <div class="search-input">
+                            <form id="search" action="#">
+                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
+                                    onkeypress="handle" />
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </div>
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
                         </ul>
@@ -91,12 +99,11 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
-                                            <p>Food : @foreach ($orderFoods as $orderFood) {{ $orderFood->food->food }} ,  @endforeach</p>
-                                            <p>Drink : @foreach ($orderDrinks as $orderDrink ) {{ $orderDrink->drinks->drink }},  @endforeach </p>
-                                            <p>Dimsum : @foreach ($orderDimsums as $orderDimsum ) {{ $orderDimsum->dimsums->dimsum }},  @endforeach</p>
-                                            <p>Catatan : {{ $ord->catatan }} </p>
-                                            <h6 style="text-align: right">Total : <span style="color: red;">Rp </span></h6>
-                                            {{-- {{ number_format(OrderHelper::index($ord->id), 0, ',', '.') }} --}}
+                                            <p>Food : {{ $ord->food->food }}</p>
+                                            <p>Drink : {{ $ord->drinks->drink }}</p>
+                                            <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
+                                            <p>Catatan : {{ $ord->catatan }}</p>
+                                            <h6>Total : <span style="color: red;">Rp {{ number_format(OrderHelper::index($ord->id), 0, ',', '.') }}</span></h6>
                                             <br>
                                                 @if ($ord->status == 'UNPAID')
                                                 <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
@@ -119,6 +126,72 @@
                                 </div>
                                 @endforeach
                             </div>
+
+
+                            {{-- <div class="page-heading col-12 mt-3">
+                                <section class="section">
+                                    <div class="card">
+                                        <div class="card-header" style="background-color: #7a6ad8;">
+                                            <h5 class="card-title text-white">
+                                                Order
+                                            </h5>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <table class="table table-striped" id="table1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>id order</th>
+                                                        <th>No Telepon</th>
+                                                        <th>Makanan</th>
+                                                        <th>Level</th>
+                                                        <th>Minuman</th>
+                                                        <th>Dimsum</th>
+                                                        {{-- <th>Catatan</th> --}}
+                                                        {{-- <th>Status</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($order as $ord)
+                                                        <tr>
+                                                            <td>#{{ $ord->id }}</td>
+                                                            <td>{{ $ord->noTelepon }}</td>
+                                                            <td>{{ $ord->food->food  }}</td>
+                                                            <td>{{ $ord->levels->level }}</td>
+                                                            <td>{{ $ord->drinks->drink }}</td>
+                                                            <td>{{ $ord->dimsums->dimsum }}</td> --}}
+                                                            {{-- <td>{{ $ord->catatan }}</td> --}}
+                                                            {{-- <td>
+
+                                                                @if ($ord->status == 'UNPAID')
+                                                                    <form action="{{ route('order.pay') }}" method="POST" class="payOrder">
+                                                                        @csrf
+                                                                        <input type="hidden" name="id" value="{{ $ord->id }}" />
+                                                                        <button class="btn btn-primary" order="{{ $ord->id }}">Bayar Sekarang</button>
+                                                                    </form>
+
+                                                                @elseif($ord->status == 'COOK')
+                                                                    <span class="badge bg-warning text-dark">Sedang Dimasak</span>
+
+                                                                @elseif($ord->status == 'DELIVER')
+                                                                    <span class="badge bg-info">Sedang Diantar</span>
+
+                                                                @elseif($ord->status == 'RECEIVED')
+                                                                    <span class="badge bg-success">Sudah Diterima</span>
+                                                                @endif
+
+                                                            </td>
+
+
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>  --}}
                         </div>
                     </section>
                     </div>

@@ -8,9 +8,6 @@ use App\Models\Dimsum;
 use App\Models\Drink;
 use App\Models\Food;
 use App\Models\Order;
-use App\Models\OrderDimsum;
-use App\Models\OrderDrink;
-use App\Models\OrderFood;
 use App\Models\User;
 use App\Services\MidtransSnap;
 use Illuminate\Http\Request;
@@ -30,93 +27,52 @@ class OrderController extends Controller
 
     public function order()
     {
+        // dd("t");
         $order = Order::where('users_id', auth()->id())->get();
-        $orderFoods = OrderFood::get();
-        $orderDimsums = OrderDimsum::get();
-        $orderDrinks = OrderDrink::get();
+        return view('pengguna.order', compact('order'));
 
-        return view('pengguna.order', compact('order', 'orderFoods', 'orderDimsums', 'orderDrinks'));
     }
 
     public function create(OrderRequest $request)
     {
-        $transaction = Transaction::where('transactions_id', $request->order_id)->first();
-
+        $order = Transaction::where('transactions_id', $request->order_id)->first();
+        // dd($request->all());
         $order = Order::create([
+            'noTelepon' => $request->noTelepon,
+            'food_id' => $request->makanan,
+            'drinks_id' => $request->minuman,
+            'dimsums_id' => $request->dimsum,
             'users_id' => auth()->id(),
             'catatan' => $request->catatan,
         ]);
+        //untuk mengurangi stock
+        //Untuk Food
+        $food = Food::findOrFail($request->makanan);
 
+        $food->update([
+            'stock' => $food->stock - 1
+        ]);
 
-        $validatedData = $request->validated();
-        if (isset($validatedData['food_id'])) {
-            for ($i=0; $i < count($validatedData['food_id']); $i++) {
-                $foodId = $validatedData['food_id'][$i];
-                OrderFood::create([
-                    'food_id' => $foodId,
-                    'order_id' => $order->id,
-                    'jumlah' => $validatedData['jumlah_food'][$i],
-                ]);
-            }
+        //Untuk Drink
+        $drink = Drink::findOrFail($request->minuman);
 
-        }
+        $drink->update([
+            'stock' => $drink->stock - 1
+        ]);
 
-        $validatedData = $request->validated();
-        if (isset($validatedData['dimsum_id'])) {
-            for ($i=0; $i < count($validatedData['dimsum_id']); $i++) {
-                $dimsumId = $validatedData['dimsum_id'][$i];
-                OrderDimsum::create([
-                    'dimsum_id' => $dimsumId,
-                    'order_id' => $order->id,
-                    'jumlah' => $validatedData['jumlah_dimsum'][$i],
-                ]);
-            }
+        //Untuk Dimsum
+        $dimsum = Dimsum::findOrFail($request->dimsum);
 
-        }
-
-        $validatedData = $request->validated();
-        if (isset($validatedData['drink_id'])) {
-            for ($i=0; $i < count($validatedData['drink_id']); $i++) {
-                $drinkId = $validatedData['drink_id'][$i];
-                OrderDrink::create([
-                    'drink_id' => $drinkId,
-                    'order_id' => $order->id,
-                    'jumlah' => $validatedData['jumlah_drink'][$i],
-                ]);
-            }
-
-        }
-
-// dd($request->all());
-        // untuk mengurangi stock
-        // Untuk Food
-        // $food = Food::find($request->food);
-
-        // $food->update([
-        //     'stock' => $food->stock - 1
-        // ]);
-
-        // //Untuk Drink
-        // $drink = Drink::find($request->drink);
-
-        // $drink->update([
-        //     'stock' => $drink->stock - 1
-        // ]);
-
-        // //Untuk Dimsum
-        // $dimsum = Dimsum::find($request->dimsum);
-
-        // $dimsum->update([
-        //     'stock' => $dimsum->stock - 1
-        // ]);
+        $dimsum->update([
+            'stock' => $dimsum->stock - 1
+        ]);
 
         Checkout::create([
             'user_id' => auth()->id(),
             'order_id' => $order->id,
         ]);
 
-        return redirect()->route("order")->with('success', 'Anda Berhasil Order');
-
+        return redirect('order')->with('success', 'Anda Berhasil Order');
     }
 
     public function pay(Request $request)
@@ -126,11 +82,12 @@ class OrderController extends Controller
         ]);
 
         $transaction = Transaction::where([
-            ['order_id', '=', $request->input('id')],
-            ['statusBayar', '=', 'PAID']
+            ['order_id','=', $request->input('id')],
+            ['statusBayar','=','PAID']
         ])->first();
 
-        if ($transaction) {
+        if($transaction)
+        {
             return redirect()->route('transaction.index', ['id' => $transaction->id]);
         }
 
@@ -176,7 +133,7 @@ class OrderController extends Controller
         $midtransData = $midtrans->create();
 
         Transaction::create([
-            'transactions_id' => $orderId,
+            'transactions_id' => $orderId   ,
             'user_id' => auth()->id(),
             'order_id' => $request->id,
             'snapToken' => $midtransData['token'],

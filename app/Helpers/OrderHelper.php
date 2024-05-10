@@ -26,14 +26,4 @@ class OrderHelper
         return $total;
     }
 
-    public static function showOrderDetails(string $orderId)
-    {
-        $orders = Order::findOrFail($orderId);
-
-        $foods = $orders->foods;
-        $drinks = $orders->drinks;
-        $dimsums = $orders->dimsums;
-
-        return view('pengguna.order', compact('orders', 'foods', 'drinks', 'dimsums'));
-    }
 }
