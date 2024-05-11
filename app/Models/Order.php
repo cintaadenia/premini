@@ -29,10 +29,6 @@ class Order extends Model
     {
         return $this->belongsTo(Level::class);
     }
-    // public function levels()
-    // {
-    //     return $this->belongsTo(Level::class);
-    // }
     public function drinks()
     {
         return $this->belongsTo(Drink::class);
@@ -41,8 +37,5 @@ class Order extends Model
     {
         return $this->belongsTo(Dimsum::class);
     }
-    // public function transactions()
-    // {
-    //     return $this->belongsTo(Transaction::class);
-    // }
+
 }
