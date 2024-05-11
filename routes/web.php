@@ -91,12 +91,6 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
     //Checkout
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
-    //Email User
-    Route::get('/emailUser', [EmailUserController::class, 'index'])->name('emailUser.index');
-
-    //Chat User
-    Route::get('/catatanUser', [CatatanUserController::class, 'index'])->name('catatanUser.index');
-
 });
 
 
