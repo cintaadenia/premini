@@ -30,7 +30,7 @@
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                        <div class="stats-icon " style="background-color: rgb(47, 55, 175);">
+                                        <div class="stats-icon " style="background-color: #6f42c1;">
                                             <i class="fa-solid fa-bowl-food"></i>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                 label: 'Transaction Data',
                                 data: monthlyData,
                                 fill: false,
-                                borderColor: 'rgb(75, 192, 192)',
+                                borderColor: 'rgb(128, 0, 128)',
                                 tension: 0.1
                             }]
                         },

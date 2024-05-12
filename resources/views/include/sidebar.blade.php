@@ -48,13 +48,6 @@
                     </a>
                 </li>
 
-                {{-- <li class="sidebar-item {{ Route::is('level.index') ? 'active' : '' }}">
-                    <a href="{{ route('level.index') }}" class='sidebar-link'>
-                        <i class="fas fa-level-up-alt"></i>
-                        <span>Level</span>
-                    </a>
-                </li> --}}
-
                 <li class="sidebar-title">Pages</li>
 
                 <li class="sidebar-item {{ Route::is('checkout.index') ? 'active' : '' }}">
@@ -64,33 +57,11 @@
                     </a>
                 </li>
 
-                {{-- <li class="sidebar-item {{ Route::is('emailUser.index') ? 'active' : '' }}">
-                    <a href="{{ route('emailUser.index') }}" class='sidebar-link'>
-                        <i class="bi bi-envelope-fill"></i>
-                        <span>Email Application</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item {{ Route::is('catatanUser.index') ? 'active' : '' }}">
-                    <a href="{{ route('catatanUser.index') }}" class='sidebar-link'>
-                        <i class="bi bi-chat-dots-fill"></i>
-                        <span>Chat Application</span>
-                    </a>
-                </li> --}}
-
-                {{-- <li class="sidebar-item">
-                    <a href="application-gallery.html" class='sidebar-link'>
-                        <i class="bi bi-image-fill"></i>
-                        <span>Photo Gallery</span>
-                    </a>
-                </li> --}}
-
 
             <li class="sidebar-item">
                 @auth
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <!-- Menggunakan kelas "fas" untuk ikon Font Awesome -->
                         <button type="submit" class="btn btn-danger">
                             <i class="fas fa-sign-out-alt"></i> Logout
                         </button>

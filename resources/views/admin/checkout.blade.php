@@ -76,7 +76,7 @@
 
                                         <div class="row">
                                             <div class="col">
-                                                <h6>Makanan: {{ $user->order->food->food }}</h6>
+                                                <h6>Makanan: {{ $user->order->food->food }} LV {{ $user->order->food->level }}</h6>
                                             </div>
                                         </div>
 
