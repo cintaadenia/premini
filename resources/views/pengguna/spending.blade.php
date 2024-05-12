@@ -8,8 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Gacoan</title>
     <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="user/assets/css/fontawesome.css">
@@ -23,7 +22,6 @@
         .main-nav {
             padding: 55px 0;
         }
-
         .main-nav .logo {
             font-size: 24px;
         }
@@ -72,84 +70,78 @@
         </div>
     </div>
 
-    <div class="section events" id="events">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-heading">
-                    </div>
+<div class="section events" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
                 </div>
+            </div>
 
-                <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
-                            <div id="main" class="col-5">
-                                <header class="mb-3">
-                                    <a href="#" class="burger-btn d-block d-xl-none">
-                                        <i class="bi bi-justify fs-3"></i>
-                                    </a>
-                                </header>
+            <div class="col-lg-12 col-md-6">
+                <div class="item">
+                    <div class="row">
+                        <div id="main" class="col-5">
+                            <header class="mb-3">
+                                <a href="#" class="burger-btn d-block d-xl-none">
+                                    <i class="bi bi-justify fs-3"></i>
+                                </a>
+                            </header>
+                        </div>
+
+                <div class="page-heading col-12 mt-3">
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #7a6ad8;">
+                                <h5 class="card-title text-white">
+                                    Spending
+                                </h5>
                             </div>
 
-                            <div class="page-heading col-12 mt-3">
-                                <section class="section">
-                                    <div class="card">
-                                        <div class="card-header" style="background-color: #7a6ad8;">
-                                            <h5 class="card-title text-white">
-                                                Spending
-                                            </h5>
-                                        </div>
-
-                                        <div class="card-body">
-                                            <table class="table table-striped" id="table1">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Food</th>
-                                                        <th>Drink</th>
-                                                        <th>Dimsum</th>
-                                                        <th>Total</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach ($spending as $spend)
-                                                    <tr>
-                                                        <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ $spend->food->food }}</td>
-                                                        <td>{{ $spend->drinks->drink }}</td>
-                                                        <td>{{ $spend->dimsums->dimsum }}</td>
-                                                        <td>Rp. {{ number_format(OrderHelper::index($or->id), 0, ',', '.') }}</td>
-                                                    </tr>
-
-                                                    @endforeach
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped" id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Food</th>
+                                            <th>Drink</th>
+                                            <th>Dimsum</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach ($spending as $spend)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $spend->food->food }}</td>
+                                        <td>{{ $spend->drinks->drink }}</td>
+                                        <td>{{ $spend->dimsums->dimsum }}</td>
+                                        <td>Rp. {{ number_format(OrderHelper::index($or->id), 0, ',', '.') }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 
+<footer>
+    <div class="container">
+        <div class="col-lg-12">
+            <p>© 2024 Gacoan</p>
+        </div>
+    </div>
+</footer>
 
-                <footer>
-                    <div class="container">
-                        <div class="col-lg-12">
-                            <p>© 2024 Gacoan</p>
-                        </div>
-                    </div>
-                </footer>
-
-                <!-- Scripts -->
-                <!-- Bootstrap core JavaScript -->
-                <script src="user/vendor/jquery/jquery.min.js"></script>
-                <script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
-                <script src="user/assets/js/isotope.min.js"></script>
-                <script src="user/assets/js/owl-carousel.js"></script>
-                <script src="user/assets/js/counter.js"></script>
-                <script src="user/assets/js/custom.js"></script>
+<script src="user/vendor/jquery/jquery.min.js"></script>
+<script src="user/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="user/assets/js/isotope.min.js"></script>
+<script src="user/assets/js/owl-carousel.js"></script>
+<script src="user/assets/js/counter.js"></script>
+<script src="user/assets/js/custom.js"></script>
 
 </body>
-
 </html>

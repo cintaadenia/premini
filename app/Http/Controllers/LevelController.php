@@ -66,7 +66,7 @@ class LevelController extends Controller
      */
     public function edit(string $id)
     {
-        $level = Level::findOrFail($id); // Mengambil data post berdasarkan ID
+        $level = Level::findOrFail($id); 
         return view('admin.editlevel', compact('level'));
     }
 

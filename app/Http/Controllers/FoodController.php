@@ -91,7 +91,7 @@ class FoodController extends Controller
      */
     public function edit(string $id)
     {
-        $food = Food::findOrFail($id); // Mengambil data post berdasarkan ID
+        $food = Food::findOrFail($id); 
         return view('admin.editfood', compact('food'));
 
 

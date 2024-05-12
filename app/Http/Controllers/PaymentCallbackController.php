@@ -11,8 +11,6 @@ class PaymentCallbackController extends Controller
 {
     public function receive(Request $request)
     {
-
-        
         $trans = Transaction::where('transaction_id', $request->order_id)->first();
         $order = Order::where('transaction_id', $request->order_id)->first();
 
@@ -21,16 +19,13 @@ class PaymentCallbackController extends Controller
             $trans->statusBayar = 'PAID';
             $trans->save();
 
-            $order->status = 'PAID'; // Misalkan ada kolom 'status' di tabel order yang menandakan status pesanan
+            $order->status = 'PAID';
             $order->save();
-
 
             return redirect()->route('transaction.index')->with('message', 'Data transaksi dan pesanan berhasil diperbarui');
         } else {
             return redirect()->route('transaction.index')->with('error', 'Transaksi atau pesanan tidak ditemukan atau status bukan "settlement"');
         }
-
-
 
     }
 }

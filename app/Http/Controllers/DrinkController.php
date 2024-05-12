@@ -78,7 +78,7 @@ class DrinkController extends Controller
      */
     public function edit(string $id)
     {
-        $drink = Drink::findOrFail($id); // Mengambil data post berdasarkan ID
+        $drink = Drink::findOrFail($id); 
         return view('admin.editdrink', compact('drink'));
     }
 

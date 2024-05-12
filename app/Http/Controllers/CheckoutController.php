@@ -14,7 +14,6 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        //compect membuat array,compact() sering digunakan dalam controller untuk mempersingkat pengiriman data ke tampilan.
         $data = Checkout::get();
         return view('admin.checkout', compact('data'));
     }

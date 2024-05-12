@@ -15,9 +15,7 @@ class OrderFoodController extends Controller
      */
     public function index()
     {
-        $foods = Food::get();
-        $orders = Order::get();
-        return view('pengguna.user2', compact('foods', 'orders'));
+        //
     }
 
     /**
@@ -25,17 +23,7 @@ class OrderFoodController extends Controller
      */
     public function create(Request $request)
     {
-
-            $request->validate(OrderFood::rules());
-
-            $orderFood = OrderFood::create([
-                'order_id' => $request->id,
-                'food_id' => $request->id,
-                'jumlah' => $request->jumlah,
-            ]);
-
-            return redirect()->back()->with('success', 'Data Level berhasil ditambahkan');
-        
+        //
     }
 
     /**
