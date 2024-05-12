@@ -17,6 +17,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\User2Controller;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SpendingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,7 +37,8 @@ Route::get('/', [UserController::class, 'foods'])->name('foods');
 //USER
 Route::middleware('auth')->group(function(){
     Route::get('/user2', [User2Controller::class, 'user2'])->name('user2');
-    Route::get('/spending', [User2Controller::class, 'spending'])->name('spending');
+
+    Route::get('/spending', [SpendingController::class, 'index'])->name('spending');
     //LOGOUT
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -90,7 +92,6 @@ Route::middleware(['role:admin', 'auth'])->group(function(){
 
     //Checkout
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
-
 });
 
 

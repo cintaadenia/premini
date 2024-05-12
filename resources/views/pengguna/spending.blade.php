@@ -52,6 +52,19 @@
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
+                            <li class="scroll-to-section">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: rgb(254, 254, 254); background-color: transparent; text-decoration: none; cursor: pointer;" onclick="delayedAlert()">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        <script>
+                            function delayedAlert() {
+                                setTimeout(function() {
+                                    alert("Yakin Log out?.");
+                                }, 1000);
+                            }
+                        </script>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -111,11 +124,10 @@
                                     <tbody>
                                     @foreach ($spending as $spend)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $spend->food->food }}</td>
+                                        <td>{{ $spend->food->food }} LV {{ $spend->food->level}}</td>
                                         <td>{{ $spend->drinks->drink }}</td>
                                         <td>{{ $spend->dimsums->dimsum }}</td>
-                                        <td>Rp. {{ number_format(OrderHelper::index($or->id), 0, ',', '.') }}</td>
+                                        <td><span style="color: red;">Rp {{ number_format(OrderHelper::index($spend->id), 0, ',', '.') }}</span></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -11,6 +11,7 @@ class PaymentCallbackController extends Controller
 {
     public function receive(Request $request)
     {
+
         $trans = Transaction::where('transaction_id', $request->order_id)->first();
         $order = Order::where('transaction_id', $request->order_id)->first();
 
@@ -27,7 +28,7 @@ class PaymentCallbackController extends Controller
             return redirect()->route('transaction.index')->with('error', 'Transaksi atau pesanan tidak ditemukan atau status bukan "settlement"');
         }
 
-    }
+}
 }
 
 // $trans = Transaction::where('transactions_id', $request->order_id)->first();
@@ -40,5 +41,8 @@ class PaymentCallbackController extends Controller
 // } else {
 
 //     return redirect()->route('transaction.index')->with('error', 'Transaksi tidak ditemukan');
+
 // }
+
+
 

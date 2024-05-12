@@ -15,9 +15,8 @@ class User2Controller extends Controller
         $foods = Food::get();
         $drinks = Drink::get();
         $dimsums = Dimsum::get();
-        $levels = Level::get();
-
-        return view('pengguna.user2', compact('foods', 'drinks', 'dimsums', 'levels'));
+        // $levels = Level::get();
+        return view('pengguna.user2', compact('foods', 'drinks', 'dimsums'));
     }
 
     public function drink(){
@@ -30,11 +29,8 @@ class User2Controller extends Controller
         return view('pengguna.user2',compact('dimsums'));
     }
 
-    public function level(){
-        $levels = Level::get();
-        return view('pengguna.user2',compact('levels'));
-    }
-    public function spending(){
-        return view('pengguna.spending');
+//  public function spending(){
+//  return view('pengguna.spending');
+// }
 }
-}
+

@@ -51,17 +51,23 @@
                         <a href="{{ route('foods') }}" class="logo">
                             <h1>Gacoan</h1>
                         </a>
-                        <div class="search-input">
-                            <form id="search" action="#">
-                                <input type="text" placeholder="Cari Sesuatu" id='searchText' name="searchKeyword"
-                                    onkeypress="handle" />
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{ route('user2') }}">Order Now!</a></li>
                             <li class="scroll-to-section"><a href="{{ route('order') }}">Details Order</a></li>
                             <li class="scroll-to-section"><a href="{{ route('spending') }}">Spending</a></li>
+                            <li class="scroll-to-section">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: rgb(254, 254, 254); background-color: transparent; text-decoration: none; cursor: pointer;" onclick="delayedAlert()">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        <script>
+                            function delayedAlert() {
+                                setTimeout(function() {
+                                    alert("Yakin Log out?.");
+                                }, 1000);
+                            }
+                        </script>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -95,7 +101,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Detail Pesanan</h5>
                                             <br>
-                                            <p>Food : {{ $ord->food->food }}</p>
+                                            <p>Food : {{ $ord->food->food }} LV {{ $ord->food->level}}</p>
                                             <p>Drink : {{ $ord->drinks->drink }}</p>
                                             <p>Dimsum : {{ $ord->dimsums->dimsum }}</p>
                                             <p>Catatan : {{ $ord->catatan }}</p>
@@ -122,8 +128,6 @@
                                 </div>
                                 @endforeach
                             </div>
-
-
                         </div>
                     </section>
                     </div>

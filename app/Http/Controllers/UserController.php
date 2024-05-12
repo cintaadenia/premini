@@ -15,9 +15,9 @@ class UserController extends Controller
         $foods = Food::get();
         $dimsums = Dimsum::get();
         $drinks = Drink::get();
-        $levels = Level::get();
+        // $levels = Level::get();
         $transaction = Transaction::get();
-        return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'levels','transaction'));
+        return view('pengguna.index',compact('foods', 'dimsums', 'drinks', 'transaction'));
     }
 
 
@@ -32,10 +32,10 @@ class UserController extends Controller
         return view('pengguna.index',compact('drinks'));
     }
 
-    public function levels(){
-        $levels = Level::get();
-        return view('pengguna.index',compact('levels'));
-    }
+    // public function levels(){
+    //     $levels = Level::get();
+    //     return view('pengguna.index',compact('levels'));
+    // }
     public function transactions(){
         $transacton = Transaction::get();
         return view('pengguna.transaction',compact('transaction'));

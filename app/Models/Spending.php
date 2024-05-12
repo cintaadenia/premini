@@ -12,21 +12,17 @@ class Spending extends Model
     protected $table = "spending";
     protected $guarded = ['id'];
 
-    public function foods()
+    public function order()
     {
-        return $this->belongsTo(Food::class);
+        return $this->belongsTo(Order::class);
     }
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'users_id', 'id');
-    }
-    public function drinks()
-    {
-        return $this->belongsTo(Drink::class);
-    }
-    public function dimsums()
-    {
-        return $this->belongsTo(Dimsum::class);
-    }
+    // public function drinks()
+    // {
+    //     return $this->belongsTo(Drink::class);
+    // }
+    // public function dimsums()
+    // {
+    //     return $this->belongsTo(Dimsum::class);
+    // }
 
 }
